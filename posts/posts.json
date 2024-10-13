@@ -1,0 +1,13 @@
+[
+    {
+      "title": "My First Post",
+      "date": "2020-10-08",
+      "tags": ["posts"],
+      "eleventyNavigation": {
+        "key": "blog",
+        "title": "Blog",
+        "order": 4
+      }
+    }
+ 
+  ]

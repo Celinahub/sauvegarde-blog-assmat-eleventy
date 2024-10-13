@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+title: "Page de Pagination"
+pagination:
+  data: collections.posts
+  size: 5
+  alias: pagination
+---
+
+<h2>Articles paginés</h2>
+<ul>
+  {% for post in pagination.items %}
+    <li>
+      <h3>{{ post.data.title }}</h3>
+      <p>{{ post.templateContent | safe }}</p>
+    </li>
+  {% else %}
+    <li>Aucun article trouvé dans les articles paginés.</li>
+  {% endfor %}
+</ul>
+
+{% if pagination.pages > 1 %}
+  <nav>
+    <ul>
+      {% for page in pagination.pages %}
+        <li>
+          <a href="{{ page.url }}">{{ page.pageNumber }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}
