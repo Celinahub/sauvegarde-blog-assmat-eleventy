@@ -1,0 +1,14 @@
+# Ignore Eleventy's output folder
+_site/
+
+# Ignore node modules
+node_modules/
+
+# Ignore any temporary files
+*.log
+*.tmp
+*.cache
+
+
+# Ignore other build artifacts (dossier de distribution ou fichiers générés)
+dist/
