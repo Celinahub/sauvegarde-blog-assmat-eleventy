@@ -2,7 +2,7 @@
 layout: layouts/base.njk
 title: "Recettes / Atelier Cuisine"
 pagination:
-  data: collections.recettesAtelierCuisine
+  data: collections.recettes-atelier-cuisine
   size: 5  # Nombre d'articles par page
   alias: posts
 ---
@@ -97,7 +97,7 @@ pagination:
         <div class="col-md-8 col-lg-8">
             <!-- Featured blog post -->
             <div id="first-article" class="card mb-4"> 
-                {% set featuredPosts = collections.recettesAtelierCuisine %}
+                {% set featuredPosts = collections.recettes-atelier-cuisine %}
                  {% if posts | length > 0 %}
                     {% set featuredPost = posts[0] %}
                     <a href="{{ featuredPost.url }}">
@@ -373,7 +373,8 @@ pagination:
         <!-- Contenu des catégories sous forme de liste verticale avec lignes horizontales pointillées -->
         <ul class="list-unstyled">
             {% set categories = [
-                 { "name": "Recettes / atelier cuisine", "slug": "recettes-atelier-cuisine" },
+                { "name": "Recettes / atelier cuisine", "slug": "recettes-atelier-cuisine" },
+                { "name": "La collectivité grâce au RPE", "slug": "collectivite-rpe" },
                 { "name": "Activités pour enfant", "slug": "activites-enfant" },
                 { "name": "Sélections Produits", "slug": "selection-produits" },
                 { "name": "Actu Petite Enfance", "slug": "actu-petite-enfance" },

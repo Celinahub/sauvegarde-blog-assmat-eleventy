@@ -1,15 +1,13 @@
 ---
 layout: layouts/post.njk
-title: "Recette 1"
+title: "RPE 1"
 date: 2023-10-05
-category: "RECETTES / ATELIER CUISINE"
+category: "LA COLLECTIVITE GRÂCE AU RPE"
 tags: 
-  - recettes
+  - rpe
 featuredImage: /images/uploads/image1.jpg
 ---
 The third post on the Eleventy and Netlify CMS blog
-
-
 
 Ceci est le contenu de mon troisième article sur mon blog. Dans cet article, je vais partager des idées et des conseils sur un sujet intéressant.
 

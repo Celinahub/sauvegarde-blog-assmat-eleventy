@@ -1,8 +1,8 @@
 ---
 layout: layouts/base.njk
-title: "selection-produits"
+title: "collectivite-rpe"
 pagination:
-  data: collections.selection-produits
+  data: collections.collectivite-rpe
   size: 5  # Nombre d'articles par page
   alias: posts
 ---
@@ -96,7 +96,7 @@ pagination:
         <div class="col-md-8 col-lg-8">
             <!-- Featured blog post -->
             <div id="first-article" class="card mb-4"> 
-             {% set featuredPosts = collections.selection-produits %}
+             {% set featuredPosts = collections.collectivite-rpe %}
                 {% if posts | length > 0 %}
                     {% set featuredPost = posts[0] %}
                     <a href="{{ featuredPost.url }}">

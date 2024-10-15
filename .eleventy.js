@@ -1,47 +1,62 @@
 const { format } = require("date-fns");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { fr } = require("date-fns/locale");
+const Image = require("@11ty/eleventy-img");
+
+// Fonction pour gérer le shortcode d'image
+async function imageShortcode(src, alt = "") {
+  if (!src) {
+    console.warn(`Missing image source for: ${alt}`);
+    return '';
+  }
+
+  let metadata = await Image(src, {
+    widths: [300, 600, 1200],
+    formats: ["webp", "jpeg"],
+    outputDir: "./_site/images/",
+    urlPath: "/images/"
+  });
+
+  let imageAttributes = {
+    alt,
+    sizes: "(max-width: 600px) 300px, (max-width: 1200px) 600px, 1200px",
+    loading: "lazy",
+    decoding: "async",
+  };
+
+  return Image.generateHTML(metadata, imageAttributes);
+}
 
 module.exports = function(eleventyConfig) {
   // Ajouter le plugin eleventy-navigation
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  
+  // Ajouter le shortcode d'image
+  eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
+  // Configuration des collections
+  const categories = [
+    { name: "Recettes / atelier cuisine", slug: "recettes-atelier-cuisine", tag: "recettes" },
+    { name: "Activités", slug: "activites-enfant", tag: "activites" },
+    { name: "Sélection produits", slug: "selection-produits", tag: "produits" },
+    { name: "Actu petite enfance", slug: "actu-petite-enfance", tag: "actualites" },
+    { name: "Actualités locales", slug: "actualites-locales", tag: "local" },
+    { name: "La collectivité grâce au RPE", slug: "collectivite-rpe", tag: "rpe" }
+  ];
 
-// Collection pour les articles de recettes
-eleventyConfig.addCollection("recettes", function(collectionApi) {
-  return collectionApi.getAll().filter(function(item) {
-    return item.data.tags && item.data.tags.includes("recettes");
+  // Collection globale pour tous les articles
+  eleventyConfig.addCollection("posts", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("posts/**/*.md").reverse();
   });
-});
 
-// Collection pour les articles d'activités pour enfants
-eleventyConfig.addCollection("activites-enfant", function(collectionApi) {
-  return collectionApi.getAll().filter(function(item) {
-    return item.data.tags && item.data.tags.includes("activites-enfant");
+  // Créer des collections spécifiques pour chaque catégorie
+  categories.forEach(category => {
+    eleventyConfig.addCollection(category.slug, function(collectionApi) {
+      return collectionApi.getFilteredByGlob(`posts/${category.slug}/*.md`)
+        .filter(post => post.data.category === category.name || (post.data.tags && post.data.tags.includes(category.tag)))
+        .sort((a, b) => b.date - a.date); // Tri par date décroissante
+    });
   });
-});
-
-// Collection pour selection-produits
-eleventyConfig.addCollection("produits", function(collectionApi) {
-  return collectionApi.getAll().filter(function(item) {
-    return item.data.tags && item.data.tags.includes("produits");
-  });
-});
-
-// Collection pour actualité
-eleventyConfig.addCollection("actualite", function(collectionApi) {
-  return collectionApi.getAll().filter(function(item) {
-    return item.data.tags && item.data.tags.includes("actualite");
-  });
-});
-
-// Collection pour local
-eleventyConfig.addCollection("local", function(collectionApi) {
-  return collectionApi.getAll().filter(function(item) {
-    return item.data.tags && item.data.tags.includes("local");
-  });
-});
-
 
   // Ajouter un filtre personnalisé pour les dates
   eleventyConfig.addFilter("date", (dateObj, formatStr = "dd MMMM yyyy") => {
@@ -54,65 +69,12 @@ eleventyConfig.addCollection("local", function(collectionApi) {
   eleventyConfig.addPassthroughCopy("static");
   eleventyConfig.addPassthroughCopy("css");
 
-  // Ajouter un alias pour les layouts
+  // Ajouter des alias pour les layouts
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
   eleventyConfig.addLayoutAlias("post", "layouts/post.njk");
   eleventyConfig.addLayoutAlias("postslist", "layouts/postslist.njk");
 
-  // Ajouter la collection de posts
-eleventyConfig.addCollection("posts", function(collectionApi) {
-  return collectionApi.getFilteredByGlob("posts/*.md").reverse(); 
-});
-
-// Ajouter la pagination aux posts
-eleventyConfig.addCollection("paginatedPosts", function(collectionApi) {
-  return collectionApi.getFilteredByGlob("posts/*.md").reverse(); // Utiliser reverse() pour maintenir l'ordre
-});
-
-// Ajouter la pagination aux catégories
-eleventyConfig.addCollection("paginatedcategories", function(collectionApi) {
-  return collectionApi.getFilteredByGlob("categories/*.md").reverse(); // Utiliser reverse() pour maintenir l'ordre
-});
-
-
-
-// Ajouter la pagination à la catégorie recettes
-eleventyConfig.addCollection("recettesAtelierCuisine", function(collectionApi) {
-  return collectionApi.getFilteredByGlob("posts/*.md")
-    .filter(post => post.data.category === "RECETTES / ATELIER CUISINE")
-    .sort((a, b) => b.date - a.date); // Tri par date décroissante (du plus récent au plus ancien)
-});
-
-// Ajouter la pagination à la catégorie activités
-eleventyConfig.addCollection("activites", function(collectionApi) {
-  return collectionApi.getFilteredByGlob("posts/*.md")
-    .filter(post => post.data.category === "ACTIVITES")
-    .sort((a, b) => b.date - a.date);
-});
-
-// Ajouter la pagination à la catégorie selection-produits
-eleventyConfig.addCollection("selection-produits", function(collectionApi) {
-  return collectionApi.getFilteredByGlob("posts/*.md")
-    .filter(post => post.data.category === "SELECTION PRODUITS")
-    .sort((a, b) => b.date - a.date);
-});
-
-// Ajouter la pagination à la catégorie actu-petite-enfance
-eleventyConfig.addCollection("actu-petite-enfance", function(collectionApi) {
-  return collectionApi.getFilteredByGlob("posts/*.md")
-    .filter(post => post.data.category === "ACTU PETITE-ENFANCE")
-    .sort((a, b) => b.date - a.date);
-});
-
-// Ajouter la pagination à la catégorie actualites-locales
-eleventyConfig.addCollection("actualites-locales", function(collectionApi) {
-  return collectionApi.getFilteredByGlob("posts/*.md")
-    .filter(post => post.data.category === "ACTUALITES LOCALES")
-    .sort((a, b) => b.date - a.date);
-});
-
-
-
+  // Retourner la configuration de l'entrée et de la sortie
   return {
     dir: {
       input: ".",           // Dossier d'entrée
