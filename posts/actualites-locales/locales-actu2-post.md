@@ -1,17 +1,19 @@
 ---
 layout: layouts/post.njk
-title: "activité 4"
+title: "Locales actu 2"
 description: "Cet article explore un exemple intéressant pour les enfants."
 tags: 
   - enfants
   - exemple
-  - activites
-url: "https://chubert91assmat.netlify.app/posts/activite-4"
+  - local
+url: "https://chubert91assmat.netlify.app/posts/Locales actu 2"
 image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
-date: 2019-10-09
-category: "ACTIVITÉS POUR ENFANT"
+date: 2023-10-07
+category: "ACTUALITES LOCALES"
 featuredImage: /images/uploads/image1.jpg
 ---
+
+
 
 The third post on the Eleventy and Netlify CMS blog
 

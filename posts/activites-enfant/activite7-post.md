@@ -1,12 +1,18 @@
 ---
 layout: layouts/post.njk
 title: "activité 7"
-date: 2019-10-12
-category: "ACTIVITES"
+description: "Cet article explore un exemple intéressant pour les enfants."
 tags: 
+  - enfants
+  - exemple
   - activites
+url: "https://chubert91assmat.netlify.app/posts/activite-7"
+image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
+date: 2019-10-12
+category: "ACTIVITÉS POUR ENFANT"
 featuredImage: /images/uploads/image1.jpg
 ---
+
 The third post on the Eleventy and Netlify CMS blog
 
 

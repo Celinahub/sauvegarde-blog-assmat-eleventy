@@ -520,36 +520,6 @@ permalink: /
 
 
 
-<script>
-
-// Script 3 mail pied de page 
-
-// Création de l'adresse e-mail
-var a = "chubert.assmat91";
-    var b = "yahoo.com";
-    var c = a + "@" + b;
-
-    // Sélection de l'élément où vous souhaitez ajouter le lien e-mail
-    var container = document.getElementById('emailContainer');
-
-    // Création de l'élément <a> pour le lien e-mail
-    var emailLink = document.createElement("a");
-    emailLink.href = "mailto:" + c;
-    emailLink.style.color = "#F8F9F6";
-    emailLink.style.textDecoration = "none";
-    emailLink.style.marginLeft = "10px";
-
-    // Création du texte à afficher dans le lien e-mail
-    var emailText = document.createTextNode(c);
-
-    // Ajout du texte à l'élément <a>
-    emailLink.appendChild(emailText);
-
-    // Ajout du lien e-mail à l'élément container
-    container.appendChild(emailLink);
-
-</script>
-
 
 <!-- Start of HubSpot Embed Code -->
 <script id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/144730300.js"></script>

@@ -1,6 +1,26 @@
 ---
 layout: layouts/base.njk
 ---
+
+<head>
+   <title>Céline Hubert - Assistante Maternelle à Brétigny-sur-Orge</title>
+
+   <!-- Lien Bootstrap CSS (version 5) -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+   <!-- Viewport pour rendre la page correctement sur mobile -->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Finger+Paint:wght@400&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900&display=swap" rel="stylesheet">
+
+   <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+</head>
+
+
+
 <article class="container my-4 visuel-content">
     
    <img src="{{ featuredImage | url }}" alt="{{ title }}" class="img-fluid mx-auto d-block">
@@ -30,7 +50,17 @@ layout: layouts/base.njk
     <a href="https://pinterest.com/pin/create/button/?url={{ page.url }}&media=/path/to/image.jpg&description={{ page.title }}" target="_blank" class="btn btn-pinterest">
         <img src="{{ '/images/blog/pinterest-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Pinterest">
     </a>
+
+ <!-- Bouton pour copier le lien -->
+    <button class="btn btn-copy-link" onclick="copyLink()">
+        <img src="{{ '/images/blog/lien-article-bretigny.svg' | url }}" class="icone-partage-lien" alt="Copier le lien">
+   
+    </button>
+
+
 </div>
+
+
 
 <h2 class="poppins-regular-titre-article text-center">{{ title }}</h2> <!-- Titre centré avec la classe de typographie -->
 
@@ -42,3 +72,26 @@ layout: layouts/base.njk
 
     
 </article>
+
+<script>
+    function copyLink() {
+        // Crée un élément temporaire pour contenir l'URL
+        var tempInput = document.createElement("input");
+        tempInput.style.position = "absolute";
+        tempInput.style.left = "-1000px";  // Cache l'input temporaire hors de la vue
+        document.body.appendChild(tempInput);
+        
+        // Définit l'URL de la page à copier
+        tempInput.value = window.location.href;  // Ou utilisez {{ page.url }} si c'est disponible dans votre template
+        
+        // Sélectionne le contenu et le copie
+        tempInput.select();
+        document.execCommand("copy");
+        
+        // Retire l'input temporaire après l'opération
+        document.body.removeChild(tempInput);
+
+        // Optionnel : Ajoutez un message ou un feedback visuel pour informer l'utilisateur
+        alert("Lien copié dans le presse-papier !");
+    }
+</script>

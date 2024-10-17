@@ -1,12 +1,19 @@
 ---
 layout: layouts/post.njk
 title: "Select-produit 4"
+description: "Cet article explore un exemple intéressant pour les enfants."
+tags: 
+  - enfants
+  - exemple
+  - produits
+url: "https://chubert91assmat.netlify.app/posts/Select-produit 4"
+image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
 date: 2021-10-11
 category: "SELECTION PRODUITS"
-tags: 
-  - produits
 featuredImage: /images/uploads/image1.jpg
 ---
+
+
 The third post on the Eleventy and Netlify CMS blog
 
 

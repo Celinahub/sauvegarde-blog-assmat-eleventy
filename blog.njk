@@ -1,6 +1,10 @@
 ---
 layout: layouts/base.njk
-title: "Blog"
+title: "Le Journal des petits chez Céline"
+description: "Découvrez nos articles sur les meilleures activités pour enfants."
+tags: "enfant, activités, blog"
+url: "https://chubert91assmat.netlify.app/blog"
+image: "https://monsite.com/images/blog.jpg"
 eleventyNavigation:
   key: "BLOG"
   title: "BLOG"
@@ -12,54 +16,17 @@ pagination:
 ---
 
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="{{ description | default('Découvrez des recettes et ateliers cuisine pour enfants à Brétigny-sur-Orge, proposés par une assistante maternelle agréée.') }}">
-    <meta name="keywords" content="Recettes, atelier cuisine, enfants, assistante maternelle, Brétigny-sur-Orge, cuisine enfant">
-    <meta name="robots" content="index, follow">
-    <meta name="author" content="Celine Hubert">
 
-<meta property="og:title" content="{{ title | default('Recettes / Atelier Cuisine - Assistante Maternelle à Brétigny-sur-Orge') }}">
-<meta property="og:description" content="{{ description | default('Découvrez des recettes et ateliers cuisine pour enfants proposés par Celine Hubert, assistante maternelle agréée.') }}">
-<meta property="og:image" content="{{ '/images/recettes-cuisine.jpg' | url }}">
-<meta property="og:url" content="{{ page.url | url }}">
 
-    
-    <title>{{ title | default('Recettes / Atelier Cuisine - Assistante Maternelle à Brétigny-sur-Orge') }}</title>
-    <link rel="canonical" href="{{ 'https://chubert91assmat.netlify.app/blog/' | url }}">
-	
-    <!-- Lien Bootstrap CSS (version 5) -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
-    <!-- Préconnexion pour Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
-    <!-- Lien vers les polices Finger Paint et Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint:wght@400&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900&display=swap" rel="stylesheet">
-
-    <!-- Favicon -->
-    <link rel="icon" href="{{ '/favicon.ico' | url }}" type="image/x-icon">
-
-    <!-- Styles personnalisés -->
-    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
-</head>
+<!-- Contenu principal de la page de blog -->
 <body class="blog-page">
 
+  <!-- Icône de défilement vers le haut utilisant une image SVG -->
+  <a href="#first-article" class="scroll-to-top">
+      <img class="rocket-icon" src="{{ '/images/rocket-svgrepo-com.svg' | url }}" alt="Icône fusée navigation vers le haut" />
+  </a>
 
-
-
-<!-- Icône de défilement vers le haut utilisant une image SVG -->
-<a href="#first-article" class="scroll-to-top">
-    <img class="rocket-icon" src="{{ '/images/rocket-svgrepo-com.svg' | url }}" alt="Icône fusée navigation vers le haut" />
-</a>
-
-</nav>
 
 <!-- Page header with logo and tagline-->
 <header class="page-header py-5 bg-light border-bottom mb-0">
@@ -93,6 +60,8 @@ pagination:
     <div class="row">
         <!-- Colonne des articles -->
         <div class="col-md-8 col-lg-8">
+
+
             <!-- Featured blog post -->
             <div id="first-article" class="card mb-4"> 
                 {% if posts | length > 0 %}
@@ -100,6 +69,7 @@ pagination:
                     <a href="{{ featuredPost.url }}">
                         <img class="card-img-top" src="{{ featuredPost.data.featuredImage | default('https://dummyimage.com/850x350/dee2e6/6c757d.jpg') }}" alt="{{ featuredPost.data.title | default('Image de l\'article') }}" />
                     </a>
+
 
                     <div class="card-body text-center"> 
                         <span class="badge text-bg-secondary">{{ featuredPost.data.category | default('Article') }}</span>
@@ -113,7 +83,7 @@ pagination:
 
  <!-- Boutons de partage pour le post vedette -->
 <div class="share-buttons">
- 
+
     <!-- Twitter pour le post vedette -->
     <a href="https://twitter.com/intent/tweet?text={{ featuredPost.data.title }}&url={{ featuredPost.url }}" target="_blank" class="btn btn-twitter">
         <img src="{{ '/images/blog/x-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Twitter">
@@ -127,7 +97,6 @@ pagination:
         class="facebook-partage-reseaux" 
         alt="Partager sur Facebook">
 </a>
-
 
     <!-- LinkedIn pour le post vedette -->
     <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ featuredPost.url }}&title={{ featuredPost.data.title }}" target="_blank" class="btn btn-linkedin">
@@ -143,21 +112,35 @@ pagination:
     <a href="https://pinterest.com/pin/create/button/?url={{ featuredPost.url }}&media=chemin/vers/image.jpg&description={{ featuredPost.data.title }}" target="_blank" class="btn btn-pinterest">
         <img src="{{ '/images/blog/pinterest-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Pinterest">
     </a>
+
+    <!-- Bouton pour copier le lien -->
+    <button class="btn btn-copy-link" onclick="copyLink()">
+        <img src="{{ '/images/blog/lien-article-bretigny.svg' | url }}" class="icone-partage-lien" alt="Copier le lien">
+   
+    </button>
+
 </div>
 
 
 
                         <div class="poppins-regular-blog">{{ featuredPost.content | safe | truncate(100, true) }}</div> <!-- Limité à 100 caractères avec "..." -->
-                        
+
                         <a href="{{ featuredPost.url }}" class="btn btn-custom">
                             <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Envoyer">
                         </a>
                     </div>
 
+
                 {% else %}
                     <p>Aucun article trouvé.</p>
                 {% endif %}
+
+
             </div>
+
+
+
+
 
             <!-- Liste des autres articles avec pagination -->
             <div class="row">
@@ -207,6 +190,13 @@ pagination:
     <a href="https://pinterest.com/pin/create/button/?url={{ post.url }}&media=chemin/vers/image.jpg&description={{ post.title }}" target="_blank" class="btn btn-pinterest">
         <img src="{{ '/images/blog/pinterest-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Pinterest">
     </a>
+
+<!-- Bouton pour copier le lien -->
+    <button class="btn btn-copy-link" onclick="copyLink()">
+        <img src="{{ '/images/blog/lien-article-bretigny.svg' | url }}" class="icone-partage-lien" alt="Copier le lien">
+   
+    </button>
+
 </div>
 
 
@@ -400,20 +390,10 @@ pagination:
                 {% endif %}
             {% endfor %}
         </ul>
+
+
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
 </div>
 
@@ -445,7 +425,7 @@ pagination:
     </div>
 </section>
 
-
+</body>
 
 
 
@@ -466,6 +446,28 @@ pagination:
 </script>
 <!-- End MailerLite Universal -->
 
+<script>
+    function copyLink() {
+        // Crée un élément temporaire pour contenir l'URL
+        var tempInput = document.createElement("input");
+        tempInput.style.position = "absolute";
+        tempInput.style.left = "-1000px";  // Cache l'input temporaire hors de la vue
+        document.body.appendChild(tempInput);
+        
+        // Définit l'URL de la page à copier
+        tempInput.value = window.location.href;  // Ou utilisez {{ page.url }} si c'est disponible dans votre template
+        
+        // Sélectionne le contenu et le copie
+        tempInput.select();
+        document.execCommand("copy");
+        
+        // Retire l'input temporaire après l'opération
+        document.body.removeChild(tempInput);
+
+        // Optionnel : Ajoutez un message ou un feedback visuel pour informer l'utilisateur
+        alert("Lien copié dans le presse-papier !");
+    }
+</script>
 
 
 

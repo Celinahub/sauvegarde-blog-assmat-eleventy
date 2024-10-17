@@ -1,12 +1,20 @@
 ---
 layout: layouts/post.njk
 title: "Recette 2"
-date: 2023-10-06
-category: "RECETTES / ATELIER CUISINE"
+description: "Cet article explore un exemple intéressant pour les enfants."
 tags: 
+  - enfants
+  - exemple
   - recettes
+url: "https://chubert91assmat.netlify.app/posts/recette-2"
+image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
+date: 2023-10-06
+category: "ACTIVITÉS POUR ENFANT"
 featuredImage: /images/uploads/image1.jpg
 ---
+
+
+
 The third post on the Eleventy and Netlify CMS blog
 
 

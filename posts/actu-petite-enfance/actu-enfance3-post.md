@@ -1,12 +1,18 @@
 ---
 layout: layouts/post.njk
 title: "Actu enfance 3"
+description: "Cet article explore un exemple intéressant pour les enfants."
+tags: 
+  - enfants
+  - exemple
+  - actualites
+url: "https://chubert91assmat.netlify.app/posts/Actu enfance 3"
+image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
 date: 2021-12-10
 category: "ACTU PETITE-ENFANCE"
-tags: 
-  - actualites
 featuredImage: /images/uploads/image1.jpg
 ---
+
 The third post on the Eleventy and Netlify CMS blog
 
 En stockant des métadonnées dans un fichier JSON, vous avez une source unique pour gérer les informations de vos articles, ce qui facilite la mise à jour et la gestion des articles.

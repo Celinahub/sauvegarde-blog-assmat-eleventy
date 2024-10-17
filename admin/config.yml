@@ -14,12 +14,13 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "Recettes / atelier cuisine" }
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
 
-      - name: "collectivite-rpe"
+  - name: "collectivite-rpe"
     label: "LA COLLECTIVITE GRÂCE AU RPE"
     folder: "posts/collectivite-rpe"
     create: true
@@ -27,7 +28,8 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "La collectivité grâce au RPE" }
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
@@ -40,7 +42,8 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "Activités" }
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
@@ -53,12 +56,13 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "Sélection produits" }
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
 
-       - name: "actu-petite-enfance"
+  - name: "actu-petite-enfance"
     label: "ACTU PETITE-ENFANCE"
     folder: "posts/actu-petite-enfance"
     create: true
@@ -66,11 +70,11 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "Actu petite enfance" }
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
-
 
   - name: "actualites-locales"
     label: "ACTUALITES LOCALES"
@@ -80,11 +84,8 @@ collections:
     fields:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", required: false }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "Actualités locales" }
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
-
-  
-
- 

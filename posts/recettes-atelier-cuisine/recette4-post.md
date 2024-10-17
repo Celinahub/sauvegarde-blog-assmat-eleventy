@@ -1,12 +1,18 @@
 ---
 layout: layouts/post.njk
 title: "Recette 4"
+description: "Cet article explore un exemple intéressant pour les enfants."
+tags: 
+  - enfants
+  - exemple
+  - recettes
+url: "https://chubert91assmat.netlify.app/posts/recette-4"
+image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
 date: 2023-10-08
 category: "RECETTES / ATELIER CUISINE"
-tags: 
-  - recettes
 featuredImage: /images/uploads/image1.jpg
 ---
+
 The third post on the Eleventy and Netlify CMS blog
 
 

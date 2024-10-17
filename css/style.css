@@ -19,6 +19,43 @@ body {
    min-height: 100vh; /* Assure que le corps a au moins la hauteur de la fenêtre du navigateur */
 }
 
+html, body {
+   height: 100%; /* Assurez-vous que l'html et le body occupent toute la hauteur */
+   margin: 0;
+}
+
+body.article-page {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh; /* Minimum 100% de la hauteur de la vue */
+}
+
+header {
+   position: relative; /* Peut aider à éviter les conflits */
+   z-index: 1000; /* Assurez-vous qu'il est au-dessus des autres éléments */
+}
+
+.navbar {
+   background-color: #fff; /* Couleur de fond */
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre sous le menu */
+   position: fixed; /* Rendre le menu fixe */
+   top: 0; /* En haut de la page */
+   left: 0; /* Aligné à gauche */
+   right: 0; /* Aligné à droite */
+   width: 100%; /* S'étendre sur toute la largeur */
+   z-index: 1000; /* Assurez-vous qu'il soit au-dessus des autres éléments */
+}
+
+main {
+   flex-grow: 1; /* Le contenu principal prend tout l'espace restant */
+   padding-top: 60px; /* Ajustez cette valeur à la hauteur de votre navbar */
+}
+
+.index-footer-section {
+   margin-top: auto; /* Force le footer à rester en bas */
+}
+
+
 
 /* Utilisez la police Helvetica pour les titres */
 h2, h3 {
@@ -3185,7 +3222,12 @@ body.blog-page {
    color: #103754;
  }
 
-
+ @media screen and (max-width: 768px) {
+   .poppins-regular-titre-blog {
+      font-size: 20px;
+    }
+   
+ }
 
  
  /* Styles spécifiques pour le texte Limité à 100 caractères */
@@ -3597,7 +3639,8 @@ body.blog-page {
  }
  
  
- /* Style des icônes svg des liens pied de page*/
+
+ /* Style des icônes svg des liens des articles*/
 .facebook-partage-reseaux {
    width: 30px; /* Taille de l'icône */
    margin-right: 10px; /* Espacement entre l'icône et le texte */
@@ -3605,18 +3648,44 @@ body.blog-page {
 }
 
 
- /* Style des icônes svg des liens pied de page*/
+ /* Style des icônes svg des liens des articles*/
  .vedette-partage-reseaux {
    width: 40px; /* Taille de l'icône */
    margin-right: 10px; /* Espacement entre l'icône et le texte */
    vertical-align: middle; /* Alignement vertical */
 }
- /* Style des icônes svg des liens pied de page*/
+
+/* Style des icônes svg des liens des articles*/
 .icone-partage-reseaux {
    width: 30px; /* Taille de l'icône */
    margin-right: 10px; /* Espacement entre l'icône et le texte */
    vertical-align: middle; /* Alignement vertical */
 }
+
+/* Style des icônes svg liens des articles*/
+.icone-partage-lien {
+   width: 45px; /* Taille de l'icône */
+   margin-right: 10px; /* Espacement entre l'icône et le texte */
+   position: relative; /* Permet de déplacer l'icône */
+   top: -7px; /* Ajuste la position vers le haut */
+}
+
+/* Style des icônes svg liens des articles page blog.njk*/
+.icone-partage-lien {
+   width: 35px; /* Taille de l'icône */
+   margin-right: 10px; /* Espacement entre l'icône et le texte */
+   position: relative; /* Permet de déplacer l'icône */
+   top: 0px; /* Ajuste la position vers le haut */
+}
+
+.share-buttons {
+   display: flex; /* Utilise Flexbox pour aligner les éléments */
+   justify-content: center; /* Centre les icônes horizontalement */
+   gap: -5px; /* Espace entre chaque icône */
+   flex-wrap: wrap; /* Optionnel : permet de passer sur une nouvelle ligne si l'espace est limité */
+   align-items: center; /* Aligne verticalement les icônes */
+}
+ 
  
 @media (max-width: 768px) {
    .vedette-partage-reseaux {
@@ -3628,6 +3697,10 @@ body.blog-page {
     /* Style des icônes svg des liens pied de page*/
    .icone-partage-reseaux {
       width: 20px; /* Taille de l'icône */
+   }
+   .icone-partage-lien {
+      width: 30px; /* Taille de l'icône */
+      top: 0px; /* Ajuste la position vers le haut */
    }
  }
  
