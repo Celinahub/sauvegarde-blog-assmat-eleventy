@@ -1,0 +1,32 @@
+---
+permalink: "/feed/atom.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Mon Blog</title>
+  <link rel="self" href="{{ site.url }}/feed/atom.xml" />
+  
+  {%- set lastUpdated = "" -%}
+  {% for item in collections.posts %}
+    {%- if lastUpdated == "" or item.date > lastUpdated -%}
+      {%- set lastUpdated = item.date -%}
+    {%- endif -%}
+  {% endfor %}
+  
+  <updated>{{ lastUpdated | dateToRfc3339 }}</updated>
+  
+  <author>
+    <name>Nom de l'auteur</name>
+  </author>
+
+  {% for item in collections.posts %}
+  <entry>
+    <title>{{ item.data.title | escape }}</title>
+    <link href="{{ item.url | url | absoluteUrl }}" />
+    <id>{{ item.url | url | absoluteUrl }}</id>
+    <updated>{{ item.date | dateToRfc3339 }}</updated>
+    <summary><![CDATA[{{ item.data.description | escape }}]]></summary>
+  </entry>
+  {% endfor %}
+</feed>

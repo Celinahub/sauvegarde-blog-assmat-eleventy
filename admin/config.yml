@@ -5,6 +5,10 @@ backend:
 media_folder: "images"  # Dossier pour les médias dans le dépôt (racine du dossier images)
 public_folder: "/images" # URL publique pour accéder aux images
 
+
+site:
+  url: "http://localhost:8080" # Remplace par l'URL de ton site en production
+
 collections:
   - name: "recettes-atelier-cuisine"
     label: "RECETTES / ATELIER CUISINE"

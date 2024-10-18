@@ -1,4 +1,5 @@
 const { format } = require("date-fns");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { fr } = require("date-fns/locale");
 const Image = require("@11ty/eleventy-img");
@@ -31,10 +32,8 @@ async function imageShortcode(src, alt = "", sizes = "100vw") {
 module.exports = function(eleventyConfig) {
   // Ajouter le plugin eleventy-navigation
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(pluginRss);
 
-
-    
-  
   
   // Ajouter le shortcode d'image
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
@@ -50,33 +49,47 @@ module.exports = function(eleventyConfig) {
   ];
 
   // Collection globale pour tous les articles
-  eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("posts/**/*.md").reverse();
+eleventyConfig.addCollection("posts", function(collectionApi) {
+  const posts = collectionApi.getFilteredByGlob("posts/**/*.md").reverse();
+
+  // Log des articles et de leurs dates
+  posts.forEach(post => {
+    console.log(`Article: ${post.data.title}, Date: ${post.date || 'pas de date'}`);
   });
 
-  // Créer des collections spécifiques pour chaque catégorie
-  categories.forEach(category => {
-    eleventyConfig.addCollection(category.slug, function(collectionApi) {
-      const posts = collectionApi.getFilteredByGlob(`posts/${category.slug}/*.md`)
-        .filter(post => post.data.category === category.name || (post.data.tags && post.data.tags.includes(category.tag)));
-  
-      posts.forEach(post => {
-        console.log(`Article: ${post.data.title}, Date: ${post.date}`);
-      });
-  
-      return posts.sort((a, b) => {
-        let dateA = new Date(a.date);
-        let dateB = new Date(b.date);
-        return dateB - dateA; // Tri par date décroissante
-      });
+  return posts; // Retourne la collection après le log
+});
+
+// Créer des collections spécifiques pour chaque catégorie
+categories.forEach(category => {
+  eleventyConfig.addCollection(category.slug, function(collectionApi) {
+    const posts = collectionApi.getFilteredByGlob(`posts/${category.slug}/*.md`)
+      .filter(post => post.data.category === category.name || (post.data.tags && post.data.tags.includes(category.tag)));
+
+    // Log des articles et de leurs dates pour chaque catégorie
+    posts.forEach(post => {
+      console.log(`Article: ${post.data.title}, Date: ${post.date || 'pas de date'}`);
+    });
+
+    return posts.sort((a, b) => {
+      let dateA = new Date(a.date);
+      let dateB = new Date(b.date);
+      return dateB - dateA; // Tri par date décroissante
     });
   });
+});
+
   
 
   // Ajouter un filtre personnalisé pour les dates
   eleventyConfig.addFilter("date", (dateObj, formatStr = "dd MMMM yyyy") => {
     return format(dateObj, formatStr, { locale: fr });
   });
+  eleventyConfig.addFilter("dateToRfc3339", (date) => {
+    return format(date, "yyyy-MM-dd'T'HH:mm:ssxxx"); // Format RFC 3339
+  });
+  
+
 
 // Ajouter un filtre pour récupérer les balises SEO
 eleventyConfig.addFilter("seo", function(data) {
@@ -94,6 +107,7 @@ eleventyConfig.addFilter("seo", function(data) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("static");
   eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("feed");
 
   // Ajouter des alias pour les layouts
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");

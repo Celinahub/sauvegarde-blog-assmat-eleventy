@@ -1,0 +1,17 @@
+{
+    "title": "Mon Blog",
+    "url": "https://chubert91assmat.netlify.app/",
+    "language": "fr",
+    "description": "Les derniers articles de mon blog",
+    "feed": {
+      "subtitle": "Les derniers articles de mon blog",
+      "filename": "atom.xml",
+      "path": "/feed/atom.xml",
+      "id": "https://chubert91assmat.netlify.app/feed/atom.xml"
+    },
+    "author": {
+      "name": "Céline Hubert"
+
+    }
+  }
+  
