@@ -1,0 +1,14 @@
+<!-- Pagination section -->
+            <div class="pagination-container">
+                {% if pagination.href.previous %}
+                    <a href="{{ pagination.href.previous }}" class="pagination-btn">
+                        <img src="/images/blog/car-demi-tour-svgrepo-com.svg" alt="Précédent" />
+                    </a>
+                {% endif %}
+
+                {% if pagination.href.next %}
+                    <a href="{{ pagination.href.next }}" class="pagination-btn">
+                        <img src="/images/blog/car-avance-svgrepo-com.svg" alt="Suivant" />
+                    </a>
+                {% endif %}
+            </div> <!-- Fin de pagination-container -->

@@ -1,0 +1,38 @@
+<!-- Boutons de partage -->
+<div class="share-buttons"> <!-- Début des boutons de partage -->
+
+    <!-- Twitter -->
+    <a href="https://twitter.com/intent/tweet?text={{ post.title }}&url={{ post.url }}" target="_blank" class="btn btn-twitter">
+        <img src="{{ '/images/blog/x-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Twitter">
+    </a>
+
+    <!-- Facebook -->
+<a href="https://www.facebook.com/sharer.php?u=https://netlify.app/{{ post.url }}" 
+   target="_blank" 
+   class="btn btn-facebook">
+   <img src="{{ '/images/blog/social-facebook-bretigny.svg' | url }}" 
+        class="facebook-partage-reseaux" 
+        alt="Partager sur Facebook">
+</a>
+
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ post.url }}&title={{ post.title }}" target="_blank" class="btn btn-linkedin">
+        <img src="{{ '/images/blog/linkedin-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur LinkedIn">
+    </a>
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/?url={{ post.url }}" target="_blank" class="btn btn-instagram">
+        <img src="{{ '/images/blog/social-insta-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Instagram">
+    </a>
+
+    <!-- Pinterest -->
+    <a href="https://pinterest.com/pin/create/button/?url={{ post.url }}&media=chemin/vers/image.jpg&description={{ post.title }}" target="_blank" class="btn btn-pinterest">
+        <img src="{{ '/images/blog/pinterest-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Pinterest">
+    </a>
+
+<!-- Bouton pour copier le lien -->
+    <button class="btn btn-copy-link" onclick="copyLink()">
+        <img src="{{ '/images/blog/lien-article-bretigny.svg' | url }}" class="icone-partage-lien" alt="Copier le lien">
+    </button> <!-- Fin du bouton pour copier le lien -->
+</div> <!-- Fin des boutons de partage -->
