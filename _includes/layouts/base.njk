@@ -1,71 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ title | safe }}</title> 
-  <meta name="description" content="{{ description | safe }}">
-  <meta name="keywords" content="{{ tags | safe }}">
-  
-  <!-- Open Graph meta tags pour réseaux sociaux -->
-  <meta property="og:title" content="{{ title | safe }}">
-  <meta property="og:description" content="{{ description | safe }}">
-  <meta property="og:image" content="{{ image | safe }}">
-  <meta property="og:url" content="{{ url | safe }}">
-
-  <!-- Lien canonique pour SEO -->
-  <link rel="canonical" href="{{ url | safe }}">
-
-  <!-- Lien vers les styles Bootstrap et CSS personnalisés -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
-
-
-
-  <!-- Polices Google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Finger+Paint:wght@400&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900&display=swap" rel="stylesheet">
-
-</head>
-<body class="article-page">
-
-
-
-    <!-- Barre de navigation -->
- 
-       
-            <nav class="navbar navbar-dark custom-navbar sticky-top navbar-expand-lg">
-  <div class="container-fluid">
-    <!-- Logo à gauche -->
-    <a class="navbar-brand" href="index.html">
-      <img src="/images/navbar/logo-navbar-paint.png" alt="Céline Hubert logo ch" class="navbar-logo">
-    </a>
-
-    <!-- Bouton de bascule pour le menu mobile -->
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon" style="background-color: #07060a; filter: invert(100%);"></span>
-    </button>
-
-    <!-- Liens de navigation à droite -->
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <!-- Navigation dynamique avec Eleventy -->
-        {%- for item in collections.all | eleventyNavigation %}
-        <li class="nav-item">
-          <a class="nav-link d-flex align-items-center" href="{{ item.url }}" style="height: 100%;" {% if item.url == page.url %}aria-current="page"{% endif %}>
-            <span class="poppins-regular-nav-link">{{ item.title }}</span>
-          </a>
-        </li>
-        {%- endfor %}
-      </ul>
-    </div>
-  </div>
-</nav>
-   
-
-
+{% include "layouts/widget/head.njk" %} <!-- Inclusion des métadonnées  -->
+     
+{% include "layouts/widget/nav.njk" %} <!-- Inclusion de la barre de navigation  -->
 
 
   <!-- Contenu principal -->
@@ -75,112 +10,7 @@
 
  
  
-<div class="striped-section">
-    <!-- Contenu de la section -->
-    Cette section présente un fond rayé décoratif, ajoutant une touche élégante à la page d'accueil dédiée à mon métier d'assistante maternelle à Brétigny-sur-Orge.
- </div>
-
-
-   <!-- Pied de page -->
-<section class="index-footer-section">
-<h2 class="titre-footer">Pied de Page - Présentation</h2>
-    <div class="container-fluid"> <!-- Changer container à container-fluid -->
-        <div class="row">
-            <!-- Colonne de gauche: Horaires d'accueil -->
-            <div class="col-md-3 col-sm-12 text-center text-md-start pied-page-typo">
-                <h3>Horaires d'accueil</h3>
-                <p>Lundi 07h15 - 18h45</p>
-                <p>Mardi 07h15 - 18h45</p>
-                <p><strong>Mercredi - Fermé</strong></p>
-                <p>Jeudi 07h15 - 18h45</p>
-                <p>Vendredi 07h15 - 18h45</p>
-            </div>
-           
-            <!-- Colonne du milieu gauche: Liens utiles -->
-            <div class="col-md-3 col-sm-12 text-center liens-utiles-typo align-center">
-                <h3>Liens utiles</h3>
-                <ul class="list-unstyled">
-                    
-                    <li>
-                        <a href="/">
-                            <img src="/images/pied-page/liens-icon-bretigny.svg" class="icone-liens" alt="Icône flèche pour retourner à la page d'accueil de Brétigny-sur-Orge" loading="lazy">
-                            Présentation
-                        </a>
-                    </li>
-
-
-                    <li>
-                        <a href="/projet-accueil/">
-                            <img src="/images/pied-page/liens-icon-bretigny.svg" class="icone-liens" alt="Icône flèche pour retourner à la page d'accueil de Brétigny-sur-Orge" loading="lazy">
-                            Projet d'accueil
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/faq/">
-                            <img src="/images/pied-page/liens-icon-bretigny.svg" class="icone-liens" alt="Icône flèche pour retourner à la page FAQ sur l'accueil de Brétigny-sur-Orge" loading="lazy">
-                            Foire aux questions
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/contact/" style="display: flex; align-items: center;">
-                            <img src="/images/pied-page/liens-icon-contact-bretigny.svg" class="love-letter" alt="Icône lettre pour accéder à la page de contact à Brétigny-sur-Orge" style="margin-right: 5px;" loading="lazy">
-                            <div id="emailContainer"></div>
-                        </a>
-                    </li>
-                </ul>
-                <div class="pied-page-spacer"></div>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="/mentions-legales/">
-                            <img src="/images/pied-page/liens-icon-bretigny.svg" class="icone-liens" alt="Icône flèche pour revenir aux mentions légales sur Brétigny-sur-Orge" loading="lazy">
-                            Mentions légales
-                        </a>
-                    </li>
-                </ul>
-            </div>
-    
-
-<!-- Colonne du milieu droite: Réseaux sociaux -->
-<div class="col-md-3 col-sm-12 text-center liens-utiles-typo">
-    <h3>Réseaux sociaux</h3>
-    <ul class="list-unstyled">
-        <li>
-            <a href="https://www.instagram.com/chez.celine.assmat.bretigny91?utm_source=qr&igsh=MWU3a2xmOHZwMjNwMA==" target="_blank">
-                <img src="/images/pied-page/social-insta-bretigny.svg" class="social-icons" alt="Instagram de Céline Hubert, assistante maternelle à Brétigny-sur-Orge" loading="lazy">
-            </a>
-       
-            <a href="https://www.facebook.com/profile.php?id=100092426056348" target="_blank">
-                <img src="/images/pied-page/social-facebook-bretigny.svg" class="social-icons" alt="Page Facebook de Céline Hubert, assistante maternelle à Brétigny-sur-Orge" loading="lazy">
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-            
-            <!-- Colonne de droite: Logo -->
-            <div class="col-md-3 col-sm-12 text-center text-md-end">
-                <img src="/images/pied-page/logo-footer-chez-celine-bretigny.svg" class="logo-pied-page" alt="Logo page index de Céline Hubert, assistante maternelle agréée à Brétigny-sur-Orge" loading="lazy">
-            </div>
-        </div>
-        
-        <hr class="pied-page-separator">
-
-
-        <!-- Contenu existant -->
-        <div class="row">
-            <div class="col-md-12 text-center footer-text">
-                <span>© 2024 Céline Hubert &nbsp;&nbsp;</span>
-                <span>Conçu avec </span>
-                <a>
-                    <img src="/images/pied-page/coeur-assistante-maternelle-bretigny.svg" alt="Icône cœur page représentant l'amour et l'engagement de Céline Hubert, assistante maternelle à Brétigny-sur-Orge, pour son travail" class="heart-icon" loading="lazy">
-                </a>
-                <span> par Céline Hubert</span>
-            </div>
-        </div>
-    </div>
-</section>
-
+{% include "layouts/widget/footer.njk" %} <!-- Inclusion du pied de page  -->
 
 
 
@@ -193,7 +23,7 @@
 
 <script>
 
-// Script 3 mail pied de page 
+// Script mail pied de page 
 
 // Création de l'adresse e-mail
 var a = "chubert.assmat91";

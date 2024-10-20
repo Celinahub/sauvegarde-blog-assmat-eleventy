@@ -4,9 +4,9 @@ eleventyExcludeFromCollections: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Mon Blog</title>
-  <link rel="self" href="{{ site.url }}/feed/atom.xml" />
-  
+  <title>{{ metadata.title }}</title> <!-- Utilise le titre du blog depuis metadata.json -->
+  <link rel="self" href="{{ metadata.url }}/feed/atom.xml" /> <!-- URL du flux dynamique -->
+
   {%- set lastUpdated = "" -%}
   {% for item in collections.posts %}
     {%- if lastUpdated == "" or item.date > lastUpdated -%}
@@ -14,19 +14,19 @@ eleventyExcludeFromCollections: true
     {%- endif -%}
   {% endfor %}
   
-  <updated>{{ lastUpdated | dateToRfc3339 }}</updated>
-  
+  <updated>{{ lastUpdated | dateToRfc3339 }}</updated> <!-- Dernière mise à jour des articles -->
+
   <author>
-    <name>Nom de l'auteur</name>
+    <name>{{ metadata.author.name }}</name> <!-- Utilise le nom de l'auteur depuis metadata.json -->
   </author>
 
   {% for item in collections.posts %}
   <entry>
-    <title>{{ item.data.title | escape }}</title>
-    <link href="{{ item.url | url | absoluteUrl }}" />
-    <id>{{ item.url | url | absoluteUrl }}</id>
-    <updated>{{ item.date | dateToRfc3339 }}</updated>
-    <summary><![CDATA[{{ item.data.description | escape }}]]></summary>
+    <title>{{ item.data.title | escape }}</title> <!-- Titre de l'article -->
+    <link href="{{ metadata.url }}{{ item.url | url }}" /> <!-- Lien complet vers l'article -->
+    <id>{{ metadata.url }}{{ item.url | url }}" /> <!-- Identifiant unique de l'article -->
+    <updated>{{ item.date | dateToRfc3339 }}</updated> <!-- Date de publication au format RFC3339 -->
+    <summary><![CDATA[{{ item.data.description | escape }}]]></summary> <!-- Résumé de l'article -->
   </entry>
   {% endfor %}
 </feed>

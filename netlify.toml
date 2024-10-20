@@ -1,0 +1,22 @@
+[build]
+  publish = "_site"                # Dossier de sortie généré par Eleventy
+  command = "eleventy"             # Commande pour générer le site
+
+[dev]
+  command = "eleventy --serve"     # Commande pour lancer le serveur de développement
+
+# Si tu prévois d'utiliser des fonctions Netlify
+[functions]
+  directory = "netlify/functions"  # Répertoire pour les fonctions serverless
+
+# Redirections (exemple pour les fonctions API et redirection 404)
+[[redirects]]
+  from = "/api/posts"              # Redirection vers la fonction posts
+  to = "/.netlify/functions/posts"  # Cible de la redirection
+  status = 200                     # Code de statut HTTP
+  force = true                     # Forcer la redirection même si l'URL existe
+
+[[redirects]]
+  from = "/*"                      # Redirection pour toutes les pages non trouvées
+  to = "/404.html"                 # Page 404 personnalisée
+  status = 404                     # Code de statut HTTP

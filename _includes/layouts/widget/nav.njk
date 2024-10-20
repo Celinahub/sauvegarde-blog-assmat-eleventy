@@ -1,0 +1,33 @@
+<body class="article-page">
+
+<!-- Barre de navigation -->
+ 
+       
+<nav class="navbar navbar-dark custom-navbar sticky-top navbar-expand-lg">
+  <div class="container-fluid">
+    <!-- Logo à gauche -->
+    <a class="navbar-brand" href="index.html">
+      <img src="/images/navbar/logo-navbar-paint.png" alt="Céline Hubert logo ch" class="navbar-logo">
+    </a>
+
+    <!-- Bouton de bascule pour le menu mobile -->
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon" style="background-color: #07060a; filter: invert(100%);"></span>
+    </button>
+
+    <!-- Liens de navigation à droite -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <!-- Navigation dynamique avec Eleventy -->
+        {%- for item in collections.all | eleventyNavigation %}
+        <li class="nav-item">
+          <a class="nav-link d-flex align-items-center" href="{{ item.url }}" style="height: 100%;" {% if item.url == page.url %}aria-current="page"{% endif %}>
+            <span class="poppins-regular-nav-link">{{ item.title }}</span>
+          </a>
+        </li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</nav>
+   

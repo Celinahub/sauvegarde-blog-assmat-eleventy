@@ -1,4 +1,4 @@
-{
+ {
     "title": "Mon Blog",
     "url": "https://chubert91assmat.netlify.app/",
     "language": "fr",
@@ -10,8 +10,12 @@
       "id": "https://chubert91assmat.netlify.app/feed/atom.xml"
     },
     "author": {
-      "name": "Céline Hubert"
-
-    }
+      "name": "Céline Hubert",
+      "twitter": "@CelineHubert",
+      "facebook": "https://www.facebook.com/celine.hubert",
+      "linkedin": "https://www.linkedin.com/in/celinehubert/",
+      "pinterest": "https://www.pinterest.com/celinehubert/"
+    },
+    "socialImage": "/images/social-default.jpg"
   }
   
