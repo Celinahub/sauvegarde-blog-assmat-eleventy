@@ -102,14 +102,11 @@ eleventyConfig.addFilter("seo", function(data) {
   };
 });
 
-  // Copier tous les fichiers sauf le dossier admin/static
-  eleventyConfig.addPassthroughCopy({
-    "static": ["**/*", "!**/*.html"], // Copie tout sauf les fichiers HTML
-    "images": "images",                // Copie le dossier images
-    "css": "css",                      // Copie le dossier css
-    "feed": "feed"                    // Copie le dossier feed
-  });
-
+  // Copier les fichiers nécessaires vers le dossier de sortie `_site`
+  eleventyConfig.addPassthroughCopy("images");
+  eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy("css");
+  eleventyConfig.addPassthroughCopy("feed");
 
   // Ajouter des alias pour les layouts
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
