@@ -105,7 +105,6 @@ eleventyConfig.addFilter("seo", function(data) {
   // Copier les fichiers nécessaires vers le dossier de sortie `_site`
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("admin");
-  eleventyConfig.addPassthroughCopy("pages");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("feed");
 
