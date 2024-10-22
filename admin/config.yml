@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   branch: main # ou la branche que tu utilises
 
-media_folder: "images"  # Dossier pour les médias dans le dépôt (racine du dossier images)
+media_folder: "_site/images"  # Dossier pour les médias dans le dépôt (racine du dossier images)
 public_folder: "/images" # URL publique pour accéder aux images
 
 
