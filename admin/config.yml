@@ -7,86 +7,15 @@ public_folder: "/images/uploads"  # URL publique pour accéder aux images (corre
 
 
 collections:
-  - name: "recettes-atelier-cuisine"
-    label: "RECETTES / ATELIER CUISINE"
-    folder: "posts/recettes-atelier-cuisine" # Dossier où les articles seront stockés
+  - name: "posts" # Le nom de la collection (ici "posts")
+    label: "Posts"
+    folder: "posts" # Le dossier où les fichiers seront créés
     create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Titre", name: "title", widget: "string" }
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Modèle du nom de fichier
+    fields: # Les champs du formulaire CMS
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "Recettes / atelier cuisine" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Image vedette", name: "featuredImage", widget: "image" }
-
-  - name: "collectivite-rpe"
-    label: "LA COLLECTIVITE GRÂCE AU RPE"
-    folder: "posts/collectivite-rpe"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "La collectivité grâce au RPE" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Image vedette", name: "featuredImage", widget: "image" }
-
-  - name: "activites-enfant"
-    label: "ACTIVITES"
-    folder: "posts/activites-enfant"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "Activités" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Image vedette", name: "featuredImage", widget: "image" }
-
-  - name: "selection-produits"
-    label: "SELECTION PRODUITS"
-    folder: "posts/selection-produits"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "Sélection produits" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Image vedette", name: "featuredImage", widget: "image" }
-
-  - name: "actu-petite-enfance"
-    label: "ACTU PETITE-ENFANCE"
-    folder: "posts/actu-petite-enfance"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "Actu petite enfance" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Image vedette", name: "featuredImage", widget: "image" }
-
-  - name: "actualites-locales"
-    label: "ACTUALITES LOCALES"
-    folder: "posts/actualites-locales"
-    create: true
-    slug: "{{slug}}"
-    fields:
-      - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "Actualités locales" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "Post Body", name: "body", widget: "markdown" }
+      - { label: "Featured Image", name: "featuredImage", widget: "image" }
