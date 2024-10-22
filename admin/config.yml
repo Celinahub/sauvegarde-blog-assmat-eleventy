@@ -6,9 +6,6 @@ media_folder: "_site/images"  # Dossier pour les médias dans le dépôt (racine
 public_folder: "/images" # URL publique pour accéder aux images
 
 
-site:
-  url: "https://chubert91assmat.netlify.app" # Remplace par l'URL de ton site en production
-
 collections:
   - name: "recettes-atelier-cuisine"
     label: "RECETTES / ATELIER CUISINE"
