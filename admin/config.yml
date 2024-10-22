@@ -7,7 +7,7 @@ public_folder: "/images" # URL publique pour accéder aux images
 
 
 site:
-  url: "http://localhost:8080" # Remplace par l'URL de ton site en production
+  url: "https://chubert91assmat.netlify.app" # Remplace par l'URL de ton site en production
 
 collections:
   - name: "recettes-atelier-cuisine"
