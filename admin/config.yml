@@ -15,14 +15,16 @@ collections:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "Recettes / atelier cuisine" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "Recettes / atelier cuisine" }
+      - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+     
+    
 
   - name: "collectivite-rpe"
     label: "LA COLLECTIVITE GRÂCE AU RPE"
@@ -72,8 +74,8 @@ collections:
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
-      - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
-      - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
 
   - name: "actu-petite-enfance"
     label: "ACTU PETITE-ENFANCE"
