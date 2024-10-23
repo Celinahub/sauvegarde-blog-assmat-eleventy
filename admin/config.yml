@@ -6,6 +6,12 @@ backend:
 media_folder: "images/uploads"  # Dossier pour les médias (dans le répertoire racine)
 public_folder: "/images/uploads"  # URL publique pour accéder aux images (correspond au chemin des fichiers sur le site)
 
+# Aperçu Netlify CMS avec un Template
+site_url: "https://test-site-statique-blog-eleventy.netlify.app"  # Votre URL de site
+preview_templates:
+  - name: "post"
+    template: "/layouts/post.njk"
+
 
 collections:
   - name: "recettes-atelier-cuisine"
@@ -21,18 +27,12 @@ collections:
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "Recettes / atelier cuisine" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "RECETTES / ATELIER CUISINE" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
 
-# Aperçu Netlify CMS avec un Template
-site_url: "https://test-site-statique-blog-eleventy.netlify.app"  # Votre URL de site
-preview_templates:
-  - name: "post"
-    template: "/layouts/post.njk"
-     
-    
 
+    
   - name: "collectivite-rpe"
     label: "LA COLLECTIVITE GRÂCE AU RPE"
     folder: "posts/collectivite-rpe"
@@ -41,14 +41,16 @@ preview_templates:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "La collectivité grâce au RPE" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "LA COLLECTIVITE GRÂCE AU RPE" }
+      - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+     
+      
 
   - name: "activites-enfant"
     label: "ACTIVITES"
@@ -58,14 +60,15 @@ preview_templates:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }   
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "Activités" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "ACTIVITÉS POUR ENFANT" }
+      - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+      
 
   - name: "selection-produits"
     label: "SELECTION PRODUITS"
@@ -75,14 +78,16 @@ preview_templates:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "Sélection produits" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "SELECTION PRODUITS" }
+      - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+      
+      
 
   - name: "actu-petite-enfance"
     label: "ACTU PETITE-ENFANCE"
@@ -92,14 +97,15 @@ preview_templates:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "Actu petite enfance" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "ACTU PETITE-ENFANCE" }
+      - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+      
 
   - name: "actualites-locales"
     label: "ACTUALITES LOCALES"
@@ -109,11 +115,15 @@ preview_templates:
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Titre", name: "title", widget: "string" }
-      - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "Actualités locales" }
-      - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "ACTUALITES LOCALES" }
+      - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+
+      
+      
+      
