@@ -21,6 +21,8 @@ collections:
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
+      - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
 
   - name: "collectivite-rpe"
     label: "LA COLLECTIVITE GRÂCE AU RPE"
@@ -36,6 +38,8 @@ collections:
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
+      - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
 
   - name: "activites-enfant"
     label: "ACTIVITES"
@@ -51,6 +55,8 @@ collections:
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
+      - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
 
   - name: "selection-produits"
     label: "SELECTION PRODUITS"
@@ -66,6 +72,8 @@ collections:
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
+      - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
 
   - name: "actu-petite-enfance"
     label: "ACTU PETITE-ENFANCE"
@@ -81,6 +89,8 @@ collections:
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
+      - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
 
   - name: "actualites-locales"
     label: "ACTUALITES LOCALES"
@@ -96,3 +106,5 @@ collections:
       - { label: "Contenu", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
+      - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
