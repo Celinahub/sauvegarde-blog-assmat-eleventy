@@ -26,8 +26,8 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "RECETTES / ATELIER CUISINE" }
+      - { label: "Date", name: "date", widget: "hidden", default: "{{now}}" } # Champ Date caché avec la date actuelle par défaut
+      - { label: "Catégorie", name: "category", widget: "hidden", default: "RECETTES / ATELIER CUISINE" } # Champ Catégorie caché avec une valeur par défaut
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
 
@@ -45,8 +45,8 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "LA COLLECTIVITE GRÂCE AU RPE" }
+      - { label: "Date", name: "date", widget: "hidden", default: "{{now}}" } # Champ Date caché avec la date actuelle par défaut
+      - { label: "Catégorie", name: "category", widget: "hidden", default: "LA COLLECTIVITE GRÂCE AU RPE" } # Champ Catégorie caché avec une valeur par défaut
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
      
@@ -64,8 +64,8 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "ACTIVITÉS POUR ENFANT" }
+      - { label: "Date", name: "date", widget: "hidden", default: "{{now}}" } # Champ Date caché avec la date actuelle par défaut
+      - { label: "Catégorie", name: "category", widget: "hidden", default: "ACTIVITÉS POUR ENFANT" } # Champ Catégorie caché avec une valeur par défaut
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
       
@@ -82,12 +82,14 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "SELECTION PRODUITS" }
+      - { label: "Date", name: "date", widget: "hidden", default: "{{now}}" } # Champ Date caché avec la date actuelle par défaut
+      - { label: "Catégorie", name: "category", widget: "hidden", default: "SELECTION PRODUITS" } # Champ Catégorie caché avec une valeur par défaut
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
       
-      
+   
+
+
 
   - name: "actu-petite-enfance"
     label: "ACTU PETITE-ENFANCE"
@@ -101,8 +103,8 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "ACTU PETITE-ENFANCE" }
+      - { label: "Date", name: "date", widget: "hidden", default: "{{now}}" } # Champ Date caché avec la date actuelle par défaut
+      - { label: "Catégorie", name: "category", widget: "hidden", default: "ACTU PETITE-ENFANCE" } # Champ Catégorie caché avec une valeur par défaut
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
       
@@ -119,8 +121,8 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
-      - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "ACTUALITES LOCALES" }
+      - { label: "Date", name: "date", widget: "hidden", default: "{{now}}" } # Champ Date caché avec la date actuelle par défaut
+      - { label: "Catégorie", name: "category", widget: "hidden", default: "ACTUALITES LOCALES" } # Champ Catégorie caché avec une valeur par défaut
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
 
