@@ -31,7 +31,38 @@ layout: layouts/base.njk
         <p><strong>Catégorie :</strong> {{ category }}</p>
     </div>
 
-   {% include "layouts/widget/partage-article-reseaux.njk" %} <!-- Inclusion du partage-article-reseaux -->
+  <!-- Boutons de partage -->
+<div class="share-buttons d-flex justify-content-center">
+    <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ page.url }}" target="_blank" class="btn btn-twitter">
+        <img src="{{ '/images/blog/x-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur twitter">
+    </a>
+  <!-- Facebook -->
+<a href="https://www.facebook.com/sharer.php?u=https://netlify.app{{ page.url }}" 
+   target="_blank" 
+   class="btn btn-facebook">
+   <img src="{{ '/images/blog/social-facebook-bretigny.svg' | url }}" 
+        class="facebook-partage-reseaux" 
+        alt="Partager sur Facebook">
+</a>
+
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url }}&title={{ page.title }}" target="_blank" class="btn btn-linkedin">
+        <img src="{{ '/images/blog/linkedin-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur LinkedIn">
+    </a>
+    <a href="https://www.instagram.com/?url={{ page.url }}" target="_blank" class="btn btn-instagram">
+        <img src="{{ '/images/blog/social-insta-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Instagram">
+    </a>
+    <a href="https://pinterest.com/pin/create/button/?url={{ page.url }}&media=/path/to/image.jpg&description={{ page.title }}" target="_blank" class="btn btn-pinterest">
+        <img src="{{ '/images/blog/pinterest-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Pinterest">
+    </a>
+
+ <!-- Bouton pour copier le lien -->
+    <button class="btn btn-copy-link" onclick="copyLink()">
+        <img src="{{ '/images/blog/lien-article-bretigny.svg' | url }}" class="icone-partage-lien" alt="Copier le lien">
+   
+    </button>
+
+
+</div>
 
     <h2 class="poppins-regular-titre-article text-center">{{ title }}</h2>
 
