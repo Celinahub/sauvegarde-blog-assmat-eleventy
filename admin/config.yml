@@ -13,6 +13,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
@@ -27,6 +28,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
@@ -41,6 +43,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }   
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
@@ -55,6 +58,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
@@ -69,6 +73,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
@@ -83,6 +88,7 @@ collections:
     create: true
     slug: "{{slug}}"
     fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
