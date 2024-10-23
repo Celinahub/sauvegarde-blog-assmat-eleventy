@@ -26,7 +26,7 @@ collections:
       - { label: "Contenu", name: "body", widget: "markdown" }
 
 # Aperçu Netlify CMS avec un Template
-site_url: "https://votre-site.netlify.app"  # Votre URL de site
+site_url: "https://test-site-statique-blog-eleventy.netlify.app"  # Votre URL de site
 preview_templates:
   - name: "post"
     template: "/layouts/post.njk"
