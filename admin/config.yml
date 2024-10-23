@@ -1,6 +1,7 @@
 backend:
   name: git-gateway
   branch: main # ou la branche que tu utilises
+  publish_mode: editorial_workflow
 
 media_folder: "images/uploads"  # Dossier pour les médias (dans le répertoire racine)
 public_folder: "/images/uploads"  # URL publique pour accéder aux images (correspond au chemin des fichiers sur le site)
@@ -9,7 +10,7 @@ public_folder: "/images/uploads"  # URL publique pour accéder aux images (corre
 collections:
   - name: "recettes-atelier-cuisine"
     label: "RECETTES / ATELIER CUISINE"
-    folder: "posts/recettes-atelier-cuisine" # Dossier où les articles seront stockés
+    folder: "posts/recettes-atelier-cuisine"
     create: true
     slug: "{{slug}}"
     fields:
@@ -17,12 +18,18 @@ collections:
       - { label: "Titre", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Tags", name: "tags", widget: "list" }
-      - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
-      - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
+      - { label: "URL", name: "url", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Catégorie", name: "category", widget: "string", default: "Recettes / atelier cuisine" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
+
+# Aperçu Netlify CMS avec un Template
+site_url: "https://votre-site.netlify.app"  # Votre URL de site
+preview_templates:
+  - name: "post"
+    template: "/layouts/post.njk"
      
     
 
