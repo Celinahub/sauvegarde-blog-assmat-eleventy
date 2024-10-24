@@ -13,14 +13,9 @@ pagination:
   data: collections.posts
   size: 5
   alias: posts
+  bodyClass: "blog-page"
 ---
 
-
-{% include "layouts/widget/head.njk" %} <!-- Inclusion des métadonnées  -->
-
-
-<!-- Contenu principal de la page de blog -->
-<body class="blog-page">
 
   <!-- Icône de défilement vers le haut utilisant une image SVG -->
   <a href="#first-article" class="scroll-to-top">
@@ -165,7 +160,6 @@ pagination:
     }
 </script>
 
-</body>
 
 
 
