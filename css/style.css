@@ -1005,7 +1005,7 @@ h2, h3 {
 .container {
    position: relative; /* Pour placer le contenu au-dessus du SVG */
    z-index: 1; /* Assure que le contenu est au-dessus de l'image */
-   padding-top: 2rem; /* Ajustez la valeur pour donner un espace au-dessus du contenu si nécessaire */
+   padding-top: 8rem; /* Ajustez la valeur pour donner un espace au-dessus du contenu si nécessaire */
 }
 
 
@@ -3035,13 +3035,16 @@ position: relative; /* Ajout de position relative */
 /* Styles pour la page blog*/
 
 
-body.blog-page {
-   background-color: #F8F9F6;
- }
- 
- 
+
+ /* Style pour la section "contenu du blog" */
+#contenu-blog {
+   background-color: #F8F9F6; /* Couleur de fond */
+}
+
+
+
  /* Styles pour la BANNIERE DU BLOG */
- 
+
  /* Styles pour le header avec l'image de fond */
  .page-header {
    position: relative;
