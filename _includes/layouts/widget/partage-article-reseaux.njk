@@ -1,10 +1,14 @@
 <!-- Boutons de partage -->
 <div class="share-buttons"> <!-- Début des boutons de partage -->
 
+
+
+
+
     <!-- Twitter -->
-    <a href="https://twitter.com/intent/tweet?text={{ post.title }}&url={{ post.url }}" target="_blank" class="btn btn-twitter">
-        <img src="{{ '/images/blog/x-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Twitter">
-    </a>
+   <a href="https://twitter.com/intent/tweet?text={{ post.title | urlencode }}&url={{ post.url | absoluteUrl }}" target="_blank" class="btn btn-twitter">
+    <img src="{{ '/images/blog/x-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Twitter">
+</a>
 
     <!-- Facebook -->
 <a href="https://www.facebook.com/sharer.php?u=https://netlify.app/{{ post.url }}" 
@@ -16,10 +20,10 @@
 </a>
 
 
-    <!-- LinkedIn -->
-    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ post.url }}&title={{ post.title }}" target="_blank" class="btn btn-linkedin">
-        <img src="{{ '/images/blog/linkedin-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur LinkedIn">
-    </a>
+   <!-- LinkedIn -->
+<a href="https://www.linkedin.com/shareArticle?mini=true&url={{ post.url | absoluteUrl | urlencode }}&title={{ post.title | urlencode }}" target="_blank" class="btn btn-linkedin">
+    <img src="{{ '/images/blog/linkedin-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur LinkedIn">
+</a>
 
     <!-- Instagram -->
     <a href="https://www.instagram.com/?url={{ post.url }}" target="_blank" class="btn btn-instagram">
