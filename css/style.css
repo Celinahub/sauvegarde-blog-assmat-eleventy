@@ -3297,10 +3297,12 @@ position: relative; /* Ajout de position relative */
 
  
 .container-article {
-   position: relative; /* Pour placer le contenu au-dessus du SVG */
-   z-index: 1; /* Assure que le contenu est au-dessus de l'image */
-   padding-top: 0rem; /* Ajustez la valeur pour donner un espace au-dessus du contenu si nécessaire */
+   position: relative;
+   z-index: 1;
+   padding-top: 0rem;
+   margin-inline: 20px; /* Ajoute la même marge à gauche et à droite */
 }
+
 
 /* Style pour le contenu du titre au dessus du visuel articles.md dans base.njk*/
 .poppins-regular-titre-article {
@@ -3315,6 +3317,7 @@ position: relative; /* Ajout de position relative */
 
 .meta-info {
    text-align: center; /* Centre le texte */
+   margin-top: 20px;
 }
 
 
