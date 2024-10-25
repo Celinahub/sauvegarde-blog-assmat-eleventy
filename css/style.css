@@ -3285,8 +3285,23 @@ position: relative; /* Ajout de position relative */
 }
 
 
+.poppins-regular-titre-section-article {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 1px;
+   font-style: normal;
+   color: transparent; /* Rend le texte complètement transparent */
+   margin-top: 50px;
+   margin-bottom: 0px;
+}
 
  
+.container-article {
+   position: relative; /* Pour placer le contenu au-dessus du SVG */
+   z-index: 1; /* Assure que le contenu est au-dessus de l'image */
+   padding-top: 0rem; /* Ajustez la valeur pour donner un espace au-dessus du contenu si nécessaire */
+}
+
 /* Style pour le contenu du titre au dessus du visuel articles.md dans base.njk*/
 .poppins-regular-titre-article {
    font-family: "Poppins", sans-serif;
@@ -3294,15 +3309,13 @@ position: relative; /* Ajout de position relative */
    font-size: 30px;
    font-style: normal;
    color: #103754;
-   margin-top: 50px;
-   margin-bottom: 50px;
+   margin-top: 20px;
+   margin-bottom: 20px;
 }
 
-
-
-
-
-
+.meta-info {
+   text-align: center; /* Centre le texte */
+}
 
 
 
@@ -3324,10 +3337,9 @@ position: relative; /* Ajout de position relative */
    font-size: 14px;
    font-style: normal;
    color: #103754;
-   margin-top: 80px;
+   margin-top: 20px;
    margin-bottom: 80px;
-   margin-left: 0px;
-   margin-right: 0px;
+   text-align: center; /* Centre le texte */
 }
 @media screen and (max-width: 768px) {
    .article-content {
