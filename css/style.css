@@ -3269,11 +3269,10 @@ position: relative; /* Ajout de position relative */
  
 
 
+ #contenu-contenu-article {
+   background-color: #F8F9F6; /* Couleur de fond */
+}
 
- /* Style pour le contenu des articles.md dans base.njk*/
- body.article-page {
-   background-color: #F8F9F6;
-  }
  
 /* Style pour le contenu du titre au dessus du visuel articles.md dans base.njk*/
 .poppins-regular-titre-article {
