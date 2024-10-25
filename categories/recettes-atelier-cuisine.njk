@@ -9,12 +9,8 @@ pagination:
   data: collections.recettes-atelier-cuisine
   size: 5  # Nombre d'articles par page
   alias: posts
+  bodyClass: "blog-page"
 ---
-
-
-<!-- Contenu principal de la page activite-enfant -->
-<body class="blog-page">
-
 
 
 <!-- Icône de défilement vers le haut utilisant une image SVG -->
@@ -25,9 +21,7 @@ pagination:
 
 {% include "layouts/widget/header.njk" %} <!-- Inclusion de l'en-tête -->
 
-<br>
-
-
+<section id="contenu-recettes-atelier-cuisine"> <!-- mt-5 ajoute de la marge supérieure -->
 <!-- Page content -->
 <div class="container"> <!-- Début du conteneur -->
     <div class="row"> <!-- Début de la ligne -->
@@ -112,7 +106,7 @@ pagination:
 
 </div> <!-- Fin de la ligne -->
 </div> <!-- Fin du conteneur -->
-
+</section> <!-- Fin de la section du contenu du blog -->
 
 {% include "layouts/widget/newsletter.njk" %} <!-- Inclusion de la newsletter -->
 
@@ -153,8 +147,6 @@ pagination:
         alert("Lien copié dans le presse-papier !");
     }
 </script>
-
-</body>
 
 
 
