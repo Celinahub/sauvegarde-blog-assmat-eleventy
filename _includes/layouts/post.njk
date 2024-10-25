@@ -7,6 +7,7 @@ bodyClass: "blog-posts-page"
 
 <section id="contenu-article">
 
+
 <article class="container my-4 visuel-content">
 
     <img src="{{ featuredImage | url }}" alt="{{ title }}" class="img-fluid mx-auto d-block">
@@ -60,8 +61,8 @@ bodyClass: "blog-posts-page"
 
 
 
-
-    <h1 class="poppins-regular-titre-article text-center">{{ title }}</h1>
+<h1 class="poppins-regular-titre-article text-center">Détails de l'Article</h1> <!-- Titre de la section -->
+    <h2 class="poppins-regular-titre-article text-center">{{ title }}</h2>
 
     <div class="article-content">
         {{ content | safe }}
