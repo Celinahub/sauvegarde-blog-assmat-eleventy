@@ -107,6 +107,7 @@ eleventyConfig.addFilter("seo", function(data) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("feed");
+  eleventyConfig.addPassthroughCopy("favicon.ico");
 
   // Ajouter des alias pour les layouts
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
