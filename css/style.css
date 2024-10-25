@@ -3248,6 +3248,8 @@ position: relative; /* Ajout de position relative */
 
  /* Styles pour les svg tétines */
  
+
+
  .bouton-tetine {
    width: 100px; /* Ajustez la largeur de l'icône selon vos besoins */
    height: 100px; /* Maintient le rapport hauteur-largeur */
@@ -3456,22 +3458,21 @@ position: relative; /* Ajout de position relative */
       border-radius: 50%; /* Pour garder la forme ronde */
       margin-top: 20px; /* Espace sur l'image */
       margin-bottom: 0px; /* Espace sous l'image */
-      
-     
-      
     }
-
 }
 
 
+/* Style pour la rubrique CATEGORIE */
+.category-item {
+   border-bottom: 5px dotted #bec9cd; /* Ligne horizontale pointillée */
+   padding-bottom: 8px; /* Espace entre le texte et la ligne */
+   margin-bottom: 8px; /* Espace entre les éléments */
+}
 
- /* Style pour la rubrique CATEGORIE */
- .dotted-line {
-   border-top: 5px dotted #103754; /* Ligne pointillée grise */
-   margin: 10px 0; /* Espacement vertical */
- }
- 
- 
+.category-item:last-child {
+   border-bottom: none; /* Supprime la ligne pour le dernier élément */
+}
+
  
  /* Styles pour le style de la pagination blog */
  

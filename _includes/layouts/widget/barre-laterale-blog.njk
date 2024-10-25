@@ -149,18 +149,18 @@
             ] %}
 
             {% for category in categories %}
-                <li>
-                    <a href="/categories/{{ category.slug }}/" class="category-link">{{ category.name }}</a>
-                    
+
+                 <li class="category-item">
+            <a href="/categories/{{ category.slug }}/" class="category-link">{{ category.name }}</a>
                 </li>
+
                 {% if not loop.last %}
                     
                 {% endif %}
             {% endfor %}
         </ul>
         
-<!-- Ligne horizontale après la liste -->
-<hr class="dotted-line">
+
 
 
 </div> <!-- Fin de card -->
