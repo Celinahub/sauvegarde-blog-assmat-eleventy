@@ -3115,7 +3115,12 @@ position: relative; /* Ajout de position relative */
    margin-bottom: 50px; /* Marge en bas du titre */
  }
  
- 
+ @media screen and (max-width: 768px) {
+   .fade-in-out-banniere {
+      font-size: 0.8em;
+    }
+   
+ }
 
 
 
