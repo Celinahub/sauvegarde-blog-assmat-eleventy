@@ -35,14 +35,14 @@ pagination:
                         <img class="card-img-top" src="{{ featuredPost.data.featuredImage | default('https://dummyimage.com/850x350/dee2e6/6c757d.jpg') }}" alt="{{ featuredPost.data.title | default('Image de l\'article') }}" />
                     </a>
 
+{% include "layouts/widget/partage-article-vedette-reseaux.njk" %} <!-- Inclusion du partage-article-vedette-reseaux -->
+
                     <div class="card-body text-center"> 
                         <span class="badge text-bg-secondary">{{ featuredPost.data.category | default('RECETTE') }}</span>
                         <div class="poppins-regular-blog-date">{{ featuredPost.date | date('dd MMMM yyyy') }}</div>
                         <h2 class="poppins-regular-titre-blog">
                             <a href="{{ featuredPost.url }}" style="text-decoration: none; color: inherit;">{{ featuredPost.data.title | default('Titre de l\'article en vedette') }}</a>
                         </h2>
-
-{% include "layouts/widget/partage-article-vedette-reseaux.njk" %} <!-- Inclusion du partage-article-vedette-reseaux -->
 
 
                         <div class="poppins-regular-blog">{{ featuredPost.content | safe | truncate(100, true) }}</div> <!-- Limité à 100 caractères avec "..." -->
@@ -67,14 +67,15 @@ pagination:
                                 <a href="{{ post.url }}">
                                     <img class="card-img-top" src="{{ post.data.featuredImage | default('https://dummyimage.com/700x350/dee2e6/6c757d.jpg') }}" alt="{{ post.data.title | default('Image de l\'article') }}" />
                                 </a>
+
+{% include "layouts/widget/partage-article-reseaux.njk" %} <!-- Inclusion du partage-article-reseaux -->
+
                                 <div class="card-body text-center"> <!-- Début du corps de la carte de l'article -->
                                     <span class="badge text-bg-secondary">{{ post.data.category | default('ACTIVITE') }}</span>
                                     <div class="poppins-regular-blog-date">{{ post.date | date('dd MMMM yyyy') }}</div>
                                     <h2 class="poppins-regular-titre-blog">
                                         <a href="{{ post.url }}" style="text-decoration: none; color: inherit;">{{ post.data.title | default('Titre de l\'article') }}</a>
                                     </h2>
-
-{% include "layouts/widget/partage-article-reseaux.njk" %} <!-- Inclusion du partage-article-reseaux -->
 
 
                                    <div class="poppins-regular-blog">{{ post.content | safe | truncate(100, true) }}</div> <!-- Limité à 100 caractères avec "..." -->
