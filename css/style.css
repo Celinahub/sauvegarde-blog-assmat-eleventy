@@ -3050,7 +3050,7 @@ position: relative; /* Ajout de position relative */
  /* Styles pour le header avec l'image de fond */
  .page-header {
    position: relative;
-   background-image: url('/images/blog/banniere-blog.jpg'); /* Remplacer par votre URL d'image */
+   background-image: url('/images/blog/banniere-blog-pc.jpg'); /* Remplacer par votre URL d'image */
    background-size: cover;
    background-position: center;
    margin-bottom: 0; /* Supprime la marge en bas de l'en-tête */
@@ -3058,6 +3058,13 @@ position: relative; /* Ajout de position relative */
    z-index: 1; /* Assurez-vous que l'en-tête est au-dessus de l'image */
  }
  
+/* Version mobile */
+@media (max-width: 768px) { /* Ajustez 768px si besoin */
+   .page-header {
+      background-image: url('/images/blog/banniere-blog-mobile.jpg'); /* Image spécifique pour le mobile */
+   }
+}
+
  .position-relative {
    position: relative;
  }
@@ -3117,7 +3124,7 @@ position: relative; /* Ajout de position relative */
  
  @media screen and (max-width: 768px) {
    .fade-in-out-banniere {
-      font-size: 0.8em;
+      font-size: 0.9em;
     }
    
  }
