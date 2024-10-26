@@ -11,15 +11,9 @@ bodyClass: "blog-posts-page"
 <article class="container-article my-4 visuel-content">
 
     <img src="{{ featuredImage | url }}" alt="{{ title }}" class="img-fluid mx-auto d-block">
-    
-    <div class="meta-info">
-     <p><strong>Date :</strong> {{ date | date("dd MMMM yyyy") }}</p>
-        <p><strong>Catégorie :</strong> {{ category }}</p>
-    </div>
 
 
-
-  <!-- Boutons de partage -->
+<!-- Boutons de partage -->
 <div class="share-buttons"> <!-- Début des boutons de partage -->
 
     <!-- Twitter -->
@@ -32,7 +26,7 @@ bodyClass: "blog-posts-page"
    target="_blank" 
    class="btn btn-facebook">
    <img src="{{ '/images/blog/social-facebook-bretigny.svg' | url }}" 
-        class="facebook-partage-reseaux" 
+        class="icone-partage-reseaux" 
         alt="Partager sur Facebook">
 </a>
 
@@ -62,12 +56,28 @@ bodyClass: "blog-posts-page"
 
 
 
+    
+    <div class="meta-info">
+     <p><strong>Date :</strong> {{ date | date("dd MMMM yyyy") }}</p>
+        <p><strong>Catégorie :</strong> {{ category }}</p>
+    </div>
+
+
     <h2 class="poppins-regular-titre-article text-center">{{ title }}</h2>
 
     <div class="article-content">
         {{ content | safe }}
     </div>
 </article>
+
+<!-- Bouton de retour à la fin de l'article -->
+  <div class="back-button">
+    <a href="javascript:history.back()" class="btn-back">
+      <img src="{{ '/images/blog/car-demi-tour-svgrepo-com.svg' | url }}" alt="Retour" class="back-icon">
+    
+    </a>
+  </div>
+
 
 </section> <!-- Fin de la section du contenu du l'article-->
 

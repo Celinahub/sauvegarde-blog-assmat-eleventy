@@ -3302,7 +3302,11 @@ position: relative; /* Ajout de position relative */
    padding-top: 0rem;
    margin-inline: 40px; /* Ajoute la même marge à gauche et à droite */
 }
-
+@media screen and (max-width: 768px) {
+   .container-article {
+      margin-inline: 20px; /* Ajoute la même marge à gauche et à droite */
+   }
+ }
 
 /* Style pour le contenu du titre au dessus du visuel articles.md dans base.njk*/
 .poppins-regular-titre-article {
@@ -3362,6 +3366,20 @@ position: relative; /* Ajout de position relative */
 .article-content h3 {
    font-size: 1.5rem; /* Style spécifique pour h3 dans article-content */
 }
+
+
+/* Style pour le bouton svg retour des articles.md dans post.njk*/
+.back-button {
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.back-icon {
+   width: 150px; /* Ajustez la taille de l'icône selon vos besoins */
+   height: 150px;
+}
+
 
 
 
@@ -3494,6 +3512,15 @@ position: relative; /* Ajout de position relative */
     }
 }
 
+.text-portrait {
+   margin-top: 80px; /* ou une valeur de votre choix */
+}
+@media (max-width: 768px) {
+   .text-portrait {
+      margin-top: 20px; /* ou une valeur de votre choix */
+   }
+ }
+
 
 /* Style pour la rubrique CATEGORIE */
 .category-item {
@@ -3507,8 +3534,6 @@ position: relative; /* Ajout de position relative */
 }
 
  
- /* Styles pour le style de la pagination blog */
- 
  .category-link {
    font-family: "Poppins", sans-serif;
    font-weight: 400;
@@ -3518,53 +3543,6 @@ position: relative; /* Ajout de position relative */
    text-decoration: none; /* Retire le soulignement des liens */
    display: block; /* Fait que les liens prennent toute la largeur pour un bon centrage */
    text-align: center; /* Centre le texte des liens */
- }
- 
- /* Réglage de la taille des SVG */
- .page-link-precedent img {
-   width: 50px;  /* Ajuste la largeur du SVG */
- 
-   background-color: transparent; /* Fond transparent */
-   border: none; /* Pas de contour */
- }
- 
- 
- /* Réglage de la taille des SVG */
- .page-link-suivant img {
-   width: 80px;  /* Ajuste la largeur du SVG */
-  
-   background-color: transparent; /* Fond transparent */
-   border: none; /* Pas de contour */
- }
- 
- /* Style des numéros de pagination */
- .page-item a.page-link {
-   background-color: #96D2CA; /* Couleur de fond par défaut pour les numéros de page */
-   border: none; /* Retire les contours par défaut */
-   padding: 0.75rem; /* Ajoute un padding pour agrandir la zone de clic */
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   color: #103754; /* Couleur du texte */
-   border-radius: 12px; /* Bordures arrondies */
- }
- 
- /* Style pour la page active */
- .page-item.active a.page-link {
-   background-color: #F79927; /* Couleur de fond pour la page active */
-   color: white; /* Couleur du texte pour la page active */
- }
- 
- /* Supprime l'effet hover pour les numéros de page */
- .page-item a.page-link:hover {
-   background-color: transparent; /* Pas de fond au survol */
-   color: inherit; /* Garde la couleur actuelle */
- }
- 
- /* Retirer tous les effets de hover pour les SVG */
- .page-item a.page-link svg {
-   background-color: transparent; /* Aucun fond au survol */
-   fill: currentColor; /* Pas de changement de couleur */
  }
  
  
@@ -3602,20 +3580,8 @@ position: relative; /* Ajout de position relative */
  
  /* Style pour la PAGINATION */
 
- .pagination-btn {
-   background: none;
-   border: none;
-   padding: 0;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-}
-
-.pagination-btn img {
-   width: 150px; /* Ajuster la taille ici */
-   height: 150px;
-}
-
+ 
+ /* Style pour l'alignement des icônes de la PAGINATION */
 .pagination-container {
    display: flex;
    justify-content: center;
@@ -3624,20 +3590,30 @@ position: relative; /* Ajout de position relative */
 }
 
 
-
-
-
-
-
-
-.text-portrait {
-   margin-top: 80px; /* ou une valeur de votre choix */
+.pagination-btn {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 8px; /* Espace entre le numéro de page et les icônes */
 }
-@media (max-width: 768px) {
-   .text-portrait {
-      margin-top: 20px; /* ou une valeur de votre choix */
-   }
- }
+
+.pagination-btn img {
+   width: 150px; /* Ajustez la taille selon vos besoins */
+   height: 150px;
+}
+
+.pagination-nav {
+   display: flex;
+   justify-content: center;
+   margin-top: 20px;
+}
+
+.pagination-nav ul {
+   display: flex;
+   gap: 20px; /* Espace entre les éléments de la liste */
+   list-style: none;
+   padding: 0;
+}
 
 
 
@@ -3678,14 +3654,6 @@ position: relative; /* Ajout de position relative */
  
 
  /* Style des icônes svg des liens des articles*/
-.facebook-partage-reseaux {
-   width: 30px; /* Taille de l'icône */
-   margin-right: 10px; /* Espacement entre l'icône et le texte */
-   vertical-align: middle; /* Alignement vertical */
-}
-
-
- /* Style des icônes svg des liens des articles*/
  .vedette-partage-reseaux {
    width: 40px; /* Taille de l'icône */
    margin-right: 10px; /* Espacement entre l'icône et le texte */
@@ -3694,22 +3662,16 @@ position: relative; /* Ajout de position relative */
 
 /* Style des icônes svg des liens des articles*/
 .icone-partage-reseaux {
-   width: 30px; /* Taille de l'icône */
+   width: 20px; /* Taille de l'icône */
    margin-right: 10px; /* Espacement entre l'icône et le texte */
    vertical-align: middle; /* Alignement vertical */
 }
 
-/* Style des icônes svg liens des articles*/
-.icone-partage-lien {
-   width: 45px; /* Taille de l'icône */
-   margin-right: 10px; /* Espacement entre l'icône et le texte */
-   position: relative; /* Permet de déplacer l'icône */
-   top: -7px; /* Ajuste la position vers le haut */
-}
+
 
 /* Style des icônes svg liens des articles page blog.njk*/
 .icone-partage-lien {
-   width: 35px; /* Taille de l'icône */
+   width: 25px; /* Taille de l'icône */
    margin-right: 10px; /* Espacement entre l'icône et le texte */
    position: relative; /* Permet de déplacer l'icône */
    top: 0px; /* Ajuste la position vers le haut */
@@ -3718,7 +3680,7 @@ position: relative; /* Ajout de position relative */
 .share-buttons {
    display: flex; /* Utilise Flexbox pour aligner les éléments */
    justify-content: center; /* Centre les icônes horizontalement */
-   gap: -5px; /* Espace entre chaque icône */
+   gap: 0px; /* Espace entre chaque icône */
    flex-wrap: wrap; /* Optionnel : permet de passer sur une nouvelle ligne si l'espace est limité */
    align-items: center; /* Aligne verticalement les icônes */
 }
@@ -3726,17 +3688,15 @@ position: relative; /* Ajout de position relative */
  
 @media (max-width: 768px) {
    .vedette-partage-reseaux {
-      width: 20px; /* Taille de l'icône */
+      width: 10px; /* Taille de l'icône */
    }
-   .facebook-partage-reseaux {
-      width: 20px; /* Taille de l'icône */
-   }
+   
     /* Style des icônes svg des liens pied de page*/
    .icone-partage-reseaux {
-      width: 20px; /* Taille de l'icône */
+      width: 15px; /* Taille de l'icône */
    }
    .icone-partage-lien {
-      width: 30px; /* Taille de l'icône */
+      width: 20px; /* Taille de l'icône */
       top: 0px; /* Ajuste la position vers le haut */
    }
  }
