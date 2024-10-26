@@ -3312,7 +3312,7 @@ position: relative; /* Ajout de position relative */
 .poppins-regular-titre-article {
    font-family: "Poppins", sans-serif;
    font-weight: 400;
-   font-size: 30px;
+   font-size: 35px;
    font-style: normal;
    color: #103754;
    margin-top: 20px;
@@ -3326,7 +3326,7 @@ position: relative; /* Ajout de position relative */
 
 
 
- /* Style pour le contenu texte des articles.md dans post.njk*/
+ /* Style pour le titre categorie - date des articles.md dans post.njk*/
  .visuel-content {
    font-family: "Poppins", sans-serif;
    font-weight: 400;
