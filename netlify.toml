@@ -21,3 +21,14 @@
   from = "/*"                      # Redirection pour toutes les pages non trouvées
   to = "/404.html"                 # Page 404 personnalisée
   status = 404                     # Code de statut HTTP
+
+# Configuration des en-têtes HTTP
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.(jpg|jpeg|png|gif|svg|webp)"
+  [headers.values]
+    Cache-Control = "max-age=31536000, immutable"
