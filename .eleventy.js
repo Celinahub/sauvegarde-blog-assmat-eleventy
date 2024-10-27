@@ -3,6 +3,8 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { fr } = require("date-fns/locale");
 const Image = require("@11ty/eleventy-img");
+const htmlMinifier = require("html-minifier-terser"); // Ajoutez ici le plugin de minification
+
 
 // Fonction pour gérer le shortcode d'image
 async function imageShortcode(src, alt = "", sizes = "100vw") {
@@ -16,6 +18,10 @@ async function imageShortcode(src, alt = "", sizes = "100vw") {
     formats: ["webp", "jpeg"],
     outputDir: "./_site/images/",
     urlPath: "/images/",
+    cacheOptions: { // Ajout du cache
+      duration: "1d", // Garde les images en cache pendant 1 jour
+      directory: ".cache", // Répertoire de cache
+    }
   });
 
   let imageAttributes = {
@@ -25,16 +31,28 @@ async function imageShortcode(src, alt = "", sizes = "100vw") {
     decoding: "async",
   };
 
- // Générer les images avec des formats adaptés et du HTML optimisé
- return Image.generateHTML(metadata, imageAttributes);
+  return Image.generateHTML(metadata, imageAttributes);
 }
+
 
 module.exports = function(eleventyConfig) {
   // Ajouter le plugin eleventy-navigation
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(pluginRss);
+// Ajouter le plugin de minification HTML
+eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+  if (outputPath && outputPath.endsWith(".html")) {
+    return htmlMinifier.minify(content, {
+      removeComments: true,
+      collapseWhitespace: true,
+      minifyCSS: true,
+      minifyJS: true,
+    });
+  }
+  return content;
+});
 
-  
+
   // Ajouter le shortcode d'image
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
 
@@ -48,37 +66,38 @@ module.exports = function(eleventyConfig) {
     { name: "La collectivité grâce au RPE", slug: "collectivite-rpe", tag: "rpe" }
   ];
 
-  // Collection globale pour tous les articles
-eleventyConfig.addCollection("posts", function(collectionApi) {
-  const posts = collectionApi.getFilteredByGlob("posts/**/*.md").reverse();
+// Variables de cache pour stocker les résultats
+let cachedPosts = null;
+let cachedCategories = {};
 
-  // Log des articles et de leurs dates
-  posts.forEach(post => {
-    console.log(`Article: ${post.data.title}, Date: ${post.date || 'pas de date'}`);
+
+  // Fonction pour récupérer les articles avec mise en cache
+  function getCachedPosts(collectionApi) {
+    if (!cachedPosts) {
+      cachedPosts = collectionApi.getFilteredByGlob("posts/**/*.md").reverse();
+      console.log("Posts cache initialized");
+    }
+    return cachedPosts;
+  }
+
+  // Ajout de la collection globale "posts" avec cache
+  eleventyConfig.addCollection("posts", function(collectionApi) {
+    return getCachedPosts(collectionApi);
   });
 
-  return posts; // Retourne la collection après le log
-});
+  // Ajouter des collections spécifiques pour chaque catégorie avec cache
+  categories.forEach(category => {
+    eleventyConfig.addCollection(category.slug, function(collectionApi) {
+      if (!cachedCategories[category.slug]) {
+        cachedCategories[category.slug] = collectionApi.getFilteredByGlob(`posts/${category.slug}/*.md`)
+          .filter(post => post.data.category === category.name || (post.data.tags && post.data.tags.includes(category.tag)))
+          .sort((a, b) => new Date(b.date) - new Date(a.date)); // Tri par date décroissante
 
-// Créer des collections spécifiques pour chaque catégorie
-categories.forEach(category => {
-  eleventyConfig.addCollection(category.slug, function(collectionApi) {
-    const posts = collectionApi.getFilteredByGlob(`posts/${category.slug}/*.md`)
-      .filter(post => post.data.category === category.name || (post.data.tags && post.data.tags.includes(category.tag)));
-
-    // Log des articles et de leurs dates pour chaque catégorie
-    posts.forEach(post => {
-      console.log(`Article: ${post.data.title}, Date: ${post.date || 'pas de date'}`);
-    });
-
-    return posts.sort((a, b) => {
-      let dateA = new Date(a.date);
-      let dateB = new Date(b.date);
-      return dateB - dateA; // Tri par date décroissante
+        console.log(`Cache initialized for category: ${category.name}`);
+      }
+      return cachedCategories[category.slug];
     });
   });
-});
-
   
 
   // Ajouter un filtre personnalisé pour les dates
