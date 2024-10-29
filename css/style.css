@@ -3713,5 +3713,142 @@ position: relative; /* Ajout de position relative */
    }
  }
  
+
+
+
+
+ /* Style pour la 404 - Page Non Trouvée dans 404.md*/ */
  
+ body.introuvable-page {
+   background-color: #96D2CA;
+   flex-grow: 1; /* Occupe toute la hauteur disponible */
+   min-height: 100vh; /* Prend au moins la hauteur de la vue */
+  }
+
+  #page-non-trouvee {
+   background-color: #F8F9F6; /* Couleur de fond */
+   flex-grow: 1; /* Occupe toute la hauteur disponible */
+   min-height: 100vh; /* Prend au moins la hauteur de la vue */
+   display: flex;
+   flex-direction: column;
+   justify-content: center; /* Centrer le contenu verticalement si nécessaire */
+   position: relative;
+   margin: 0; /* Supprime les marges externes */
+   padding: 0; /* Supprime les espaces internes */
+   overflow: hidden; /* Évite les débordements */
+}
+
+
+/* Style pour le contenu du titre 404 - Page Non Trouvée dans 404.md*/
+.poppins-regular-titre-page-non-trouvee {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 35px;
+   font-style: normal;
+   color: #103754;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+/* Styles spécifiques pour le titre de l'article page blog.njk */
+.poppins-regular-texte-page-non-trouvee {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+ }
+
+/* Styles pour le lien de 404 - Page Non Trouvée dans 404.md*/
+.styled-link-home {
+   font-family: "Poppins", sans-serif;
+   font-weight: bold;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+   text-decoration: none;
+}
+.styled-link-home:hover {
+   text-decoration: underline;
+}
+/* Media query pour écrans plus petits */
+@media (max-width: 768px) {
+   .styled-link-home  {
+      font-size: 14px;
+   }
+ }
+
+
+ .voiture-stop {
+   width: 60%;
+   max-width: 300px;
+   height: auto;
+   margin-top: 40px; /* Ajoute de l'espace au-dessus */
+   margin-bottom: 140px; /* Ajuste l'espace pour les écrans moyens */
+}
+
+@media (max-width: 768px) {
+   .voiture-stop {
+       width: 80%;
+       margin-top: 25px; /* Ajuste l'espace pour les écrans moyens */
+       margin-bottom: 100px; /* Ajuste l'espace pour les écrans moyens */
+   }
+}
+
+@media (max-width: 480px) {
+   .voiture-stop {
+       width: 100%;
+       margin-top: 20px; /* Ajuste l'espace pour les petits écrans */
+       margin-bottom: 100px; /* Ajuste l'espace pour les écrans moyens */
+   }
+}
+
+
+/* Pour le SVG en haut */
+.ciel-nuages-decor {
+   display: block;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+
+
+/* Pour les SVG en bas */
+.sol-nuages-decor {
+   width: 100%; /* Ajustez la largeur à 100% pour occuper toute la largeur */
+   height: auto; /* Conserve les proportions */
+ }
+ 
+ 
+ /* Par défaut, afficher le SVG pour les grands écrans (PC) */
+ .pc-svg {
+   display: block;
+ }
+ 
+ .mobile-svg {
+   display: none;
+ }
+ 
+ /* Pour les petits écrans, on masque le SVG pour PC et on affiche celui pour mobile */
+ @media only screen and (max-width: 767px) {
+   .pc-svg {
+       display: none;
+   }
+   
+   .mobile-svg {
+       display: block;
+   }
+ }
+ 
+/* Pour les SVG en bas */
+.oups-container {
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100%;
+   text-align: center;
+}
+
  
