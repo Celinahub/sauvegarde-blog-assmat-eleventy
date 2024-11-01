@@ -6,7 +6,7 @@ tags:
   - enfants
   - exemple
   - activites
-url: "https://chubert91assmat.netlify.app/posts/activite-4"
+url: "https://test-site-statique-blog-eleventy.netlify.app/posts/activite-4"
 image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
 date: 2019-10-09
 category: "ACTIVITÉS POUR ENFANT"

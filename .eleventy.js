@@ -3,8 +3,7 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { fr } = require("date-fns/locale");
 const Image = require("@11ty/eleventy-img");
-const htmlMinifier = require("html-minifier-terser"); // Ajoutez ici le plugin de minification
-
+const htmlMinifier = require("html-minifier-terser"); // Plugin de minification HTML
 
 // Fonction pour gérer le shortcode d'image
 async function imageShortcode(src, alt = "", sizes = "100vw") {
@@ -12,8 +11,9 @@ async function imageShortcode(src, alt = "", sizes = "100vw") {
     console.warn(`Missing image source for: ${alt}`);
     return '';
   }
-// Définir directement l'image source
-const imageSrc = src.startsWith("/") ? `.${src}` : `./images/${src}`;
+
+  // Définir directement l'image source
+  const imageSrc = src.startsWith("/") ? `.${src}` : `./images/${src}`;
 
   try {
     let metadata = await Image(imageSrc, {
@@ -44,51 +44,33 @@ const imageSrc = src.startsWith("/") ? `.${src}` : `./images/${src}`;
 }
 
 module.exports = function(eleventyConfig) {
+  // Ajouter le filtre absoluteUrl
+  eleventyConfig.addFilter("absoluteUrl", function(url) {
+    const baseUrl = "https://test-site-statique-blog-eleventy.netlify.app/"; // Remplacez par votre URL de base
+    return new URL(url, baseUrl).toString();
+  });
+
   // Ajouter le plugin eleventy-navigation
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(pluginRss);
 
-// Ajouter le plugin de minification HTML
-eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
-  if (outputPath && outputPath.endsWith(".html")) {
-    return htmlMinifier.minify(content, {
-      removeComments: true,
-      collapseWhitespace: true,
-      minifyCSS: true,
-      minifyJS: true,
-    });
-  }
-
-  // Ajouter pour simplifier et d'optimiser l'insertion d'images pages presentation et projet-accueil
-  eleventyConfig.addNunjucksAsyncShortcode("imageShortcode", async function(src, alt, sizes = "(min-width: 1024px) 100vw, 50vw") {
-    let metadata = await Image(src, {
-      widths: [300, 600, 900, 1200],
-      formats: ["webp", "jpeg"],
-      outputDir: "./_site/images", // Dossier de sortie
-      urlPath: "/images/",         // Chemin d'URL
-    });
-
-    let imageAttributes = {
-      alt,
-      sizes,
-      loading: "lazy",
-      decoding: "async",
-    };
-
-    return Image.generateHTML(metadata, imageAttributes);
+  // Ajouter le plugin de minification HTML
+  eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
+    if (outputPath && outputPath.endsWith(".html")) {
+      return htmlMinifier.minify(content, {
+        removeComments: true,
+        collapseWhitespace: true,
+        minifyCSS: true,
+        minifyJS: true,
+      });
+    }
+    return content; // Veillez à retourner le contenu
   });
-
-
-  return content;
-});
-
 
   // Ajouter le shortcode d'image
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
   eleventyConfig.addLiquidShortcode("image", imageShortcode);
   eleventyConfig.addJavaScriptFunction("image", imageShortcode);
-
- 
 
   // Configuration des collections
   const categories = [
@@ -100,10 +82,9 @@ eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
     { name: "La collectivité grâce au RPE", slug: "collectivite-rpe", tag: "rpe" }
   ];
 
-// Variables de cache pour stocker les résultats
-let cachedPosts = null;
-let cachedCategories = {};
-
+  // Variables de cache pour stocker les résultats
+  let cachedPosts = null;
+  let cachedCategories = {};
 
   // Fonction pour récupérer les articles avec mise en cache
   function getCachedPosts(collectionApi) {
@@ -132,28 +113,26 @@ let cachedCategories = {};
       return cachedCategories[category.slug];
     });
   });
-  
 
   // Ajouter un filtre personnalisé pour les dates
   eleventyConfig.addFilter("date", (dateObj, formatStr = "dd MMMM yyyy") => {
     return format(dateObj, formatStr, { locale: fr });
   });
+
   eleventyConfig.addFilter("dateToRfc3339", (date) => {
     return format(date, "yyyy-MM-dd'T'HH:mm:ssxxx"); // Format RFC 3339
   });
-  
 
-
-// Ajouter un filtre pour récupérer les balises SEO
-eleventyConfig.addFilter("seo", function(data) {
-  return {
-    title: data.title || "Titre par défaut",
-    description: data.description || "Description par défaut",
-    image: data.image || "/images/default-image.jpg",
-    url: data.url || "https://chubert91assmat.netlify.app",
-    date: data.date ? format(new Date(data.date), 'yyyy-MM-dd', { locale: fr }) : "",
-  };
-});
+  // Ajouter un filtre pour récupérer les balises SEO
+  eleventyConfig.addFilter("seo", function(data) {
+    return {
+      title: data.title || "Titre par défaut",
+      description: data.description || "Description par défaut",
+      image: data.image || "/images/default-image.jpg",
+      url: data.url || "https://test-site-statique-blog-eleventy.netlify.app/",
+      date: data.date ? format(new Date(data.date), 'yyyy-MM-dd', { locale: fr }) : "",
+    };
+  });
 
   // Copier les fichiers nécessaires vers le dossier de sortie `_site`
   eleventyConfig.addPassthroughCopy("images");

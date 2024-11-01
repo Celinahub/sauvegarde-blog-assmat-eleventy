@@ -6,7 +6,7 @@ tags:
   - enfants
   - exemple
   - actualites
-url: "https://chubert91assmat.netlify.app/posts/Actu enfance 4"
+url: "https://test-site-statique-blog-eleventy.netlify.app/posts/actu-enfance-4"
 image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
 date: 2021-12-11
 category: "ACTU PETITE-ENFANCE"

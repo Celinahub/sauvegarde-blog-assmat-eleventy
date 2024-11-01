@@ -6,7 +6,7 @@ tags:
   - enfants
   - exemple
   - recettes
-url: "https://chubert91assmat.netlify.app/posts/recette-5"
+url: "https://test-site-statique-blog-eleventy.netlify.app/posts/recette-5"
 image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
 date: 2023-10-09
 category: "RECETTES / ATELIER CUISINE"

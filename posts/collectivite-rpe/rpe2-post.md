@@ -6,7 +6,7 @@ tags:
   - enfants
   - exemple
   - rpe
-url: "https://chubert91assmat.netlify.app/posts/RPE 2"
+url: "https://test-site-statique-blog-eleventy.netlify.app/posts/rpe-2"
 image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
 date: 2023-10-06
 category: "LA COLLECTIVITE GRÂCE AU RPE"

@@ -6,7 +6,7 @@ tags:
   - enfants
   - local
   - activites
-url: "https://chubert91assmat.netlify.app/posts/locale-2"
+url: "https://test-site-statique-blog-eleventy.netlify.app/posts/locale-2"
 image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
 date: 2019-10-08
 category: "ACTUALITES LOCALES"
