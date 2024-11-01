@@ -1,8 +1,8 @@
 ---
 layout: layouts/base.njk
-title: "actu-petite-enfance"
-description: "Les actualités de la petite enfance sur Brétigny-sur-Orge."
-tags: "actualités petite enfance, brétigny-sur-orge"
+title: "Administratif pour Assistantes Maternelles et parents à Brétigny-sur-Orge"
+description: "Retrouvez des informations sur l'évolution de la convention collective, les aides CMG et autres aspects administratifs pour les parents et assistantes maternelles à Brétigny-sur-Orge."
+tags: "administratif petite enfance, convention collective assistante maternelle, CMG, Brétigny-sur-Orge, nounou"
 url: "https://chubert91assmat.netlify.app/categories/actu-petite-enfance"
 image: "https://monsite.com/images/actu-petite-enfance.jpg"
 pagination:
@@ -15,7 +15,7 @@ pagination:
 
 <!-- Icône de défilement vers le haut utilisant une image SVG -->
 <a href="#first-article" class="scroll-to-top">
-    <img class="rocket-icon" src="{{ '/images/rocket-svgrepo-com.svg' | url }}" alt="Icône fusée navigation vers le haut" />
+    <img class="rocket-icon" src="{{ '/images/rocket-svgrepo-com.svg' | url }}" alt="Icône de fusée pour retourner en haut de la page sur administratif pour assistantes maternelles et parents à Brétigny-sur-Orge" />
 </a>
 
 
@@ -34,7 +34,9 @@ pagination:
                 {% if posts | length > 0 %}
                     {% set featuredPost = posts[0] %}
                     <a href="{{ featuredPost.url }}">
-                        <img class="card-img-top" src="{{ featuredPost.data.featuredImage | default('https://dummyimage.com/850x350/dee2e6/6c757d.jpg') }}" alt="{{ featuredPost.data.title | default('Image de l\'article') }}" />
+
+                       {% image featuredPost.data.featuredImage | default('https://dummyimage.com/850x350/dee2e6/6c757d.jpg'), featuredPost.data.title | default('Image de l\'article'), '(min-width: 1024px) 100vw, 50vw' %} 
+
                     </a>
 
                      {% include "layouts/widget/partage-article-vedette-reseaux.njk" %} <!-- Inclusion du partage-article-vedette-reseaux -->
@@ -48,8 +50,8 @@ pagination:
 
 
                         <div class="poppins-regular-blog">{{ featuredPost.content | safe | truncate(100, true) }}</div> <!-- Limité à 100 caractères avec "..." -->
-                        <a href="{{ featuredPost.url }}" class="btn btn-custom">
-                            <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Envoyer">
+                       <a href="{{ featuredPost.url }}" class="btn btn-custom">
+    <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Lire l'article sur les aspects administratifs et les aides CMG pour les assistantes maternelles à Brétigny-sur-Orge" />
                         </a>
                     </div> <!-- Fin de card-body text-center -->
 
@@ -67,7 +69,9 @@ pagination:
                         <div class="col-lg-6 mb-4"> <!-- Début de la colonne pour chaque autre article -->
                             <div class="card"> <!-- Début de la carte de l'article -->
                                 <a href="{{ post.url }}">
-                                    <img class="card-img-top" src="{{ post.data.featuredImage | default('https://dummyimage.com/700x350/dee2e6/6c757d.jpg') }}" alt="{{ post.data.title | default('Image de l\'article') }}" />
+
+                                   {% image post.data.featuredImage | default('https://dummyimage.com/700x350/dee2e6/6c757d.jpg'), post.data.title | default('Image de l\'article'), '(min-width: 1024px) 100vw, 50vw' %} 
+
                                 </a>
 
 {% include "layouts/widget/partage-article-reseaux.njk" %} <!-- Inclusion du partage-article-reseaux -->
@@ -80,8 +84,8 @@ pagination:
                                     </h2>
 
                                    <div class="poppins-regular-blog">{{ post.content | safe | truncate(100, true) }}</div> <!-- Limité à 100 caractères avec "..." -->
-                                    <a href="{{ post.url }}" class="btn btn-custom">
-                                        <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Lire l'article">
+                                    <a href="{{ featuredPost.url }}" class="btn btn-custom">
+                                <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Lire l'article sur les aspects administratifs et les aides CMG pour les assistantes maternelles à Brétigny-sur-Orge" />
                                     </a>
 
 </div> <!-- Fin de card-body text-center -->

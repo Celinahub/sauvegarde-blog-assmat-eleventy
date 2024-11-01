@@ -20,13 +20,22 @@ pagination:
 </ul>
 
 {% if pagination.pages > 1 %}
-  <nav>
+  <nav class="pagination-nav">
     <ul>
       {% for page in pagination.pages %}
         <li>
-          <a href="{{ page.url }}">{{ page.pageNumber }}</a>
+          <a href="{{ page.url }}" class="pagination-btn pagination-link">
+            {% if page.pageNumber > 1 %}
+              <img src="{{ '/images/car-demi-tour-svgrepo-com.svg' | url }}" alt="Previous" class="pagination-icon">
+            {% endif %}
+            {{ page.pageNumber }}
+            {% if page.pageNumber < pagination.pages %}
+              <img src="{{ '/images/car-avance-svgrepo-com.svg' | url }}" alt="Next" class="pagination-icon">
+            {% endif %}
+          </a>
         </li>
       {% endfor %}
     </ul>
   </nav>
 {% endif %}
+

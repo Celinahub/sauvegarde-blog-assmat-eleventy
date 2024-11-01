@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: "Assistante maternelle agréée chez Celine Hubert - nounou à Brétigny-sur-orge"
-description: "Assistante maternelle agréée, Brétigny-sur-orge, mode de garde, accueil familial, accueil individuel, Celine Hubert."
+title: "Céline Hubert - Assistante Maternelle Agréée à Brétigny-sur-Orge"
+description: "Découvrez l'accueil chaleureux et les services professionnels de Céline Hubert, assistante maternelle agréée à Brétigny-sur-Orge. Accueil individuel, activités ludiques et soutien administratif pour les parents."
 url: "https://test-site-statique-blog-eleventy.app"
 image: "presentation-assistante-maternelle-agreee.jpg"
 eleventyNavigation:
@@ -69,7 +69,7 @@ bodyClass: "bg-white presentation"
 
 <!-- Icône de défilement vers le haut utilisant une image SVG -->
 <a href="#portrait" class="scroll-to-top">
-    <img class="rocket-icon" src="../images/rocket-svgrepo-com.svg" alt="Icône fusée navigation vers le haut" />
+    <img class="rocket-icon" src="../images/rocket-svgrepo-com.svg" alt="Icône de fusée pour remonter en haut de la page de Céline Hubert, assistante maternelle à Brétigny-sur-Orge" />
 </a>
 
 
@@ -82,17 +82,15 @@ bodyClass: "bg-white presentation"
             <!-- Ajout d'un titre pour la section -->
             <h1 class="heading-presentation">{{ title | default("Présentation Assistante Maternelle Agréée à Brétigny-sur-Orge") }}</h1>
             
-            <img src="{{ '/images/presentation/arriere-plan-nuages-bleus-bretigny-assistante-maternelle.svg' | url }}" class="fond-curvy" alt="Arrière-plan en nuages bleus dessinés pour la présentation d'une assistante maternelle agréée à Brétigny-sur-Orge">
+           <img src="{{ '/images/presentation/arriere-plan-nuages-bleus-bretigny-assistante-maternelle.svg' | url }}" class="fond-curvy" alt="Illustration de nuages bleus représentant l'accueil chaleureux d'une assistante maternelle à Brétigny-sur-Orge">
         </div>
         <div class="bordered-content-presentation-image">
             <div class="presentation-image mx-auto position-relative mb-4">
                
-                <picture>
-                    <!-- Balise source pour WebP -->
-                    <source srcset="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.webp' | url }}" type="image/webp">
-                    <!-- Balise img pour les navigateurs ne prenant pas en charge WebP -->
-                    <img src="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg' | url }}" alt="Céline Hubert, assistante maternelle à Brétigny-sur-Orge" class="rounded-circle img-fluid">
-                </picture>
+ 
+{% image "/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg", "Céline Hubert, assistante maternelle à Brétigny-sur-Orge", "(min-width: 1024px) 100vw, 50vw", "rounded-circle img-fluid" %}
+
+
 
                 <a href="{{ '/contact/' | url }}" class="position-icon-b">
                     <!-- Contenu de l'icône ou bouton -->
@@ -152,13 +150,8 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-                <picture>
-                    <!-- Format WebP pour les navigateurs récents -->
-                    <source srcset="{{ '/images/presentation/webp/reconversion.webp' | url }}" type="image/webp">
-                    <!-- Format JPG pour les navigateurs anciens -->
-                    <source srcset="{{ '/images/presentation/reconversion.jpg' | url }}" type="image/jpeg">
-                    <img src="{{ '/images/presentation/reconversion.jpg' | url }}" alt="Reconversion" loading="lazy">
-                </picture>
+               {% image "/images/presentation/reconversion.jpg", "Reconversion", "(min-width: 1024px) 100vw, 50vw" %}
+
 
                     
                             <div class="image-overlay"></div>
@@ -191,14 +184,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-                <picture>
-                    <!-- Format WebP pour les navigateurs récents -->
-                    <source srcset="{{ '/images/presentation/webp/anniversaire-accueilli.webp' | url }}" type="image/webp">
-                    <!-- Format JPG pour les navigateurs anciens -->
-                    <source srcset="{{ '/images/presentation/anniversaire-accueilli.jpg' | url }}" type="image/jpeg">
-                    <img src="{{ '/images/presentation/anniversaire-accueilli.jpg' | url }}" alt="Anniversaire accueilli" loading="lazy">
-                </picture>
-
+ {% image "/images/presentation/anniversaire-accueilli.jpg", "Anniversaire accueilli", "(min-width: 1024px) 100vw, 50vw" %}
             
                             <div class="image-overlay"></div>
                         </div>
@@ -231,14 +217,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-                <picture>
-                    <!-- Format WebP pour les navigateurs récents -->
-                    <source srcset="{{ '/images/presentation/webp/agrement-limite.webp' | url }}" type="image/webp">
-                    <!-- Format JPG pour les navigateurs anciens -->
-                    <source srcset="{{ '/images/presentation/agrement-limite.jpg' | url }}" type="image/jpeg">
-                    <img src="{{ '/images/presentation/agrement-limite.jpg' | url }}" alt="Agrement Limite" loading="lazy">
-                </picture>
-
+{% image "/images/presentation/agrement-limite.jpg", "Agrement Limite", "(min-width: 1024px) 100vw, 50vw" %}
 
                             <div class="image-overlay"></div>
                         </div>
@@ -270,13 +249,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-                <picture>
-                    <!-- Format WebP pour les navigateurs récents -->
-                    <source srcset="{{ '/images/presentation/webp/parc-bretigny.webp' | url }}" type="image/webp">
-                    <!-- Format JPG pour les navigateurs anciens -->
-                    <source srcset="{{ '/images/presentation/parc-bretigny.jpg' | url }}" type="image/jpeg">
-                    <img src="{{ '/images/presentation/parc-bretigny.jpg' | url }}" alt="Parc Bretigny" loading="lazy">
-                </picture>
+{% image "/images/presentation/parc-bretigny.jpg", "Parc Bretigny", "(min-width: 1024px) 100vw, 50vw" %}
 
                             <div class="image-overlay"></div>
                         </div>
@@ -308,13 +281,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-                <picture>
-                    <!-- Format WebP pour les navigateurs récents -->
-                    <source srcset="{{ '/images/presentation/webp/communication-directe.webp' | url }}" type="image/webp">
-                    <!-- Format JPG pour les navigateurs anciens -->
-                    <source srcset="{{ '/images/presentation/communication-directe.jpg' | url }}" type="image/jpeg">
-                    <img src="{{ '/images/presentation/communication-directe.jpg' | url }}" alt="Communication Directe" loading="lazy">
-                </picture>
+{% image "/images/presentation/communication-directe.jpg", "Communication Directe", "(min-width: 1024px) 100vw, 50vw" %}
 
                             <div class="image-overlay"></div>
                         </div>
@@ -346,13 +313,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-                <picture>
-                    <!-- Format WebP pour les navigateurs récents -->
-                    <source srcset="{{ '/images/presentation/webp/rpe-bretigny.webp' | url }}" type="image/webp">
-                    <!-- Format JPG pour les navigateurs anciens -->
-                    <source srcset="{{ '/images/presentation/rpe-bretigny.jpg' | url }}" type="image/jpeg">
-                    <img src="{{ '/images/presentation/rpe-bretigny.jpg' | url }}" alt="RPE Bretigny" loading="lazy">
-                </picture>
+{% image "/images/presentation/rpe-bretigny.jpg", "RPE Bretigny", "(min-width: 1024px) 100vw, 50vw" %}
 
                             <div class="image-overlay"></div>
                         </div>
@@ -382,13 +343,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-                <picture>
-                    <!-- Format WebP pour les navigateurs récents -->
-                    <source srcset="{{ '/images/presentation/webp/syndicat-unsa-pro-assmat.webp' | url }}" type="image/webp">
-                    <!-- Format JPG pour les navigateurs anciens -->
-                    <source srcset="{{ '/images/presentation/syndicat-unsa-pro-assmat.jpg' | url }}" type="image/jpeg">
-                    <img src="{{ '/images/presentation/syndicat-unsa-pro-assmat.jpg' | url }}" alt="UNSA Pro Assmat" loading="lazy">
-                </picture>
+{% image "/images/presentation/syndicat-unsa-pro-assmat.jpg", "UNSA Pro Assmat", "(min-width: 1024px) 100vw, 50vw" %}
 
                             <div class="image-overlay"></div>
                         </div>
@@ -419,13 +374,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-                <picture>
-                    <!-- Format WebP pour les navigateurs récents -->
-                    <source srcset="{{ '/images/presentation/webp/tarif-assmat.webp' | url }}" type="image/webp">
-                    <!-- Format JPG pour les navigateurs anciens -->
-                    <source srcset="{{ '/images/presentation/tarif-assmat.jpg' | url }}" type="image/jpeg">
-                    <img src="{{ '/images/presentation/tarif-assmat.jpg' | url }}" alt="CAF" loading="lazy">
-                </picture>
+{% image "/images/presentation/tarif-assmat.jpg", "CAF aides", "(min-width: 1024px) 100vw, 50vw" %}
 
                             <div class="image-overlay"></div>
                         </div>
@@ -476,7 +425,7 @@ bodyClass: "bg-white presentation"
             <div class="col-12">
                 <h2 class="titre-rencontrons-nous">
                     <span>
-                        <img src="{{ '/images/presentation/validation-rencontre-assistante-bretigny.svg' | url }}" class="checked" alt="Icône de validation pour la prise de rendez-vous avec Céline, assistante maternelle à Brétigny-sur-Orge">
+                       <img src="{{ '/images/presentation/validation-rencontre-assistante-bretigny.svg' | url }}" class="checked" alt="Icône de validation pour confirmer un rendez-vous avec Céline, assistante maternelle à Brétigny-sur-Orge">
                     </span>
                     <strong>RENCONTRONS - NOUS</strong>
                 </h2>   
@@ -501,7 +450,7 @@ bodyClass: "bg-white presentation"
                     <p class="poppins-regular-rdv">
                         C'est avec plaisir que j'échangerai avec vous.
                         <a href="{{ '/contact/' | url }}">
-                            <img src="{{ '/images/presentation/enveloppe-contact-direct-assistante-maternelle-bretigny.svg' | url }}" class="checked-localisation" alt="Icône d'enveloppe pour le contact direct avec Céline, assistante maternelle à Brétigny-sur-Orge">
+                            <img src="{{ '/images/presentation/enveloppe-contact-direct-assistante-maternelle-bretigny.svg' | url }}" class="checked-localisation" alt="Icône d'enveloppe pour contacter Céline Hubert, assistante maternelle à Brétigny-sur-Orge">
                         </a>
                     </p>
                 </div>

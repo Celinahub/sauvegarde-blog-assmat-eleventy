@@ -1,0 +1,11 @@
+# Indique que ce fichier est la racine des configurations EditorConfig
+root = true
+
+# Règles de formatage pour tous les fichiers du projet
+[*]
+indent_style = space       # Utilise des espaces pour l'indentation
+indent_size = 2            # Définit l'indentation à 2 espaces
+end_of_line = lf           # Utilise des sauts de ligne LF (Unix)
+insert_final_newline = true # Ajoute une ligne vide à la fin des fichiers
+trim_trailing_whitespace = true # Supprime les espaces en fin de ligne
+charset = utf-8            # Définit l'encodage des fichiers en UTF-8

@@ -12,33 +12,42 @@ async function imageShortcode(src, alt = "", sizes = "100vw") {
     console.warn(`Missing image source for: ${alt}`);
     return '';
   }
+// Définir directement l'image source
+const imageSrc = src.startsWith("/") ? `.${src}` : `./images/${src}`;
 
-  let metadata = await Image(src, {
-    widths: [300, 600, 1200],
-    formats: ["webp", "jpeg"],
-    outputDir: "./_site/images/",
-    urlPath: "/images/",
-    cacheOptions: { // Ajout du cache
-      duration: "1d", // Garde les images en cache pendant 1 jour
-      directory: ".cache", // Répertoire de cache
-    }
-  });
+  try {
+    let metadata = await Image(imageSrc, {
+      widths: [300, 600, 1200],
+      formats: ["webp", "jpeg"],
+      outputDir: "./_site/images/",
+      urlPath: "/images/",
+      cacheOptions: {
+        duration: "1d",
+        directory: ".cache",
+      }
+    });
 
-  let imageAttributes = {
-    alt,
-    sizes,
-    loading: "lazy",
-    decoding: "async",
-  };
+    let imageAttributes = {
+      alt,
+      sizes,
+      loading: "lazy",
+      decoding: "async",
+    };
 
-  return Image.generateHTML(metadata, imageAttributes);
+    return Image.generateHTML(metadata, imageAttributes, {
+      whitespaceMode: "inline"
+    });
+  } catch (e) {
+    console.warn(`⚠️ Erreur lors du traitement de l'image : ${imageSrc}`, e);
+    return `<img src="${src}" alt="${alt}" loading="lazy">`;
+  }
 }
-
 
 module.exports = function(eleventyConfig) {
   // Ajouter le plugin eleventy-navigation
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(pluginRss);
+
 // Ajouter le plugin de minification HTML
 eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
   if (outputPath && outputPath.endsWith(".html")) {
@@ -49,12 +58,37 @@ eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
       minifyJS: true,
     });
   }
+
+  // Ajouter pour simplifier et d'optimiser l'insertion d'images pages presentation et projet-accueil
+  eleventyConfig.addNunjucksAsyncShortcode("imageShortcode", async function(src, alt, sizes = "(min-width: 1024px) 100vw, 50vw") {
+    let metadata = await Image(src, {
+      widths: [300, 600, 900, 1200],
+      formats: ["webp", "jpeg"],
+      outputDir: "./_site/images", // Dossier de sortie
+      urlPath: "/images/",         // Chemin d'URL
+    });
+
+    let imageAttributes = {
+      alt,
+      sizes,
+      loading: "lazy",
+      decoding: "async",
+    };
+
+    return Image.generateHTML(metadata, imageAttributes);
+  });
+
+
   return content;
 });
 
 
   // Ajouter le shortcode d'image
   eleventyConfig.addNunjucksAsyncShortcode("image", imageShortcode);
+  eleventyConfig.addLiquidShortcode("image", imageShortcode);
+  eleventyConfig.addJavaScriptFunction("image", imageShortcode);
+
+ 
 
   // Configuration des collections
   const categories = [

@@ -3429,91 +3429,76 @@ position: relative; /* Ajout de position relative */
  
  
  
- 
- 
- 
- /* Styles pour la photo portrait de blog et des icônes */
- 
- /* Réduire la taille de l'image et la centrer */
- .card-img-portrait {
-   width: 60%; /* Réduire la taille de l'image à 80% de la largeur de la carte */
-   height: auto; /* Garde les proportions de l'image */
-   display: block; /* Pour centrer l'image */
-   margin: 20px auto 0; /* Ajoute une marge en haut, centre l'image */
-   margin-bottom: 0; /* Supprime toute marge inférieure pour l'image */
- }
- 
- @media screen and (max-width: 768px) {
-   .card-img-portrait {
-     width: 90%; /* Réduire la taille de l'image à 80% de la largeur de la carte */
-   }
- }
- 
- 
- /* Style de l'icône position */
- .position-icon-portrait {
-   position: absolute;
-   top: 20%; /* Position verticale centrée */
-   left: 75%; /* Position horizontale centrée */
-   transform: translate(-50%, -50%);
-   z-index: 2; /* Pour que l'icône soit au-dessus de la photo de profil */
- }
- 
- /* Styles pour rendre l'icône responsive */
- @media (max-width: 768px) {
-   .position-icon-portrait svg {
-       width: 3.5em; /* Réduisez la taille de l'icône pour les écrans plus petits */
-       height: 3.5em;
-       
-   }
- }
- 
- /* Style de l'icône position */
- .position-icon-domicile {
-   position: absolute;
-   top: 25%; /* Position verticale centrée */
-   left: 20%; /* Position horizontale centrée */
-   transform: translate(-50%, -50%);
-   z-index: 2; /* Pour que l'icône soit au-dessus de la photo de profil */
- }
- 
- /* Styles pour rendre l'icône responsive */
- @media (max-width: 768px) {
-   .position-icon-domicile svg {
-       width: 3.5em; /* Réduisez la taille de l'icône pour les écrans plus petits */
-       height: 3.5em;
-   }
+ /* Styles pour positionner l'icône de position sur la photo animée */
+.portrait-blog {
+   position: relative; /* Assure que les icônes sont positionnées par rapport à ce conteneur */
+   display: inline-block; /* Pour empêcher le débordement de l'icône position */
+   z-index: 1;
+}
 
+/* Styles pour la photo portrait de blog et des icônes */
+.card-img-portrait {
+   width: 80%; /* Ajuster selon vos besoins */
+   height: auto; /* Maintenir les proportions */
+   display: block; /* Centre l'image */
+   margin: 20px auto 0; /* Marge en haut et centre horizontalement */
+}
+
+@media screen and (max-width: 768px) {
+   .card-img-portrait {
+       width: 90%; /* Ajustement pour les écrans plus petits */
+   }
+}
+
+/* Style de l'icône position pour l'icône portrait */
+.position-icon-portrait {
+   position: absolute;
+   top: 15%; /* Ajustez pour un meilleur centrage */
+   left: 75%; /* Position horizontale */
+   transform: translate(-50%, -50%); /* Centrage */
+   z-index: 2; /* Pour que l'icône soit au-dessus de la photo de profil */
+}
+
+/* Styles pour rendre l'icône responsive */
+@media (max-width: 768px) {
+   .position-icon-portrait {
+     width: 3em; /* Taille de l'icône pour les petits écrans */
+     height: 3em;
+     top: 15%; /* Ajustement minimal */
+     left: 75%; /* Gardez la même position relative */
+   }
+}
+
+/* Style de l'icône position pour l'icône domicile */
+.position-icon-domicile {
+   position: absolute;
+   top: 30%; /* Ajustez pour un meilleur centrage */
+   left: 20%; /* Position horizontale */
+   transform: translate(-50%, -50%); /* Centrage */
+   z-index: 2; /* Pour que l'icône soit au-dessus de la photo de profil */
+}
+
+/* Styles pour rendre l'icône responsive */
+@media (max-width: 768px) {
    .position-icon-domicile {
-    
-      top: 25%; /* Position verticale centrée */
-      left: 20%; /* Position horizontale centrée */
-     
-    }
- }
- 
-/* Style de la photo animée et le style de la bordure autour photos animation projet-accueil */
+     width: 3em; /* Taille de l'icône pour les petits écrans */
+     height: 3em;
+     top: 30%; /* Gardez la même position relative */
+     left: 20%; /* Gardez la même position relative */
+   }
+}
+
+
+/* Style de la photo de portrait blog en taille maxi et photo ronde */
 .bordered-content-portrait-blog .portrait-blog img {
    max-width: 300px; /* Définissez la largeur maximale souhaitée */
    max-height: 300px; /* Définissez la hauteur maximale souhaitée */
    border-radius: 50%; /* Pour garder la forme ronde */
    margin-top: 20px; /* Espace sur l'image */
    margin-bottom: -50px; /* Espace sous l'image */
-  
-   
- }
-
-
-/* Styles pour positionner l'icône de position sur la photo animée */
-.portrait-blog {
-   position: relative;
-   display: inline-block; /* Pour empêcher le débordement de l'icône position */
-   z-index: 1;
-   
 }
 
-
-/* Style de la photo animée et le style de la bordure autour photos animation projet-accueil */
+/* Style de la photo de portrait blog en taille maxi et photo ronde */
 @media (max-width: 768px) {
    .bordered-content-portrait-blog .portrait-blog img {
       max-width: 200px; /* Définissez la largeur maximale souhaitée */

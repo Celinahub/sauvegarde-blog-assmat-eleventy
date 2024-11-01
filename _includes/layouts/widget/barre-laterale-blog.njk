@@ -10,8 +10,15 @@
             <div class="portrait-blog">
 
 
-        <!-- Image de profil -->
-        <img src="/images/blog/celine-hubert-assistante-maternelle-bretigny.png" class="card-img-portrait" alt="Céline">
+
+<picture>
+    <!-- Balise source pour WebP -->
+    <source srcset="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.webp' | url }}" type="image/webp">
+    <!-- Balise img pour les navigateurs ne prenant pas en charge WebP -->
+    <img class="card-img-portrait" src="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg' | url }}" alt="Céline Hubert, assistante maternelle à Brétigny-sur-Orge" loading="lazy">
+</picture>
+
+     
 
         <!-- Icône de contact -->
         <a href="/contact" class="position-icon-portrait">
@@ -145,7 +152,7 @@
                 { "name": "Activités pour enfant", "slug": "activites-enfant" },
                 { "name": "Sélections Produits", "slug": "selection-produits" },
                 { "name": "Actu Petite Enfance", "slug": "actu-petite-enfance" },
-                { "name": "Actualités locale", "slug": "actualites-locales" }
+                { "name": "Actualités locales", "slug": "actualites-locales" }
             ] %}
 
             {% for category in categories %}
