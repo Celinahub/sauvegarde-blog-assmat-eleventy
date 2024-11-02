@@ -46,7 +46,7 @@ async function imageShortcode(src, alt = "", sizes = "100vw") {
 module.exports = function(eleventyConfig) {
  // Définir les données globales pour le site
 eleventyConfig.addGlobalData("site", {
-  title: "Céline Hubert - Assistante Maternelle Agréée à Brétigny-sur-Orge", // Titre du site
+  title: "Le Journal des petits chez Céline", // Titre du site
   url: "https://test-site-statique-blog-eleventy.netlify.app", // URL du site
   author: { name: "Céline Hubert" } // Ajout de l'auteur
 });
@@ -63,7 +63,7 @@ eleventyConfig.addGlobalData("site", {
  
   eleventyConfig.addPlugin(pluginRss, {
     feedOptions: {
-        title: "Céline Hubert - Assistante Maternelle Agréée à Brétigny-sur-Orge",
+        title: "Le Journal des petits chez Céline",
         url: "https://test-site-statique-blog-eleventy.netlify.app/feed.xml",
         language: "fr"
     }
