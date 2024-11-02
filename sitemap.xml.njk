@@ -9,20 +9,14 @@ eleventyExcludeFromCollections: true
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 {%- for page in collections.all %}
-  {%- if not page.url == "/admin/" and not page.url == "/404/" and not page.data.eleventyExcludeFromCollections %}
-  {% set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  {%- if page.url != "/admin/" and page.url != "/404/" and not page.data.eleventyExcludeFromCollections %}
+  {% set absoluteUrl = page.url | url | absoluteUrl(metadata.url) %}
   <url>
     <loc>{{ absoluteUrl }}</loc>
     {%- if page.date %}
     <lastmod>{{ page.date | dateToRfc3339 }}</lastmod>
     {%- endif %}
-    {%- if page.url == "/" %}
-    <priority>1.00</priority>
-    {%- elseif "/blog/" in page.url %}
-    <priority>0.64</priority>
-    {%- else %}
-    <priority>0.80</priority>
-    {%- endif %}
+    <priority>{% if page.url == "/" %}1.00{% elseif "/blog/" in page.url %}0.64{% else %}0.80{% endif %}</priority>
   </url>
   {%- endif %}
 {%- endfor %}
