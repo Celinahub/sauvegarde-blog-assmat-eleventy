@@ -1,0 +1,30 @@
+---
+permalink: /sitemap.xml
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+{%- for page in collections.all %}
+  {%- if not page.data.eleventyExcludeFromCollections %}
+  {% set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
+  <url>
+    <loc>{{ absoluteUrl }}</loc>
+    {%- if page.date %}
+    <lastmod>{{ page.date | dateToRfc3339 }}</lastmod>
+    {%- endif %}
+    {%- if page.url == "/" %}
+    <priority>1.00</priority>
+    {%- elseif "/blog/" in page.url %}
+    <priority>0.64</priority>
+    {%- else %}
+    <priority>0.80</priority>
+    {%- endif %}
+  </url>
+  {%- endif %}
+{%- endfor %}
+</urlset>
+
