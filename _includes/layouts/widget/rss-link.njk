@@ -1,0 +1,26 @@
+<section class="newsletter">
+    <div class="svg-newsletter">
+        <div class="svg-container">
+            <!-- SVG pour PC -->
+            <img src="{{ '/images/blog/nuage-newsletter-pc.svg' | url }}" class="nuages-bleus-curvy pc-svg" alt="Décor nuages pour PC">
+            <!-- SVG pour mobile -->
+            <img src="{{ '/images/blog/nuage-newsletter-mobile.svg' | url }}" class="nuages-bleus-curvy mobile-svg" alt="Décor nuages pour mobile">
+        </div> <!-- Fin de svg-container -->
+    </div> <!-- Fin de svg-newsletter -->
+
+    <div class="newsletter-section py-5">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-12">
+                    <h2 class="newsletter-titre"><strong>Abonnez-vous à ma Newsletter</strong></h2>
+                    <hr class="horizontal-line">
+                    <!-- Lien vers le flux RSS -->
+                    <a href="{{ '/rss.xml' | url }}" class="rss-link" title="S'abonner au flux RSS">
+                        <img src="{{ '/images/rss-icon.png' | url }}" alt="RSS" />
+                        Abonnez-vous à notre flux RSS
+                    </a>
+                </div> <!-- Fin de col-12 -->
+            </div> <!-- Fin de row justify-content-center -->
+        </div> <!-- Fin de container-fluid -->
+    </div> <!-- Fin de newsletter-section py-5 -->
+</section> <!-- Fin de la section newsletter -->

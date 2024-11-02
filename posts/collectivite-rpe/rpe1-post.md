@@ -8,7 +8,7 @@ tags:
   - rpe
 url: "https://test-site-statique-blog-eleventy.netlify.app/posts/rpe-1"
 image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
-date: 2023-10-05
+date: 2023-10-15
 category: "LA COLLECTIVITE GRÂCE AU RPE"
 featuredImage: /images/uploads/image1.jpg
 ---

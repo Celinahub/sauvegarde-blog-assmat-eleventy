@@ -44,15 +44,30 @@ async function imageShortcode(src, alt = "", sizes = "100vw") {
 }
 
 module.exports = function(eleventyConfig) {
-  // Ajouter le filtre absoluteUrl
-  eleventyConfig.addFilter("absoluteUrl", function(url) {
-    const baseUrl = "https://test-site-statique-blog-eleventy.netlify.app/"; // Remplacez par votre URL de base
+ // Définir les données globales pour le site
+eleventyConfig.addGlobalData("site", {
+  title: "Céline Hubert - Assistante Maternelle Agréée à Brétigny-sur-Orge", // Titre du site
+  url: "https://test-site-statique-blog-eleventy.netlify.app", // URL du site
+  author: { name: "Céline Hubert" } // Ajout de l'auteur
+});
+
+
+   // Ajouter le filtre absoluteUrl
+   eleventyConfig.addFilter("absoluteUrl", function(url) {
+    const baseUrl = "https://test-site-statique-blog-eleventy.netlify.app"; // Remplacez par votre URL de base
     return new URL(url, baseUrl).toString();
-  });
+});
 
   // Ajouter le plugin eleventy-navigation
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPlugin(pluginRss);
+ 
+  eleventyConfig.addPlugin(pluginRss, {
+    feedOptions: {
+        title: "Céline Hubert - Assistante Maternelle Agréée à Brétigny-sur-Orge",
+        url: "https://test-site-statique-blog-eleventy.netlify.app/feed.xml",
+        language: "fr"
+    }
+});
 
   // Ajouter le plugin de minification HTML
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
@@ -114,31 +129,43 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  
   // Ajouter un filtre personnalisé pour les dates
-  eleventyConfig.addFilter("date", (dateObj, formatStr = "dd MMMM yyyy") => {
-    return format(dateObj, formatStr, { locale: fr });
-  });
+eleventyConfig.addFilter("date", (dateObj, formatStr = "dd MMMM yyyy") => {
+  if (!dateObj) return "Date non définie"; // Gestion des cas où la date est null
+  return format(new Date(dateObj), formatStr, { locale: fr });
+});
 
-  eleventyConfig.addFilter("dateToRfc3339", (date) => {
-    return format(date, "yyyy-MM-dd'T'HH:mm:ssxxx"); // Format RFC 3339
-  });
+eleventyConfig.addFilter("dateToRfc3339", (date) => {
+  if (!date) return ""; // Retourner une chaîne vide si la date est non définie
+  return format(new Date(date), "yyyy-MM-dd'T'HH:mm:ssxxx"); // Format RFC 3339
+});
 
-  // Ajouter un filtre pour récupérer les balises SEO
-  eleventyConfig.addFilter("seo", function(data) {
-    return {
-      title: data.title || "Titre par défaut",
-      description: data.description || "Description par défaut",
-      image: data.image || "/images/default-image.jpg",
-      url: data.url || "https://test-site-statique-blog-eleventy.netlify.app/",
-      date: data.date ? format(new Date(data.date), 'yyyy-MM-dd', { locale: fr }) : "",
-    };
-  });
+// Ajouter un filtre pour le format RFC-822
+eleventyConfig.addFilter("dateToRfc822", (date) => {
+  if (!date) return ""; // Retourner une chaîne vide si la date est non définie
+  return format(new Date(date), "EEE, dd MMM yyyy HH:mm:ss 'GMT'xxx", { locale: fr });
+});
+
+
+
+// Ajouter un filtre pour récupérer les balises SEO
+eleventyConfig.addFilter("seo", function(data) {
+  return {
+    title: data.title || "Titre par défaut",
+    description: data.description || "Description par défaut",
+    image: data.image || "/images/default-image.jpg",
+    url: data.url || "https://test-site-statique-blog-eleventy.netlify.app/",
+    date: data.date ? format(new Date(data.date), 'yyyy-MM-dd', { locale: fr }) : "",
+  };
+});
+
 
   // Copier les fichiers nécessaires vers le dossier de sortie `_site`
   eleventyConfig.addPassthroughCopy("images");
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("css");
-  eleventyConfig.addPassthroughCopy("feed");
+  
   eleventyConfig.addPassthroughCopy("favicon.ico");
 
   // Ajouter des alias pour les layouts
