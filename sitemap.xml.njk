@@ -9,7 +9,7 @@ eleventyExcludeFromCollections: true
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 {%- for page in collections.all %}
-  {%- if not page.data.eleventyExcludeFromCollections %}
+  {%- if not page.url == "/admin/" and not page.url == "/404/" and not page.data.eleventyExcludeFromCollections %}
   {% set absoluteUrl %}{{ page.url | url | absoluteUrl(metadata.url) }}{% endset %}
   <url>
     <loc>{{ absoluteUrl }}</loc>
