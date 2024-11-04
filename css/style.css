@@ -3837,3 +3837,128 @@ position: relative; /* Ajout de position relative */
 }
 
  
+
+
+
+
+
+
+/* Style pour la page d'information flux RSS rss-info.njk*/ 
+ 
+body.rss-info-page {
+   background-color: #96D2CA;
+  }
+
+#page-flux-rss {
+  
+   background: linear-gradient(to bottom, #98D1CA 5%, #F8F9F6 95%); /* Création du dégradé avec bande réglable */
+   margin-bottom: 0; /* Corrige le margin-bottom négatif */
+}
+
+
+.ciel-nuages-flux {
+   width: 100%; /* Prendre toute la largeur */
+   height: auto; /* Assurer que le SVG garde ses proportions */
+   margin: 0; /* Pas de marge supplémentaire */
+   padding: 0; /* Pas de remplissage supplémentaire */
+}
+
+
+/* Styles pour le lien de 404 - Page Non Trouvée dans 404.md*/
+.styled-link-rss {
+   font-family: "Poppins", sans-serif;
+   font-weight: bold;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+   text-decoration: none;
+   display: inline-block; /* Permet d'ajouter du margin */
+   margin: 20px 0; /* Ajustez cette valeur pour espacer le lien */
+}
+.styled-link-rss:hover {
+   text-decoration: underline;
+}
+/* Media query pour écrans plus petits */
+@media (max-width: 768px) {
+   .styled-link-rss  {
+      font-size: 14px;
+   }
+ }
+
+
+ .button-wrapper {
+   display: flex;
+   justify-content: center; /* Centre les boutons horizontalement */
+   align-items: center; /* Centre les boutons verticalement, si nécessaire */
+   flex-wrap: wrap; /* Permet aux boutons de passer à la ligne en cas de manque d'espace */
+   gap: 15px; /* Ajuste l'espacement entre les boutons */
+ }
+ 
+
+.custom-button {
+   background-color: #103754; /* Couleur de fond */
+   color: #F8F9F6; /* Couleur du texte */
+   border-radius: 8px; /* Coins arrondis */
+   border: none; /* Retirer la bordure par défaut */
+   padding: 10px 20px; /* Espacement interne */
+   font-size: 16px; /* Taille du texte */
+   cursor: pointer; /* Changer le curseur au survol */
+   transition: background-color 0.3s; /* Transition pour un effet au survol */
+ }
+ .custom-button:hover {
+   background-color: #041427; /* Couleur au survol */
+   color: #F8F9F6; /* Couleur du texte */
+ }
+ @media (min-width: 576px) {
+   .custom-button {
+       width: auto; /* Laisse les boutons reprendre leur taille auto sur les écrans plus larges */
+   }
+ }
+ 
+/* Dans votre fichier CSS */
+.poppins-regular-titre-page-flux-rss {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   color: #103653;
+   font-size: 3em; /* Taille de la police relative */
+   margin-bottom: 50px; /* Marge en bas du titre */
+   margin-top: 50px; /* Marge en haut du titre */
+}
+
+@media screen and (max-width: 768px) {
+   .poppins-regular-titre-page-flux-rss {
+      font-size: 2em; /* Taille de la police relative */
+   }
+}
+
+/* Dans votre fichier CSS */
+.poppins-regular-sous-titre-page-flux-rss {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   color: #103653;
+   font-size: 2em; /* Taille de la police relative */
+   margin-bottom: 50px; /* Marge en bas du titre */
+   margin-top: 50px; /* Marge en haut du titre */
+}
+
+@media screen and (max-width: 768px) {
+   .poppins-regular-sous-titre-page-flux-rss {
+      font-size: 1.2em; /* Taille de la police relative */
+   }
+}
+
+.poppins-regular-texte-page-flux-rss {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+ }
+
+ /* Styles spécifiques pour l'espace entre les titres "Routine" et "Dejeuner" et le texte */
+.flux-spacer {
+   margin-bottom: 80px; /* Ajoutez de l'espace entre les éléments */
+}
+
