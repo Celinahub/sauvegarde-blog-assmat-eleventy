@@ -133,12 +133,12 @@ h2, h3 {
 /* Style pour les horaires d'accueil*/
 .liens-utiles-typo h3 {
    margin-bottom: 25px; /* Augmente l'espace sous le titre */
-   font-size: 20px; /* typo horaires */
+   font-size: 16px; /* typo horaires */
 }
 
 .pied-page-typo h3 {
    margin-bottom: 35px; /* Augmente l'espace sous le titre */
-   font-size: 20px; /* typo liens utiles et reeseaux sociaux */
+   font-size: 16px; /* typo liens utiles et reeseaux sociaux */
 }
 
 .pied-page-typo p {
@@ -3909,11 +3909,16 @@ body.rss-info-page {
    background-color: #041427; /* Couleur au survol */
    color: #F8F9F6; /* Couleur du texte */
  }
- @media (min-width: 576px) {
-   .custom-button {
-       width: auto; /* Laisse les boutons reprendre leur taille auto sur les écrans plus larges */
+ @media (max-width: 576px) {
+   .button-wrapper {
+       flex-direction: column; /* Aligne les boutons verticalement */
+       width: 100%; /* Assure que le conteneur occupe toute la largeur */
    }
- }
+   
+   .custom-button {
+       width: 100%; /* Les boutons occupent toute la largeur du conteneur */
+   }
+}
  
 /* Dans votre fichier CSS */
 .poppins-regular-titre-page-flux-rss {
@@ -3962,3 +3967,7 @@ body.rss-info-page {
    margin-bottom: 80px; /* Ajoutez de l'espace entre les éléments */
 }
 
+.rss-icon {
+   width: 50px;
+   height: 50px;
+}

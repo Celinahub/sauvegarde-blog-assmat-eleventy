@@ -9,15 +9,26 @@
     </div> <!-- Fin de svg-newsletter -->
 
     <div class="newsletter-section py-5">
-        <div class="container-fluid">
-            <div class="row justify-content-center">
-                <div class="col-12">
-                    <h2 class="newsletter-titre"><strong>Abonnez-vous à ma Newsletter</strong></h2>
-                    <hr class="horizontal-line">
-                    <!-- Newsletter form -->
-                    <div class="ml-embedded" data-form="MII6je"></div>
-                </div> <!-- Fin de col-12 -->
-            </div> <!-- Fin de row justify-content-center -->
-        </div> <!-- Fin de container-fluid -->
-    </div> <!-- Fin de newsletter-section py-5 -->
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-12 text-center">
+                <h2 class="newsletter-titre"><strong>Abonnez-vous : Newsletter ou RSS</strong></h2>
+                <hr class="horizontal-line">
+                <!-- Newsletter form -->
+                <div class="ml-embedded" data-form="MII6je"></div>
+               
+        
+                 <hr class="horizontal-line">
+                <!-- Lien flux rss centré -->
+                <div class="d-flex justify-content-center">
+                    <a href="/rss-info/" class="styled-link-rss" title="S'abonner au flux RSS">
+                        <img src="{{ '/images/flux-rss/rss-bretigny.svg' | url }}" alt="RSS" class="rss-icon" />
+                        Abonnez-vous à mon flux RSS
+                    </a>
+                </div>
+            </div> <!-- Fin de col-12 -->
+        </div> <!-- Fin de row justify-content-center -->
+    </div> <!-- Fin de container-fluid -->
+</div> <!-- Fin de newsletter-section py-5 -->
+
 </section> <!-- Fin de la section newsletter -->
