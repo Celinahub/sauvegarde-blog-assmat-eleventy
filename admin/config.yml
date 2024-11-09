@@ -125,5 +125,21 @@ collections:
       - { label: "Contenu", name: "body", widget: "markdown" }
 
       
+      - name: "entreprises"
+    label: "ENTREPRISES"
+    folder: "posts/actualites-locales"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Layout", name: "layout", widget: "hidden", default: "layouts/post.njk" }
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
+      - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "ENTREPRISES" }
+      - { label: "Image vedette", name: "featuredImage", widget: "image" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
       
       

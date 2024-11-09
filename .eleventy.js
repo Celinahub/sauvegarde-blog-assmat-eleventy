@@ -96,7 +96,8 @@ module.exports = function(eleventyConfig) {
     { name: "Sélection produits", slug: "selection-produits", tag: "produits" },
     { name: "Actu petite enfance", slug: "actu-petite-enfance", tag: "actualites" },
     { name: "Actualités locales", slug: "actualites-locales", tag: "local" },
-    { name: "La collectivité grâce au RPE", slug: "collectivite-rpe", tag: "rpe" }
+    { name: "La collectivité grâce au RPE", slug: "collectivite-rpe", tag: "rpe" },
+    { name: "Entreprises", slug: "entreprises", tag: "entreprises" }
   ];
 
   // Variables de cache pour stocker les résultats

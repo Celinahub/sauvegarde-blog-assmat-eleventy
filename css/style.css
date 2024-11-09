@@ -3035,6 +3035,7 @@ position: relative; /* Ajout de position relative */
  /* Style pour la section "contenu du blog" */
 #contenu-blog,
 #contenu-activites-enfant,
+#contenu-entreprises,
 #contenu-actualites-locales,
 #contenu-actu-petite-enfance,
 #contenu-collectivite-rpe,
@@ -3312,7 +3313,7 @@ position: relative; /* Ajout de position relative */
    position: relative;
    z-index: 1;
    padding-top: 0rem;
-   margin-inline: 40px; /* Ajoute la même marge à gauche et à droite */
+   margin-inline: 20px; /* Ajoute la même marge à gauche et à droite */
 }
 @media screen and (max-width: 768px) {
    .container-article {
@@ -3330,6 +3331,12 @@ position: relative; /* Ajout de position relative */
    margin-top: 20px;
    margin-bottom: 20px;
 }
+@media screen and (max-width: 768px) {
+   .poppins-regular-titre-article {
+      font-size: 20px;
+   }
+ }
+
 
 .meta-info {
    text-align: center; /* Centre le texte */
@@ -3350,22 +3357,35 @@ position: relative; /* Ajout de position relative */
 }
 
  /* Style pour le contenu texte des articles.md dans post.njk*/
+ .content-wrapper {
+   max-width: 800px; /* Largeur maximale pour le texte et l'image */
+   margin: 0 auto; /* Centre le conteneur */
+}
+
+.article-image {
+   width: 100%; /* L'image prendra la largeur du conteneur */
+   height: auto;
+}
+
 .article-content {
    font-family: "Poppins", sans-serif;
    font-weight: 400;
    font-size: 14px;
-   font-style: normal;
    color: #103754;
    margin-top: 20px;
    margin-bottom: 80px;
-   text-align: center; /* Centre le texte */
+   padding: 0 20px; /* Ajoute du padding pour éviter que le texte touche les bords */
+   text-align: left;  /* Aligne le texte à gauche */
+
+
 }
+
 @media screen and (max-width: 768px) {
-   .article-content {
-      margin-left: 10px;
-      margin-right: 10px;
+   .content-wrapper {
+      padding: 0 10px; /* Réduit les marges latérales pour les petits écrans */
    }
- }
+}
+
 
  .article-content h1 {
    font-size: 2rem; /* Style spécifique pour h1 dans article-content */
@@ -3379,6 +3399,19 @@ position: relative; /* Ajout de position relative */
    font-size: 1.5rem; /* Style spécifique pour h3 dans article-content */
 }
 
+@media screen and (max-width: 768px) {
+   .article-content h1 {
+      font-size: 1.3rem; /* Style spécifique pour h1 dans article-content */
+   }
+   
+   .article-content h2 {
+      font-size: 1.1rem; /* Style spécifique pour h2 dans article-content */
+   }
+   
+   .article-content h3 {
+      font-size: 0.9rem; /* Style spécifique pour h3 dans article-content */
+   }
+}
 
 /* Style pour le bouton svg retour des articles.md dans post.njk*/
 .back-button {
@@ -3447,74 +3480,104 @@ position: relative; /* Ajout de position relative */
 @media screen and (max-width: 768px) {
    .card-img-portrait {
        width: 90%; /* Ajustement pour les écrans plus petits */
+       
    }
 }
 
-/* Style de l'icône position pour l'icône portrait */
-.position-icon-portrait {
-   position: absolute;
-   top: 15%; /* Ajustez pour un meilleur centrage */
-   left: 75%; /* Position horizontale */
-   transform: translate(-50%, -50%); /* Centrage */
-   z-index: 2; /* Pour que l'icône soit au-dessus de la photo de profil */
-}
-
-/* Styles pour rendre l'icône responsive */
-@media (max-width: 768px) {
-   .position-icon-portrait {
-     width: 3em; /* Taille de l'icône pour les petits écrans */
-     height: 3em;
-     top: 15%; /* Ajustement minimal */
-     left: 75%; /* Gardez la même position relative */
-   }
-}
-
-/* Style de l'icône position pour l'icône domicile */
+/* Ajustements généraux pour les icônes en fonction de l'image de profil */
+.position-icon-portrait,
 .position-icon-domicile {
-   position: absolute;
-   top: 30%; /* Ajustez pour un meilleur centrage */
-   left: 20%; /* Position horizontale */
-   transform: translate(-50%, -50%); /* Centrage */
-   z-index: 2; /* Pour que l'icône soit au-dessus de la photo de profil */
+    position: absolute;
+    width: 3.5em; /* Ajuster la taille de l'icône si nécessaire */
+    height: 3.5em;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
-/* Styles pour rendre l'icône responsive */
-@media (max-width: 768px) {
-   .position-icon-domicile {
-     width: 3em; /* Taille de l'icône pour les petits écrans */
-     height: 3em;
-     top: 30%; /* Gardez la même position relative */
-     left: 20%; /* Gardez la même position relative */
-   }
+/* Positionnement spécifique pour chaque icône */
+.position-icon-portrait {
+    top: 15%;
+    left: 80%; /* Ajustement horizontal pour réduire le décalage */
 }
 
-
-/* Style de la photo de portrait blog en taille maxi et photo ronde */
-.bordered-content-portrait-blog .portrait-blog img {
-   max-width: 300px; /* Définissez la largeur maximale souhaitée */
-   max-height: 300px; /* Définissez la hauteur maximale souhaitée */
-   border-radius: 50%; /* Pour garder la forme ronde */
-   margin-top: 20px; /* Espace sur l'image */
-   margin-bottom: -50px; /* Espace sous l'image */
+.position-icon-domicile {
+    top: 40%;
+    left: 15%;
 }
 
-/* Style de la photo de portrait blog en taille maxi et photo ronde */
-@media (max-width: 768px) {
-   .bordered-content-portrait-blog .portrait-blog img {
-      max-width: 200px; /* Définissez la largeur maximale souhaitée */
-      max-height: 200px; /* Définissez la hauteur maximale souhaitée */
-      border-radius: 50%; /* Pour garder la forme ronde */
-      margin-top: 20px; /* Espace sur l'image */
-      margin-bottom: 0px; /* Espace sous l'image */
+/* Réglages pour écrans moyens */
+@media (max-width: 992px) {
+    .position-icon-portrait {
+        top: 15%;
+        left: 80%;
+        width: 3em;
+        height: 3em;
+    }
+    .position-icon-domicile {
+        top: 40%;
+        left: 15%;
+        width: 3em;
+        height: 3em;
     }
 }
 
+/* Réglages pour écrans étroits (petites colonnes) */
+@media (max-width: 768px) {
+    .position-icon-portrait,
+    .position-icon-domicile {
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .position-icon-portrait {
+        top: 25%; /* Ajustement de la position en haut pour petits écrans */
+        left: 75%; /* Position plus proche de l'image */
+    }
+
+    .position-icon-domicile {
+        top: 10%;
+        left: 15%;
+    }
+}
+
+/* Styles pour garder la photo de profil ronde et centrée */
+.bordered-content-portrait-blog .portrait-blog img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto; /* Centrage */
+}
+
+@media (max-width: 768px) {
+    .bordered-content-portrait-blog .portrait-blog img {
+        max-width: 80%; /* Réduire la taille sur les petits écrans */
+        max-height: 80%;
+    }
+}
+
+
+/* Ajustement pour éviter le débordement en mode paysage sur mobiles */
+@media screen and (orientation: landscape) and (max-width: 768px) {
+   .portrait-blog {
+       width: 100%; /* Limite la largeur du conteneur */
+       margin: 0 auto;
+   }
+   .card-img-portrait {
+       width: 70%; /* Ajustement supplémentaire pour le paysage */
+       margin: 0 auto;
+   }
+}
+
+
+
+
 .text-portrait {
-   margin-top: 80px; /* ou une valeur de votre choix */
+   margin-top: 0px; /* ou une valeur de votre choix */
 }
 @media (max-width: 768px) {
    .text-portrait {
-      margin-top: 20px; /* ou une valeur de votre choix */
+      margin-top: 10px; /* ou une valeur de votre choix */
    }
  }
 

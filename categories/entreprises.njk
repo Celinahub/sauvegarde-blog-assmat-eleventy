@@ -1,47 +1,39 @@
 ---
 layout: layouts/base.njk
-title: "Le Journal des Petits chez Céline - Activités pour Enfants à Brétigny-sur-Orge"
-description: "Articles sur les activités d'éveil, conseils et astuces pour enfants de moins de 3 ans à Brétigny-sur-Orge. Découvrez comment rendre l'apprentissage amusant avec Céline, assistante maternelle agréée."
-tags: "assistante maternelle, nounou, activités enfants, Brétigny-sur-Orge, blog"
-url: "https://test-site-statique-blog-eleventy.netlify.app/blog"
-image: "https://monsite.com/images/blog.jpg"
-eleventyNavigation:
-  key: "BLOG"
-  title: "BLOG"
-  order: 4
+title: "Pourquoi Offrir le CESU à Vos Employés ? Un Avantage Gagnant pour Tous"
+description: "Découvrez les avantages du CESU pour les entreprises et les employés. Facilitez l'accès aux services de garde d'enfant et améliorez le bien-être au travail grâce à des solutions adaptées aux familles."
+tags: "entreprises, avantages employés, bien-être au travail, équilibre vie professionnelle et personnelle, politique RH, productivité employé"
+url: "https://test-site-statique-blog-eleventy.netlify.app/categories/entreprises"
+image: "https://monsite.com/images/entreprises.jpg"
 pagination:
-  data: collections.posts
-  size: 5
+  data: collections.entreprises
+  size: 5  # Nombre d'articles par page
   alias: posts
   bodyClass: "blog-page"
 ---
 
-
-  <!-- Icône de défilement vers le haut utilisant une image SVG -->
-  <a href="#first-article" class="scroll-to-top">
-    <img class="rocket-icon" src="{{ '/images/rocket-svgrepo-com.svg' | url }}" alt="Icône fusée - Retour en haut de la page pour découvrir les articles sur des sujets de la petite enfance">
+<!-- Icône de défilement vers le haut utilisant une image SVG -->
+<a href="#first-article" class="scroll-to-top">
+    <img class="rocket-icon" src="{{ '/images/rocket-svgrepo-com.svg' | url }}" alt="Icône de fusée pour naviguer vers le haut de la page des activités pour enfants à Brétigny-sur-Orge" />
 </a>
 
 {% include "layouts/widget/header.njk" %} <!-- Inclusion de l'en-tête -->
 
-
-
-
-<section id="contenu-blog"> <!-- mt-5 ajoute de la marge supérieure -->
+<section id="contenu-entreprises"> <!-- mt-5 ajoute de la marge supérieure -->
 <!-- Page content -->
 <div class="container"> <!-- Début du conteneur -->
     <div class="row"> <!-- Début de la ligne -->
         <!-- Colonne des articles -->
         <div class="col-md-8 col-lg-8"> <!-- Début de la colonne des articles -->
 
-
             <!-- Featured blog post -->
             <div id="first-article" class="card mb-4"> <!-- Début de l'article vedette -->
+             {% set featuredPosts = collections.entreprises %}
                 {% if posts | length > 0 %}
                     {% set featuredPost = posts[0] %}
                     <a href="{{ featuredPost.url }}">
 
-{% image featuredPost.data.featuredImage | default('https://dummyimage.com/850x350/dee2e6/6c757d.jpg'), featuredPost.data.title | default('Image de l\'article'), '(min-width: 1024px) 100vw, 50vw' %} 
+                        {% image featuredPost.data.featuredImage | default('https://dummyimage.com/850x350/dee2e6/6c757d.jpg'), featuredPost.data.title | default('Image de l\'article'), '(min-width: 1024px) 100vw, 50vw' %} 
 
                     </a>
 
@@ -56,8 +48,8 @@ pagination:
 
 
                         <div class="poppins-regular-blog">{{ featuredPost.content | safe | truncate(100, true) }}</div> <!-- Limité à 100 caractères avec "..." -->
-                        <a href="{{ featuredPost.url }}" class="btn btn-custom">
-    <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Lire l'article sur les meilleures activités pour enfants chez Céline, nounou à Brétigny-sur-Orge">
+                       <a href="{{ featuredPost.url }}" class="btn btn-custom">
+                    <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Lire l'article sur les activités pour les tout-petits chez une assistante maternelle à Brétigny-sur-Orge" />
                         </a>
                     </div> <!-- Fin de card-body text-center -->
 
@@ -76,8 +68,8 @@ pagination:
                             <div class="card"> <!-- Début de la carte de l'article -->
                                 <a href="{{ post.url }}">
 
-                                   {% image post.data.featuredImage | default('https://dummyimage.com/700x350/dee2e6/6c757d.jpg'), post.data.title | default('Image de l\'article'), '(min-width: 1024px) 100vw, 50vw' %} 
-                                   
+                            {% image post.data.featuredImage | default('https://dummyimage.com/700x350/dee2e6/6c757d.jpg'), post.data.title | default('Image de l\'article'), '(min-width: 1024px) 100vw, 50vw' %} 
+
                                 </a>
 
 {% include "layouts/widget/partage-article-reseaux.njk" %} <!-- Inclusion du partage-article-reseaux -->
@@ -89,10 +81,11 @@ pagination:
                                         <a href="{{ post.url }}" style="text-decoration: none; color: inherit;">{{ post.data.title | default('Titre de l\'article') }}</a>
                                     </h2>
 
+
                                    <div class="poppins-regular-blog">{{ post.content | safe | truncate(100, true) }}</div> <!-- Limité à 100 caractères avec "..." -->
-                                   <a href="{{ post.url }}" class="btn btn-custom">
-                                <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Lire l'article sur les meilleures activités pour enfants chez Céline, nounou à Brétigny-sur-Orge">
-                                </a>
+                                    <a href="{{ featuredPost.url }}" class="btn btn-custom">
+                                <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Lire l'article sur les activités pour les tout-petits chez une assistante maternelle à Brétigny-sur-Orge" />
+                                    </a>
 </div> <!-- Fin de card-body text-center -->
 </div> <!-- Fin de la carte de l'article -->
 </div> <!-- Fin de la colonne pour chaque autre article -->
@@ -116,18 +109,13 @@ pagination:
 
 </div> <!-- Fin de la ligne -->
 </div> <!-- Fin du conteneur -->
-
-
 </section> <!-- Fin de la section du contenu du blog -->
-
-
 
 {% include "layouts/widget/newsletter.njk" %} <!-- Inclusion de la newsletter -->
 
 
-   <script async src="https://cse.google.com/cse.js?cx=11cceee9558b14788">
+ <script async src="https://cse.google.com/cse.js?cx=11cceee9558b14788">
     </script>
-
 
 <!-- MailerLite Universal -->
 <script>
@@ -161,20 +149,4 @@ pagination:
         alert("Lien copié dans le presse-papier !");
     }
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

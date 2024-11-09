@@ -1,5 +1,5 @@
 <div class="col-12 col-md-4">
-    <!-- Sidebar widgets -->
+   <!-- Première card : Photo et icônes -->
     <div class="card mb-3">
         <!-- Titre du widget -->
         <h5 class="finger-paint-regular-titre-blog text-center">A PROPOS ...</h5>
@@ -94,28 +94,40 @@
        </svg>
         </a>
    
+</div> <!-- Fin de portrait-blog -->
+</div> <!-- Fin de bordered-content-portrait-blog -->
+</div> <!-- Fin de première card -->
 
 
 
-<!-- Texte de présentation dans Nunjucks -->
+
+
+
+ <!-- Deuxième card : Texte de présentation -->
+  <div class="card mb-3">
+<div class="card-body">
 <div class="text-portrait px-3">
-    <h5 class="poppins-bold-blog text-center">Je suis Céline,</h5>
+    <h5 class="poppins-bold-blog text-center">Bienvenue sur mon blog !</h5>
     <p class="poppins-regular-blog text-center">
-        Assistante maternelle agréée à Brétigny-sur-Orge depuis 8 ans, je partage sur ce blog mes bons plans et astuces qui ont fait leurs preuves auprès des enfants.
-        Consultez mon projet d'accueil et n'hésitez-pas à me contacter si vous êtes à la recherche d'un mode de garde.
+        Je suis Céline, assistante maternelle agréée à Brétigny-sur-Orge depuis 8 ans. Passionnée par mon métier, je partage ici des astuces et des bons plans qui ont fait leurs preuves auprès des enfants, et que j’aurais aimé connaître en tant que jeune parent.
+    </p>
+    <p class="poppins-regular-blog text-center">
+        Ce blog s’adresse également à mes collègues. N’hésitez pas à partager les articles et proposer vos idées via le formulaire de contact. Ensemble, valorisons l’accueil individuel !
+    </p>
+    <p class="poppins-regular-blog text-center">
+       Vous pouvez aussi consulter mon projet d’accueil, et je reste disponible pour toute question d'accueil. Bonne lecture, et à bientôt !
     </p>
 </div>
      
 
-
-</div> <!-- Fin de bordered-content-portrait-blog -->
-</div> <!-- Fin de portrait-blog -->
-
+</div> <!-- Fin de card-body -->
+</div> <!-- Fin de deuxième card -->
 
 
 
 
-<!-- Nouvelle structure de la carte -->
+
+  <!-- Troisième card : Recherche par mots-clés -->
 <div class="card">
     <div class="card-body">
         <!-- Titre du widget -->
@@ -154,7 +166,8 @@
                 { "name": "Activités pour enfant", "slug": "activites-enfant" },
                 { "name": "Sélections Produits", "slug": "selection-produits" },
                 { "name": "Actu Petite Enfance", "slug": "actu-petite-enfance" },
-                { "name": "Actualités locales", "slug": "actualites-locales" }
+                { "name": "Actualités locales", "slug": "actualites-locales" },
+                { "name": "Entreprises", "slug": "entreprises" }
             ] %}
 
             {% for category in categories %}

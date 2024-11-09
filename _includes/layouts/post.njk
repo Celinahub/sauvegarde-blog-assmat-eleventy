@@ -17,7 +17,7 @@ bodyClass: "blog-posts-page"
 </div>
 
 
-
+<div class="content-wrapper"> <!-- Nouveau conteneur pour l'image et le texte -->
     <img src="{{ featuredImage | url }}" alt="{{ title }}" class="img-fluid mx-auto d-block">
 
 
@@ -69,6 +69,7 @@ bodyClass: "blog-posts-page"
     <div class="article-content">
         {{ content | safe }}
     </div>
+    </div> <!-- Fin du conteneur -->
 </article>
 
 <!-- Bouton de retour à la fin de l'article -->
