@@ -1,16 +1,16 @@
 ---
 layout: layouts/post.njk
-title: "activité 2"
+title: "Halloween & les citrouilles rigolotes"
 description: "Cet article explore un exemple intéressant pour les enfants."
 tags: 
   - enfants
-  - exemple
+  - local
   - activites
-url: "https://test-site-statique-blog-eleventy.netlify.app/posts/activite-2"
+url: "https://test-site-statique-blog-eleventy.netlify.app/posts/locale-1"
 image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
-date: 2019-10-07
-category: "ACTIVITÉS POUR ENFANT"
-featuredImage: /images/uploads/image1.jpg
+date: 2024-11-12
+category: "ACTUALITES LOCALES"
+featuredImage: /images/uploads/halloween.jpg
 ---
 
 

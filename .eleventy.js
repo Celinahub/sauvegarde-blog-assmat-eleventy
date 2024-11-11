@@ -94,7 +94,7 @@ module.exports = function(eleventyConfig) {
     { name: "Recettes / atelier cuisine", slug: "recettes-atelier-cuisine", tag: "recettes" },
     { name: "Activités pour enfant", slug: "activites-enfant", tag: "activites" },
     { name: "Sélection produits", slug: "selection-produits", tag: "produits" },
-    { name: "Actu petite enfance", slug: "actu-petite-enfance", tag: "actualites" },
+    { name: "Hygiène / soins", slug: "hygiene-soins", tag: "soins" },
     { name: "Actualités locales", slug: "actualites-locales", tag: "local" },
     { name: "La collectivité grâce au RPE", slug: "collectivite-rpe", tag: "rpe" },
     { name: "Entreprises", slug: "entreprises", tag: "entreprises" }

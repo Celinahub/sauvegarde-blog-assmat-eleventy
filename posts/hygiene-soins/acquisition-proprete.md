@@ -1,16 +1,16 @@
 ---
 layout: layouts/post.njk
-title: "Actu enfance 2"
+title: "Acquisition de la propreté"
 description: "Cet article explore un exemple intéressant pour les enfants."
 tags: 
   - enfants
-  - exemple
-  - actualites
-url: "https://test-site-statique-blog-eleventy.netlify.app/posts/actu-enfance-2"
+  - soins
+  - acquisition
+url: "https://test-site-statique-blog-eleventy.netlify.app/posts/acquisistion-de-la-proprete"
 image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
-date: 2021-12-09
-category: "ACTU PETITE-ENFANCE"
-featuredImage: /images/uploads/image1.jpg
+date: 2024-11-11
+category: "HYGIÈNE / SOINS"
+featuredImage: /images/uploads/pot.jpg
 ---
 
 

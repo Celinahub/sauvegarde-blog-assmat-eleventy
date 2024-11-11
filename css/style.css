@@ -3038,6 +3038,7 @@ position: relative; /* Ajout de position relative */
 #contenu-entreprises,
 #contenu-actualites-locales,
 #contenu-actu-petite-enfance,
+#contenu-hygiene-soins,
 #contenu-collectivite-rpe,
 #contenu-recettes-atelier-cuisine,
 #contenu-selection-produits {
@@ -3264,6 +3265,7 @@ position: relative; /* Ajout de position relative */
  /* Styles pour les svg tétines */
  
 
+ 
 
  .bouton-tetine {
    width: 100px; /* Ajustez la largeur de l'icône selon vos besoins */

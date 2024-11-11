@@ -90,8 +90,8 @@ collections:
       
 
   - name: "actu-petite-enfance"
-    label: "ACTU PETITE-ENFANCE"
-    folder: "posts/actu-petite-enfance"
+    label: "HYGIÈNE / SOINS"
+    folder: "posts/hygiene-soins"
     create: true
     slug: "{{slug}}"
     fields:
@@ -102,7 +102,7 @@ collections:
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "ACTU PETITE-ENFANCE" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "HYGIÈNE / SOINS" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
       

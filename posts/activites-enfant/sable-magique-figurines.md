@@ -1,17 +1,18 @@
 ---
 layout: layouts/post.njk
-title: "Select-produit 5"
+title: "Sable magique avec figurines"
 description: "Cet article explore un exemple intéressant pour les enfants."
 tags: 
   - enfants
   - exemple
-  - produits
-url: "https://chubert91assmat.netlify.app/posts/Select-produit 5"
+  - activites
+url: "https://test-site-statique-blog-eleventy.netlify.app/posts/sable-magique-avec-figurines"
 image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
-date: 2021-10-12
-category: "SELECTION PRODUITS"
-featuredImage: /images/uploads/image1.jpg
+date: 2019-10-07
+category: "ACTIVITÉS POUR ENFANT"
+featuredImage: /images/uploads/sable-magique.jpg
 ---
+
 
 The third post on the Eleventy and Netlify CMS blog
 

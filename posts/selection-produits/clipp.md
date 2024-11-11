@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: "Select-produit 1"
+title: "Clipp tétine, un sevrage en douceur"
 description: "Cet article explore un exemple intéressant pour les enfants."
 tags: 
   - enfants
@@ -10,7 +10,7 @@ url: "https://chubert91assmat.netlify.app/posts/Select-produit 1"
 image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
 date: 2021-10-08
 category: "SELECTION PRODUITS"
-featuredImage: /images/uploads/image1.jpg
+featuredImage: /images/uploads/clipp.jpg
 ---
 
 
