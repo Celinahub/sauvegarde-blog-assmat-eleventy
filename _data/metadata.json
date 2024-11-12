@@ -1,13 +1,13 @@
  {
     "title": "Mon Blog",
-    "url": "https://test-site-statique-blog-eleventy.netlify.app",
+    "url": "https://chubert91assmat.netlify.app/",
     "language": "fr",
     "description": "Les derniers articles de mon blog",
     "feed": {
       "subtitle": "Les derniers articles de mon blog",
       "filename": "atom.xml",
       "path": "/feed/atom.xml",
-      "id": "https://test-site-statique-blog-eleventy.netlify.app/feed/atom.xml"
+      "id": "https://chubert91assmat.netlify.app/feed/atom.xml"
     },
     "author": {
       "name": "Céline Hubert",

@@ -1,10 +1,10 @@
 ---
 layout: layouts/base.njk
-title: "Actualités Locales de la Petite Enfance à Brétigny-sur-Orge"
-description: "Tenez-vous informé des événements et actualités locales concernant la petite enfance à Brétigny-sur-Orge. Retrouvez des conseils, des activités pour les enfants de moins de 3 ans."
-tags: "actualités locales, assistante maternelle, Brétigny-sur-Orge, petite enfance, événements"
-url: "https://test-site-statique-blog-eleventy.netlify.app/categories/actualites-locales"
-image: "https://monsite.com/images/actualites-locales.jpg"
+title: "actualites locales"
+description: "Les actualités locales de Brétigny-sur-Orge pour les enfants."
+tags: "actualités locales, brétigny-sur-orge, région"
+url: "https://chubert91assmat.netlify.app/categories/actualites-locales"
+image: "https://monsite.com/images/activites-enfant.jpg"
 pagination:
   data: collections.actualites-locales
   size: 5  # Nombre d'articles par page
@@ -15,7 +15,7 @@ pagination:
 
 <!-- Icône de défilement vers le haut utilisant une image SVG -->
 <a href="#first-article" class="scroll-to-top">
-    <img class="rocket-icon" src="{{ '/images/rocket-svgrepo-com.svg' | url }}" alt="Icône de fusée pour naviguer vers le haut de la page des actualités locales pour enfants à Brétigny-sur-Orge" />
+    <img class="rocket-icon" src="{{ '/images/rocket-svgrepo-com.svg' | url }}" alt="Icône fusée navigation vers le haut" />
 </a>
 
 
@@ -34,12 +34,10 @@ pagination:
                 {% if posts | length > 0 %}
                     {% set featuredPost = posts[0] %}
                     <a href="{{ featuredPost.url }}">
-
-{% image featuredPost.data.featuredImage | default('https://dummyimage.com/850x350/dee2e6/6c757d.jpg'), featuredPost.data.title | default('Image de l\'article'), '(min-width: 1024px) 100vw, 50vw' %} 
-
+                        <img class="card-img-top" src="{{ featuredPost.data.featuredImage | default('https://dummyimage.com/850x350/dee2e6/6c757d.jpg') }}" alt="{{ featuredPost.data.title | default('Image de l\'article') }}" />
                     </a>
 
-                    {% include "layouts/widget/partage-article-vedette-reseaux.njk" %} <!-- Inclusion du partage-article-vedette-reseaux -->
+ {% include "layouts/widget/partage-article-vedette-reseaux.njk" %} <!-- Inclusion du partage-article-vedette-reseaux -->
 
                     <div class="card-body text-center"> <!-- Début du corps de la carte --> 
                         <span class="badge text-bg-secondary">{{ featuredPost.data.category | default('RECETTE') }}</span>
@@ -48,10 +46,11 @@ pagination:
                             <a href="{{ featuredPost.url }}" style="text-decoration: none; color: inherit;">{{ featuredPost.data.title | default('Titre de l\'article en vedette') }}</a>
                         </h2>
 
+
                         <div class="poppins-regular-blog">{{ featuredPost.content | safe | truncate(100, true) }}</div> <!-- Limité à 100 caractères avec "..." -->
                         
                         <a href="{{ featuredPost.url }}" class="btn btn-custom">
-                        <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Voir les articles sur les actualités locales pour les enfants à Brétigny-sur-Orge" />
+                            <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Envoyer">
                         </a>
                     </div> <!-- Fin de card-body text-center -->
 
@@ -70,9 +69,7 @@ pagination:
                         <div class="col-lg-6 mb-4"> <!-- Début de la colonne pour chaque autre article -->
                             <div class="card"> <!-- Début de la carte de l'article -->
                                 <a href="{{ post.url }}">
-
-                 {% image post.data.featuredImage | default('https://dummyimage.com/700x350/dee2e6/6c757d.jpg'), post.data.title | default('Image de l\'article'), '(min-width: 1024px) 100vw, 50vw' %} 
-
+                                    <img class="card-img-top" src="{{ post.data.featuredImage | default('https://dummyimage.com/700x350/dee2e6/6c757d.jpg') }}" alt="{{ post.data.title | default('Image de l\'article') }}" />
                                 </a>
 
 {% include "layouts/widget/partage-article-reseaux.njk" %} <!-- Inclusion du partage-article-reseaux -->
@@ -82,13 +79,13 @@ pagination:
                                     <div class="poppins-regular-blog-date">{{ post.date | date('dd MMMM yyyy') }}</div>
                                     <h2 class="poppins-regular-titre-blog">
                                         <a href="{{ post.url }}" style="text-decoration: none; color: inherit;">{{ post.data.title | default('Titre de l\'article') }}</a>
-                                    </h2>
+                                    </h2
 
 
                                    <div class="poppins-regular-blog">{{ post.content | safe | truncate(100, true) }}</div> <!-- Limité à 100 caractères avec "..." -->
-                                  <a href="{{ post.url }}" class="btn btn-custom">
-                                <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Voir les articles sur les actualités locales pour les enfants à Brétigny-sur-Orge" />
-                                </a>
+                                    <a href="{{ post.url }}" class="btn btn-custom">
+                                        <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Lire l'article">
+                                    </a>
 
 </div> <!-- Fin de card-body text-center -->
 </div> <!-- Fin de la carte de l'article -->
@@ -153,4 +150,3 @@ pagination:
         alert("Lien copié dans le presse-papier !");
     }
 </script>
-

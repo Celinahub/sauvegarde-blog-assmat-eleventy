@@ -1,6 +1,6 @@
 <div class="col-12 col-md-4">
-   <!-- Première card : Photo et icônes -->
-    <div class="card-colonne mb-3">
+    <!-- Sidebar widgets -->
+    <div class="card mb-3">
         <!-- Titre du widget -->
         <h5 class="finger-paint-regular-titre-blog text-center">A PROPOS ...</h5>
         <hr>
@@ -10,24 +10,16 @@
             <div class="portrait-blog">
 
 
-
-<picture>
-    <!-- Balise source pour WebP -->
-    <source srcset="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.webp' | url }}" type="image/webp">
-    <!-- Balise img pour les navigateurs ne prenant pas en charge WebP -->
-    <img class="card-img-portrait" src="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg' | url }}" alt="Céline Hubert, assistante maternelle à Brétigny-sur-Orge" loading="lazy">
-</picture>
-
-     
+        <!-- Image de profil -->
+        <img src="/images/blog/celine-hubert-assistante-maternelle-bretigny.png" class="card-img-portrait" alt="Céline">
 
         <!-- Icône de contact -->
-<a href="/contact" class="position-icon-portrait" aria-label="Contactez-nous">
-    <!-- SVG Icône de contact -->
-    <svg version="1.1" id="Capa_1_a" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        width="4em" height="4em" viewBox="0 41.206 800 717.588" enable-background="new 0 41.206 800 717.588"
-        xml:space="preserve" role="img" aria-labelledby="icon-contact">
-        <title id="icon-contact">Icône de contact</title>
-        <g>
+        <a href="/contact" class="position-icon-portrait">
+            <!-- SVG Icône de contact -->
+            <svg version="1.1" id="Capa_1_a" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="4em" height="4em" viewBox="0 41.206 800 717.588" enable-background="new 0 41.206 800 717.588"
+            xml:space="preserve">
+            <g>
                 <path fill="#103653" d="M653.017,106.665H186.35h-0.017C112.697,106.665,53,166.667,53,239.998v266.667
                     c0,73.332,59.697,133.333,133.333,133.333h5.21V800l196.874-160.002h264.6c73.634,0,133.333-60.001,133.333-133.333V239.998
                     C786.35,166.667,726.65,106.665,653.017,106.665z M221.75,439.998c-36.82,0-66.667-30.001-66.667-66.666
@@ -48,13 +40,12 @@
 
 
         <!-- Icône de domicile -->
-<a href="/" class="position-icon-domicile" aria-label="Page d'accueil">
-    <!-- SVG Icône de domicile -->
-    <svg version="1.1" id="Capa_1_b" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-        width="4em" height="4em" viewBox="0 41.206 800 717.588" enable-background="new 0 41.206 800 717.588"
-        xml:space="preserve" role="img" aria-labelledby="icon-home">
-        <title id="icon-home">Icône de domicile</title>
-        <g>
+        <a href="/" class="position-icon-domicile">
+            <!-- SVG Icône de domicile -->
+            <svg version="1.1" id="Capa_1_b" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            width="4em" height="4em" viewBox="0 41.206 800 717.588" enable-background="new 0 41.206 800 717.588"
+            xml:space="preserve">
+            <g>
                 <path opacity="0.5" fill="#F8F9F6" d="M718.92,301.671c-4.476-6.049-12.526-12.313-28.571-24.791L424.633,70.211
                     c-9.453-7.352-16.916-13.158-19.957-13.98c-1.339-0.363-2.714-0.545-4.097-0.545s-2.759,0.183-4.092,0.544
                     c-3.046,0.824-10.51,6.629-19.96,13.981l-265.718,206.67c-16.046,12.481-24.096,18.741-28.573,24.794
@@ -94,41 +85,29 @@
        </svg>
         </a>
    
-</div> <!-- Fin de portrait-blog -->
-</div> <!-- Fin de bordered-content-portrait-blog -->
-</div> <!-- Fin de première card -->
 
 
 
-
-
-
- <!-- Deuxième card : Texte de présentation -->
-  <div class="card-colonne mb-3">
-<div class="card-body">
+<!-- Texte de présentation dans Nunjucks -->
 <div class="text-portrait px-3">
-    <h5 class="poppins-bold-blog text-center">Bienvenue sur mon blog !</h5>
+    <h5 class="poppins-bold-blog text-center">Je suis Céline,</h5>
     <p class="poppins-regular-blog text-center">
-        Je suis Céline, assistante maternelle agréée à Brétigny-sur-Orge depuis 8 ans. Passionnée par mon métier, je partage ici des astuces et des bons plans qui ont fait leurs preuves auprès des enfants, et que j’aurais aimé connaître en tant que jeune parent.
-    </p>
-    <p class="poppins-regular-blog text-center">
-        Ce blog s’adresse également à mes collègues. N’hésitez pas à partager les articles et proposer vos idées via le formulaire de contact. Ensemble, valorisons l’accueil individuel !
-    </p>
-    <p class="poppins-regular-blog text-center">
-       Vous pouvez aussi consulter mon projet d’accueil, et je reste disponible pour toute question d'accueil. Bonne lecture, et à bientôt !
+        Assistante maternelle agréée à Brétigny-sur-Orge depuis 8 ans, je partage sur ce blog mes bons plans et astuces qui ont fait leurs preuves auprès des enfants.
+        Consultez mon projet d'accueil et n'hésitez-pas à me contacter si vous êtes à la recherche d'un mode de garde.
     </p>
 </div>
      
 
-</div> <!-- Fin de card-body -->
-</div> <!-- Fin de deuxième card -->
+
+</div> <!-- Fin de bordered-content-portrait-blog -->
+</div> <!-- Fin de portrait-blog -->
 
 
 
 
 
-  <!-- Troisième card : Recherche par mots-clés -->
-<div class="card-colonne">
+<!-- Nouvelle structure de la carte -->
+<div class="card">
     <div class="card-body">
         <!-- Titre du widget -->
         <h5 class="finger-paint-regular-titre-blog text-center">RECHERCHE PAR MOTS CLES</h5>
@@ -144,7 +123,7 @@
 <br>
 
 
-<div class="card-colonne">
+<div class="card">
     <div class="card-body">
         <!-- Titre du widget avec catégorie dynamique -->
         <h5 class="finger-paint-regular-titre-blog text-center">
@@ -165,9 +144,8 @@
                 { "name": "La collectivité grâce au RPE", "slug": "collectivite-rpe" },
                 { "name": "Activités pour enfant", "slug": "activites-enfant" },
                 { "name": "Sélections Produits", "slug": "selection-produits" },
-                { "name": "Hygiène / soins", "slug": "hygiene-soins" },
-                { "name": "Actualités locales", "slug": "actualites-locales" },
-                { "name": "Entreprises", "slug": "entreprises" }
+                { "name": "Actu Petite Enfance", "slug": "actu-petite-enfance" },
+                { "name": "Actualités locale", "slug": "actualites-locales" }
             ] %}
 
             {% for category in categories %}
