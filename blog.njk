@@ -73,7 +73,7 @@ pagination:
                     <!-- Vérifie si ce n'est pas l'article en vedette -->
                     {% if post != featuredPost %}
                         <div class="col-lg-6 mb-4"> <!-- Début de la colonne pour chaque autre article -->
-                            <div class="card-articles"> <!-- Début de la carte de l'article -->
+                            <div class="card"> <!-- Début de la carte de l'article -->
                                 <a href="{{ post.url }}">
 
                                    {% image post.data.featuredImage | default('https://dummyimage.com/700x350/dee2e6/6c757d.jpg'), post.data.title | default('Image de l\'article'), '(min-width: 1024px) 100vw, 50vw' %} 

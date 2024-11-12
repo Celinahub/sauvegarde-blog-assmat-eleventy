@@ -3188,68 +3188,22 @@ position: relative; /* Ajout de position relative */
  /* Styles les cards blog */
  
  
- 
+ .badge {
+   border-radius: 50px;
+   margin-bottom: 10px;
+ }
  body.blog-page {
   background-color: #F8F9F6;
  }
-
  .card {
-   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.0);
-   background-color: #fcfcfc;
-   overflow: hidden; /* Cache le débordement du contenu */
-   border: 1px solid transparent; /* Contour transparent */
-   position: relative; /* Assure que tout élément positionné à l'intérieur de la carte reste relatif à elle */
- }
-
- .card-colonne {
    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.0);
    background-color: #F8F9F6;
    overflow: hidden; /* Cache le débordement du contenu */
    border: 1px solid transparent; /* Contour transparent */
    position: relative; /* Assure que tout élément positionné à l'intérieur de la carte reste relatif à elle */
  }
-
-
- .card-articles {
-   margin: 10px;
-   background-color: #fcfcfc;
-   border-radius: 8px;
-   overflow: hidden;
-   height: 700px; /* Hauteur fixe de la carte */
-   margin-top: 25px;
-   display: flex;
-   flex-direction: column;  /* Aligner les éléments internes en colonne */
-}
-
-.card-body {
-   flex-grow: 1; /* Fait en sorte que le contenu occupe tout l'espace restant */
-   display: flex;
-   flex-direction: column; /* Garde le contenu dans un flux normal (pas en ligne) */
-   justify-content: space-between; /* Assure que le contenu est espacé uniformément */
-   text-align: center; /* Centre tout le contenu texte (y compris le badge) */
-}
-
-
-
-
-.card-body .badge {
-   align-self: center; /* Centrer le badge dans la carte */
-   display: inline-block;  /* Permet de garder le badge en ligne et éviter l'étirement */
-   margin-bottom: 10px; /* Ajuster l'espacement si nécessaire */
-   margin-top: 20px; /* Ajuster l'espacement si nécessaire */
-   border-radius: 50px;
-   margin-bottom: 10px;
-}
-
-.btn-custom {
-   margin-top: auto; /* Cela pousse le bouton au bas de la carte */
-   display: inline-block; /* Garde le bouton en ligne, mais le pousse au bas */
-   align-self: center; /* Centrer le bouton horizontalement */
-}
-
-
-
-
+ 
+ 
  
  
  /* Styles pour la TYPO des cards blog */
@@ -3281,8 +3235,8 @@ position: relative; /* Ajout de position relative */
  /* Styles spécifiques pour le titre de l'article page blog.njk */
  .poppins-regular-titre-blog {
    font-family: "Poppins", sans-serif;
-   font-weight: 600;
-   font-size: 25px;
+   font-weight: 400;
+   font-size: 30px;
    font-style: normal;
    color: #103754;
  }
@@ -3515,8 +3469,6 @@ position: relative; /* Ajout de position relative */
    position: relative; /* Assure que les icônes sont positionnées par rapport à ce conteneur */
    display: inline-block; /* Pour empêcher le débordement de l'icône position */
    z-index: 1;
-   width: 100%; /* Assure que le conteneur de l'image prend toute la largeur */
-   text-align: center; /* Centre l'image si elle est en ligne */
 }
 
 /* Styles pour la photo portrait de blog et des icônes */
@@ -3533,41 +3485,6 @@ position: relative; /* Ajout de position relative */
        
    }
 }
-
-/* Styles pour garder la photo de profil ronde et centrée */
-.bordered-content-portrait-blog .portrait-blog img {
-   max-width: 100%;
-   height: auto;
-   border-radius: 50%;
-   display: block;
-   margin: 0 auto; /* Centrage */
-}
-
-@media (max-width: 768px) {
-   .bordered-content-portrait-blog .portrait-blog img {
-       max-width: 80%; /* Réduire la taille sur les petits écrans */
-       max-height: 80%;
-       
-   }
-}
-
-
-/* Ajustement pour éviter le débordement en mode paysage sur mobiles */
-@media screen and (orientation: landscape) and (max-width: 768px) {
-  .portrait-blog {
-      width: 100%; /* Limite la largeur du conteneur */
-      margin: 0 auto;
-  }
-  .card-img-portrait {
-      width: 70%; /* Ajustement supplémentaire pour le paysage */
-      margin: 0 auto;
-  }
-}
-
-
-
-
-
 
 /* Ajustements généraux pour les icônes en fonction de l'image de profil */
 .position-icon-portrait,
@@ -3625,6 +3542,34 @@ position: relative; /* Ajout de position relative */
     }
 }
 
+/* Styles pour garder la photo de profil ronde et centrée */
+.bordered-content-portrait-blog .portrait-blog img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto; /* Centrage */
+}
+
+@media (max-width: 768px) {
+    .bordered-content-portrait-blog .portrait-blog img {
+        max-width: 80%; /* Réduire la taille sur les petits écrans */
+        max-height: 80%;
+    }
+}
+
+
+/* Ajustement pour éviter le débordement en mode paysage sur mobiles */
+@media screen and (orientation: landscape) and (max-width: 768px) {
+   .portrait-blog {
+       width: 100%; /* Limite la largeur du conteneur */
+       margin: 0 auto;
+   }
+   .card-img-portrait {
+       width: 70%; /* Ajustement supplémentaire pour le paysage */
+       margin: 0 auto;
+   }
+}
 
 
 
