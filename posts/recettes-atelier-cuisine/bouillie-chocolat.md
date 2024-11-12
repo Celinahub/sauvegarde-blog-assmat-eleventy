@@ -1,6 +1,6 @@
 ---
 layout: layouts/post.njk
-title: "Bouillie au chocolat de mon enfance"
+title: "Bouillie au chocolat"
 description: "Recette maison de bouillie au chocolat pour enfants, réalisée avec des ingrédients non transformés. Facile et rapide, idéale pour un dessert sain et nutritif."
 tags: 
   - enfants
