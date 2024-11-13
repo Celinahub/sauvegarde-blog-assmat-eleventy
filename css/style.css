@@ -133,12 +133,12 @@ h2, h3 {
 /* Style pour les horaires d'accueil*/
 .liens-utiles-typo h3 {
    margin-bottom: 25px; /* Augmente l'espace sous le titre */
-   font-size: 20px; /* typo horaires */
+   font-size: 16px; /* typo horaires */
 }
 
 .pied-page-typo h3 {
    margin-bottom: 35px; /* Augmente l'espace sous le titre */
-   font-size: 20px; /* typo liens utiles et reeseaux sociaux */
+   font-size: 16px; /* typo liens utiles et reeseaux sociaux */
 }
 
 .pied-page-typo p {
@@ -3035,8 +3035,10 @@ position: relative; /* Ajout de position relative */
  /* Style pour la section "contenu du blog" */
 #contenu-blog,
 #contenu-activites-enfant,
+#contenu-entreprises,
 #contenu-actualites-locales,
 #contenu-actu-petite-enfance,
+#contenu-hygiene-soins,
 #contenu-collectivite-rpe,
 #contenu-recettes-atelier-cuisine,
 #contenu-selection-produits {
@@ -3186,22 +3188,68 @@ position: relative; /* Ajout de position relative */
  /* Styles les cards blog */
  
  
- .badge {
-   border-radius: 50px;
-   margin-bottom: 10px;
- }
+ 
  body.blog-page {
   background-color: #F8F9F6;
  }
+
  .card {
+   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.0);
+   background-color: #fcfcfc;
+   overflow: hidden; /* Cache le débordement du contenu */
+   border: 1px solid transparent; /* Contour transparent */
+   position: relative; /* Assure que tout élément positionné à l'intérieur de la carte reste relatif à elle */
+ }
+
+ .card-colonne {
    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.0);
    background-color: #F8F9F6;
    overflow: hidden; /* Cache le débordement du contenu */
    border: 1px solid transparent; /* Contour transparent */
    position: relative; /* Assure que tout élément positionné à l'intérieur de la carte reste relatif à elle */
  }
- 
- 
+
+
+ .card-articles {
+   margin: 10px;
+   background-color: #fcfcfc;
+   border-radius: 8px;
+   overflow: hidden;
+   height: 700px; /* Hauteur fixe de la carte */
+   margin-top: 25px;
+   display: flex;
+   flex-direction: column;  /* Aligner les éléments internes en colonne */
+}
+
+.card-body {
+   flex-grow: 1; /* Fait en sorte que le contenu occupe tout l'espace restant */
+   display: flex;
+   flex-direction: column; /* Garde le contenu dans un flux normal (pas en ligne) */
+   justify-content: space-between; /* Assure que le contenu est espacé uniformément */
+   text-align: center; /* Centre tout le contenu texte (y compris le badge) */
+}
+
+
+
+
+.card-body .badge {
+   align-self: center; /* Centrer le badge dans la carte */
+   display: inline-block;  /* Permet de garder le badge en ligne et éviter l'étirement */
+   margin-bottom: 10px; /* Ajuster l'espacement si nécessaire */
+   margin-top: 20px; /* Ajuster l'espacement si nécessaire */
+   border-radius: 50px;
+   margin-bottom: 10px;
+}
+
+.btn-custom {
+   margin-top: auto; /* Cela pousse le bouton au bas de la carte */
+   display: inline-block; /* Garde le bouton en ligne, mais le pousse au bas */
+   align-self: center; /* Centrer le bouton horizontalement */
+}
+
+
+
+
  
  
  /* Styles pour la TYPO des cards blog */
@@ -3233,8 +3281,8 @@ position: relative; /* Ajout de position relative */
  /* Styles spécifiques pour le titre de l'article page blog.njk */
  .poppins-regular-titre-blog {
    font-family: "Poppins", sans-serif;
-   font-weight: 400;
-   font-size: 30px;
+   font-weight: 600;
+   font-size: 25px;
    font-style: normal;
    color: #103754;
  }
@@ -3263,6 +3311,7 @@ position: relative; /* Ajout de position relative */
  /* Styles pour les svg tétines */
  
 
+ 
 
  .bouton-tetine {
    width: 100px; /* Ajustez la largeur de l'icône selon vos besoins */
@@ -3312,7 +3361,7 @@ position: relative; /* Ajout de position relative */
    position: relative;
    z-index: 1;
    padding-top: 0rem;
-   margin-inline: 40px; /* Ajoute la même marge à gauche et à droite */
+   margin-inline: 20px; /* Ajoute la même marge à gauche et à droite */
 }
 @media screen and (max-width: 768px) {
    .container-article {
@@ -3330,6 +3379,12 @@ position: relative; /* Ajout de position relative */
    margin-top: 20px;
    margin-bottom: 20px;
 }
+@media screen and (max-width: 768px) {
+   .poppins-regular-titre-article {
+      font-size: 20px;
+   }
+ }
+
 
 .meta-info {
    text-align: center; /* Centre le texte */
@@ -3350,22 +3405,35 @@ position: relative; /* Ajout de position relative */
 }
 
  /* Style pour le contenu texte des articles.md dans post.njk*/
+ .content-wrapper {
+   max-width: 800px; /* Largeur maximale pour le texte et l'image */
+   margin: 0 auto; /* Centre le conteneur */
+}
+
+.article-image {
+   width: 100%; /* L'image prendra la largeur du conteneur */
+   height: auto;
+}
+
 .article-content {
    font-family: "Poppins", sans-serif;
    font-weight: 400;
    font-size: 14px;
-   font-style: normal;
    color: #103754;
    margin-top: 20px;
    margin-bottom: 80px;
-   text-align: center; /* Centre le texte */
+   padding: 0 20px; /* Ajoute du padding pour éviter que le texte touche les bords */
+   text-align: left;  /* Aligne le texte à gauche */
+
+
 }
+
 @media screen and (max-width: 768px) {
-   .article-content {
-      margin-left: 10px;
-      margin-right: 10px;
+   .content-wrapper {
+      padding: 0 10px; /* Réduit les marges latérales pour les petits écrans */
    }
- }
+}
+
 
  .article-content h1 {
    font-size: 2rem; /* Style spécifique pour h1 dans article-content */
@@ -3379,6 +3447,19 @@ position: relative; /* Ajout de position relative */
    font-size: 1.5rem; /* Style spécifique pour h3 dans article-content */
 }
 
+@media screen and (max-width: 768px) {
+   .article-content h1 {
+      font-size: 1.3rem; /* Style spécifique pour h1 dans article-content */
+   }
+   
+   .article-content h2 {
+      font-size: 1.1rem; /* Style spécifique pour h2 dans article-content */
+   }
+   
+   .article-content h3 {
+      font-size: 0.9rem; /* Style spécifique pour h3 dans article-content */
+   }
+}
 
 /* Style pour le bouton svg retour des articles.md dans post.njk*/
 .back-button {
@@ -3429,107 +3510,131 @@ position: relative; /* Ajout de position relative */
  
  
  
- 
- 
- 
- /* Styles pour la photo portrait de blog et des icônes */
- 
- /* Réduire la taille de l'image et la centrer */
- .card-img-portrait {
-   width: 60%; /* Réduire la taille de l'image à 80% de la largeur de la carte */
-   height: auto; /* Garde les proportions de l'image */
-   display: block; /* Pour centrer l'image */
-   margin: 20px auto 0; /* Ajoute une marge en haut, centre l'image */
-   margin-bottom: 0; /* Supprime toute marge inférieure pour l'image */
- }
- 
- @media screen and (max-width: 768px) {
-   .card-img-portrait {
-     width: 90%; /* Réduire la taille de l'image à 80% de la largeur de la carte */
-   }
- }
- 
- 
- /* Style de l'icône position */
- .position-icon-portrait {
-   position: absolute;
-   top: 20%; /* Position verticale centrée */
-   left: 75%; /* Position horizontale centrée */
-   transform: translate(-50%, -50%);
-   z-index: 2; /* Pour que l'icône soit au-dessus de la photo de profil */
- }
- 
- /* Styles pour rendre l'icône responsive */
- @media (max-width: 768px) {
-   .position-icon-portrait svg {
-       width: 3.5em; /* Réduisez la taille de l'icône pour les écrans plus petits */
-       height: 3.5em;
-       
-   }
- }
- 
- /* Style de l'icône position */
- .position-icon-domicile {
-   position: absolute;
-   top: 25%; /* Position verticale centrée */
-   left: 20%; /* Position horizontale centrée */
-   transform: translate(-50%, -50%);
-   z-index: 2; /* Pour que l'icône soit au-dessus de la photo de profil */
- }
- 
- /* Styles pour rendre l'icône responsive */
- @media (max-width: 768px) {
-   .position-icon-domicile svg {
-       width: 3.5em; /* Réduisez la taille de l'icône pour les écrans plus petits */
-       height: 3.5em;
-   }
-
-   .position-icon-domicile {
-    
-      top: 25%; /* Position verticale centrée */
-      left: 20%; /* Position horizontale centrée */
-     
-    }
- }
- 
-/* Style de la photo animée et le style de la bordure autour photos animation projet-accueil */
-.bordered-content-portrait-blog .portrait-blog img {
-   max-width: 300px; /* Définissez la largeur maximale souhaitée */
-   max-height: 300px; /* Définissez la hauteur maximale souhaitée */
-   border-radius: 50%; /* Pour garder la forme ronde */
-   margin-top: 20px; /* Espace sur l'image */
-   margin-bottom: -50px; /* Espace sous l'image */
-  
-   
- }
-
-
-/* Styles pour positionner l'icône de position sur la photo animée */
+ /* Styles pour positionner l'icône de position sur la photo animée */
 .portrait-blog {
-   position: relative;
+   position: relative; /* Assure que les icônes sont positionnées par rapport à ce conteneur */
    display: inline-block; /* Pour empêcher le débordement de l'icône position */
    z-index: 1;
-   
+   width: 100%; /* Assure que le conteneur de l'image prend toute la largeur */
+   text-align: center; /* Centre l'image si elle est en ligne */
+}
+
+/* Styles pour la photo portrait de blog et des icônes */
+.card-img-portrait {
+   width: 80%; /* Ajuster selon vos besoins */
+   height: auto; /* Maintenir les proportions */
+   display: block; /* Centre l'image */
+   margin: 20px auto 0; /* Marge en haut et centre horizontalement */
+}
+
+@media screen and (max-width: 768px) {
+   .card-img-portrait {
+       width: 90%; /* Ajustement pour les écrans plus petits */
+       
+   }
+}
+
+/* Styles pour garder la photo de profil ronde et centrée */
+.bordered-content-portrait-blog .portrait-blog img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 50%;
+   display: block;
+   margin: 0 auto; /* Centrage */
+}
+
+@media (max-width: 768px) {
+   .bordered-content-portrait-blog .portrait-blog img {
+       max-width: 80%; /* Réduire la taille sur les petits écrans */
+       max-height: 80%;
+       
+   }
 }
 
 
-/* Style de la photo animée et le style de la bordure autour photos animation projet-accueil */
-@media (max-width: 768px) {
-   .bordered-content-portrait-blog .portrait-blog img {
-      max-width: 200px; /* Définissez la largeur maximale souhaitée */
-      max-height: 200px; /* Définissez la hauteur maximale souhaitée */
-      border-radius: 50%; /* Pour garder la forme ronde */
-      margin-top: 20px; /* Espace sur l'image */
-      margin-bottom: 0px; /* Espace sous l'image */
+/* Ajustement pour éviter le débordement en mode paysage sur mobiles */
+@media screen and (orientation: landscape) and (max-width: 768px) {
+  .portrait-blog {
+      width: 100%; /* Limite la largeur du conteneur */
+      margin: 0 auto;
+  }
+  .card-img-portrait {
+      width: 70%; /* Ajustement supplémentaire pour le paysage */
+      margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+/* Ajustements généraux pour les icônes en fonction de l'image de profil */
+.position-icon-portrait,
+.position-icon-domicile {
+    position: absolute;
+    width: 3.5em; /* Ajuster la taille de l'icône si nécessaire */
+    height: 3.5em;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* Positionnement spécifique pour chaque icône */
+.position-icon-portrait {
+    top: 15%;
+    left: 80%; /* Ajustement horizontal pour réduire le décalage */
+}
+
+.position-icon-domicile {
+    top: 40%;
+    left: 15%;
+}
+
+/* Réglages pour écrans moyens */
+@media (max-width: 992px) {
+    .position-icon-portrait {
+        top: 15%;
+        left: 80%;
+        width: 3em;
+        height: 3em;
+    }
+    .position-icon-domicile {
+        top: 40%;
+        left: 15%;
+        width: 3em;
+        height: 3em;
     }
 }
 
+/* Réglages pour écrans étroits (petites colonnes) */
+@media (max-width: 768px) {
+    .position-icon-portrait,
+    .position-icon-domicile {
+        width: 2.5em;
+        height: 2.5em;
+    }
+
+    .position-icon-portrait {
+        top: 25%; /* Ajustement de la position en haut pour petits écrans */
+        left: 75%; /* Position plus proche de l'image */
+    }
+
+    .position-icon-domicile {
+        top: 10%;
+        left: 15%;
+    }
+}
+
+
+
+
+
 .text-portrait {
-   margin-top: 80px; /* ou une valeur de votre choix */
+   margin-top: 0px; /* ou une valeur de votre choix */
 }
 @media (max-width: 768px) {
    .text-portrait {
-      margin-top: 20px; /* ou une valeur de votre choix */
+      margin-top: 10px; /* ou une valeur de votre choix */
    }
  }
 
@@ -3713,5 +3818,276 @@ position: relative; /* Ajout de position relative */
    }
  }
  
+
+
+
+
+ /* Style pour la 404 - Page Non Trouvée dans 404.md*/ */
+ 
+ body.introuvable-page {
+   background-color: #96D2CA;
+   flex-grow: 1; /* Occupe toute la hauteur disponible */
+   min-height: 100vh; /* Prend au moins la hauteur de la vue */
+  }
+
+  #page-non-trouvee {
+   background-color: #F8F9F6; /* Couleur de fond */
+   flex-grow: 1; /* Occupe toute la hauteur disponible */
+   min-height: 100vh; /* Prend au moins la hauteur de la vue */
+   display: flex;
+   flex-direction: column;
+   justify-content: center; /* Centrer le contenu verticalement si nécessaire */
+   position: relative;
+   margin: 0; /* Supprime les marges externes */
+   padding: 0; /* Supprime les espaces internes */
+   overflow: hidden; /* Évite les débordements */
+}
+
+
+/* Style pour le contenu du titre 404 - Page Non Trouvée dans 404.md*/
+.poppins-regular-titre-page-non-trouvee {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 35px;
+   font-style: normal;
+   color: #103754;
+   margin-top: 20px;
+   margin-bottom: 20px;
+}
+/* Styles spécifiques pour le titre de l'article page blog.njk */
+.poppins-regular-texte-page-non-trouvee {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+ }
+
+/* Styles pour le lien de 404 - Page Non Trouvée dans 404.md*/
+.styled-link-home {
+   font-family: "Poppins", sans-serif;
+   font-weight: bold;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+   text-decoration: none;
+}
+.styled-link-home:hover {
+   text-decoration: underline;
+}
+/* Media query pour écrans plus petits */
+@media (max-width: 768px) {
+   .styled-link-home  {
+      font-size: 14px;
+   }
+ }
+
+
+ .voiture-stop {
+   width: 60%;
+   max-width: 300px;
+   height: auto;
+   margin-top: 40px; /* Ajoute de l'espace au-dessus */
+   margin-bottom: 140px; /* Ajuste l'espace pour les écrans moyens */
+}
+
+@media (max-width: 768px) {
+   .voiture-stop {
+       width: 80%;
+       margin-top: 25px; /* Ajuste l'espace pour les écrans moyens */
+       margin-bottom: 100px; /* Ajuste l'espace pour les écrans moyens */
+   }
+}
+
+@media (max-width: 480px) {
+   .voiture-stop {
+       width: 100%;
+       margin-top: 20px; /* Ajuste l'espace pour les petits écrans */
+       margin-bottom: 100px; /* Ajuste l'espace pour les écrans moyens */
+   }
+}
+
+
+/* Pour le SVG en haut */
+.ciel-nuages-decor {
+   display: block;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+
+
+/* Pour les SVG en bas */
+.sol-nuages-decor {
+   width: 100%; /* Ajustez la largeur à 100% pour occuper toute la largeur */
+   height: auto; /* Conserve les proportions */
+ }
  
  
+ /* Par défaut, afficher le SVG pour les grands écrans (PC) */
+ .pc-svg {
+   display: block;
+ }
+ 
+ .mobile-svg {
+   display: none;
+ }
+ 
+ /* Pour les petits écrans, on masque le SVG pour PC et on affiche celui pour mobile */
+ @media only screen and (max-width: 767px) {
+   .pc-svg {
+       display: none;
+   }
+   
+   .mobile-svg {
+       display: block;
+   }
+ }
+ 
+/* Pour les SVG en bas */
+.oups-container {
+   position: absolute;
+   bottom: 0;
+   left: 50%;
+   transform: translateX(-50%);
+   width: 100%;
+   text-align: center;
+}
+
+ 
+
+
+
+
+
+
+/* Style pour la page d'information flux RSS rss-info.njk*/ 
+ 
+body.rss-info-page {
+   background-color: #96D2CA;
+  }
+
+#page-flux-rss {
+  
+   background: linear-gradient(to bottom, #98D1CA 5%, #F8F9F6 95%); /* Création du dégradé avec bande réglable */
+   margin-bottom: 0; /* Corrige le margin-bottom négatif */
+}
+
+
+.ciel-nuages-flux {
+   width: 100%; /* Prendre toute la largeur */
+   height: auto; /* Assurer que le SVG garde ses proportions */
+   margin: 0; /* Pas de marge supplémentaire */
+   padding: 0; /* Pas de remplissage supplémentaire */
+}
+
+
+/* Styles pour le lien de 404 - Page Non Trouvée dans 404.md*/
+.styled-link-rss {
+   font-family: "Poppins", sans-serif;
+   font-weight: bold;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+   text-decoration: none;
+   display: inline-block; /* Permet d'ajouter du margin */
+   margin: 20px 0; /* Ajustez cette valeur pour espacer le lien */
+}
+.styled-link-rss:hover {
+   text-decoration: underline;
+}
+/* Media query pour écrans plus petits */
+@media (max-width: 768px) {
+   .styled-link-rss  {
+      font-size: 14px;
+   }
+ }
+
+
+ .button-wrapper {
+   display: flex;
+   justify-content: center; /* Centre les boutons horizontalement */
+   align-items: center; /* Centre les boutons verticalement, si nécessaire */
+   flex-wrap: wrap; /* Permet aux boutons de passer à la ligne en cas de manque d'espace */
+   gap: 15px; /* Ajuste l'espacement entre les boutons */
+ }
+ 
+
+.custom-button {
+   background-color: #103754; /* Couleur de fond */
+   color: #F8F9F6; /* Couleur du texte */
+   border-radius: 8px; /* Coins arrondis */
+   border: none; /* Retirer la bordure par défaut */
+   padding: 10px 20px; /* Espacement interne */
+   font-size: 16px; /* Taille du texte */
+   cursor: pointer; /* Changer le curseur au survol */
+   transition: background-color 0.3s; /* Transition pour un effet au survol */
+ }
+ .custom-button:hover {
+   background-color: #041427; /* Couleur au survol */
+   color: #F8F9F6; /* Couleur du texte */
+ }
+ @media (max-width: 576px) {
+   .button-wrapper {
+       flex-direction: column; /* Aligne les boutons verticalement */
+       width: 100%; /* Assure que le conteneur occupe toute la largeur */
+   }
+   
+   .custom-button {
+       width: 100%; /* Les boutons occupent toute la largeur du conteneur */
+   }
+}
+ 
+/* Dans votre fichier CSS */
+.poppins-regular-titre-page-flux-rss {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   color: #103653;
+   font-size: 3em; /* Taille de la police relative */
+   margin-bottom: 50px; /* Marge en bas du titre */
+   margin-top: 50px; /* Marge en haut du titre */
+}
+
+@media screen and (max-width: 768px) {
+   .poppins-regular-titre-page-flux-rss {
+      font-size: 2em; /* Taille de la police relative */
+   }
+}
+
+/* Dans votre fichier CSS */
+.poppins-regular-sous-titre-page-flux-rss {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   color: #103653;
+   font-size: 2em; /* Taille de la police relative */
+   margin-bottom: 50px; /* Marge en bas du titre */
+   margin-top: 50px; /* Marge en haut du titre */
+}
+
+@media screen and (max-width: 768px) {
+   .poppins-regular-sous-titre-page-flux-rss {
+      font-size: 1.2em; /* Taille de la police relative */
+   }
+}
+
+.poppins-regular-texte-page-flux-rss {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+ }
+
+ /* Styles spécifiques pour l'espace entre les titres "Routine" et "Dejeuner" et le texte */
+.flux-spacer {
+   margin-bottom: 80px; /* Ajoutez de l'espace entre les éléments */
+}
+
+.rss-icon {
+   width: 50px;
+   height: 50px;
+}

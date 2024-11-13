@@ -1,9 +1,9 @@
 ---
 layout: layouts/base.njk
-title: "collectivite-rpe"
-description: "Les activités au rpe sur Brétigny-sur-Orge."
-tags: "collectivité au rpe, brétigny-sur-orge"
-url: "https://chubert91assmat.netlify.app/categories/collectivite-rpe"
+title: "Activités pour Enfants au Relais Petite Enfance (RPE) à Brétigny-sur-Orge"
+description: "Découvrez les activités éducatives et ludiques pour enfants de moins de 3 ans au Relais Petite Enfance de Brétigny-sur-Orge, encadrées par une animatrice éducateur de jeunes enfants."
+tags: "activités enfant, relais petite enfance, RPE, Brétigny-sur-Orge, assistante maternelle"
+url: "https://test-site-statique-blog-eleventy.netlify.app/categories/collectivite-rpe"
 image: "https://monsite.com/images/collectivite-rpe.jpg"
 pagination:
   data: collections.collectivite-rpe
@@ -15,7 +15,7 @@ pagination:
 
 <!-- Icône de défilement vers le haut utilisant une image SVG -->
 <a href="#first-article" class="scroll-to-top">
-    <img class="rocket-icon" src="{{ '/images/rocket-svgrepo-com.svg' | url }}" alt="Icône fusée navigation vers le haut" />
+    <img class="rocket-icon" src="{{ '/images/rocket-svgrepo-com.svg' | url }}" alt="Icône de fusée pour revenir en haut de la page sur les activités du relais petite enfance à Brétigny-sur-Orge" />
 </a>
 
 
@@ -34,7 +34,9 @@ pagination:
                 {% if posts | length > 0 %}
                     {% set featuredPost = posts[0] %}
                     <a href="{{ featuredPost.url }}">
-                        <img class="card-img-top" src="{{ featuredPost.data.featuredImage | default('https://dummyimage.com/850x350/dee2e6/6c757d.jpg') }}" alt="{{ featuredPost.data.title | default('Image de l\'article') }}" />
+
+                       {% image featuredPost.data.featuredImage | default('https://dummyimage.com/850x350/dee2e6/6c757d.jpg'), featuredPost.data.title | default('Image de l\'article'), '(min-width: 1024px) 100vw, 50vw' %} 
+
                     </a>
 
 {% include "layouts/widget/partage-article-vedette-reseaux.njk" %} <!-- Inclusion du partage-article-vedette-reseaux -->
@@ -49,9 +51,9 @@ pagination:
 
 
                         <div class="poppins-regular-blog">{{ featuredPost.content | safe | truncate(100, true) }}</div> <!-- Limité à 100 caractères avec "..." -->
-                        <a href="{{ featuredPost.url }}" class="btn btn-custom">
-                            <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Envoyer">
-                        </a>
+                       <a href="{{ featuredPost.url }}" class="btn btn-custom">
+    <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Voir les articles sur les activités pour enfants au relais petite enfance à Brétigny-sur-Orge" />
+</a>
                   </div> <!-- Fin de card-body text-center -->
 
 
@@ -69,7 +71,9 @@ pagination:
                         <div class="col-lg-6 mb-4"> <!-- Début de la colonne pour chaque autre article -->
                             <div class="card"> <!-- Début de la carte de l'article -->
                                 <a href="{{ post.url }}">
-                                    <img class="card-img-top" src="{{ post.data.featuredImage | default('https://dummyimage.com/700x350/dee2e6/6c757d.jpg') }}" alt="{{ post.data.title | default('Image de l\'article') }}" />
+
+                                    {% image post.data.featuredImage | default('https://dummyimage.com/700x350/dee2e6/6c757d.jpg'), post.data.title | default('Image de l\'article'), '(min-width: 1024px) 100vw, 50vw' %} 
+                                    
                                 </a>
 
 {% include "layouts/widget/partage-article-reseaux.njk" %} <!-- Inclusion du partage-article-reseaux -->
@@ -83,8 +87,8 @@ pagination:
 
 
                                    <div class="poppins-regular-blog">{{ post.content | safe | truncate(100, true) }}</div> <!-- Limité à 100 caractères avec "..." -->
-                                    <a href="{{ post.url }}" class="btn btn-custom">
-                                        <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Lire l'article">
+                                  <a href="{{ post.url }}" class="btn btn-custom">
+                                <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Voir les articles sur les activités pour enfants au relais petite enfance à Brétigny-sur-Orge" />
                                     </a>
 
 </div> <!-- Fin de card-body text-center -->
