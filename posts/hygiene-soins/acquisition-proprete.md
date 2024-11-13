@@ -1,20 +1,20 @@
 ---
 layout: layouts/post.njk
-title: "Recette 4"
+title: "Acquisition de la propreté"
 description: "Cet article explore un exemple intéressant pour les enfants."
 tags: 
   - enfants
-  - exemple
-  - recettes
-url: "https://chubert91assmat.netlify.app/posts/recette-4"
+  - soins
+  - acquisition
+url: "https://test-site-statique-blog-eleventy.netlify.app/posts/acquisistion-de-la-proprete"
 image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
-date: 2023-10-08
-category: "RECETTES / ATELIER CUISINE"
-featuredImage: /images/uploads/image1.jpg
+date: 2024-11-11
+category: "HYGIÈNE / SOINS"
+featuredImage: /images/uploads/pot.jpg
 ---
 
-The third post on the Eleventy and Netlify CMS blog
 
+The third post on the Eleventy and Netlify CMS blog
 
 
 En stockant des métadonnées dans un fichier JSON, vous avez une source unique pour gérer les informations de vos articles, ce qui facilite la mise à jour et la gestion des articles.

@@ -1,16 +1,16 @@
 ---
 layout: layouts/post.njk
-title: "RPE 2"
+title: "Peinture avec un tampon pomme"
 description: "Cet article explore un exemple intéressant pour les enfants."
 tags: 
   - enfants
   - exemple
   - rpe
-url: "https://chubert91assmat.netlify.app/posts/RPE 2"
+url: "https://test-site-statique-blog-eleventy.netlify.app/posts/rpe-1"
 image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
-date: 2023-10-06
+date: 2023-10-15
 category: "LA COLLECTIVITE GRÂCE AU RPE"
-featuredImage: /images/uploads/image1.jpg
+featuredImage: /images/uploads/tampon-pomme.jpg
 ---
 
 
