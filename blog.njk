@@ -55,7 +55,7 @@ pagination:
                         </h2>
 
 
-                        <div class="poppins-regular-blog">{{ featuredPost.content | safe | truncate(100, true) }}</div> <!-- Limité à 100 caractères avec "..." -->
+                        <div class="poppins-regular-blog">{{ featuredPost.content | truncateWords(20) }}</div><!-- Limité à 20 mots avec "..." -->
                         <a href="{{ featuredPost.url }}" class="btn btn-custom">
     <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Lire l'article sur les meilleures activités pour enfants chez Céline, nounou à Brétigny-sur-Orge">
                         </a>
@@ -89,7 +89,7 @@ pagination:
                                         <a href="{{ post.url }}" style="text-decoration: none; color: inherit;">{{ post.data.title | default('Titre de l\'article') }}</a>
                                     </h2>
 
-                                   <div class="poppins-regular-blog">{{ post.content | safe | truncate(100, true) }}</div> <!-- Limité à 100 caractères avec "..." -->
+                                   <div class="poppins-regular-blog">{{ post.content | truncateWords(20) }}</div><!-- Limité à 20 mots avec "..." -->
                                    <a href="{{ post.url }}" class="btn btn-custom">
                                 <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Lire l'article sur les meilleures activités pour enfants chez Céline, nounou à Brétigny-sur-Orge">
                                 </a>

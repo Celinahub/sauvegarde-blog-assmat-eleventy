@@ -149,6 +149,28 @@ module.exports = function(eleventyConfig) {
     return format(new Date(date), "EEE, dd MMM yyyy HH:mm:ss 'GMT'xxx", { locale: fr });
   });
 
+
+
+// Ajouter un filtre pour limiter par mots
+eleventyConfig.addFilter("truncateWords", function (content, numWords) {
+  if (!content || typeof content !== "string") return ""; // Vérifie si le contenu est valide
+
+  // Supprimer les balises HTML
+  const plainText = content.replace(/<\/?[^>]+(>|$)/g, ""); 
+
+  // Découpe par mots et limite à numWords
+  const words = plainText.split(/\s+/);
+  if (words.length <= numWords) {
+    return plainText; // Retourne tout le texte s'il a moins de mots
+  }
+
+  return words.slice(0, numWords).join(" ") + "…"; // Tronque et ajoute une ellipse
+});
+
+
+
+
+
   // Ajouter un filtre pour récupérer les balises SEO
   eleventyConfig.addFilter("seo", function(data) {
     return {

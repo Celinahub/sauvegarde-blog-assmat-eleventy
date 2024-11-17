@@ -3195,7 +3195,7 @@ position: relative; /* Ajout de position relative */
 
  .card {
    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.0);
-   background-color: #fcfcfc;
+   background-color: #FDFCF7;
    overflow: hidden; /* Cache le débordement du contenu */
    border: 1px solid transparent; /* Contour transparent */
    position: relative; /* Assure que tout élément positionné à l'intérieur de la carte reste relatif à elle */
@@ -3212,7 +3212,7 @@ position: relative; /* Ajout de position relative */
 
  .card-articles {
    margin: 10px;
-   background-color: #fcfcfc;
+   background-color: #FDFCF7;
    border-radius: 8px;
    overflow: hidden;
    height: 700px; /* Hauteur fixe de la carte */
