@@ -13,60 +13,61 @@ category: "HYGIÈNE / SOINS"
 featuredImage: /images/uploads/pot.jpg
 ---
 
-# Quel est le bon moment pour proposer à votre enfant le pot ou le réducteur?
-Les enfants passent par plusieurs étapes dans leur developpement, ils évoluent à leur rythme puis vient le sujet que l'on appelle commnément "l'acquisition de la propreté". Cette étape n'est pas un apprentissage mais un processus naturel et spontané comme la marche, l'acquisition de la parole. Ne vous inquietez-pas, ce moment tant attendu viendra et n'écoutez-pas les idées reçues, votre enfant sera accepté à l'ecole maternelle malgré quelques petits accidents.
+# Quand et comment proposer le pot ou le réducteur ?
+L’acquisition de la propreté est une étape naturelle et spontanée du développement, comme la marche ou la parole. Ne vous inquiétez pas : ce moment tant attendu viendra. N'écoutez pas les idées reçues, votre enfant sera accepté à l'école maternelle, même s'il a encore quelques petits accidents.
 
-L'enfant décide lui-même et faites-lui confiance, plusieurs signes ne trompent pas:
+C'est l'enfant qui décide de lui-même ; faites-lui confiance, car plusieurs signes ne trompent pas:
 
-- **Votre enfant vous informe** que "pipi" et/ou "caca" est fait.
+- **Il vous informe** qu'il a fait « pipi » ou « caca ».
 - **Il commence à exprimer ses besoins** par exemple en demandant de l'eau.
-- **Formule son besoin** avant de faire.
-- **Intêret pour le pot ou le réducteur** s'assoit dessus tout seul et désintêret de la couche.
-- **Il se déshabille** en partie sans votre aide.
-- **Il comprend les consignes simples** comme: " Va porter ceci à maman.".
-- **Couche sèche** de plus de 2 heures.
-- **Capacité de monter et descendre les escaliers** 
-- **Joue acroupi**
-- **Il est curieux à ce sujet** il place doudou sur le pot, il aime les histoires qui parlent de propreté.
-- **Appréhension acquise en pince fine** ( motricité fine ).
+- **Il exprime ses besoins ou formule son envie** avant de faire.
+- **Il montre de l’intérêt pour le pot ou le réducteur.** 
+- **Il se déshabille** partiellement seul.
+- **Il comprend des consignes simples** comme « Va chercher tes chaussons. »
+- **Sa couche reste sèche** pendant plus de deux heures.
+- **Il est capable de monter et descendre les escaliers.** 
+- **Il est curieux** : il place son doudou sur le pot ou apprécie les histoires sur la propreté.
 
-Le secret d'une acquisition de la propreté réussie est de ne surtout pas se focaliser dessus avec un rapport de force et de pression. Votre enfant est dans sa période d'opposition du "NON" à 2 ans et demi/3ans. Dès que vous sentez votre enfant prêt, cet accompagnement commence chez vous car vous êtes les premiers référents affectifs et c'est un moment privélégié et fort, cette étape est **intime**. Pour assurer la continuité de cet accompagnement, le professionnel de la petite enfance prend ensuite le relais, notre rôle est de vous soutenir dans cette démarche, nous formons une équipe.
 
-## Une régression ou une stagnation est possible dans les cas suivants:
-- **Les selles** sont vécues comme une partie de votre enfant qui part, se détache de lui-même dans les toilettes et cela peut provoquer une angoisse.
-- **Un démenagement ou une naissance** peuvent provoquer une régression et formulez à votre enfant que ce n'est pas grave, si votre enfant réclame la couche, écoutez-le car il aura le sentiment d'être écouté et rassuré. Reculer pour mieux repartir est l'option la plus bénéfique, le besoin de sécurité dans cette étape est essentielle.
+Le secret d'une acquisition de la propreté réussie est de ne pas se focaliser dessus ni de créer un rapport de force ou de pression. À 2 ans et demi ou 3 ans, votre enfant traverse souvent une période d'opposition marquée par le "NON". Dès que vous sentez qu'il est prêt, l'accompagnement peut commencer chez vous. En tant que premiers référents affectifs, vous jouez un rôle clé dans cette étape privilégiée et intime. Pour assurer une continuité dans cet accompagnement, le professionnel de la petite enfance prendra ensuite le relais. Ensemble, nous formons une équipe pour soutenir votre enfant dans cette démarche.
 
-## Plusieurs raisons parasitent la réussite de l'aquisition de la propreté:
+## Une régression ou une stagnation peut survenir dans les cas suivants :
+- **Les selles** peuvent être perçues par l'enfant comme une partie de lui-même qui se détache et disparaît dans les toilettes, ce qui peut provoquer une certaine angoisse.
+- **Un démenagement ou une naissance** peuvent également entraîner une régression. Dans ce cas, expliquez à votre enfant que ce n'est pas grave. S'il réclame la couche, écoutez-le, il se sentira ainsi compris et rassuré. Reculer pour mieux avancer est souvent la meilleure approche. Le besoin de sécurité est essentiel à cette étape.
 
-- **L'école** arrive à grand pas, une deadline psychologique se met en place.
-- **Les comparaisons** entre enfants induisent du stress et de la pression.
-- **La pression familiale** avec des méthodes diverses et variées qui ne sont pas toujours adaptées.
+## Plusieurs facteurs peuvent perturber ou ralentir la réussite de l'acquisition de la propreté :
+
+- **L’approche de l’entrée à l’école** qui crée une sorte de deadline psychologique.
+- **Les comparaisons** entre enfants, générant stress et pression.
+- **La pression familiale** avec des méthodes parfois inadaptées.
 - **L'âge** de votre enfant.
-- **La pression sociale** 
-- **Le prix des couches**
-- **Désir** de voir son enfant grandir.
+- **La pression sociale.** 
+- **Le prix des couches.**
+- **Désir** de voir son enfant grandir rapidement.
 
 
 <br><br>
 
 
-## **STOP avec la théorie, laissez de côté les livres chaque cas est unique et faîtes-vous confiance: observez votre enfant**
+## **Laissez de côté les théories et les livres. Chaque enfant est unique : faites-vous confiance et observez-le.**
 
 
 <br><br>
 
 
-## Les processus d'évolution vers l'aquisition de la propreté:
+## Les processus d’évolution vers l’acquisition de la propreté :
 
-- **La maturation physiologique** par l'acquisition du contrôle des sphincters qui sont des muscles qui permettent d'ouvrir et fermer la vessie et l'anus.
-- **Avant 20 mois** les terminaisons nerveuses ne sont pas complètement terminées, l'enfant ne ressent pas quand la vessie est pleine ou l'envie de faire ses besoins.
-- **La maturation intellectuelle** l'enfant doit avoir conscience de ce besoin d'évacuation et doit pouvoir communiquer avec l'adulte pour demander le pot.
-- **Le lien affectif** L'enfant doit avoir le désir de "devenir grand" , il peut vouloir freiner l'étape du pot.
+- **La maturation physiologique** : L’acquisition du contrôle des sphincters, ces muscles qui permettent d’ouvrir et de fermer la vessie et l’anus.
+- **Avant 20 mois** , les terminaisons nerveuses ne sont pas encore complètement développées, ce qui empêche l’enfant de ressentir quand sa vessie est pleine ou d’avoir envie de faire ses besoins.
+- **La maturation intellectuelle** : L’enfant doit prendre conscience de son besoin d’évacuer et être capable de communiquer avec l’adulte pour demander le pot.
+- **Le lien affectif**  : L’enfant doit avoir le désir de "devenir grand". Il peut aussi ressentir une certaine résistance à cette étape et vouloir freiner son apprentissage.
 
 ## Les activités en lien avec l'acquisition de la propreté:
 
-- **Les livres** 
-- **Le transvasement** par vider et remplir.
-- **La pâte à modeler** permet d'avoir consience de son corps par la manipulation.
+- **Les livres** : Des histoires et des illustrations sur le thème de la propreté, pour aider l’enfant à mieux comprendre le processus.
+- **Le transvasement** : Activité consistant à vider et remplir des contenants, ce qui aide à développer la coordination et la compréhension des concepts de "plein" et "vide".
+- **La pâte à modeler** : Permet à l’enfant de prendre conscience de son corps par la manipulation, en stimulant sa motricité fine et sa créativité.
+
+Si je devais résumer cet article en trois mots, ce seraient : observation, confiance et patience.
 
 

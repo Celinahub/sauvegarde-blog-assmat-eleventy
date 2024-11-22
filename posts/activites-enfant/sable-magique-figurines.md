@@ -13,11 +13,44 @@ category: "ACTIVITÉS POUR ENFANT"
 featuredImage: /images/uploads/sable-magique.jpg
 ---
 
+# Le Sable Magique : Une Activité Ludique et Sensorielle pour les Tout-Petits
 
-The third post on the Eleventy and Netlify CMS blog
+Je propose régulièrement aux enfants de 2 ans le sable magique. Facile à manipuler, amusant et durable, il offre une expérience riche en découvertes sensorielles.
 
-Ceci est le contenu de mon premier article sur mon blog. Vous pouvez ajouter ici du texte, des images, ou tout autre contenu que vous souhaitez partager avec vos lecteurs.
 
-## Une sous-section
+<br><br>
 
-Vous pouvez également ajouter des sous-sections pour mieux structurer votre contenu.
+
+# Qu'est ce que le sable magique ?
+Le sable magique également appelé sable lunaire ou sable à modeler, est une matière unique aux grains très fins et compacts. Il est doux au toucher, se tient bien sans être collant, et permet de créer facilement des formes, des châteaux, ou encore des empreintes.
+
+
+<br><br>
+
+
+# Pourquoi proposer le sable magique ?
+
+## 1. Une exploration sensorielle :
+- Le sable magique stimule le toucher grâce à sa texture douce et malléable. Les enfants adorent presser, modeler, et laisser glisser le sable entre leurs doigts, ce qui contribue à leur éveil sensoriel.
+
+## 2. Une activité créative  :
+- En utilisant le sable magique, les enfants développent leur imagination et leur créativité en construisant et modelant des formes variées. Cette activité calme aide aussi à canaliser leur énergie et favorise la concentration.
+
+## 3. Une introduction au jeu libre  :
+- Avec le sable magique, il n’y a pas de règles fixes : les enfants peuvent inventer leur propre jeu, favorisant ainsi leur autonomie et leur confiance en eux. Pour cette activité les enfants sont allés cherchés spontanément des figurines d'animaux. Soit les animaux étaient recouverts de sable ou des empreintes se dessinaient sur le sable.
+
+
+<br><br>
+
+
+# Comment organiser une séance ?
+- **Matériel nécessaire** : Du sable magique, des emporte-pièces, de petits moules ou outils de modelage, et un bac pour contenir le sable.
+- **Installation** : Préparez un espace sécurisé et facile à nettoyer. Vous pouvez utiliser soit une bâche ou un tapis de protection ou une table en plastique à hauteur d'enfant.
+- **Encouragements** : Laissez les enfants explorer librement, en jouant avec eux si nécessaire pour leur montrer comment utiliser les outils ou créer des formes.
+
+<br><br>
+
+# Une activité durable
+Le sable magique se conserve longtemps à condition de le garder dans un contenant hermétique. Cela en fait une activité à proposer régulièrement, adaptée aussi bien pour les jeux en solo que pour les ateliers en petit groupe.
+
+
