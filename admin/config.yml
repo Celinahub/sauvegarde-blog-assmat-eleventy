@@ -93,7 +93,7 @@ collections:
       
       
 
-  - name: "actu-petite-enfance"
+  - name: "/hygiene-soins"
     label: "HYGIÈNE / SOINS"
     folder: "posts/hygiene-soins"
     create: true
