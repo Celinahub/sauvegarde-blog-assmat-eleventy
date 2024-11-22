@@ -131,7 +131,7 @@ collections:
       - { name: "jsonLd", label: "JSON-LD", widget: "code", default: "" }
 
       
-      - name: "entreprises"
+  - name: "entreprises"
     label: "ENTREPRISES"
     folder: "posts/entreprises"
     create: true
