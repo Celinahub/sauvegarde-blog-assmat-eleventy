@@ -74,26 +74,12 @@ bodyClass: "blog-posts-page"
 
 
 <!-- Ajout du JSON-LD pour le référencement -->
-{% set jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": title,
-  "image": featuredImage,
-  "datePublished": date,
-  "author": {
-    "@type": "Person",
-    "name": "Céline Hubert"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Chubert Assmat Brétigny Blog",
-    "url": "https://test-site-statique-blog-eleventy.netlify.app/"
-  },
-  "keywords": tags
-} %}
+{% raw %}
 <script type="application/ld+json">
-    {{ jsonLd | dump | safe }}
+  {{ jsonLd | safe }}
 </script>
+{% endraw %}
+
 
 
 

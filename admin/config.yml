@@ -30,7 +30,34 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "RECETTES / ATELIER CUISINE" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
-      - { name: "jsonLd", label: "JSON-LD", widget: "text", default: '{"@context": "https://schema.org", "@type": "Article"}' }
+      # Ajouter un champ JSON-LD structuré
+      - name: "jsonLd"
+        label: "JSON-LD"
+        widget: "text"
+        default: |
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "{{title}}",
+            "image": "{{image}}",
+            "datePublished": "{{date}}",
+            "dateModified": "{{date}}",
+            "description": "{{description}}",
+            "author": {
+              "@type": "Person",
+              "name": "Céline Hubert"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Chubert Assmat Brétigny Blog",
+              "url": "https://test-site-statique-blog-eleventy.netlify.app/"
+            },
+            "keywords": ["{{tags}}"],
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://test-site-statique-blog-eleventy.netlify.app/article/{{slug}}"
+            }
+          }
 
 
 
@@ -52,7 +79,34 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "LA COLLECTIVITE GRÂCE AU RPE" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
-      - { name: "jsonLd", label: "JSON-LD", widget: "text", default: '{"@context": "https://schema.org", "@type": "Article"}' }
+      # Ajouter un champ JSON-LD structuré
+      - name: "jsonLd"
+        label: "JSON-LD"
+        widget: "text"
+        default: |
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "{{title}}",
+            "image": "{{image}}",
+            "datePublished": "{{date}}",
+            "dateModified": "{{date}}",
+            "description": "{{description}}",
+            "author": {
+              "@type": "Person",
+              "name": "Céline Hubert"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Chubert Assmat Brétigny Blog",
+              "url": "https://test-site-statique-blog-eleventy.netlify.app/"
+            },
+            "keywords": ["{{tags}}"],
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://test-site-statique-blog-eleventy.netlify.app/article/{{slug}}"
+            }
+          }
 
 
      
@@ -74,7 +128,34 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "ACTIVITÉS POUR ENFANT" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
-      - { name: "jsonLd", label: "JSON-LD", widget: "text", default: '{"@context": "https://schema.org", "@type": "Article"}' }
+      # Ajouter un champ JSON-LD structuré
+      - name: "jsonLd"
+        label: "JSON-LD"
+        widget: "text"
+        default: |
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "{{title}}",
+            "image": "{{image}}",
+            "datePublished": "{{date}}",
+            "dateModified": "{{date}}",
+            "description": "{{description}}",
+            "author": {
+              "@type": "Person",
+              "name": "Céline Hubert"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Chubert Assmat Brétigny Blog",
+              "url": "https://test-site-statique-blog-eleventy.netlify.app/"
+            },
+            "keywords": ["{{tags}}"],
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://test-site-statique-blog-eleventy.netlify.app/article/{{slug}}"
+            }
+          }
 
 
       
@@ -95,8 +176,34 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "SELECTION PRODUITS" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
-      - { name: "jsonLd", label: "JSON-LD", widget: "text", default: '{"@context": "https://schema.org", "@type": "Article"}' }
-
+      # Ajouter un champ JSON-LD structuré
+      - name: "jsonLd"
+        label: "JSON-LD"
+        widget: "text"
+        default: |
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "{{title}}",
+            "image": "{{image}}",
+            "datePublished": "{{date}}",
+            "dateModified": "{{date}}",
+            "description": "{{description}}",
+            "author": {
+              "@type": "Person",
+              "name": "Céline Hubert"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Chubert Assmat Brétigny Blog",
+              "url": "https://test-site-statique-blog-eleventy.netlify.app/"
+            },
+            "keywords": ["{{tags}}"],
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://test-site-statique-blog-eleventy.netlify.app/article/{{slug}}"
+            }
+          }
 
       
       
@@ -117,8 +224,34 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "HYGIÈNE / SOINS" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
-      - { name: "jsonLd", label: "JSON-LD", widget: "text", default: '{"@context": "https://schema.org", "@type": "Article"}' }
-
+      # Ajouter un champ JSON-LD structuré
+      - name: "jsonLd"
+        label: "JSON-LD"
+        widget: "text"
+        default: |
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "{{title}}",
+            "image": "{{image}}",
+            "datePublished": "{{date}}",
+            "dateModified": "{{date}}",
+            "description": "{{description}}",
+            "author": {
+              "@type": "Person",
+              "name": "Céline Hubert"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Chubert Assmat Brétigny Blog",
+              "url": "https://test-site-statique-blog-eleventy.netlify.app/"
+            },
+            "keywords": ["{{tags}}"],
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://test-site-statique-blog-eleventy.netlify.app/article/{{slug}}"
+            }
+          }
 
       
 
@@ -138,7 +271,34 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "ACTUALITES LOCALES" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
-      - { name: "jsonLd", label: "JSON-LD", widget: "text", default: '{"@context": "https://schema.org", "@type": "Article"}' }
+      # Ajouter un champ JSON-LD structuré
+      - name: "jsonLd"
+        label: "JSON-LD"
+        widget: "text"
+        default: |
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "{{title}}",
+            "image": "{{image}}",
+            "datePublished": "{{date}}",
+            "dateModified": "{{date}}",
+            "description": "{{description}}",
+            "author": {
+              "@type": "Person",
+              "name": "Céline Hubert"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Chubert Assmat Brétigny Blog",
+              "url": "https://test-site-statique-blog-eleventy.netlify.app/"
+            },
+            "keywords": ["{{tags}}"],
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://test-site-statique-blog-eleventy.netlify.app/article/{{slug}}"
+            }
+          }
 
 
 
@@ -159,7 +319,34 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "ENTREPRISES" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
-      - { name: "jsonLd", label: "JSON-LD", widget: "text", default: '{"@context": "https://schema.org", "@type": "Article"}' }
+      # Ajouter un champ JSON-LD structuré
+      - name: "jsonLd"
+        label: "JSON-LD"
+        widget: "text"
+        default: |
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "{{title}}",
+            "image": "{{image}}",
+            "datePublished": "{{date}}",
+            "dateModified": "{{date}}",
+            "description": "{{description}}",
+            "author": {
+              "@type": "Person",
+              "name": "Céline Hubert"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Chubert Assmat Brétigny Blog",
+              "url": "https://test-site-statique-blog-eleventy.netlify.app/"
+            },
+            "keywords": ["{{tags}}"],
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://test-site-statique-blog-eleventy.netlify.app/article/{{slug}}"
+            }
+          }
 
 
       
