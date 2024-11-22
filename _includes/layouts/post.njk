@@ -79,7 +79,7 @@ bodyClass: "blog-posts-page"
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "{{ title }}",
-  "image": "{{ featuredImage | url }}",
+  "image": "{{ image }}",
   "datePublished": "{{ date }}",
   "dateModified": "{{ date }}",
   "description": "{{ description }}",
@@ -92,13 +92,14 @@ bodyClass: "blog-posts-page"
     "name": "Chubert Assmat Brétigny Blog",
     "url": "https://test-site-statique-blog-eleventy.netlify.app/"
   },
-  "keywords": {{ tags | dump }},
+  "keywords": [{% for tag in tags %}"{{ tag }}"{% if not loop.last %}, {% endif %}{% endfor %}],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "{{ url }}"
+    "@id": "https://test-site-statique-blog-eleventy.netlify.app/article/{{ slug }}"
   }
 }
 </script>
+
 
 
 
