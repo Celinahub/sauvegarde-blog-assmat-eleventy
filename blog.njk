@@ -139,28 +139,7 @@ pagination:
 </script>
 <!-- End MailerLite Universal -->
 
-<script>
-    function copyLink() {
-        // Crée un élément temporaire pour contenir l'URL
-        var tempInput = document.createElement("input");
-        tempInput.style.position = "absolute";
-        tempInput.style.left = "-1000px";  // Cache l'input temporaire hors de la vue
-        document.body.appendChild(tempInput);
-        
-        // Définit l'URL de la page à copier
-        tempInput.value = window.location.href;  // Ou utilisez {{ page.url }} si c'est disponible dans votre template
-        
-        // Sélectionne le contenu et le copie
-        tempInput.select();
-        document.execCommand("copy");
-        
-        // Retire l'input temporaire après l'opération
-        document.body.removeChild(tempInput);
 
-        // Optionnel : Ajoutez un message ou un feedback visuel pour informer l'utilisateur
-        alert("Lien copié dans le presse-papier !");
-    }
-</script>
 
 
 

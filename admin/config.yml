@@ -30,6 +30,7 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "RECETTES / ATELIER CUISINE" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
+      - { name: "jsonLd", label: "JSON-LD", widget: "code", default: "" }
 
 
     
@@ -49,6 +50,7 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "LA COLLECTIVITE GRÂCE AU RPE" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
+      - { name: "jsonLd", label: "JSON-LD", widget: "code", default: "" }
      
       
 
@@ -68,6 +70,7 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "ACTIVITÉS POUR ENFANT" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
+      - { name: "jsonLd", label: "JSON-LD", widget: "code", default: "" }
       
 
   - name: "selection-produits"
@@ -86,6 +89,7 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "SELECTION PRODUITS" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
+      - { name: "jsonLd", label: "JSON-LD", widget: "code", default: "" }
       
       
 
@@ -105,6 +109,7 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "HYGIÈNE / SOINS" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
+      - { name: "jsonLd", label: "JSON-LD", widget: "code", default: "" }
       
 
   - name: "actualites-locales"
@@ -123,6 +128,7 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "ACTUALITES LOCALES" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
+      - { name: "jsonLd", label: "JSON-LD", widget: "code", default: "" }
 
       
       - name: "entreprises"
@@ -141,5 +147,6 @@ collections:
       - { label: "Catégorie", name: "category", widget: "string", default: "ENTREPRISES" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
+      - { name: "jsonLd", label: "JSON-LD", widget: "code", default: "" }
       
       
