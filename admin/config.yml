@@ -133,7 +133,7 @@ collections:
       
       - name: "entreprises"
     label: "ENTREPRISES"
-    folder: "posts/actualites-locales"
+    folder: "posts/entreprises"
     create: true
     slug: "{{slug}}"
     fields:
