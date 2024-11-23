@@ -27,6 +27,7 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
+      - { label: "Texte alternatif", name: "imageAlt", widget: "string" } # Nouveau champ pour le alt
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Catégorie", name: "category", widget: "string", default: "RECETTES / ATELIER CUISINE" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
@@ -77,6 +78,7 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
+      - { label: "Texte alternatif", name: "imageAlt", widget: "string" } # Nouveau champ pour le alt
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Catégorie", name: "category", widget: "string", default: "LA COLLECTIVITE GRÂCE AU RPE" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
@@ -127,6 +129,7 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
+      - { label: "Texte alternatif", name: "imageAlt", widget: "string" } # Nouveau champ pour le alt
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Catégorie", name: "category", widget: "string", default: "ACTIVITÉS POUR ENFANT" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
@@ -176,6 +179,7 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "URL", name: "url", widget: "string" }
       - { label: "Image", name: "image", widget: "image" }
+      - { label: "Texte alternatif", name: "imageAlt", widget: "string" } # Nouveau champ pour le alt
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Catégorie", name: "category", widget: "string", default: "SELECTION PRODUITS" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
@@ -225,6 +229,7 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
+      - { label: "Texte alternatif", name: "imageAlt", widget: "string" } # Nouveau champ pour le alt
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Catégorie", name: "category", widget: "string", default: "HYGIÈNE / SOINS" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
@@ -273,6 +278,7 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
+      - { label: "Texte alternatif", name: "imageAlt", widget: "string" } # Nouveau champ pour le alt
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Catégorie", name: "category", widget: "string", default: "ACTUALITES LOCALES" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
@@ -322,6 +328,7 @@ collections:
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "URL", name: "url", widget: "string" }  # Nouveau champ pour l'URL
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
+      - { label: "Texte alternatif", name: "imageAlt", widget: "string" } # Nouveau champ pour le alt
       - { label: "Date", name: "date", widget: "datetime" }
       - { label: "Catégorie", name: "category", widget: "string", default: "ENTREPRISES" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }

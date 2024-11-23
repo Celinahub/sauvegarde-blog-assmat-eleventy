@@ -18,40 +18,37 @@ bodyClass: "blog-posts-page"
 
 
 <div class="content-wrapper"> <!-- Nouveau conteneur pour l'image et le texte -->
-    <img src="{{ featuredImage | url }}" alt="{{ title }}" class="img-fluid mx-auto d-block">
-
+<img src="{{ featuredImage | url }}" alt="{{ imageAlt }}" class="img-fluid mx-auto d-block">
 
 <!-- Boutons de partage -->
 <div class="share-buttons"> <!-- Début des boutons de partage -->
 
     <!-- Twitter -->
    <a href="https://twitter.com/intent/tweet?text={{ page.title | urlencode }}&url={{ page.url | absoluteUrl }}" target="_blank" class="btn btn-twitter">
-    <img src="{{ '/images/blog/x-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Twitter">
+    <img src="{{ '/images/blog/x-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager l'article {{ title }} sur Twitter">
 </a>
 
     <!-- Facebook -->
 <a href="https://www.facebook.com/sharer.php?u=https://netlify.app/{{ page.url }}" 
    target="_blank" 
    class="btn btn-facebook">
-   <img src="{{ '/images/blog/social-facebook-bretigny.svg' | url }}" 
-        class="icone-partage-reseaux" 
-        alt="Partager sur Facebook">
+     <img src="{{ '/images/blog/social-facebook-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager l'article {{ title }} sur Facebook">
 </a>
 
 
    <!-- LinkedIn -->
 <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absoluteUrl | urlencode }}&title={{ page.title | urlencode }}" target="_blank" class="btn btn-linkedin">
-    <img src="{{ '/images/blog/linkedin-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur LinkedIn">
+     <img src="{{ '/images/blog/linkedin-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager l'article {{ title }} sur LinkedIn">
 </a>
 
     <!-- Instagram -->
     <a href="https://www.instagram.com/?url={{ page.url }}" target="_blank" class="btn btn-instagram">
-        <img src="{{ '/images/blog/social-insta-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Instagram">
+          <img src="{{ '/images/blog/social-insta-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager l'article {{ title }} sur Instagram">
     </a>
 
    <!-- Pinterest -->
 <a href="https://pinterest.com/pin/create/button/?url={{ page.url | absoluteUrl | urlencode }}&media=chemin/vers/image.jpg&description={{ page.title | urlencode }}" target="_blank" class="btn btn-pinterest">
-    <img src="{{ '/images/blog/pinterest-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager sur Pinterest">
+     <img src="{{ '/images/blog/pinterest-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager l'article {{ title }} sur Pinterest">
 </a>
 
 
@@ -101,7 +98,7 @@ bodyClass: "blog-posts-page"
 </script>
 
 
-
+ 
 
 
 
