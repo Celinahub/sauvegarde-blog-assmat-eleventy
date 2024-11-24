@@ -1,19 +1,59 @@
 ---
 layout: layouts/post.njk
-title: "Acquisition de la propreté"
-description: "Cet article explore un exemple intéressant pour les enfants."
+title: "L'acquisition de la propreté chez les enfants : conseils et étapes clés"
+description: "Découvrez les étapes et les signes de l'acquisition de la propreté, ainsi que des conseils pratiques pour accompagner votre enfant dans cette étape importante de son développement."
 tags: 
-  - enfants
-  - soins
-  - acquisition
+  - acquisition de la propreté
+  - développement de l'enfant
+  - soins des enfants
+  - hygiène infantile
+  - éducation positive
+  - parents
+  - éducation bienveillante
+  - psychologie de l'enfant
 url: "https://test-site-statique-blog-eleventy.netlify.app/posts/acquisistion-de-la-proprete"
-image: "https://chubert91assmat.netlify.app/images/un-exemple.jpg"
+image: "https://chubert91assmat.netlify.app/images/pot.jpg"
 date: 2024-11-11
 category: "HYGIÈNE / SOINS"
 featuredImage: /images/uploads/pot.jpg
+jsonLd: >
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{title}}",
+    "image": "{{image}}",
+    "datePublished": "{{date}}",
+    "dateModified": "{{date}}",
+    "description": "{{description}}",
+    "author": {
+      "@type": "Person",
+      "name": "Céline Hubert"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Chubert Assmat Brétigny Blog",
+      "url": "https://test-site-statique-blog-eleventy.netlify.app/"
+    },
+    "keywords": [
+      "acquisition de la propreté",
+      "apprentissage propreté enfant",
+      "éducation enfant",
+      "soins de l'enfant",
+      "hygiène enfant",
+      "acquisition propreté conseils",
+      "étapes acquisition propreté",
+      "éducation positive",
+      "développement de l'enfant"
+    ],
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://test-site-statique-blog-eleventy.netlify.app/article/{{slug}}"
+    }
+  }
 ---
 
-# Quand et comment proposer le pot ou le réducteur ?
+
+## Quand et comment proposer le pot ou le réducteur ?
 L’acquisition de la propreté est une étape naturelle et spontanée du développement, comme la marche ou la parole. Ne vous inquiétez pas : ce moment tant attendu viendra. N'écoutez pas les idées reçues, votre enfant sera accepté à l'école maternelle, même s'il a encore quelques petits accidents.
 
 C'est l'enfant qui décide de lui-même ; faites-lui confiance, car plusieurs signes ne trompent pas:
@@ -69,5 +109,13 @@ Le secret d'une acquisition de la propreté réussie est de ne pas se focaliser 
 - **La pâte à modeler** : Permet à l’enfant de prendre conscience de son corps par la manipulation, en stimulant sa motricité fine et sa créativité.
 
 Si je devais résumer cet article en trois mots, ce seraient : observation, confiance et patience.
+
+
+<br><br>
+
+
+---
+
+Photo par Charles De Luvio sur Unsplash, utilisée sous la licence Unsplash.
 
 
