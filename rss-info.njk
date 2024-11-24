@@ -1,0 +1,61 @@
+---
+layout: layouts/base.njk
+title: Abonnez-vous à notre flux RSS
+bodyClass: "rss-info-page"
+---
+
+  <section id="page-flux-rss" class="container-fluid py-5">
+        <div class="row justify-content-center text-center position-relative">
+
+        <img src="{{ '/images/flux-rss/haut-nuage-rss.svg' | url }}" class="ciel-nuages-flux" alt="Décor nuages haut page flux rss">
+            
+            
+            <div class="col-md-10"> <!-- Augmentation de la valeur de px-md-5 pour des marges plus larges -->
+                <div class="profile-text">
+    
+                    <!-- Ajout d'un titre pour la section -->
+                    <h1 class="poppins-regular-titre-page-flux-rss">Bienvenue sur ma page RSS</h1>
+    
+                    <p class="poppins-regular-texte-page-flux-rss">Pour vous abonner à mon flux RSS, cliquez sur l'un des boutons ci-dessous ou ajoutez manuellement le lien de notre flux à votre lecteur RSS préféré.</p>
+
+<div>
+<a href="{{ url }}/rss.xml" class="styled-link-rss" target="_blank">Voir le flux RSS brut</a>
+</div>
+
+<div class="button-wrapper">
+  <button class="btn custom-button" onclick="window.open('https://feedly.com/i/discover/sources/search/rss?query=https://test-site-statique-blog-eleventy.netlify.app/rss.xml', '_blank')">S'abonner via Feedly</button>
+  <button class="btn custom-button" onclick="window.open('https://www.inoreader.com/?add_feed=https://test-site-statique-blog-eleventy.netlify.app/rss.xml', '_blank')">S'abonner via Inoreader</button>
+  <button class="btn custom-button" onclick="window.open('https://flipboard.com', '_blank')">S'abonner via Flipboard</button>
+  <button class="btn custom-button" onclick="window.open('https://www.netvibes.com/subscribe.php?url=https://test-site-statique-blog-eleventy.netlify.app/rss.xml', '_blank')">S'abonner via Netvibes</button>
+  <button class="btn custom-button" onclick="window.open('https://www.newsblur.com/?add_site_feed=https://test-site-statique-blog-eleventy.netlify.app/rss.xml', '_blank')">S'abonner via NewsBlur</button>
+</div>
+
+
+<h2 class="poppins-regular-sous-titre-page-flux-rss">Qu'est-ce qu'un flux RSS?</h2>
+<p class="poppins-regular-texte-page-flux-rss">Un flux RSS (Really Simple Syndication) est un format de données utilisé pour diffuser des informations et des mises à jour de contenu d'un site web de manière standardisée. Cela permet aux utilisateurs de recevoir des notifications instantanées sur les nouveaux articles ou mises à jour sans avoir à visiter le site web.</p>
+
+<h2 class="poppins-regular-sous-titre-page-flux-rss">Comment utiliser les flux RSS?</h2>
+<p class="poppins-regular-texte-page-flux-rss">Pour utiliser un flux RSS, vous avez besoin d'un lecteur RSS. Ce lecteur peut être une application dédiée ou un service en ligne. Il vous suffit d'ajouter l'URL de notre flux RSS (visible ci-dessus) dans votre lecteur pour commencer à recevoir les mises à jour.</p>
+
+<h2 class="poppins-regular-sous-titre-page-flux-rss">Pourquoi utiliser des flux RSS?</h2>
+<p class="poppins-regular-texte-page-flux-rss">Les flux RSS vous permettent de rester informé facilement sans avoir à parcourir plusieurs sites web. Ils centralisent vos sources d'information préférées et vous permettent de consommer du contenu de manière efficace. C'est un outil idéal pour ceux qui souhaitent suivre des blogs, des actualités, ou d'autres types de contenus en ligne.</p>
+
+<h2 class="poppins-regular-sous-titre-page-flux-rss">Conditions d'utilisation</h2>
+<p class="poppins-regular-texte-page-flux-rss">En utilisant notre flux RSS, vous vous engagez à respecter les droits d'auteur et à ne pas reproduire ou redistribuer mon contenu sans autorisation. Les informations fournies via le flux sont destinées à un usage personnel et ne doivent pas être utilisées à des fins commerciales sans accord préalable.</p>
+
+              <!-- Espacement entre le titre et le paragraphe -->
+              <div class="flux-spacer"></div>
+    
+                  
+                    
+                </div> <!-- profile-text -->
+            </div> <!-- Fermeture de la col-md-10 -->
+    
+<img src="{{ '/images/flux-rss/bas-nuage-rss.svg' | url }}" class="ciel-nuages-flux" alt="Décor nuages haut page flux rss">
+
+            
+    
+        </div> <!-- Fermeture de la row -->
+    </section> <!-- Fermeture de la section -->
+    
+

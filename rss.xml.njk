@@ -1,0 +1,28 @@
+---
+permalink: /rss.xml
+layout: false
+---
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.title }}</title>
+    <link>{{ site.url }}</link>
+    <description>{{ site.description }}</description>
+
+    {# Trouver la dernière date de publication parmi les articles #}
+    {% set last_post_date = collections.posts | sort(attribute='date', reverse=true) | first %}
+    <lastBuildDate>{{ last_post_date.date | dateToRfc822 if last_post_date.date else now | dateToRfc822 }}</lastBuildDate>
+
+    <atom:link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml" />
+
+    {% for post in collections.posts %}
+      <item>
+        <title>{{ post.data.title }}</title>
+        <link>{{ site.url }}{{ post.url }}</link>
+        <description>{{ post.data.description | safe }}</description>
+        <pubDate>{{ post.date | dateToRfc822 }}</pubDate>
+        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+      </item>
+    {% endfor %}
+  </channel>
+</rss>
