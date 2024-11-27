@@ -22,6 +22,17 @@
   to = "/404.html"                 # Page 404 personnalisée
   status = 404                     # Code de statut HTTP
 
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self' https://trusted-cdn.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://trusted-cdn.com; img-src 'self' https://trusted-cdn.com; font-src 'self' https://trusted-cdn.com;"
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+
+
+
 # Configuration des en-têtes HTTP
 [[headers]]
   for = "/*.css"
