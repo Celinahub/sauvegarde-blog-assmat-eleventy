@@ -3477,6 +3477,62 @@ position: relative; /* Ajout de position relative */
 
 
 
+
+/* Style pour le bouton liens des fichiers md article*/
+.btn-article {
+   text-align: center;
+   background-color: #103754; /* Couleur de fond */
+   color: #F8F9F6; /* Couleur du texte */
+   border-radius: 8px; /* Coins arrondis */
+   border: none; /* Retirer la bordure par défaut */
+   padding: 10px 20px; /* Espacement interne */
+   font-size: 16px; /* Taille du texte */
+   cursor: pointer; /* Changer le curseur au survol */
+   transition: background-color 0.3s; /* Transition pour un effet au survol */
+  
+}
+
+.btn-article:hover {
+   background-color: #041427; /* Couleur au survol */
+   color: #F8F9F6; /* Couleur du texte */
+}
+
+@media (max-width: 576px) {
+   .btn-article-wrapper {
+       flex-direction: column; /* Aligne les boutons verticalement */
+       width: 100%; /* Assure que le conteneur occupe toute la largeur */
+   }
+   
+   .btn-article {
+       width: 100%; /* Les boutons occupent toute la largeur du conteneur */
+   }
+}
+
+
+
+/* Styles pour le lien de 404 - Page Non Trouvée dans 404.md*/
+.styled-link-article {
+   font-family: "Poppins", sans-serif;
+   font-weight: bold;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+   text-decoration: none;
+}
+.styled-link-article:hover {
+   text-decoration: underline;
+}
+/* Media query pour écrans plus petits */
+@media (max-width: 768px) {
+   .styled-link-article  {
+      font-size: 14px;
+   }
+ }
+
+
+
+
+
  
  /* Styles pour la TYPO des cards cote droit blog */
  
