@@ -90,8 +90,14 @@ En fin de journée, il suffit de vider le contenu dans une poubelle, un geste si
 
 **Découvrez en vidéo une comparaison entre le potty training et l'utilisation d’un pot classique:**
 <div class="ratio ratio-16x9">
-  <iframe src="https://www.youtube.com/watch?si=ojgBI9hz023dtD5B&v=jEcvUC_A3YY&feature=youtu.be&cbrd=1" title="YouTube potty&me" allowfullscreen></iframe>
+  <iframe 
+    src="https://www.youtube.com/embed/jEcvUC_A3YY" 
+    title="YouTube video" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+    allowfullscreen>
+  </iframe>
 </div>
+
 
 
 
