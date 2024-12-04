@@ -3,6 +3,7 @@ layout: layouts/post.njk
 title: "CESU préfinancés : j'économise!"
 description: "Découvrez comment réduire vos coûts de garde d'enfants grâce aux CESU préfinancés. Un guide complet sur les avantages pour les parents et les entreprises."
 tags: 
+  - entreprises
   - CESU préfinancé
   - Garde d'enfants
   - Aides familiales
@@ -11,9 +12,9 @@ tags:
   - Travailleur indépendant
   - Fiscalité
   - RH entreprise
-url: "https://test-site-statique-blog-eleventy.netlify.app/posts/des-economies-grace-aux-cesu-prefinances"
+url: "https://chubert91assmat.netlify.app/posts/des-economies-grace-aux-cesu-prefinances"
 image: "https://chubert91assmat.netlify.app/images/cesu.jpg"
-date: 2024-11-09
+date: 2024-11-23
 category: "ENTREPRISES"
 featuredImage: /images/uploads/cesu.jpg
 jsonLd: >
@@ -32,7 +33,7 @@ jsonLd: >
     "publisher": {
       "@type": "Organization",
       "name": "Chubert Assmat Brétigny Blog",
-      "url": "https://test-site-statique-blog-eleventy.netlify.app/"
+      "url": "chubert91assmat.netlify.app/"
     },
     "keywords": [
       "CESU préfinancé", 
@@ -45,7 +46,7 @@ jsonLd: >
     ],
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://test-site-statique-blog-eleventy.netlify.app/article/{{slug}}"
+      "@id": "https://chubert91assmat.netlify.app/article/{{slug}}"
     }
   }
 ---
@@ -56,20 +57,20 @@ Réduire votre reste à charge et accéder à une diversité de lieux d'accueil,
 Parents, vous avez le pouvoir de faciliter l'accès aux modes de garde pour vos enfants, mais sans information, cela peut sembler difficile. Une solution existe : les CESU préfinancés. Si votre entreprise ne les propose pas encore, vous pouvez soumettre cette demande à votre service RH, en vous appuyant sur cet article.
 
 
-## Le CESU préfinancé : qu’est-ce que c’est et comment en bénéficier ?
+## **Le CESU préfinancé : qu’est-ce que c’est et comment en bénéficier ?**
 Le CESU "préfinancé" est un moyen de paiement qui fonctionne sur le même principe que les titres restaurant financés en partie par les entreprises. Il contient le nom du bénéficiaire et est préfinancé, en totalité ou partiellement, par l'entreprise, le comité d'entreprise, les parents ou un organisme financeur (ex : conseil général). L'entreprise des parents qui emploient une assistante maternelle agréée participe à 100% ou en partie au financement des chèques CESU. En payant avec ces chèques préfinancés, les parents réduisent leurs charge liées à la garde de leur(s) enfant(s) de moins de 6 ans.
 
 
 <br><br>
 
 
-## Qui est éligible au CESU préfinancé ?
+## **Qui est éligible au CESU préfinancé ?**
 
 
 <br><br>
 
 
-### 1. Éligibilité totale :
+### **1. Éligibilité totale :**
 
 Les statuts suivants sont **complètement éligibles** au CESU préfinancé :
 
@@ -85,14 +86,14 @@ Les statuts suivants sont **complètement éligibles** au CESU préfinancé :
 - **Employeur de particuliers** (salarié à domicile) : Un particulier employeur peut bénéficier du CESU préfinancé pour financer des services à la personne (garde d'enfants, aide à domicile, etc.).
 - **Salarié en CDD et contrat intérim** : Les salariés en CDD ou intérim peuvent bénéficier du CESU préfinancé si leur employeur ou le CSE le propose.
 
-### 2. Éligibilité partielle :
+### **2. Éligibilité partielle :**
 
 Les statuts suivants peuvent bénéficier du CESU préfinancé, mais **avec des limitations** :
 
 - **Micro-entrepreneur (auto-entrepreneur)** : Le micro-entrepreneur peut utiliser le CESU préfinancé uniquement si un tiers (comme un employeur, un CSE ou un particulier) le finance.
 - **Entreprise Individuelle (EI)** : Le freelance en EI peut bénéficier du CESU préfinancé, mais avec des limitations fiscales (pas de séparation entre patrimoine personnel et professionnel).
 
-### 3. Non-Éligible
+### **3. Non-Éligible :**
 
 Les statuts suivants **ne sont pas éligibles** au CESU préfinancé :
 
@@ -109,7 +110,7 @@ Les statuts suivants **ne sont pas éligibles** au CESU préfinancé :
 <br><br>
 
 
-### Avantages pour l’Entreprise
+### **Avantages pour l’Entreprise**
 Les CESU préfinancés offrent de nombreux avantages aux entreprises, non seulement pour ses avantages financiers, mais aussi pour ses effets sur l’organisation :
 
 - **Avantages fiscaux** : Les montants versés en CESU préfinancé sont souvent déductibles des charges sociales, ce qui permet à l’entreprise de réaliser des économies.
@@ -117,7 +118,7 @@ Les CESU préfinancés offrent de nombreux avantages aux entreprises, non seulem
 - **Réduction de l’absentéisme** : En facilitant l’accès à des services comme la garde d’enfants, le CESU préfinancé permet aux employés de mieux organiser leur vie familiale, réduisant ainsi les absences imprévues.
 
 
-### Avantages pour les Indépendants
+### **Avantages pour les Indépendants**
 Les travailleurs indépendants sans salarié peuvent également bénéficier du CESU préfinancé, bien que les conditions soient légèrement différentes :
 
 - **Souplesse dans la gestion** : Les indépendants peuvent utiliser les CESU pour payer des services à la personne dans un cadre privé, tels que la garde d’enfants, sans avoir à se soucier d’une gestion administrative complexe.
@@ -125,14 +126,14 @@ Les travailleurs indépendants sans salarié peuvent également bénéficier du 
 
 
 
-### Avantages pour les Salariés
+### **Avantages pour les Salariés**
 Pour les salariés, le CESU préfinancé est un coup de pouce à la fois financier et pratique :
 
 - **Augmentation du pouvoir d’achat** : Grâce au cofinancement de l’entreprise, le coût final des services est allégé pour le salarié.
 - **Facilité de gestion** : Le CESU préfinancé simplifie le paiement des services à domicile, en réduisant la paperasse et les démarches administratives.
 - **Réductions d'impôts** : Les dépenses effectuées via le CESU préfinancé ouvrent droit à un crédit d’impôt, ce qui allège la facture finale pour le salarié.
 
-### A retenir
+### **A retenir**
 Le CESU préfinancé est une solution gagnante pour tous. Il améliore le quotidien des salariés, renforce les relations entre les employeurs et leurs équipes, et permet aux assistantes maternelles de bénéficier d’un paiement fiable et sécurisé.
 
 
