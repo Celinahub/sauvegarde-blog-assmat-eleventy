@@ -81,8 +81,6 @@ module.exports = function(eleventyConfig) {
         collapseWhitespace: true,
         minifyCSS: true,
         minifyJS: true,
-        removeOptionalTags: true, // Supprime les balises HTML optionnelles
-        removeEmptyAttributes: true, // Supprime les attributs vides
       });
     }
     return content; // Veillez à retourner le contenu si la condition n'est pas remplie
