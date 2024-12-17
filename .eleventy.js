@@ -36,7 +36,6 @@ async function imageShortcode(src, alt = "", sizes = "100vw") {
       loading: "lazy",
       decoding: "async",
     };
-    
 
     return Image.generateHTML(metadata, imageAttributes, {
       whitespaceMode: "inline"
@@ -188,8 +187,6 @@ eleventyConfig.addFilter("truncateWords", function (content, numWords) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("favicon.ico");
-  eleventyConfig.addPassthroughCopy("_headers");
-
 
   // Ajouter des alias pour les layouts
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
