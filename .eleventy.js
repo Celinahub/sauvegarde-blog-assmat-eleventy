@@ -33,8 +33,7 @@ async function imageShortcode(src, alt = "", sizes = "100vw") {
     let imageAttributes = {
       alt,
       sizes,
-      fetchpriority: "high", // Priorité élevée pour les images importantes
-      loading: "eager", // Ne pas différer le chargement
+      loading: "lazy",
       decoding: "async",
     };
     
