@@ -1,15 +1,13 @@
- <!-- SEO Metadata -->
+<!-- SEO Metadata -->
   <title>{{ title or metadata.title }}</title>
   <meta name="description" content="{{ description or metadata.description }}">
   <meta name="keywords" content="{{ tags or 'blog, articles, ' ~ metadata.title | safe }}">
   <meta name="robots" content="index, follow">
 
-  <!-- Open Graph Metadata -->
+  <!-- Open Graph Metadata (Facebook, LinkedIn, Pinterest) -->
   <meta property="og:title" content="{{ title or metadata.title }}">
   <meta property="og:description" content="{{ description or metadata.description }}">
   <meta property="og:image" content="{{ image or metadata.socialImage | url }}">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
   <meta property="og:url" content="{{ page.url | absoluteUrl }}">
   <meta property="og:site_name" content="{{ metadata.title }}">
   <meta property="og:type" content="website">
@@ -22,31 +20,31 @@
   <meta name="twitter:image" content="{{ image or metadata.socialImage | url }}">
   <meta name="twitter:site" content="{{ metadata.twitter or '@yourtwitterhandle' }}">
 
-  <!-- Lien vers le flux RSS -->
+<!-- Lien vers le flux RSS -->
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Flux RSS" href="{{ site.url }}/rss.xml" />
 
-  <!-- Theme Color -->
+<!-- Theme Color -->
   <meta name="theme-color" content="#F8F9F6">
 
+
   <!-- Canonical URL -->
-  <link rel="canonical" href="{{ page.url | absoluteUrl('https://chubert91assmat.netlify.app') }}">
+<link rel="canonical" href="{{ page.url | absoluteUrl('https://chubert91assmat.netlify.app') }}">
 
-  <!-- Préchargement des polices -->
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"></noscript>
 
-  <!-- Préchargement CSS -->
-  <link rel="preload" href="{{ '/css/style.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ '/css/style.css' | url }}"></noscript>
 
-  <!-- Préchargement de l'image LCP -->
-  <link rel="preload" as="image" href="/images/presentation/reconversion.jpg">
-
-  <!-- Lien vers les styles Bootstrap -->
+<!-- Lien vers les styles Bootstrap et CSS personnalisés -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-
-  <!-- Icônes Font Awesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-
-  <!-- Favicon -->
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
   <link rel="icon" href="{{ '/favicon.ico' | url }}" type="image/x-icon">
+
+  <!-- Polices Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Finger+Paint:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+ 
+
+
+
+
