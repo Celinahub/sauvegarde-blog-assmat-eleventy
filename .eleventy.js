@@ -33,9 +33,11 @@ async function imageShortcode(src, alt = "", sizes = "100vw") {
     let imageAttributes = {
       alt,
       sizes,
-      loading: "lazy",
+      fetchpriority: "high", // Priorité élevée pour les images importantes
+      loading: "eager", // Ne pas différer le chargement
       decoding: "async",
     };
+    
 
     return Image.generateHTML(metadata, imageAttributes, {
       whitespaceMode: "inline"
@@ -79,6 +81,8 @@ module.exports = function(eleventyConfig) {
         collapseWhitespace: true,
         minifyCSS: true,
         minifyJS: true,
+        removeOptionalTags: true, // Supprime les balises HTML optionnelles
+        removeEmptyAttributes: true, // Supprime les attributs vides
       });
     }
     return content; // Veillez à retourner le contenu si la condition n'est pas remplie
@@ -187,6 +191,8 @@ eleventyConfig.addFilter("truncateWords", function (content, numWords) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("_headers");
+
 
   // Ajouter des alias pour les layouts
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
