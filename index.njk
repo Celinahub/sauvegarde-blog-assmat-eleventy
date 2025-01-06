@@ -85,7 +85,7 @@ bodyClass: "bg-white presentation"
         <div class="bordered-content-presentation-image">
             <div class="presentation-image mx-auto position-relative mb-4">
                 {% image "/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg", "Céline Hubert, assistante maternelle à Brétigny-sur-Orge", "(min-width: 1024px) 100vw, 50vw", "rounded-circle img-fluid" %}
-                <a href="{{ '/contact/' | url }}" class="position-icon-b" aria-label="Accéder à la page de contact via icône">
+                <a href="{{ '/contact/' | url }}" class="position-icon-b" aria-label="Contacter Céline Hubert via icône bulle ou bouton SVG">
                     <!-- Contenu de l'icône ou bouton -->
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          width="5em" height="5em" viewBox="0 41.206 800 717.588" enable-background="new 0 41.206 800 717.588"
@@ -129,7 +129,7 @@ bodyClass: "bg-white presentation"
                             <p class="poppins-regular-accueil">{{ aProposDescription | default("En 2016, après une immersion en tant que particulier-employeur, j'ai amorcé une reconversion professionnelle pour devenir assistante maternelle agréée. Trouver un mode de garde sécurisant pour notre premier enfant a renforcé ma conviction d'offrir un accueil personnalisé et de qualité aux familles.") }}</p>
                             
                             <!-- Bouton "lien interne" -->
-                          <a href="{{ '/contact/' | url }}" class="btn btn-action-primary my-4" aria-label="Accéder au formulaire de contact">
+                          <a href="{{ '/contact/' | url }}" class="btn btn-action-primary my-4" aria-label="Envoyer un message à Céline Hubert par e-mail">
     Accédez au formulaire de contact
 </a>
 
@@ -295,7 +295,9 @@ bodyClass: "bg-white presentation"
                             <p class="poppins-regular-accueil">{{ sociabilisationDescription | default("Les visites bi-mensuelles au Relais Petite Enfance (RPE) de Brétigny-sur-Orge offrent aux enfants un environnement stimulant pour enrichir leur cercle social, développer des compétences essentielles comme le partage et la communication, et renforcer le lien avec l'assistante maternelle.") }}</p>
                             
                             <!-- Bouton "lien interne" -->
-                            <a href="{{ '/projet-accueil/#team' | url }}" class="btn btn-action-primary my-4">{{ boutonTexte | default("Découvrez les avantages du RPE") }}</a>
+                           <a href="{{ '/projet-accueil/#team' | url }}" class="btn btn-action-primary my-4" aria-label="En savoir plus sur les avantages du RPE et de l'équipe">
+    {{ boutonTexte | default("Découvrez les avantages du RPE") }}
+</a>
                         </div>
                     </div>
                 </div>
