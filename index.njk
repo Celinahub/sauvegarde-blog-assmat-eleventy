@@ -7,7 +7,7 @@ image: "presentation-assistante-maternelle-agreee.jpg"
 eleventyNavigation:
   key: PRESENTATION
   order: 1
-permalink: /
+permalink: "/"
 bodyClass: "bg-white presentation"
 ---
 
@@ -69,61 +69,51 @@ bodyClass: "bg-white presentation"
 
 <!-- Icône de défilement vers le haut utilisant une image SVG -->
 <a href="#portrait" class="scroll-to-top">
-    <img class="rocket-icon" src="../images/rocket-svgrepo-com.svg" alt="Icône de fusée pour remonter en haut de la page de Céline Hubert, assistante maternelle à Brétigny-sur-Orge" />
+    <img class="rocket-icon" src="../images/rocket-svgrepo-com.svg" alt="Icône de fusée pour remonter en haut de la page" />
 </a>
 
 
 <section id="portrait" class="container-fluid py-5 position-relative">
+ <h2 class="sr-only" aria-hidden="true">Portrait de Céline Hubert</h2> <!-- Titre caché pour l'accessibilité -->
     <div class="row justify-content-center text-center position-relative">
-        <!-- Ajout de la bande grise -->
-       
         <div class="col-md-12">
-            
-            <!-- Ajout d'un titre pour la section -->
-            <h1 class="heading-presentation">{{ title | default("Présentation Assistante Maternelle Agréée à Brétigny-sur-Orge") }}</h1>
-            
-           <img src="{{ '/images/presentation/arriere-plan-nuages-bleus-bretigny-assistante-maternelle.svg' | url }}" class="fond-curvy" alt="Illustration de nuages bleus représentant l'accueil chaleureux d'une assistante maternelle à Brétigny-sur-Orge">
+            <!-- Image d'arrière-plan -->
+            <img src="{{ '/images/presentation/arriere-plan-nuages-bleus-bretigny-assistante-maternelle.svg' | url }}" 
+                 class="fond-curvy" 
+                 alt="Nuages bleus enfantins">
         </div>
         <div class="bordered-content-presentation-image">
             <div class="presentation-image mx-auto position-relative mb-4">
-               
- 
-{% image "/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg", "Céline Hubert, assistante maternelle à Brétigny-sur-Orge", "(min-width: 1024px) 100vw, 50vw", "rounded-circle img-fluid" %}
-
-
-
-                <a href="{{ '/contact/' | url }}" class="position-icon-b">
+                {% image "/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg", "Céline Hubert, assistante maternelle à Brétigny-sur-Orge", "(min-width: 1024px) 100vw, 50vw", "rounded-circle img-fluid" %}
+                <a href="{{ '/contact/' | url }}" class="position-icon-b" aria-label="Accéder à la page de contact via icône">
                     <!-- Contenu de l'icône ou bouton -->
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    width="5em" height="5em" viewBox="0 41.206 800 717.588" enable-background="new 0 41.206 800 717.588"
-                    xml:space="preserve">
-               <g>
-                   <path fill="#F07861" d="M672.067,41.206H127.986C53.053,41.206,0,92.101,0,169.159v284.424c0,70.98,49.116,128.113,127.986,128.113
-                       h30.658c16.934,0,33.742,15.938,37.495,35.608l23.698,123.31c3.753,19.671,18.241,24.062,32.292,9.811l141.114-142.928
-                       c14.087-14.25,41.719-25.801,61.753-25.801h217.048c77.021,0,127.949-63.023,127.949-128.113V169.159
-                       C800,94.221,745.007,41.206,672.067,41.206z M161.385,370.739c-32.545,0-58.926-26.382-58.926-58.927s26.381-58.926,58.926-58.926
-                       s58.926,26.381,58.926,58.926S193.913,370.739,161.385,370.739z M385.576,352.607c-22.518,0-40.796-18.277-40.796-40.795
-                       s18.278-40.795,40.796-40.795s40.795,18.277,40.795,40.795C426.371,334.334,408.094,352.607,385.576,352.607z M638.632,370.739
-                       c-32.545,0-58.926-26.382-58.926-58.927s26.381-58.926,58.926-58.926s58.927,26.381,58.927,58.926S671.177,370.739,638.632,370.739
-                       z"/>
-               </g>
-               </svg>
+                         width="5em" height="5em" viewBox="0 41.206 800 717.588" enable-background="new 0 41.206 800 717.588"
+                         xml:space="preserve">
+                        <g>
+                            <path fill="#F07861" d="M672.067,41.206H127.986C53.053,41.206,0,92.101,0,169.159v284.424c0,70.98,49.116,128.113,127.986,128.113
+                                h30.658c16.934,0,33.742,15.938,37.495,35.608l23.698,123.31c3.753,19.671,18.241,24.062,32.292,9.811l141.114-142.928
+                                c14.087-14.25,41.719-25.801,61.753-25.801h217.048c77.021,0,127.949-63.023,127.949-128.113V169.159
+                                C800,94.221,745.007,41.206,672.067,41.206z M161.385,370.739c-32.545,0-58.926-26.382-58.926-58.927s26.381-58.926,58.926-58.926
+                                s58.926,26.381,58.926,58.926S193.913,370.739,161.385,370.739z M385.576,352.607c-22.518,0-40.796-18.277-40.796-40.795
+                                s18.278-40.795,40.796-40.795s40.795,18.277,40.795,40.795C426.371,334.334,408.094,352.607,385.576,352.607z M638.632,370.739
+                                c-32.545,0-58.926-26.382-58.926-58.927s26.381-58.926,58.926-58.926s58.927,26.381,58.927,58.926S671.177,370.739,638.632,370.739
+                                z"/>
+                        </g>
+                    </svg>
                 </a>
-
             </div>
         </div>
-      
-       
-
     </div>
 </section>
+
 
 
 <section id="services-garde-enfants" class="container-fluid py-5">
     <div class="services-garde-enfants-section section-wrapper">
         <div class="profile-text text-center">
-            <h2 class="poppins-bold-titre-accueil">{{ accueilTitre | default("Céline, Assistante Maternelle Agréée") }}</h2>
-            <p class="fade-in-out-bretigny">{{ sousTitreAccueil | default("à Brétigny-sur-Orge") }}</p>
+            <h1 class="poppins-bold-titre-accueil">{{ accueilTitre | default("Céline, Assistante Maternelle Agréée") }}</h1>
+            <h2 class="fade-in-out-bretigny">{{ sousTitreAccueil | default("à Brétigny-sur-Orge") }}</h2>
         </div>
 
         <!-- Premier ligne -->
@@ -139,7 +129,10 @@ bodyClass: "bg-white presentation"
                             <p class="poppins-regular-accueil">{{ aProposDescription | default("En 2016, après une immersion en tant que particulier-employeur, j'ai amorcé une reconversion professionnelle pour devenir assistante maternelle agréée. Trouver un mode de garde sécurisant pour notre premier enfant a renforcé ma conviction d'offrir un accueil personnalisé et de qualité aux familles.") }}</p>
                             
                             <!-- Bouton "lien interne" -->
-                            <a href="{{ '/contact/' | url }}" class="btn btn-action-primary my-4">Accédez au formulaire de contact</a>
+                          <a href="{{ '/contact/' | url }}" class="btn btn-action-primary my-4" aria-label="Accéder au formulaire de contact">
+    Accédez au formulaire de contact
+</a>
+
                         </div>
                     </div>
                 </div>
@@ -332,7 +325,10 @@ bodyClass: "bg-white presentation"
                         <hr class="horizontal-line">
                         <div class="description-atout-services">
                             <p class="poppins-regular-accueil">{{ assistanceDescription | default("Je vous accompagne dans toutes vos démarches administratives, y compris la saisie Pajemploi, avec une expertise juridique spécialisée grâce à mon affiliation au syndicat UNSA PRO ASSMAT garantissant ainsi simplicité et tranquillité d'esprit. La FEPEM offre des ressources pour les particuliers-employeurs.") }}</p>
-                            <a href="{{ '/projet-accueil/#team' | url }}" class="btn btn-action-primary my-4">{{ boutonTexte | default("En savoir plus sur le syndicat") }}</a>
+                           <a href="{{ '/projet-accueil/#team' | url }}" class="btn btn-action-primary my-4" aria-label="En savoir plus sur le syndicat, section équipe">
+    {{ boutonTexte | default("En savoir plus sur le syndicat") }}
+</a>
+
                         </div>
                     </div>
                 </div>
@@ -402,11 +398,11 @@ bodyClass: "bg-white presentation"
 
 
 <section id="avis" class="container-fluid-contact py-5"> <!-- Utilisation de container-fluid -->
-    <h2 class="heading-avis">Avis des parents sur Brétigny-sur-Orge - Assistante Maternelle Agréée-Chez Céline</h2>
+
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <p class="google-fiche-avis"><strong>VOS AVIS COMPTENT</strong></p>
+                <h2 class="google-fiche-avis"><strong>VOS AVIS COMPTENT</strong></h2>
                 <hr class="horizontal-line">
                 <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
                 <div class="elfsight-app-e1c8b1af-d1eb-4f3b-abba-dd006fd956c3" data-elfsight-app-lazy></div>
@@ -425,7 +421,7 @@ bodyClass: "bg-white presentation"
             <div class="col-12">
                 <h2 class="titre-rencontrons-nous">
                     <span>
-                       <img src="{{ '/images/presentation/validation-rencontre-assistante-bretigny.svg' | url }}" class="checked" alt="Icône de validation pour confirmer un rendez-vous avec Céline, assistante maternelle à Brétigny-sur-Orge">
+                       <img src="{{ '/images/presentation/validation-rencontre-assistante-bretigny.svg' | url }}" class="checked" alt="Icône de validation pour confirmer un rendez-vous avec Céline, assistante maternelle">
                     </span>
                     <strong>RENCONTRONS - NOUS</strong>
                 </h2>   
@@ -449,9 +445,9 @@ bodyClass: "bg-white presentation"
                 <div class="container">
                     <p class="poppins-regular-rdv">
                         C'est avec plaisir que j'échangerai avec vous.
-                        <a href="{{ '/contact/' | url }}">
-                            <img src="{{ '/images/presentation/enveloppe-contact-direct-assistante-maternelle-bretigny.svg' | url }}" class="checked-localisation" alt="Icône d'enveloppe pour contacter Céline Hubert, assistante maternelle à Brétigny-sur-Orge">
-                        </a>
+                      <a href="{{ '/contact/' | url }}" aria-label="Contacter Céline Hubert directement via l'enveloppe">
+    <img src="{{ '/images/presentation/enveloppe-contact-direct-assistante-maternelle-bretigny.svg' | url }}" class="checked-localisation" alt="Icône d'enveloppe pour contacter Céline Hubert, assistante maternelle à Brétigny-sur-Orge">
+</a>
                     </p>
                 </div>
             </div>
