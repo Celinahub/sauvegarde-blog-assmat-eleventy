@@ -634,10 +634,11 @@ h2, h3 {
    z-index: -1; /* Assurez-vous que l'image SVG est derrière le contenu */
 }
 
-.fond-curvy-portrait {
-   width: 100%; /* Remplit le conteneur */
-   height: auto; /* Maintient les proportions */
-}
+.background-portrait {
+   width: 100%;
+   height: auto;
+ }
+ 
 
 
 #portrait {
