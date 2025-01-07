@@ -65,25 +65,16 @@ var a = "chubert.assmat91";
 </script>
 
 <script>
-  // Détection du chargement des polices
+  document.documentElement.classList.add('fonts-loading');
+  
   if ("fonts" in document) {
     Promise.all([
-      document.fonts.load("400 1em Poppins"),
-      document.fonts.load("700 1em Poppins")
+      document.fonts.load("1em 'Finger Paint'"),
+      document.fonts.load("1em Poppins")
     ]).then(() => {
-      document.documentElement.classList.add("fonts-loaded");
+      document.documentElement.classList.remove('fonts-loading');
     });
   }
-
-  // Optimisation du paragraphe avec le LCP
-  document.addEventListener('DOMContentLoaded', () => {
-    const lcp = document.querySelector('.poppins-regular-accueil');
-    if (lcp) {
-      lcp.setAttribute('importance', 'high');
-      // Assurez-vous que le contenu est visible immédiatement
-      lcp.style.visibility = 'visible';
-    }
-  });
 </script>
 
 

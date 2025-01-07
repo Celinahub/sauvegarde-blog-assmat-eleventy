@@ -1,10 +1,57 @@
-<!-- SEO Metadata -->
+<!-- 1. Métadonnées essentielles en premier -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- 2. Préconnexions prioritaires -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+
+  <!-- 3. SEO Metadata -->
   <title>{{ title or metadata.title }}</title>
   <meta name="description" content="{{ description or metadata.description }}">
   <meta name="keywords" content="{{ tags or 'blog, articles, ' ~ metadata.title | safe }}">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="{{ page.url | absoluteUrl('https://chubert91assmat.netlify.app') }}">
 
-  <!-- Open Graph Metadata (Facebook, LinkedIn, Pinterest) -->
+  <!-- 4. CSS critique inline pour le First Paint -->
+  <style>
+    :root {
+      --font-fallback: system-ui, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    }
+    body {
+      font-family: var(--font-fallback);
+      visibility: visible;
+    }
+  </style>
+
+  <!-- 5. Préchargement des ressources critiques -->
+  <link rel="preload" 
+        href="{{ '/images/presentation/arriere-plan-nuages-bleus-bretigny-assistante-maternelle.svg' | url }}" 
+        as="image" 
+        fetchpriority="high"
+        type="image/svg+xml">
+  
+  <!-- 6. CSS critique externe -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        fetchpriority="high"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ '/css/style.css' | url }}" fetchpriority="high">
+
+  <!-- 7. Chargement différé des polices -->
+  <link rel="preload" as="style" 
+        href="https://fonts.googleapis.com/css2?family=Finger+Paint:wght@400&family=Poppins:ital,wght@0,400;0,700;0,800;0,900&display=swap"
+        onload="this.onload=null;this.rel='stylesheet'">
+  
+  <!-- 8. Font Awesome différé -->
+  <link rel="preload" as="style" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- 9. Social Media Tags -->
   <meta property="og:title" content="{{ title or metadata.title }}">
   <meta property="og:description" content="{{ description or metadata.description }}">
   <meta property="og:image" content="{{ image or metadata.socialImage | url }}">
@@ -12,51 +59,19 @@
   <meta property="og:site_name" content="{{ metadata.title }}">
   <meta property="og:type" content="website">
   <meta name="pinterest-rich-pin" content="true">
-
-  <!-- Twitter Metadata -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="{{ title or metadata.title }}">
   <meta name="twitter:description" content="{{ description or metadata.description }}">
   <meta name="twitter:image" content="{{ image or metadata.socialImage | url }}">
   <meta name="twitter:site" content="{{ metadata.twitter or '@yourtwitterhandle' }}">
 
-<!-- Lien vers le flux RSS -->
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Flux RSS" href="{{ site.url }}/rss.xml" />
-
-<!-- Theme Color -->
+  <!-- 10. Ressources non-critiques -->
   <meta name="theme-color" content="#F8F9F6">
-
-
-  <!-- Canonical URL -->
-<link rel="canonical" href="{{ page.url | absoluteUrl('https://chubert91assmat.netlify.app') }}">
-
-
-
-<!-- Lien vers les styles Bootstrap et CSS personnalisés -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }} - Flux RSS" href="{{ site.url }}/rss.xml" />
   <link rel="icon" href="{{ '/favicon.ico' | url }}" type="image/x-icon">
 
-  <!-- Polices Google -->
-  <!-- Préconnexions prioritaires -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <!-- Optimisation des polices Google -->
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Finger+Paint:wght@400&display=swap">
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900&display=swap">
-  
-  <!-- Chargement des polices avec display=swap -->
-  <link href="https://fonts.googleapis.com/css2?family=Finger+Paint:wght@400&display=swap&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900&display=swap&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome optimisé -->
-  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-
-  <link rel="preload" 
-      href="{{ '/images/presentation/arriere-plan-nuages-bleus-bretigny-assistante-maternelle.svg' | url }}" 
-      as="image" 
-      type="image/svg+xml">
-
-
+  <!-- 11. Fallback pour les polices (noscript) -->
+  <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Finger+Paint:wght@400&family=Poppins:ital,wght@0,400;0,700;0,800;0,900&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  </noscript>
