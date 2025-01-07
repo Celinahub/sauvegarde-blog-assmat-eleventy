@@ -13,7 +13,7 @@ body {
    background-size: cover;
    background-position: center;
    background-attachment: fixed;
-   font-family: Arial, sans-serif;
+   font-family: "Poppins", Arial, sans-serif;
    box-sizing: border-box;
    min-height: 100vh; /* Assure que le corps a au moins la hauteur de la fenêtre du navigateur */
 }
@@ -632,6 +632,11 @@ h2, h3 {
    left: 0;
    width: 100%;
    z-index: -1; /* Assurez-vous que l'image SVG est derrière le contenu */
+}
+
+.fond-curvy-portrait {
+   width: 100%; /* Remplit le conteneur */
+   height: auto; /* Maintient les proportions */
 }
 
 
