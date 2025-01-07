@@ -1094,10 +1094,6 @@ h2, h3 {
  
 }
 
-.heading-chezceline {
-   color: #F9FAF7; /* Changez la couleur selon votre préférence */
-   font-size: 1px;
-}
 
 
 #chezceline .col-md-12 img.fond-curvy {
@@ -2135,7 +2131,7 @@ position: relative; /* Ajout de position relative */
    background-color: transparent;
    color: #103754;
    padding: 5px;
-   font-size: 10px;
+   font-size: 12px;
    cursor: pointer;
 }
 
@@ -2169,7 +2165,7 @@ position: relative; /* Ajout de position relative */
 /* Ajoutez des styles spécifiques pour les écrans plus petits (par exemple, largeur inférieure à 768px) */
 @media (max-width: 768px) {
    .routine-keyword {
-      font-size: 8px;
+      font-size: 10px;
    }
 
    .routine-keywords {
