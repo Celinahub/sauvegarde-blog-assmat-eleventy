@@ -723,10 +723,16 @@ h2, h3 {
 
 
 
-
-
-
-
+ /* Police de substitution en attendant le chargement */
+ .poppins-regular-accueil {
+   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+   font-display: swap;
+ }
+ 
+ /* Une fois la police chargée */
+ .fonts-loaded .poppins-regular-accueil {
+   font-family: 'Poppins', sans-serif;
+ }
 
 
 
