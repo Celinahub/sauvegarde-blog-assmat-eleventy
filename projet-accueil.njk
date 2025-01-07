@@ -14,7 +14,7 @@ bodyClass: "bg-white projet-accueil"
     
 <!-- Icône de défilement vers le haut utilisant une image SVG -->
 <a href="#chezceline" class="scroll-to-top">
-    <img class="rocket-icon" src="../images/rocket-svgrepo-com.svg" alt="Icône de fusée pour revenir en haut de la page sur le projet d'accueil de Céline Hubert, assistante maternelle à Brétigny-sur-Orge" />
+    <img class="rocket-icon" src="../images/rocket-svgrepo-com.svg" alt="Icône de fusée pour remonter en haut de la page projet d'accueil" />
 </a>
 
 
@@ -22,7 +22,7 @@ bodyClass: "bg-white projet-accueil"
 <section id="chezceline" class="container-fluid py-5 position-relative">
     <div class="row justify-content-center text-center position-relative">
         <div class="col-md-12">
-            <h2 class="heading-chezceline">Mon Projet d'Accueil - Assistante Maternelle Agréée</h2>
+          <h2 class="sr-only" aria-hidden="true">Mon Projet d'Accueil - Assistante Maternelle Agréée</h2> <!-- Titre caché pour l'accessibilité -->
             <img src="{{ '/images/projet-accueil/nuages-bleus-projet-accueil.svg' | url }}" class="fond-curvy" alt="style de l'arrière plan en nuages bleus">
         </div>
         <div class="bordered-content-lieu-accueil-image">
@@ -72,7 +72,7 @@ bodyClass: "bg-white projet-accueil"
                     <img class="animation-frame hidden" src="{{ '/images/projet-accueil/activites/domicile/accueil-ludique-10.jpg' | url }}" alt="Photo d'une activité ludique du lieu d'accueil et son environement illustrant le lieu d'accueil chez Céline Hubert, assistante maternelle à Brétigny-sur-Orge">
                 </picture>
                
-                <a href="{{ '/contact.html' | url }}" class="position-icon">
+                <a href="{{ '/contact.html' | url }}" class="position-icon" aria-label="Contacter et localiser Céline Hubert">
                     <!-- Remplacez cette ligne par votre code SVG -->
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="5em" height="5em" viewBox="0 0 800 800" enable-background="new 0 0 800 800" xml:space="preserve">
@@ -130,22 +130,22 @@ bodyClass: "bg-white projet-accueil"
     <div class="role-section section-wrapper">
         <div class="profile-text">
             <div class="title-container">
-                <h2>
+                <h1>
                     <span class="poppins-bold-role-title">BIENVENUE</span>
                     <!-- Texte qui apparaît et disparaît en boucle -->
                     <span class="fade-in-out-role">chez Céline !</span>
-                </h2>
+                </h1>
             </div>
             <div class="row">
                 <div class="col-md-8">
                     <div class="role-item">
                         <div class="role-image">
                             <div class="role-assmat">
-                                <h3 class="poppins-bold-role-title">J'ASSURE UN RÔLE DE TRANSITION</h3>
+                                <h2 class="poppins-bold-role-title">J'ASSURE UN RÔLE DE TRANSITION</h2>
                                 <p class="poppins-regular">
                                     Je suis une professionnelle de la petite enfance dont le rôle est d'accompagner l'enfant dans un objectif de coéducation avec la famille en établissant une relation de confiance.
                                 </p>
-                                <h3 class="poppins-bold-role-title">UNE ADAPTATION RÉUSSIE</h3>
+                                <h2 class="poppins-bold-role-title">UNE ADAPTATION RÉUSSIE</h2>
                                 <p class="poppins-regular">
                                     L'adaptation est indispensable pour favoriser le bien être de votre enfant, sa sécurité psychologique. Cette période d’adaptation est bien entendu modulable selon les contraintes et obligations de chacun(e), voici un planning type :
                                 </p>
@@ -171,7 +171,7 @@ bodyClass: "bg-white projet-accueil"
                                     Enfin, nous démarrons la première journée d'accueil, et c'est le moment d'initier petits et grands à l'ensemble des rituels qui rythment la journée d'accueil !
                                 </p>
 
-                                <h3 class="poppins-bold-role-title">LE DOUDOU</h3>
+                                <h2 class="poppins-bold-role-title">LE DOUDOU</h2>
                                 <p class="poppins-regular">
                                     Le doudou crée un lien entre l'enfant et le monde extérieur. Il est essentiel d'expliquer de manière pédagogique à l'enfant qu'il ne peut pas garder son doudou pendant les repas ou aux toilettes. Le doudou reste toutefois à disposition de l'enfant en cas de besoin de réconfort.
                                 </p>
@@ -187,7 +187,7 @@ bodyClass: "bg-white projet-accueil"
     <div class="valeur-item">
         <div class="valeur-image">
             <div class="valeur-frame">
-                <img src="{{ '/images/projet-accueil/doudou-serpillere-crayon.png' | url }}" class="doudou" alt="Dessin d'un doudou symbolisant l'importance du doudou pour les enfants chez Céline Hubert, assistante maternelle à Brétigny-sur-Orge" />
+                <img src="{{ '/images/projet-accueil/doudou-serpillere-crayon.png' | url }}" class="doudou" alt="Dessin d'un doudou ojet transitionnel" />
                                 </div><!-- Fermeture de valeur-frame -->
                             </div><!-- Fermeture de valeur-image -->
                         </div><!-- Fermeture de valeur-item -->
@@ -336,7 +336,9 @@ bodyClass: "bg-white projet-accueil"
     <div class="routine-info">
         <h3 class="routine-title">
             <span class="poppins-bold-routine">Modalité du soin</span>
-            <button class="routine-btn-toggle"><i class="fas fa-chevron-right"></i></button>
+           <button class="routine-btn-toggle" aria-label="Activer routine">
+            <i class="fas fa-chevron-right"></i>
+        </button>
         </h3>
         
         <div class="routine-description hidden">
@@ -358,7 +360,8 @@ bodyClass: "bg-white projet-accueil"
                 <div class="routine-info">
                     <h3 class="routine-title">
                         <span class="poppins-bold-routine">Pictogrammes</span>
-                        <button class="routine-picto-btn-toggle"><i class="fas fa-chevron-right"></i></button>
+                        <button class="routine-picto-btn-toggle" aria-label="Activer pictogrammes">
+                        <i class="fas fa-chevron-right"></i></button>
                     </h3>
             
                     <div class="routine-pictogramme hidden">
@@ -440,7 +443,8 @@ bodyClass: "bg-white projet-accueil"
                 <div class="routine-info">
                     <h3 class="routine-title">
                         <span class="poppins-bold-routine">Modalité du repas</span>
-                        <button class="routine-btn-toggle"><i class="fas fa-chevron-right"></i></button>
+                        <button class="routine-btn-toggle" aria-label="Activer routine">
+                        <i class="fas fa-chevron-right"></i></button>
                     </h3>
             
                     <div class="routine-description hidden">
@@ -462,7 +466,8 @@ bodyClass: "bg-white projet-accueil"
                 <div class="routine-info">
                     <h3 class="routine-title">
                         <span class="poppins-bold-routine">Pictogrammes</span>
-                        <button class="routine-picto-btn-toggle"><i class="fas fa-chevron-right"></i></button>
+                        <button class="routine-picto-btn-toggle" aria-label="Activer pictogrammes">
+                        <i class="fas fa-chevron-right"></i></button>
                     </h3>
             
                     <div class="routine-pictogramme hidden">
@@ -567,7 +572,8 @@ bodyClass: "bg-white projet-accueil"
                 <div class="routine-info">
                     <h3 class="routine-title">
                         <span class="poppins-bold-routine">Modalité repos, sommeil</span>
-                        <button class="routine-btn-toggle routine-btn-toggle"><i class="fas fa-chevron-right"></i></button>
+                        <button class="routine-btn-toggle routine-btn-toggle" aria-label="Activer routine">
+                        <i class="fas fa-chevron-right"></i></button>
                     </h3>
             
                     <div class="routine-description hidden">
@@ -584,7 +590,8 @@ bodyClass: "bg-white projet-accueil"
                 <div class="routine-info">
                     <h3 class="routine-title">
                         <span class="poppins-bold-routine">Pictogrammes</span>
-                        <button class="routine-picto-btn-toggle routine-picto-btn-toggle"><i class="fas fa-chevron-right"></i></button>
+                        <button class="routine-picto-btn-toggle routine-picto-btn-toggle" aria-label="Activer pictogramme">
+                        <i class="fas fa-chevron-right"></i></button>
                     </h3>
             
                     <div class="routine-pictogramme hidden">
@@ -957,7 +964,8 @@ bodyClass: "bg-white projet-accueil"
                         
                                 <h3 class="agrement-title">
                                     <span class="poppins-bold-agrement">En savoir plus</span>
-                                    <button class="agrement-btn-toggle routine-btn-toggle"><i class="fas fa-chevron-right"></i></button>
+                                    <button class="agrement-btn-toggle routine-btn-toggle" aria-label="Activer agrement">
+                                    <i class="fas fa-chevron-right"></i></button>
                                 </h3>
                         
                                 <div class="agrement-description hidden">
@@ -978,7 +986,8 @@ bodyClass: "bg-white projet-accueil"
                         
                                 <h3 class="agrement-title">
                                     <span class="poppins-bold-agrement">Formations</span>
-                                    <button class="agrement-btn-toggle routine-btn-toggle"><i class="fas fa-chevron-right"></i></button>
+                                    <button class="agrement-btn-toggle routine-btn-toggle" aria-label="Activer formations">
+                                    <i class="fas fa-chevron-right"></i></button>
                                 </h3>
                         
                                 <div class="agrement-description hidden">
@@ -1008,7 +1017,8 @@ bodyClass: "bg-white projet-accueil"
                             <div class="agrement-info">
                                 <h3 class="agrement-title">
                                     <span class="poppins-bold-agrement">En savoir plus</span>
-                                    <button class="agrement-btn-toggle agrement-btn-toggle"><i class="fas fa-chevron-right"></i></button>
+                                    <button class="agrement-btn-toggle agrement-btn-toggle" aria-label="Activer informations">
+                                    <i class="fas fa-chevron-right"></i></button>
                                 </h3>
                                 <div class="agrement-description hidden">
                                     <p class="poppins-bold-agrement-hidden">Juin 2020</p>
@@ -1042,7 +1052,8 @@ bodyClass: "bg-white projet-accueil"
                             <div class="agrement-info">
                                 <h3 class="agrement-title">
                                     <span class="poppins-bold-agrement">En savoir plus</span>
-                                    <button class="agrement-btn-toggle agrement-btn-toggle"><i class="fas fa-chevron-right"></i></button>
+                                    <button class="agrement-btn-toggle agrement-btn-toggle" aria-label="Activer stage">
+                                    <i class="fas fa-chevron-right"></i></button>
                                 </h3>
                                 <div class="agrement-description hidden">
                                     <p class="poppins-bold-agrement-hidden">Septembre 2019</p>
@@ -1079,7 +1090,8 @@ bodyClass: "bg-white projet-accueil"
                             <div class="agrement-info">
                                 <h3 class="agrement-title">
                                     <span class="poppins-bold-agrement">En savoir plus</span>
-                                    <button class="agrement-btn-toggle agrement-btn-toggle"><i class="fas fa-chevron-right"></i></button>
+                                    <button class="agrement-btn-toggle agrement-btn-toggle" aria-label="Activer formation">
+                                    <i class="fas fa-chevron-right"></i></button>
                                 </h3>
                                 <div class="agrement-description hidden">
                                     <p class="poppins-bold-agrement-hidden">Février 2018</p>
@@ -1112,7 +1124,8 @@ bodyClass: "bg-white projet-accueil"
                             <div class="agrement-info">
                                 <h3 class="agrement-title">
                                     <span class="poppins-bold-agrement">En savoir plus</span>
-                                    <button class="agrement-btn-toggle agrement-btn-toggle"><i class="fas fa-chevron-right"></i></button>
+                                    <button class="agrement-btn-toggle agrement-btn-toggle" aria-label="Activer contrat">
+                                    <i class="fas fa-chevron-right"></i></button>
                                 </h3>
                                 <div class="agrement-description hidden">
                                     <p class="poppins-bold-agrement-hidden">Juin 2017 - Premier contrat</p>
@@ -1136,7 +1149,8 @@ bodyClass: "bg-white projet-accueil"
                             <div class="agrement-info">
                                 <h3 class="agrement-title">
                                     <span class="poppins-bold-agrement">En savoir plus</span>
-                                    <button class="agrement-btn-toggle agrement-btn-toggle"><i class="fas fa-chevron-right"></i></button>
+                                    <button class="agrement-btn-toggle agrement-btn-toggle" aria-label="Activer modules">
+                                    <i class="fas fa-chevron-right"></i></button>
                                 </h3>
                                 <div class="agrement-description hidden">
                                     <p class="poppins-bold-agrement-hidden">Avril 2017</p>
