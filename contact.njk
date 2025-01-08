@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Contactez Céline Hubert, assistante maternelle agréée à Brétigny-sur-Orge"
-description: "Contactez Céline Hubert, assistante maternelle agréée à Brétigny-sur-Orge. Localisez mon lieu d'accueil et remplissez le formulaire pour toute demande d'information."
+description: "Localisez mon lieu d'accueil et remplissez le formulaire pour toute demande d'information."
 url: "https://chubert91assmat.netlify.app/contact"
 image: "contact-celine-assistante-maternelle.jpg"
 eleventyNavigation:
@@ -17,8 +17,8 @@ bodyClass: "bg-white contact"
 <section id="contact" class="container-fluid-contact py-5"> <!-- Utilisation de container-fluid -->
     <div class="text-center"> <!-- Retrait de la div supplémentaire -->
         <!-- Ajout d'un titre pour la section -->
-        <h2 class="heading-contact">Me contacter</h2>
-
+        <h2 class="sr-only" aria-hidden="true">Me contacter</h2> <!-- Titre caché pour l'accessibilité -->
+       
         <!-- SVG qui doit être placé au-dessus de la carte -->
          <img src="{{ '/images/contact/map-top.svg' | url }}" class="map-top-curvy" alt="Décor de nuages en haut de la page de contact de Céline, assistante maternelle agréée" />
       
@@ -42,8 +42,8 @@ bodyClass: "bg-white contact"
                     <!-- Contenu du formulaire -->
                     <div class="label-form section-wrapper">
                         <div class="contact-text">
-                            <p class="contact-label">ME CONTACTER</p> 
-                            <p class="fade-in-out-contact">C'est avec plaisir que j'échangerai avec vous ...</p>
+                            <h1 class="contact-label">ME CONTACTER</h1> 
+                            <h2 class="fade-in-out-contact">C'est avec plaisir que j'échangerai avec vous ...</h2>
                             <div class="contact-spacer"></div>
                             
                             <!-- Formulaire -->
