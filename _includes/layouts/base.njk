@@ -64,21 +64,6 @@ var a = "chubert.assmat91";
 
 </script>
 
-<script>
-  document.documentElement.classList.add('fonts-loading');
-  
-  if ("fonts" in document) {
-    Promise.all([
-      document.fonts.load("1em 'Finger Paint'"),
-      document.fonts.load("1em Poppins")
-    ]).then(() => {
-      document.documentElement.classList.remove('fonts-loading');
-    });
-  }
-</script>
-
-
-
 
     </body>
 </html>
