@@ -2,7 +2,7 @@
    <!-- Première card : Photo et icônes -->
     <div class="card-colonne mb-3">
         <!-- Titre du widget -->
-        <h5 class="finger-paint-regular-titre-blog text-center">A PROPOS ...</h5>
+        <h2 class="finger-paint-regular-titre-blog text-center">A PROPOS ...</h2>
         <hr>
 
 
@@ -107,7 +107,7 @@
   <div class="card-colonne mb-3">
 <div class="card-body">
 <div class="text-portrait px-3">
-    <h5 class="poppins-bold-blog text-center">Bienvenue sur mon blog!</h5>
+    <h2 class="poppins-bold-blog text-center">Bienvenue sur mon blog!</h2>
     <p class="poppins-regular-blog text-center">
         Je m'appelle Céline, assistante maternelle agréée à Brétigny-sur-Orge depuis 8 ans. Passionnée par mon métier, je partage ici des astuces, des idées pratiques et des bons plans, testés et approuvés auprès des enfants. Ce sont des conseils que j’aurais aimé avoir lorsque j’étais jeune parent.
     </p>
@@ -131,7 +131,7 @@
 <div class="card-colonne">
     <div class="card-body">
         <!-- Titre du widget -->
-        <h5 class="finger-paint-regular-titre-blog text-center">RECHERCHE PAR MOTS CLES</h5>
+        <h3 class="finger-paint-regular-titre-blog text-center">RECHERCHE PAR MOTS CLES</h3>
 
         <hr>
         <!-- Conteneur pour la recherche Google -->
@@ -147,14 +147,14 @@
 <div class="card-colonne">
     <div class="card-body">
         <!-- Titre du widget avec catégorie dynamique -->
-        <h5 class="finger-paint-regular-titre-blog text-center">
+        <h2 class="finger-paint-regular-titre-blog text-center">
     {% if page.url == '/blog/' or pagination.pageNumber > 0 %}  
         <!-- Vérifie si l'URL est celle de la page blog ou d'une page de pagination -->
         CATEGORIES
     {% else %}
         {{ featuredPost.data.category | default('CATEGORIES') }}  <!-- Affiche la catégorie pour les autres pages non paginées -->
     {% endif %}
-</h5>
+</h2>
 
         <hr>
 
