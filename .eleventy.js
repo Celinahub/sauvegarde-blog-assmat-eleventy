@@ -9,7 +9,7 @@ const htmlMinifier = require("html-minifier-terser"); // Plugin de minification 
 const BASE_URL = "https://chubert91assmat.netlify.app";
 
 // Fonction pour gérer le shortcode d'image
-async function imageShortcode(src, alt = "", sizes = "100vw") {
+async function imageShortcode(src, alt = "", sizes = "100vw", width = 300, height = null, loading = "lazy", fetchpriority = "auto") {
   if (!src) {
     console.warn(`Missing image source for: ${alt}`);
     return '';
@@ -20,7 +20,7 @@ async function imageShortcode(src, alt = "", sizes = "100vw") {
 
   try {
     let metadata = await Image(imageSrc, {
-      widths: [300, 600, 1200],
+      widths: [width, 600, 1200].filter(Boolean), // Filtre les valeurs nulles ou undefined
       formats: ["webp", "jpeg"],
       outputDir: "./_site/images/",
       urlPath: "/images/",
@@ -30,11 +30,14 @@ async function imageShortcode(src, alt = "", sizes = "100vw") {
       }
     });
 
-    let imageAttributes = {
+     // Attributs pour la balise <img>
+     let imageAttributes = {
       alt,
       sizes,
-      loading: "lazy",
+      loading,
       decoding: "async",
+      fetchpriority,
+      ...(height ? { style: `aspect-ratio: ${width}/${height};` } : {}), // Ajoute l'aspect-ratio si `height` est défini
     };
 
     return Image.generateHTML(metadata, imageAttributes, {
@@ -187,6 +190,7 @@ eleventyConfig.addFilter("truncateWords", function (content, numWords) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("css");
   eleventyConfig.addPassthroughCopy("favicon.ico");
+  eleventyConfig.addPassthroughCopy("google0b7250a45fd279a1.html");
 
   // Ajouter des alias pour les layouts
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");

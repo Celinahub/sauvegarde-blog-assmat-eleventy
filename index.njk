@@ -86,7 +86,8 @@ bodyClass: "bg-white presentation"
         </div>
         <div class="bordered-content-presentation-image">
             <div class="presentation-image mx-auto position-relative mb-4">
-                {% image "/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg", "Céline Hubert, assistante maternelle à Brétigny-sur-Orge", "(min-width: 1024px) 100vw, 50vw", "rounded-circle img-fluid" %}
+                {% image "/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg", "Céline Hubert, assistante maternelle à Brétigny-sur-Orge", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high", class="rounded-circle img-fluid" %}
+
                 <a href="{{ '/contact/' | url }}" class="position-icon-b" aria-label="Contacter Céline Hubert via icône bulle ou bouton SVG">
                     <!-- Contenu de l'icône ou bouton -->
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -146,8 +147,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-               {% image "/images/presentation/reconversion.jpg", "Reconversion", "(min-width: 1024px) 100vw, 50vw" %}
-
+                {% image "/images/presentation/reconversion.jpg", "Photo illustrant la reconversion professionnelle en assistante maternelle", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
 
                     
                             <div class="image-overlay"></div>
@@ -180,8 +180,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
- {% image "/images/presentation/anniversaire-accueilli.jpg", "Anniversaire accueilli", "(min-width: 1024px) 100vw, 50vw" %}
-            
+               {% image "/images/presentation/anniversaire-accueilli.jpg", "Anniversaire accueilli", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -213,8 +212,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-{% image "/images/presentation/agrement-limite.jpg", "Agrement Limite", "(min-width: 1024px) 100vw, 50vw" %}
-
+{% image "/images/presentation/agrement-limite.jpg", "Agrement Limite", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -245,8 +243,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-{% image "/images/presentation/parc-bretigny.jpg", "Parc Bretigny", "(min-width: 1024px) 100vw, 50vw" %}
-
+{% image "/images/presentation/parc-bretigny.jpg", "Parc Bretigny", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -277,8 +274,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-{% image "/images/presentation/communication-directe.jpg", "Communication Directe", "(min-width: 1024px) 100vw, 50vw" %}
-
+{% image "/images/presentation/communication-directe.jpg", "Communication Directe", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -311,8 +307,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-{% image "/images/presentation/rpe-bretigny.jpg", "RPE Bretigny", "(min-width: 1024px) 100vw, 50vw" %}
-
+{% image "/images/presentation/rpe-bretigny.jpg", "RPE Bretigny", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -344,8 +339,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-{% image "/images/presentation/syndicat-unsa-pro-assmat.jpg", "UNSA Pro Assmat", "(min-width: 1024px) 100vw, 50vw" %}
-
+{% image "/images/presentation/syndicat-unsa-pro-assmat.jpg", "UNSA Pro Assmat", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -375,8 +369,7 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-{% image "/images/presentation/tarif-assmat.jpg", "CAF aides", "(min-width: 1024px) 100vw, 50vw" %}
-
+{% image "/images/presentation/tarif-assmat.jpg", "CAF aides", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -393,7 +386,16 @@ bodyClass: "bg-white presentation"
 <!-- Section pour le SVG plein écran -->
 <div class="svg-background">
     <div class="svg-container">
-        <img src="{{ '/images/presentation/nuage-introduction.svg' | url }}" class="nuages-bleus-curvy" alt="Décor nuages">
+      
+
+  <img src="{{ '/images/presentation/nuage-introduction.svg' | url }}" 
+     class="nuages-bleus-curvy" 
+     alt="Décor nuages"
+     loading="eager"  
+     fetchpriority="high"
+     decoding="async">
+
+
     </div>
 </div>
 
@@ -426,7 +428,14 @@ bodyClass: "bg-white presentation"
             <div class="col-12">
                 <h2 class="titre-rencontrons-nous">
                     <span>
-                       <img src="{{ '/images/presentation/validation-rencontre-assistante-bretigny.svg' | url }}" class="checked" alt="Icône de validation pour confirmer un rendez-vous avec Céline, assistante maternelle">
+                     
+    <img src="{{ '/images/presentation/validation-rencontre-assistante-bretigny.svg' | url }}"
+     class="checked" 
+     alt="Icône de validation pour confirmer un rendez-vous avec Céline, assistante maternelle"
+     loading="eager"  
+     fetchpriority="high"
+     decoding="async">
+                    
                     </span>
                     <strong>RENCONTRONS - NOUS</strong>
                 </h2>   
@@ -451,7 +460,13 @@ bodyClass: "bg-white presentation"
                     <p class="poppins-regular-rdv">
                         C'est avec plaisir que j'échangerai avec vous.
                       <a href="{{ '/contact/' | url }}" aria-label="Contacter Céline Hubert directement via l'enveloppe">
-    <img src="{{ '/images/presentation/enveloppe-contact-direct-assistante-maternelle-bretigny.svg' | url }}" class="checked-localisation" alt="Icône d'enveloppe pour contacter Céline Hubert, assistante maternelle à Brétigny-sur-Orge">
+
+ <img src="{{ '/images/presentation/enveloppe-contact-direct-assistante-maternelle-bretigny.svg' | url }}"
+     class="checked-localisation" 
+     alt="Icône d'enveloppe pour contacter Céline Hubert, assistante maternelle à Brétigny-sur-Orge"
+     loading="eager"  
+     fetchpriority="high"
+     decoding="async">
 </a>
                     </p>
                 </div>
