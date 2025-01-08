@@ -3354,15 +3354,7 @@ position: relative; /* Ajout de position relative */
 }
 
 
-.poppins-regular-titre-section-article {
-   font-family: "Poppins", sans-serif;
-   font-weight: 400;
-   font-size: 1px;
-   font-style: normal;
-   color: transparent; /* Rend le texte complètement transparent */
-   margin-top: 50px;
-   margin-bottom: 0px;
-}
+
 
  
 .container-article {
