@@ -60,6 +60,12 @@ h2, h3 {
 
 /* Style PIED DE PAGE */
 
+/* Contenu principal */
+.content {
+   flex: 1; /* Le contenu occupe tout l'espace disponible, poussant le pied de page vers le bas si nécessaire */
+}
+
+
 /* Style du logo rond chez celine */
 .logo-pied-page {
    height: 170px;
