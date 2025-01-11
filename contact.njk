@@ -24,10 +24,10 @@ bodyClass: "bg-white contact"
       
         
         <!-- Contenu de la section -->
-        <div class="row-contact justify-content-center align-items-center"> <!-- Centrer le contenu -->
-            <div class="col-md-12-contact"> <!-- Largeur complète -->
+      <div class="row-contact justify-content-center align-items-center"> <!-- Section contact -->
+    <div class="col-md-12-contact"> <!-- Conteneur principal -->
 
-                <div class="contact-form section-wrapper">
+      <div class="contact-form section-wrapper">
                     <div class="leaflet-container">
                         <!-- Carte Leaflet -->
                         <div id="map"></div>
@@ -36,49 +36,49 @@ bodyClass: "bg-white contact"
                     </div>
 
                     <!-- Autres éléments de la section -->
-                      <img src="{{ '/images/contact/me-contacter.svg' | url }}" class="contact-curvy" alt="Décor de nuages en haut du formulaire de contact de Céline" />
-        
-                    
-                    <!-- Contenu du formulaire -->
-                    <div class="label-form section-wrapper">
-                        <div class="contact-text">
-                            <h1 class="contact-label">ME CONTACTER</h1> 
-                            <h2 class="fade-in-out-contact">C'est avec plaisir que j'échangerai avec vous ...</h2>
-                            <div class="contact-spacer"></div>
-                            
-                            <!-- Formulaire -->
-                            <form name="contact" method="POST" data-netlify="true">
-                                <input type="hidden" name="form-name" value="contact" />
-                                <div class="row g-3">
-                                    <div class="col-md-6 form-group">
-                                        <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom" required autocomplete="off">
-                                        <label class="floating-label" for="prenom">Prénom</label>
-                                    </div>
-                                    <div class="col-md-6 form-group">
-                                        <input type="email" class="form-control" id="email" name="email" placeholder=" " required>
-                                        <label class="floating-label" for="email">E-mail</label>
-                                    </div>
-                                    <div class="col-md-12 form-group">
-                                        <input type="text" class="form-control" id="message" name="message" placeholder=" " required>
-                                        <label class="floating-label" for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-1">
-                                        <button type="submit" class="btn btn-custom">
-                                    <img src="{{ '/images/contact/car-police-security-svgrepo-com.svg' | url }}" class="car-send" alt="Icône pour envoyer le formulaire de contact" />
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
+<img src="{{ '/images/contact/me-contacter.svg' | url }}" class="contact-curvy me-contacter-decor" alt="Décor de nuages en haut du formulaire de contact de Céline" />
+
+
+
+            <!-- Formulaire de contact -->
+            <div class="row justify-content-center"> <!-- Centrer le formulaire -->
+                <div class="col-md-6 col-lg-5"> <!-- Largeur réduite du formulaire -->
+                   <form name="contact" method="POST" data-netlify="true" class="p-4 shadow-lg-tablet rounded-md">
+                        <input type="hidden" name="form-name" value="contact" />
+
+                        <h1 class="contact-label">ME CONTACTER</h1>
+                        <h2 class="fade-in-out-contact">C'est avec plaisir que j'échangerai avec vous ...</h2>
+
+                        <div class="row g-3">
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom" required autocomplete="off">
+                                <label class="floating-label" for="prenom">Prénom</label>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder=" " required>
+                                <label class="floating-label" for="email">E-mail</label>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="message" name="message" placeholder=" " required>
+                                <label class="floating-label" for="message">Message</label>
+                            </div>
                         </div>
-                    </div>
-                     <img src="{{ '/images/contact/me-contacter-form.svg' | url }}" class="contact-curvy" alt="Décor de nuages en bas du formulaire de contact de Céline, assistante maternelle agréée" />
-                 
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-custom">
+                                <img src="{{ '/images/contact/car-police-security-svgrepo-com.svg' | url }}" class="car-send" alt="Icône pour envoyer le formulaire de contact" />
+                            </button>
+                        </div>
+                    </form>
                 </div>
-                
             </div>
+
+            <!-- Décoration après le formulaire -->
+            <img src="{{ '/images/contact/me-contacter-form.svg' | url }}" class="contact-curvy mt-4" alt="Décor de nuages en bas du formulaire de contact de Céline, assistante maternelle agréée" />
         </div>
+
+    </div>
+</div>
+
     </div>
 </section>
 

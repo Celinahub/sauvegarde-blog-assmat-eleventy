@@ -289,15 +289,28 @@ h2, h3 {
    height: 54px; /* Taille de l'icône */
 }
 
+.scroll-to-top {
+   position: fixed; /* Fixe l'icône pour qu'elle reste visible lors du défilement */
+   bottom: 20px; /* Placez l'icône à 20px du bas de l'écran */
+   left: 50%; /* Placez l'icône au centre horizontal */
+   transform: translateX(-50%); /* Ajuste l'alignement pour centrer exactement */
+   width: 54px; /* Largeur de l'icône */
+   height: 54px; /* Hauteur de l'icône */
+   line-height: 54px; /* Centre l'icône verticalement si nécessaire */
+   z-index: 1000; /* Assure que l'icône reste au-dessus des autres éléments */
+}
+
 
 /* Style responsive */
 @media (max-width: 480px) {
    .scroll-to-top {
-       font-size: 20px; /* Réduisez la taille de l'icône pour les écrans plus petits */
-       width: 40px; /* Réduisez la largeur du cercle pour les écrans plus petits */
-       height: 40px; /* Réduisez la hauteur du cercle pour les écrans plus petits */
-       line-height: 40px; /* Centre l'icône verticalement pour les écrans plus petits */
+       font-size: 20px;
+       width: 40px;
+       height: 40px;
+       line-height: 40px;
    }
+
+
 
    .rocket-icon {
       width: 44px; /* Taille de l'icône */
@@ -421,6 +434,41 @@ h2, h3 {
 }
 
 
+/* Ombre pour tablettes et écrans plus grands (768px à 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+   .shadow-lg-tablet {
+       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre personnalisée */
+   }
+}
+
+/* Ombre pour les écrans larges (PC > 1024px) */
+@media (min-width: 1024px) {
+   .shadow-lg-tablet {
+       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ombre personnalisée */
+   }
+}
+
+/* Supprime l'ombre sur les écrans mobiles (moins de 768px) */
+@media (max-width: 767px) {
+   .shadow-lg-tablet {
+       box-shadow: none; /* Pas d'ombre pour les écrans mobiles */
+   }
+}
+
+
+
+
+
+
+.me-contacter-decor {
+   margin-bottom: 20px; /* Espace en dessous de l'image */
+}
+
+.contact-form form {
+   margin-top: 20px; /* Espace en haut du formulaire, si nécessaire */
+}
+
+
 .contact-form {
    background-color: #F8F9F6;
    border: none; /* Supprimez la bordure par défaut de l'iframe */
@@ -522,7 +570,8 @@ h2, h3 {
    font-family: "Finger Paint", sans-serif; /* Police personnalisée */
    font-weight: 400; /* Poids de la police */
    font-size: 1em; /* Taille du texte */
-   text-align: left; /* Alignement du texte à gauche */
+   text-align: center; /* Centrer le texte */
+   margin-bottom: 40px; /* Ajoutez de l'espace entre les éléments */
  }
 
 
@@ -538,15 +587,14 @@ h2, h3 {
    font-family: "Poppins", sans-serif;
    font-weight: 700;
    font-style: normal;
-   text-align: left; /* Alignement du texte à gauche */
+   text-align: center; /* Centrer le texte */
    font-size: 1.2em; /* Taille de la police */
    font-weight: bold; /* Épaisseur de la police */
    color: #103754; /* Couleur du texte */
-   margin-right: 10px; /* Espace entre le texte fixe et le texte animé */
-   margin: 0; /* Supprimez l'espace vertical entre les éléments */
+   margin: 0 auto; /* Centre le texte en supprimant l'espace vertical */
    padding: 0; /* Supprimez le padding */
-  
 }
+
 
 
 
@@ -1660,37 +1708,22 @@ position: relative; /* Ajout de position relative */
    display: inline-block; /* Permet de contenir le bouton et le fond oval */
 }
 
-/* Styles pour le fond oval du bouton suivant */
-.oval {
-   position: absolute;
-   bottom: 42%;
-   left: 50%;
-   transform: translateX(-50%);
-   width: 90px; /* Largeur fixe */
-   height: 30px; /* Hauteur fixe */
-   border-radius: 20px; /* Pour créer une forme oval */
-   animation: changeColor 2s infinite alternate; /* Animation alternant entre deux couleurs */
-   z-index: -1; /* Mettre en arrière-plan par rapport au SVG */
-}
+
 
 /* Centrer l'icône SVG */
 .arrow {
    display: block;
    margin: auto; /* Centre horizontalement */
-   width: 50px; /* Ajustez la taille de l'icône SVG selon vos besoins */
+   width: 150px; /* Ajustez la taille de l'icône SVG selon vos besoins */
    height: auto;
    position: relative; /* Ajout de cette ligne */
    z-index: 1; /* Ajout de cette ligne */
 }
 
-
-/* Animation pour changer les couleurs du bouton oval suivant */
-@keyframes changeColor {
-   0% {
-       background-color: #F3992C; /* Couleur 1 */
-   }
-   100% {
-       background-color: #F9FAF7; /* Couleur 2 */
+/* CSS pour ajuster la mise en page sur les écrans plus petits */
+@media (max-width: 767px) {
+   .arrow {
+      width: 100px; /* Ajustez la taille de l'icône SVG selon vos besoins */
    }
 }
 
