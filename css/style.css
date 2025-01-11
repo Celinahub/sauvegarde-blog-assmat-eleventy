@@ -60,10 +60,7 @@ h2, h3 {
 
 /* Style PIED DE PAGE */
 
-/* Contenu principal */
-.content {
-   flex: 1; /* Le contenu occupe tout l'espace disponible, poussant le pied de page vers le bas si nécessaire */
-}
+
 
 
 /* Style du logo rond chez celine */
@@ -326,10 +323,20 @@ h2, h3 {
 
 
 
+
+
 /* Page contact.html */
 
 #contact {
-   background-color: #96D2CA;
+   background-color: #96D2CA; /* Couleur de fond */
+
+   flex-grow: 1; /* Occupe toute la hauteur disponible */
+   min-height: 100vh; /* Prend au moins la hauteur de la vue */
+   display: flex;
+   flex-direction: column;
+   justify-content: center; /* Centrer le contenu verticalement si nécessaire */
+   padding-top: 0;
+   padding-bottom: 0;
  
 }
 
