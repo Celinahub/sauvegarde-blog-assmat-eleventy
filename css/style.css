@@ -3092,7 +3092,7 @@ position: relative; /* Ajout de position relative */
 #contenu-blog,
 #contenu-activites-enfant,
 #contenu-entreprises,
-#contenu-actualites-locales,
+#contenu-petite-enfance-bretigny-91,
 #contenu-actu-petite-enfance,
 #contenu-hygiene-soins,
 #contenu-collectivite-rpe,
@@ -3880,6 +3880,98 @@ position: relative; /* Ajout de position relative */
    width: 100%; /* S'assure que la ligne prend toute la largeur disponible */
  }
  
+ 
+ /* Bouton Like */
+/* Bouton "J'aime" */
+/* Style de base pour le bouton "J'aime" */
+.like-button {
+   background-color: #f3f4f6; /* Couleur de fond */
+   color: #103653; /* Couleur du texte */
+   border: none; /* Pas de bordure */
+   border-radius: 5px; /* Coins arrondis */
+   padding: 8px 16px; /* Espacement interne */
+   display: flex;
+   align-items: center;
+   gap: 8px; /* Espacement entre l'icône, le texte et le nombre de likes */
+   box-shadow: none; /* Pas d'ombre */
+}
+
+/* Icône du bouton */
+.like-button img {
+   width: 20px; /* Taille de l'icône */
+   height: 20px; /* Taille de l'icône */
+}
+
+/* Style pour le nombre de likes */
+#like-count {
+   font-weight: bold; /* Mettre en gras le nombre de likes */
+}
+
+/* Changement de style après le like */
+.like-button.liked {
+   background-color: #fbddd7; /* Changer la couleur de fond après le like */
+   color: #103653; /* Couleur du texte après le like */
+}
+
+
+
+/* Bouton principal "Partager" */
+.share-dropdown .dropdown-toggle {
+   background-color: #f3f4f6; /* Couleur de fond */
+   color: #103653; /* Couleur du texte */
+   border: none; /* Supprimer la bordure */
+   border-radius: 5px; /* Coins arrondis */
+   padding: 8px 16px; /* Espacement interne */
+   display: flex;
+   align-items: center;
+   gap: 8px; /* Espacement entre l'icône et le texte */
+   box-shadow: none; /* Pas d'effet d'ombre */
+}
+
+/* Désactiver l'effet hover pour le bouton */
+.share-dropdown .dropdown-toggle:hover,
+.share-dropdown .dropdown-toggle:focus {
+   background-color: #f3f4f6; /* Conserver la couleur initiale */
+   color: #103653; /* Conserver la couleur du texte */
+   box-shadow: none; /* Pas d'effet au focus */
+}
+
+/* Menu déroulant */
+.share-dropdown .dropdown-menu {
+   background-color: #F8F9F6; /* Couleur de fond */
+   border: none; /* Supprimer les bordures */
+   border-radius: 5px; /* Coins arrondis */
+   padding: 8px 0; /* Espacement interne */
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre subtile */
+}
+
+/* Dropdown items */
+.share-dropdown .dropdown-item {
+   display: flex;
+   align-items: center;
+   gap: 10px; /* Espacement entre l'icône et le texte */
+   padding: 8px 16px; /* Espacement interne */
+   color: #103653; /* Couleur du texte */
+   background-color: transparent; /* Fond transparent */
+   transition: background-color 0.2s ease; /* Transition pour effet visuel */
+}
+
+/* Effet hover sur les items */
+.share-dropdown .dropdown-item:hover {
+   background-color: #f3f4f6; /* Couleur au survol */
+}
+
+/* Icônes dans le menu "Partager" */
+.share-dropdown img {
+   width: 20px;
+   height: 20px;
+}
+
+
+
+
+
+
  
 
  /* Style des icônes svg des liens des articles*/

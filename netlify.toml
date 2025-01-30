@@ -10,6 +10,8 @@
 [functions]
   directory = "netlify/functions"  # Répertoire pour les fonctions serverless
 
+
+
 # Redirections (exemple pour les fonctions API et redirection 404)
 [[redirects]]
   from = "/api/posts"              # Redirection vers la fonction posts

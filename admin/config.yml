@@ -7,7 +7,7 @@ media_folder: "images/uploads"  # Dossier pour les médias (dans le répertoire 
 public_folder: "/images/uploads"  # URL publique pour accéder aux images (correspond au chemin des fichiers sur le site)
 
 # Aperçu Netlify CMS avec un Template
-site_url: "https://test-site-statique-blog-eleventy.netlify.app"  # Votre URL de site
+site_url: "https://chubert91assmat.netlify.app"  # Votre URL de site
 preview_templates:
   - name: "post"
     template: "/layouts/post.njk"
@@ -216,7 +216,7 @@ collections:
       
       
 
-  - name: "/hygiene-soins"
+  - name: "hygiene-soins"
     label: "HYGIÈNE / SOINS"
     folder: "posts/hygiene-soins"
     create: true
@@ -265,9 +265,9 @@ collections:
 
       
 
-  - name: "actualites-locales"
-    label: "ACTUALITES LOCALES"
-    folder: "posts/actualites-locales"
+  - name: "petite-enfance-bretigny-91"
+    label: "PETITE ENFANCE BRETIGNY-91"
+    folder: "posts/petite-enfance-bretigny-91"
     create: true
     slug: "{{slug}}"
     fields:
@@ -280,7 +280,7 @@ collections:
       - { label: "Image", name: "image", widget: "image" }  # Nouveau champ pour une image
       - { label: "Texte alternatif", name: "imageAlt", widget: "string" } # Nouveau champ pour le alt
       - { label: "Date", name: "date", widget: "datetime" }
-      - { label: "Catégorie", name: "category", widget: "string", default: "ACTUALITES LOCALES" }
+      - { label: "Catégorie", name: "category", widget: "string", default: "PETITE ENFANCE BRETIGNY-91" }
       - { label: "Image vedette", name: "featuredImage", widget: "image" }
       - { label: "Contenu", name: "body", widget: "markdown" }
       # Ajouter un champ JSON-LD structuré

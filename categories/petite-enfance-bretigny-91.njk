@@ -3,11 +3,11 @@ layout: layouts/base.njk
 title: "Actualités Locales de la Petite Enfance à Brétigny-sur-Orge"
 description: "Tenez-vous informé des événements et actualités locales concernant la petite enfance à Brétigny-sur-Orge. Retrouvez des conseils, des activités pour les enfants de moins de 3 ans."
 tags: "actualités locales, assistante maternelle, Brétigny-sur-Orge, petite enfance, événements"
-url: "https://chubert91assmat.netlify.app/categories/actualites-locales"
+url: "https://chubert91assmat.netlify.app/categories/petite-enfance-bretigny-91"
 image: "https://chubert91assmat.netlify.app/images/blog/le-journal-des-petits-actualites-bretigny-sur-orge.jpg"
 alt: "Le Journal des Petits - Actualités locales petite enfance à Brétigny-sur-Orge"
 pagination:
-  data: collections.actualites-locales
+  data: collections.petite-enfance-bretigny-91
   size: 5  # Nombre d'articles par page
   alias: posts
   bodyClass: "blog-page"
@@ -22,7 +22,7 @@ pagination:
 
 {% include "layouts/widget/header.njk" %} <!-- Inclusion de l'en-tête -->
 
-<section id="contenu-actualites-locales"> <!-- mt-5 ajoute de la marge supérieure -->
+<section id="contenu-petite-enfance-bretigny-91"> <!-- mt-5 ajoute de la marge supérieure -->
 <!-- Page content -->
 <div class="container"> <!-- Début du conteneur -->
     <div class="row"> <!-- Début de la ligne -->
@@ -31,7 +31,7 @@ pagination:
 
             <!-- Featured blog post -->
             <div id="first-article" class="card mb-4"> <!-- Début de l'article vedette -->
-             {% set featuredPosts = collections.actualites-locales %}
+             {% set featuredPosts = collections.petite-enfance-bretigny-91 %}
                 {% if posts | length > 0 %}
                     {% set featuredPost = posts[0] %}
                     <a href="{{ featuredPost.url }}">
@@ -133,25 +133,94 @@ pagination:
 
 
 <script>
-    function copyLink() {
-        // Crée un élément temporaire pour contenir l'URL
-        var tempInput = document.createElement("input");
-        tempInput.style.position = "absolute";
-        tempInput.style.left = "-1000px";  // Cache l'input temporaire hors de la vue
-        document.body.appendChild(tempInput);
-        
-        // Définit l'URL de la page à copier
-        tempInput.value = window.location.href;  // Ou utilisez {{ page.url }} si c'est disponible dans votre template
-        
-        // Sélectionne le contenu et le copie
-        tempInput.select();
-        document.execCommand("copy");
-        
-        // Retire l'input temporaire après l'opération
-        document.body.removeChild(tempInput);
+    function copyLink(button) {
+    let relativeUrl = button.getAttribute('data-url');
+    // Ajouter le domaine à l'URL relative pour créer une URL absolue
+    const absoluteUrl = `${window.location.origin}${relativeUrl}`;
 
-        // Optionnel : Ajoutez un message ou un feedback visuel pour informer l'utilisateur
-        alert("Lien copié dans le presse-papier !");
+    // Copier l'URL absolue dans le presse-papiers
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(absoluteUrl)
+            .then(() => alert("Lien copié dans le presse-papiers !"))
+            .catch(err => console.error("Impossible de copier le lien :", err));
+    } else {
+        const tempInput = document.createElement("input");
+        tempInput.value = absoluteUrl;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        try {
+            document.execCommand("copy");
+            alert("Lien copié dans le presse-papiers !");
+        } catch (err) {
+            console.error("Impossible de copier le lien :", err);
+        }
+        document.body.removeChild(tempInput);
     }
+}
+</script>
+
+
+
+
+<script>
+  // Initialiser les données des likes à partir du localStorage
+function initializeLikes() {
+    const allLikes = JSON.parse(localStorage.getItem('likes')) || {};
+
+    // Parcourir les articles sur la page et synchroniser les likes
+    document.querySelectorAll('.like-button').forEach(button => {
+        const postId = button.getAttribute('data-id');
+        const likeCountElement = document.getElementById(`like-count-${encodeURIComponent(postId)}`);
+        
+        if (allLikes[postId]) {
+            // Met à jour l'affichage des likes
+            likeCountElement.innerText = allLikes[postId].count;
+
+            // Met à jour l'état du bouton si déjà liké
+            if (allLikes[postId].isLiked) {
+                button.classList.add('liked');
+            }
+        }
+    });
+}
+
+// Fonction pour gérer les "likes"
+function toggleLike(button) {
+    const postId = button.getAttribute('data-id');
+    let allLikes = JSON.parse(localStorage.getItem('likes')) || {};
+
+    // Initialiser les données du post si nécessaire
+    if (!allLikes[postId]) {
+        allLikes[postId] = { count: 0, isLiked: false };
+    }
+
+    // Inverser l'état du like
+    const postData = allLikes[postId];
+    if (postData.isLiked) {
+        postData.count--;
+    } else {
+        postData.count++;
+    }
+    postData.isLiked = !postData.isLiked;
+
+    // Sauvegarder les données mises à jour dans le localStorage
+    localStorage.setItem('likes', JSON.stringify(allLikes));
+
+    // Mettre à jour l'affichage
+    const likeCountElement = document.getElementById(`like-count-${encodeURIComponent(postId)}`);
+    if (likeCountElement) {
+        likeCountElement.innerText = postData.count;
+    }
+
+    if (postData.isLiked) {
+        button.classList.add('liked');
+    } else {
+        button.classList.remove('liked');
+    }
+}
+
+// Initialiser les likes au chargement de la page
+document.addEventListener('DOMContentLoaded', initializeLikes);
+
 </script>
 

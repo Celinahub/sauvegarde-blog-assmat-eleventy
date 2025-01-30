@@ -98,7 +98,7 @@ module.exports = function(eleventyConfig) {
     { name: "Activités pour enfant", slug: "activites-enfant", tag: "activites" },
     { name: "Sélection produits", slug: "selection-produits", tag: "produits" },
     { name: "Hygiène / soins", slug: "hygiene-soins", tag: "soins" },
-    { name: "Actualités locales", slug: "actualites-locales", tag: "local" },
+    { name: "Petite enfance bretigny-91", slug: "petite-enfance-bretigny-91", tag: "petite-enfance-bretigny-91" },
     { name: "La collectivité grâce au RPE", slug: "collectivite-rpe", tag: "rpe" },
     { name: "Entreprises", slug: "entreprises", tag: "entreprises" }
   ];
