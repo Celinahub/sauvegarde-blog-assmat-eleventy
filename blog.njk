@@ -143,15 +143,25 @@ pagination:
  document.addEventListener("DOMContentLoaded", async () => {
   document.querySelectorAll('.like-button').forEach(async button => {
     const postId = button.getAttribute('data-id');
-    const likeCountElement = document.getElementById(`like-count-${postId}`);
-    console.log('postId:', postId);
-    console.log('likeCountElement:', likeCountElement);
+    const safePostId = postId.replace(/\//g, "-"); // Remplace les "/" par des tirets
+    const likeCountElement = document.getElementById(`like-count-${safePostId}`);
 
-    // Récupérer les likes existants au chargement
+    if (!likeCountElement) {
+      console.error('Like count element not found for post', postId);
+      return; // Si l'élément n'est pas trouvé, on quitte
+    }
+
     try {
+      // Récupérer les likes existants
       const response = await fetch(`/.netlify/functions/like?post_id=${postId}`);
       const data = await response.json();
-      likeCountElement.textContent = data.likes || 0;
+      
+      // Assurer que la structure des données est correcte
+      if (data.likes !== undefined) {
+        likeCountElement.textContent = data.likes || 0;
+      } else {
+        console.error('Likes data not found in response:', data);
+      }
     } catch (error) {
       console.error('Error fetching likes:', error);
     }
@@ -180,6 +190,7 @@ pagination:
     });
   });
 });
+
 
 </script>
 
