@@ -12,7 +12,7 @@ tags:
   - fêtes de fin d'année
   - culture mexicaine
 url: "https://chubert91assmat.netlify.app/posts/halloween-brétigny-citrouilles-día-de-los-muertos"
-image: "https://chubert91assmat.netlify.app/images/halloween.-bretigny-24.jpg"
+image: "/images/uploads/halloween.-bretigny-24.jpg"
 date: 2024-10-24
 category: "PETITE ENFANCE BRETIGNY-91"
 featuredImage: /images/uploads/halloween.-bretigny-24.jpg

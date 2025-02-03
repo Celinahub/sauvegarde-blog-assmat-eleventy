@@ -12,7 +12,7 @@ tags:
   - néophobie alimentaire
   - activités éducatives
 url: "https://chubert91assmat.netlify.app/posts/peindre-avec-des-pommes"
-image: "https://chubert91assmat.netlify.app/images/tampon-pomme.jpg"
+image: "/images/uploads/tampon-pomme.jpg"
 date: 2024-10-20
 category: "LA COLLECTIVITE GRÂCE AU RPE"
 featuredImage: /images/uploads/tampon-pomme.jpg

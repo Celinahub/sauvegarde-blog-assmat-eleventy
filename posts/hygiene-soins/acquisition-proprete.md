@@ -13,7 +13,7 @@ tags:
   - éducation bienveillante
   - psychologie de l'enfant
 url: "https://chubert91assmat.netlify.app/posts/acquisistion-de-la-proprete"
-image: "https://chubert91assmat.netlify.app/images/pot.jpg"
+image: "/images/uploads/pot.jpg"
 date: 2024-11-24
 category: "HYGIÈNE / SOINS"
 featuredImage: /images/uploads/pot.jpg

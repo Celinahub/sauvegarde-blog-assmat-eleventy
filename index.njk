@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
 title: "Céline Hubert - Assistante Maternelle Agréée à Brétigny-sur-Orge"
-description: "Découvrez l'accueil chaleureux et les services professionnels de Céline Hubert, assistante maternelle agréée à Brétigny-sur-Orge. Accueil individuel, activités ludiques et soutien administratif pour les parents."
+description: "Confiez votre enfant à Céline Hubert, assistante maternelle agréée à Brétigny-sur-Orge. Un mode de garde alternatif à la crèche, avec un accueil personnalisé."
 url: "https://chubert91assmat.netlify.app/"
 image: "presentation-assistante-maternelle-agreee.jpg"
 eleventyNavigation:
@@ -19,7 +19,7 @@ bodyClass: "bg-white presentation"
           "name": "Assistante maternelle agréée - chez Céline",
           "image": "presentation-assistante-maternelle-agreee.jpg",
           "priceRange": "Fixé en fonction de vos besoins d'accueil",
-          "description": "Assistante maternelle agréée proposant un accueil personnalisé pour les enfants. Les tarifs sont définis en fonction des besoins spécifiques de chaque famille.",
+          "description": "Assistante maternelle agréée proposant un accueil personnalisé pour les enfants à Brétigny-sur-Orge. Une alternative chaleureuse et professionnelle à la crèche.",
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "22 Rue du Parc",
@@ -86,7 +86,12 @@ bodyClass: "bg-white presentation"
         </div>
         <div class="bordered-content-presentation-image">
             <div class="presentation-image mx-auto position-relative mb-4">
-                {% image "/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg", "Céline Hubert, assistante maternelle à Brétigny-sur-Orge", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high", class="rounded-circle img-fluid" %}
+                <picture>
+    <!-- Balise source pour WebP -->
+    <source srcset="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.webp' | url }}" type="image/webp">
+    <!-- Balise img pour les navigateurs ne prenant pas en charge WebP -->
+    <img class="photo-img-portrait" src="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg' | url }}" alt="Céline Hubert, assistante maternelle à Brétigny-sur-Orge" loading="lazy">
+</picture>
 
                 <a href="{{ '/contact/' | url }}" class="position-icon-b" aria-label="Contacter Céline Hubert via icône bulle ou bouton SVG">
                     <!-- Contenu de l'icône ou bouton -->
@@ -132,7 +137,7 @@ bodyClass: "bg-white presentation"
                             <p class="poppins-regular-accueil">{{ aProposDescription | default("En 2016, après une immersion en tant que particulier-employeur, j'ai amorcé une reconversion professionnelle pour devenir assistante maternelle agréée. Trouver un mode de garde sécurisant pour notre premier enfant a renforcé ma conviction d'offrir un accueil personnalisé et de qualité aux familles.") }}</p>
                             
                             <!-- Bouton "lien interne" -->
-                       <a href="{{ '/contact/' | url }}" class="btn btn-action-primary my-4" aria-label="Envoyer un message à Céline Hubert par e-mail">
+                       <a href="{{ '/contact/' | url }}" class="btn btn-action-primary my-4" aria-label="Accédez au formulaire de contact pour envoyer un e-mail">
     Accédez au formulaire de contact
 </a>
 
@@ -294,7 +299,7 @@ bodyClass: "bg-white presentation"
                             <p class="poppins-regular-accueil">{{ sociabilisationDescription | default("Les visites bi-mensuelles au Relais Petite Enfance (RPE) de Brétigny-sur-Orge offrent aux enfants un environnement stimulant pour enrichir leur cercle social, développer des compétences essentielles comme le partage et la communication, et renforcer le lien avec l'assistante maternelle.") }}</p>
                             
                             <!-- Bouton "lien interne" -->
-                           <a href="{{ '/projet-accueil/#team' | url }}" class="btn btn-action-primary my-4" aria-label="En savoir plus sur les avantages du RPE et de l'équipe">
+                           <a href="{{ '/projet-accueil/#team' | url }}" class="btn btn-action-primary my-4" aria-label="Découvrez les avantages du RPE et de l'équipe">
     {{ boutonTexte | default("Découvrez les avantages du RPE") }}
 </a>
                         </div>

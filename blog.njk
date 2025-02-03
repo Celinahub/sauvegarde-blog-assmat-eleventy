@@ -36,43 +36,13 @@ pagination:
         <div class="col-md-8 col-lg-8"> <!-- Début de la colonne des articles -->
 
 
-            <!-- Featured blog post -->
-            <div id="first-article" class="card mb-4"> <!-- Début de l'article vedette -->
-                {% if posts | length > 0 %}
-                    {% set featuredPost = posts[0] %}
-                    <a href="{{ featuredPost.url }}">
-
-{% image featuredPost.data.featuredImage | default('https://dummyimage.com/850x350/dee2e6/6c757d.jpg'), featuredPost.data.title | default('Image de l\'article'), '(min-width: 1024px) 100vw, 50vw' %} 
-
-                    </a>
-
-{% include "layouts/widget/partage-article-vedette-reseaux.njk" %} <!-- Inclusion du partage-article-vedette-reseaux -->
-
-                    <div class="card-body text-center"> 
-                        <span class="badge text-bg-secondary">{{ featuredPost.data.category | default('RECETTE') }}</span>
-                        <div class="poppins-regular-blog-date">{{ featuredPost.date | date('dd MMMM yyyy') }}</div>
-                        <h2 class="poppins-regular-titre-blog">
-                            <a href="{{ featuredPost.url }}" style="text-decoration: none; color: inherit;">{{ featuredPost.data.title | default('Titre de l\'article en vedette') }}</a>
-                        </h2>
-
-
-                        <div class="poppins-regular-blog">{{ featuredPost.content | truncateWords(20) }}</div><!-- Limité à 20 mots avec "..." -->
-                        <a href="{{ featuredPost.url }}" class="btn btn-custom">
-    <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Lire l'article sur les meilleures activités pour enfants chez Céline, nounou à Brétigny-sur-Orge">
-                        </a>
-                    </div> <!-- Fin de card-body text-center -->
-
-                {% else %}
-                    <p>Aucun article trouvé.</p>
-                {% endif %}
-            </div> <!-- Fin de l'article vedette -->
+           
 
 
             <!-- Liste des autres articles avec pagination -->
             <div class="row"> <!-- Début de la ligne des autres articles -->
                 {% for post in pagination.items %}
-                    <!-- Vérifie si ce n'est pas l'article en vedette -->
-                    {% if post != featuredPost %}
+                   
                         <div class="col-lg-6 mb-4"> <!-- Début de la colonne pour chaque autre article -->
                             <div class="card-articles"> <!-- Début de la carte de l'article -->
                                 <a href="{{ post.url }}">
@@ -99,7 +69,7 @@ pagination:
 </div> <!-- Fin de la colonne pour chaque autre article -->
 
                
-                    {% endif %}
+                
                 {% endfor %}
 
     </div> <!-- Fin de la ligne des autres articles -->
@@ -141,20 +111,66 @@ pagination:
 <!-- End MailerLite Universal -->
 
 
+<script>
+    function copyLink(button) {
+    let relativeUrl = button.getAttribute('data-url');
+    // Ajouter le domaine à l'URL relative pour créer une URL absolue
+    const absoluteUrl = `${window.location.origin}${relativeUrl}`;
+
+    // Copier l'URL absolue dans le presse-papiers
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(absoluteUrl)
+            .then(() => alert("Lien copié dans le presse-papiers !"))
+            .catch(err => console.error("Impossible de copier le lien :", err));
+    } else {
+        const tempInput = document.createElement("input");
+        tempInput.value = absoluteUrl;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        try {
+            document.execCommand("copy");
+            alert("Lien copié dans le presse-papiers !");
+        } catch (err) {
+            console.error("Impossible de copier le lien :", err);
+        }
+        document.body.removeChild(tempInput);
+    }
+}
+</script>
 
 
+<script>
+  document.addEventListener("DOMContentLoaded", async () => {
+  document.querySelectorAll('.like-button').forEach(async button => {
+    const postId = button.getAttribute('data-id');
+    const likeCountElement = document.getElementById(`like-count-${postId}`);
 
+    // Récupérer les likes existants au chargement
+    const response = await fetch(`/.netlify/functions/like?post_id=${postId}`);
+    const data = await response.json();
+    likeCountElement.textContent = data.likes || 0;
 
+    // Ajouter un événement "click" sur le bouton
+    button.addEventListener('click', async function() {
+      const response = await fetch('/.netlify/functions/like', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ post_id: postId }),
+      });
 
+      const result = await response.json();
 
+      if (result.message === "Like added successfully") {
+        likeCountElement.textContent = parseInt(likeCountElement.textContent) + 1;
+      } else {
+        alert('Error: ' + result.message);
+      }
+    });
+  });
+});
 
-
-
-
-
-
-
-
-
+</script>
 
 

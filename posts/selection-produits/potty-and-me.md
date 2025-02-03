@@ -13,7 +13,7 @@ tags:
   - produit breveté
   - bien-être enfant
 url: "https://chubert91assmat.netlify.app/posts/potty-and-me-pot-ecologique"
-image: "https://chubert91assmat.netlify.app/images/potty-and-me.jpg"
+image: "/images/uploads/potty-and-me.jpg"
 date: 2024-11-28
 category: "SELECTION PRODUITS"
 featuredImage: /images/uploads/potty-and-me.jpg

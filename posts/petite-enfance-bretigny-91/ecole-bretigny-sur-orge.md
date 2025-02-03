@@ -14,7 +14,7 @@ tags:
   - ATSEM  
   - bien-être enfant 
 url: "https://chubert91assmat.netlify.app/posts/votre-enfant-est-il-pret-pour-l-ecole"
-image: "https://chubert91assmat.netlify.app/images/ecole-bretigny-sur-orge.jpg"
+image: "/images/uploads/ecole-bretigny-sur-orge.jpg"
 date: 2025-01-21
 category: "PETITE ENFANCE BRETIGNY-91" 
 featuredImage: /images/uploads/ecole-bretigny-sur-orge.jpg

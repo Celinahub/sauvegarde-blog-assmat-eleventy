@@ -2,9 +2,12 @@
 <nav class="navbar navbar-dark custom-navbar sticky-top navbar-expand-lg">
   <div class="container-fluid">
     <!-- Logo à gauche -->
-    <a class="navbar-brand" href="{{ metadata.url }}">
-      <img src="/images/navbar/logo-navbar-paint.png" alt="Céline Hubert logo ch" class="navbar-logo">
-    </a>
+   <a class="navbar-logo" href="{{ metadata.url }}">
+   {% image "/images/navbar/logo-navbar-paint.png", "Logo Céline Hubert", "100vw", 300 %}
+</a>
+
+
+
 
     <!-- Bouton de bascule pour le menu mobile -->
     <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Ouvrir le menu de navigation">

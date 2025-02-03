@@ -15,63 +15,38 @@
         </button>
 
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownShareButton">
-            <li>
-                <!-- Twitter -->
-  <a class="dropdown-item" 
-   href="https://twitter.com/intent/tweet?text={{ post.title | urlencode }}&url={{ post.url | absoluteUrl | urlencode }}" 
-   target="_blank">
-    <img src="{{ '/images/blog/x-bretigny.svg' | url }}" alt="Twitter" class="me-2">
-    Twitter
-</a>
+          
 
-            </li>
-            
-          <li>
+<li>
     <!-- Facebook -->
-   <a class="dropdown-item" 
-   href="https://www.facebook.com/sharer.php?u=https://chubert91assmat.netlify.app{{ post.url | urlencode }}" 
+  <a class="dropdown-item" 
+   href="https://www.facebook.com/sharer.php?u={{ site.url }}{{ post.url | urlencode }}" 
    target="_blank">
     <img src="{{ '/images/blog/social-facebook-bretigny.svg' | url }}" alt="Facebook" class="me-2">
     Facebook
 </a>
-
-
 </li>
-            <li>
-                 <!-- LinkedIn -->
-<a class="dropdown-item" 
-   href="https://www.linkedin.com/shareArticle?mini=true&url={{ post.url | absoluteUrl | urlencode }}&title={{ post.title | urlencode }}" 
-   target="_blank">
-    <img src="{{ '/images/blog/linkedin-bretigny.svg' | url }}" alt="LinkedIn" class="me-2">
-    LinkedIn
-</a>
 
-            </li>
-            <li>
-               <!-- Instagram (REMPLACÉ : Instagram ne permet pas le partage d'URL via un simple lien) -->
-    <a class="dropdown-item" href="https://www.instagram.com/votre_compte" target="_blank">
-        <img src="{{ '/images/blog/social-insta-bretigny.svg' | url }}" alt="Instagram" class="me-2">
-        Instagram
-    </a>
-            </li>
-            <li>
-                <a class="dropdown-item" 
-       href="https://pinterest.com/pin/create/button/?url={{ post.url | absoluteUrl | urlencode }}&media={{ post.image | absoluteUrl | urlencode }}&description={{ post.title | urlencode }}" 
-       target="_blank" class="btn btn-pinterest">
-        <img src="{{ '/images/blog/pinterest-bretigny.svg' | url }}" alt="Pinterest" class="me-2">
-        Pinterest
-    </a>
-            </li>
+
+<li>
+<!-- LinkedIn -->
+<a class="dropdown-item" 
+   href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ post.url | urlencode }}&title={{ post.title | urlencode }}" 
+   target="_blank">
+   <img src="{{ '/images/blog/linkedin-bretigny.svg' | url }}" alt="LinkedIn" class="me-2">
+   LinkedIn
+</a>
+</li>
+         
+
+
             <li>
                 <button class="dropdown-item" data-url="{{ post.url | absoluteUrl }}" onclick="copyLink(this)">
                 <img src="{{ '/images/blog/lien-article-bretigny.svg' | url }}" alt="Copier le lien" class="me-2">
                 Copier le lien
             </button>
-
-
-
-
             </li>
+
         </ul>
     </div>
 </div>

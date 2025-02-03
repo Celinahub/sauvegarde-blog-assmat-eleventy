@@ -21,42 +21,59 @@ bodyClass: "blog-posts-page"
 <img src="{{ featuredImage | url }}" alt="{{ imageAlt }}" class="img-fluid mx-auto d-block">
 
 <!-- Boutons de partage -->
-<div class="share-buttons"> <!-- Début des boutons de partage -->
+<div class="d-flex justify-content-between align-items-center mt-3">
+    
 
-    <!-- Twitter -->
-   <a href="https://twitter.com/intent/tweet?text={{ page.title | urlencode }}&url={{ page.url | absoluteUrl }}" target="_blank" class="btn btn-twitter">
-    <img src="{{ '/images/blog/x-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager l'article {{ title }} sur Twitter">
-</a>
+    <!-- Onglet Partager -->
+    <div class="dropdown share-dropdown">
+        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownShareButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="{{ '/images/blog/share-icon.svg' | url }}" alt="Partager" class="me-2">
+            Partager
+        </button>
 
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownShareButton">
+           
+
+
+    <li>
     <!-- Facebook -->
-<a href="https://www.facebook.com/sharer.php?u=https://netlify.app/{{ page.url }}" 
-   target="_blank" 
-   class="btn btn-facebook">
-     <img src="{{ '/images/blog/social-facebook-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager l'article {{ title }} sur Facebook">
+  <a class="dropdown-item" 
+   href="https://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url | urlencode }}" 
+   target="_blank">
+    <img src="{{ '/images/blog/social-facebook-bretigny.svg' | url }}" alt="Facebook" class="me-2">
+    Facebook
 </a>
+</li>
 
 
-   <!-- LinkedIn -->
-<a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absoluteUrl | urlencode }}&title={{ page.title | urlencode }}" target="_blank" class="btn btn-linkedin">
-     <img src="{{ '/images/blog/linkedin-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager l'article {{ title }} sur LinkedIn">
-</a>
 
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/?url={{ page.url }}" target="_blank" class="btn btn-instagram">
-          <img src="{{ '/images/blog/social-insta-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager l'article {{ title }} sur Instagram">
-    </a>
-
-   <!-- Pinterest -->
-<a href="https://pinterest.com/pin/create/button/?url={{ page.url | absoluteUrl | urlencode }}&media=chemin/vers/image.jpg&description={{ page.title | urlencode }}" target="_blank" class="btn btn-pinterest">
-     <img src="{{ '/images/blog/pinterest-bretigny.svg' | url }}" class="icone-partage-reseaux" alt="Partager l'article {{ title }} sur Pinterest">
-</a>
+<li>
+  <!-- LinkedIn -->
+  <a class="dropdown-item" 
+     href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url | urlencode }}&title={{ page.title | urlencode }}" 
+     target="_blank">
+     <img src="{{ '/images/blog/linkedin-bretigny.svg' | url }}" alt="LinkedIn" class="me-2">
+     LinkedIn
+  </a>
+</li>
 
 
-<!-- Bouton pour copier le lien -->
-    <button class="btn btn-copy-link" onclick="copyLink()">
-        <img src="{{ '/images/blog/lien-article-bretigny.svg' | url }}" class="icone-partage-lien" alt="Copier le lien">
-    </button> <!-- Fin du bouton pour copier le lien -->
-</div> <!-- Fin des boutons de partage -->
+
+
+            <li>
+ <button class="dropdown-item" data-url="{{ page.url | absoluteUrl }}" onclick="copyLink(this)">
+                <img src="{{ '/images/blog/lien-article-bretigny.svg' | url }}" alt="Copier le lien" class="me-2">
+                Copier le lien
+            </button>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+
+
+
 
 
 
@@ -87,12 +104,12 @@ bodyClass: "blog-posts-page"
   "publisher": {
     "@type": "Organization",
     "name": "Chubert Assmat Brétigny Blog",
-    "url": "https://test-site-statique-blog-eleventy.netlify.app/"
+    "url": "https://chubert91assmat.netlify.app/"
   },
   "keywords": [{% for tag in tags %}"{{ tag }}"{% if not loop.last %}, {% endif %}{% endfor %}],
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://test-site-statique-blog-eleventy.netlify.app/article/{{ slug }}"
+    "@id": "https://chubert91assmat.netlify.app/article/{{ slug }}"
   }
 }
 </script>
@@ -119,10 +136,6 @@ bodyClass: "blog-posts-page"
 
 
 
-
-
-
-
 <script>
     function copyLink() {
         var tempInput = document.createElement("input");
@@ -138,25 +151,5 @@ bodyClass: "blog-posts-page"
         alert("Lien copié dans le presse-papier !");
     }
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

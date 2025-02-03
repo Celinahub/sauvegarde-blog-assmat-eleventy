@@ -13,7 +13,7 @@ tags:
   - produits certifiés
   - bien-être enfant
 url: "https://chubert91assmat.netlify.app/posts/clipp-tetine-sevrage-en-douceur"
-image: "https://chubert91assmat.netlify.app/images/clipp-tetine.jpg"
+image: "/images/uploads/clipp-tetine.jpg"
 date: 2024-10-18
 category: "SELECTION PRODUITS"
 featuredImage: /images/uploads/clipp-tetine.jpg

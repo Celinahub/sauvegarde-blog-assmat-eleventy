@@ -235,7 +235,8 @@ h2, h3 {
    border-bottom: 5px solid transparent; /* Assurez-vous que la bordure inférieure est transparente */
    border-image: url('../images/navbar/bordure-main multicolor.svg') 30 repeat; /* Remplacez 'chemin/vers/votre/image.png' par le chemin de votre image */
    transition: border-image 0.5s ease-in-out; /* Ajoute une transition pour l'effet tremblant */
-   
+   padding-top: 15px; /* Augmente la hauteur en ajoutant du padding en haut */
+   padding-bottom: 15px; /* Augmente la hauteur en ajoutant du padding en bas */
 }
 
 .custom-navbar:hover {
@@ -744,6 +745,26 @@ h2, h3 {
     }
 
 }
+
+
+/* Styles pour la photo portrait de blog et des icônes */
+.photo-img-portrait {
+   width: 100%; /* Ajuster selon vos besoins */
+   height: auto; /* Maintenir les proportions */
+   display: block; /* Centre l'image */
+   margin: 20px auto 0; /* Marge en haut et centre horizontalement */
+}
+
+@media screen and (max-width: 768px) {
+   .photo-img-portrait {
+       width: 100%; /* Ajustement pour les écrans plus petits */
+       
+   }
+}
+
+
+
+
 
 
 
@@ -3909,7 +3930,7 @@ position: relative; /* Ajout de position relative */
 
 /* Changement de style après le like */
 .like-button.liked {
-   background-color: #fbddd7; /* Changer la couleur de fond après le like */
+   background-color: #f7e6cd; /* Changer la couleur de fond après le like */
    color: #103653; /* Couleur du texte après le like */
 }
 

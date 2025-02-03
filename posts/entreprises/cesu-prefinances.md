@@ -13,7 +13,7 @@ tags:
   - Fiscalité
   - RH entreprise
 url: "https://chubert91assmat.netlify.app/posts/des-economies-grace-aux-cesu-prefinances"
-image: "https://chubert91assmat.netlify.app/images/cesu.jpg"
+image: "/images/uploads/cesu.jpg"
 date: 2024-11-23
 category: "ENTREPRISES"
 featuredImage: /images/uploads/cesu.jpg

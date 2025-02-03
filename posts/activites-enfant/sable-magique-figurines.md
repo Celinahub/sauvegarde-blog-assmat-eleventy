@@ -15,7 +15,7 @@ tags:
   - figurines
   - éveil de l'imagination
 url: "https://chubert91assmat.netlify.app/posts/sable-magique-avec-figurines"
-image: "https://chubert91assmat.netlify.app/images/sable-magique.jpg"
+image: "/images/uploads/sable-magique.jpg"
 date: 2024-10-07
 category: "ACTIVITÉS POUR ENFANT"
 featuredImage: /images/uploads/sable-magique.jpg
