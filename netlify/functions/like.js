@@ -24,51 +24,36 @@ exports.handler = async (event, context) => {
         };
     }
 
+    // Récupérer le nombre actuel de likes pour cet article
     const { data, error } = await supabase
         .from('likes')
         .select('count')
         .eq('post_id', post_id)
         .single();
 
-    if (error) {
+    if (error && error.code !== 'PGRST116') { // PGRST116 = "No rows found"
         return {
             statusCode: 500,
             body: JSON.stringify({ message: 'Database error', error: error.message }),
         };
     }
 
-    if (!data) {
-        const { error: insertError } = await supabase
-            .from('likes')
-            .insert([{ post_id: post_id, count: 1 }]);
+    const newCount = data ? data.count + 1 : 1; // Si data existe, +1 sinon 1 like
 
-        if (insertError) {
-            return {
-                statusCode: 500,
-                body: JSON.stringify({ message: 'Error inserting like', error: insertError.message }),
-            };
-        }
-
-        return {
-            statusCode: 200,
-            body: JSON.stringify({ message: 'Like added successfully' }),
-        };
-    }
-
-    const { error: updateError } = await supabase
+    // Utilisation de upsert() pour éviter les doublons
+    const { error: upsertError } = await supabase
         .from('likes')
-        .update({ count: data.count + 1 })
-        .eq('post_id', post_id);
+        .upsert([{ post_id, count: newCount }], { onConflict: ['post_id'] });
 
-    if (updateError) {
+    if (upsertError) {
         return {
             statusCode: 500,
-            body: JSON.stringify({ message: 'Error updating like', error: updateError.message }),
+            body: JSON.stringify({ message: 'Error updating like', error: upsertError.message }),
         };
     }
 
     return {
         statusCode: 200,
-        body: JSON.stringify({ message: 'Like added successfully' }),
+        body: JSON.stringify({ message: 'Like added successfully', likes: newCount }),
     };
 };
