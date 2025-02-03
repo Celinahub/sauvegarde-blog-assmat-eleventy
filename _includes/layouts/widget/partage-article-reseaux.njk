@@ -1,11 +1,11 @@
 <div class="d-flex justify-content-between align-items-center mt-3">
     <!-- Onglet Like (Cœur) -->
    <!-- Bouton Like pour un article -->
-<button class="btn btn-light like-button" onclick="toggleLike(this)" data-id="{{ post.url }}">
-    <img src="{{ '/images/blog/like-icon.svg' | url }}" alt="Like" class="me-2">
-    
-    <span id="like-count-{{ post.url | urlencode }}" class="ms-2">0</span> <!-- Compteur de likes -->
+<button class="btn btn-light like-button" data-id="{{ post.url }}">
+  <img src="{{ '/images/blog/like-icon.svg' | url }}" alt="Like" class="me-2">
+  <span id="like-count-{{ post.url | urlencode }}" class="ms-2">0</span> <!-- Compteur de likes -->
 </button>
+
 
     <!-- Onglet Partager -->
     <div class="dropdown share-dropdown">
