@@ -144,39 +144,38 @@ pagination:
   document.querySelectorAll('.like-button').forEach(async button => {
     const postId = button.getAttribute('data-id');
     const likeCountElement = document.getElementById(`like-count-${postId}`);
-
-    console.log(`postId: ${postId}`);
-    console.log(`likeCountElement:`, likeCountElement); // Vérifie si l'élément est trouvé
+    console.log('postId:', postId);
+    console.log('likeCountElement:', likeCountElement);
 
     // Récupérer les likes existants au chargement
-    const response = await fetch(`/.netlify/functions/like?post_id=${postId}`);
-    const data = await response.json();
-
-    // Vérifie si l'élément existe avant de le manipuler
-    if (likeCountElement) {
+    try {
+      const response = await fetch(`/.netlify/functions/like?post_id=${postId}`);
+      const data = await response.json();
       likeCountElement.textContent = data.likes || 0;
-    } else {
-      console.error('L\'élément compteur de like n\'a pas été trouvé');
+    } catch (error) {
+      console.error('Error fetching likes:', error);
     }
 
     // Ajouter un événement "click" sur le bouton
     button.addEventListener('click', async function() {
-      const response = await fetch('/.netlify/functions/like', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ post_id: postId }),
-      });
+      try {
+        const response = await fetch('/.netlify/functions/like', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ post_id: postId }),
+        });
 
-      const result = await response.json();
+        const result = await response.json();
 
-      if (result.message === "Like added successfully") {
-        if (likeCountElement) {
+        if (result.message === "Like added successfully") {
           likeCountElement.textContent = parseInt(likeCountElement.textContent) + 1;
+        } else {
+          alert('Error: ' + result.message);
         }
-      } else {
-        alert('Error: ' + result.message);
+      } catch (error) {
+        console.error('Error on like button click:', error);
       }
     });
   });
