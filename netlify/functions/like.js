@@ -1,26 +1,39 @@
 const { createClient } = require('@supabase/supabase-js');
 
-// Récupérer les variables d'environnement (elles seront automatiquement injectées par Netlify)
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_KEY;
+const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
 exports.handler = async (event, context) => {
-  const { post_id } = event.queryStringParameters; // Récupère l'ID de l'article depuis l'URL
+  const { post_id } = event.queryStringParameters;
 
-  // Incrémenter le nombre de likes pour cet article
-  const { data, error } = await supabase
-    .from('likes')
-    .upsert([{ post_id, count: 1 }], { onConflict: ['post_id'] }); // Si le post_id existe déjà, met à jour le count
-
-  if (error) {
+  if (!post_id) {
     return {
-      statusCode: 500,
-      body: JSON.stringify({ message: 'Erreur lors de l\'ajout du like', error }),
+      statusCode: 400,
+      body: JSON.stringify({ message: 'post_id is required' }),
     };
   }
 
-  return {
-    statusCode: 200,
-    body: JSON.stringify({ message: 'Like ajouté avec succès', data }),
-  };
+  try {
+    const { data, error } = await supabase
+      .from('likes')
+      .upsert([{ post_id, count: 1 }], { onConflict: ['post_id'] });
+
+    if (error) {
+      return {
+        statusCode: 500,
+        body: JSON.stringify({ message: 'Error adding like', error }),
+      };
+    }
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ message: 'Like added successfully', data }),
+    };
+  } catch (err) {
+    return {
+      statusCode: 500,
+      body: JSON.stringify({ message: 'Internal server error', error: err.message }),
+    };
+  }
 };
