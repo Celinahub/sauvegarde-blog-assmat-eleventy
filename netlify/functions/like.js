@@ -1,6 +1,8 @@
 const { createClient } = require('@supabase/supabase-js');
 
-const supabase = createClient('https://your-supabase-url.supabase.co', 'your-anon-key');
+// Récupérer les variables d'environnement (elles seront automatiquement injectées par Netlify)
+const SUPABASE_URL = process.env.SUPABASE_URL;
+const SUPABASE_KEY = process.env.SUPABASE_KEY;
 
 exports.handler = async (event, context) => {
   const { post_id } = event.queryStringParameters; // Récupère l'ID de l'article depuis l'URL
