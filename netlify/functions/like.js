@@ -1,5 +1,6 @@
 const { createClient } = require('@supabase/supabase-js');
 
+// Récupérer les variables d'environnement
 const SUPABASE_URL = process.env.SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_KEY;
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
@@ -22,7 +23,7 @@ exports.handler = async (event, context) => {
     if (error) {
       return {
         statusCode: 500,
-        body: JSON.stringify({ message: 'Error adding like', error }),
+        body: JSON.stringify({ message: 'Error adding like', error: error.message }),
       };
     }
 
@@ -33,7 +34,11 @@ exports.handler = async (event, context) => {
   } catch (err) {
     return {
       statusCode: 500,
-      body: JSON.stringify({ message: 'Internal server error', error: err.message }),
+      body: JSON.stringify({
+        message: 'Internal server error',
+        error: err.message,
+        stack: err.stack,
+      }),
     };
   }
 };
