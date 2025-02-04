@@ -141,10 +141,9 @@ pagination:
 
 
 <script>
-// src/js/like-button.js
 document.querySelector('#likeButton').addEventListener('click', async function () {
   const postId = '1234'; // L'ID de l'article, que tu peux récupérer dynamiquement
-  const response = await fetch(`/api/like?post_id=${postId}`, { method: 'POST' });
+  const response = await fetch(`/.netlify/functions/like?post_id=${postId}`, { method: 'POST' });
 
   if (!response.ok) {
     console.error('Erreur de réponse:', response.statusText);
