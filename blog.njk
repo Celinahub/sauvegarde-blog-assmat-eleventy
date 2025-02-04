@@ -139,73 +139,23 @@ pagination:
 </script>
 
 
+
 <script>
-window.onload = () => {
-  function initializeLikeButtons() {
-    document.querySelectorAll('.like-button').forEach(button => {
-      const postId = button.getAttribute('data-id');
-      const sanitizedPostId = encodeURIComponent(postId); // Encodage pour correspondre aux IDs HTML
-      const likeCountElement = document.getElementById(`like-count-${sanitizedPostId}`);
+// src/js/like-button.js
+document.querySelector('#likeButton').addEventListener('click', async function () {
+  const postId = '1234'; // L'ID de l'article, que tu peux récupérer dynamiquement
+  const response = await fetch(`/api/like?post_id=${postId}`, { method: 'POST' });
 
-      if (!likeCountElement) {
-        console.error('Like count element not found for post', postId);
-        return;
-      }
-
-      // 🔹 Récupérer le nombre de likes depuis Supabase avec debug
-      (async () => {
-        try {
-          const response = await fetch(`/.netlify/functions/like?post_id=${postId}`);
-          const text = await response.text(); // Lire la réponse brute avant JSON.parse
-
-          console.log("Raw response:", text); // 🔍 Voir la réponse avant de la parser
-
-          const data = JSON.parse(text); // ⚠ Peut échouer si ce n'est pas du JSON
-          
-          console.log("Parsed JSON:", data); // Vérifier le JSON retourné
-          likeCountElement.textContent = data.likes || 0;
-        } catch (error) {
-          console.error('Error fetching likes:', error);
-        }
-      })();
-
-      // 🔹 Ajouter un événement au clic pour incrémenter les likes
-      button.addEventListener('click', async function () {
-        try {
-          const response = await fetch('/.netlify/functions/like', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ post_id: postId }),
-          });
-
-          const text = await response.text(); // Lire la réponse brute avant JSON.parse
-          console.log("Raw response on like:", text); // 🔍 Voir la réponse avant de la parser
-
-          const result = JSON.parse(text);
-
-          if (result.message === "Like added successfully") {
-            likeCountElement.textContent = parseInt(likeCountElement.textContent) + 1;
-          } else {
-            alert('Error: ' + result.message);
-          }
-        } catch (error) {
-          console.error('Error on like button click:', error);
-        }
-      });
-    });
+  if (!response.ok) {
+    console.error('Erreur de réponse:', response.statusText);
+    return;
   }
 
-  // 🔹 Exécuter l'initialisation dès que le DOM est chargé
-  initializeLikeButtons();
-
-  // 🔹 Observer si des nouveaux éléments sont ajoutés dynamiquement
-  const observer = new MutationObserver(() => {
-    initializeLikeButtons();
-  });
-
-  observer.observe(document.body, { childList: true, subtree: true });
-};
+  const result = await response.json();
+  console.log(result.message); // Affiche le message de succès ou d'erreur
+});
 
 </script>
+
 
 
