@@ -140,57 +140,71 @@ pagination:
 
 
 <script>
- document.addEventListener("DOMContentLoaded", async () => {
-  document.querySelectorAll('.like-button').forEach(async button => {
-    const postId = button.getAttribute('data-id');
-    const safePostId = postId.replace(/\//g, "-"); // Remplace les "/" par des tirets
-    const likeCountElement = document.getElementById(`like-count-${safePostId}`);
+window.onload = () => {
+  function initializeLikeButtons() {
+    document.querySelectorAll('.like-button').forEach(button => {
+      const postId = button.getAttribute('data-id');
+      const sanitizedPostId = encodeURIComponent(postId); // Encodage pour correspondre aux IDs HTML
+      const likeCountElement = document.getElementById(`like-count-${sanitizedPostId}`);
 
-    if (!likeCountElement) {
-      console.error('Like count element not found for post', postId);
-      return; // Si l'élément n'est pas trouvé, on quitte
-    }
-
-    try {
-      // Récupérer les likes existants
-      const response = await fetch(`/.netlify/functions/like?post_id=${postId}`);
-      const data = await response.json();
-      
-      // Assurer que la structure des données est correcte
-      if (data.likes !== undefined) {
-        likeCountElement.textContent = data.likes || 0;
-      } else {
-        console.error('Likes data not found in response:', data);
+      if (!likeCountElement) {
+        console.error('Like count element not found for post', postId);
+        return;
       }
-    } catch (error) {
-      console.error('Error fetching likes:', error);
-    }
 
-    // Ajouter un événement "click" sur le bouton
-    button.addEventListener('click', async function() {
-      try {
-        const response = await fetch('/.netlify/functions/like', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ post_id: postId }),
-        });
+      // 🔹 Récupérer le nombre de likes depuis Supabase avec debug
+      (async () => {
+        try {
+          const response = await fetch(`/.netlify/functions/like?post_id=${postId}`);
+          const text = await response.text(); // Lire la réponse brute avant JSON.parse
 
-        const result = await response.json();
+          console.log("Raw response:", text); // 🔍 Voir la réponse avant de la parser
 
-        if (result.message === "Like added successfully") {
-          likeCountElement.textContent = parseInt(likeCountElement.textContent) + 1;
-        } else {
-          alert('Error: ' + result.message);
+          const data = JSON.parse(text); // ⚠ Peut échouer si ce n'est pas du JSON
+          
+          console.log("Parsed JSON:", data); // Vérifier le JSON retourné
+          likeCountElement.textContent = data.likes || 0;
+        } catch (error) {
+          console.error('Error fetching likes:', error);
         }
-      } catch (error) {
-        console.error('Error on like button click:', error);
-      }
-    });
-  });
-});
+      })();
 
+      // 🔹 Ajouter un événement au clic pour incrémenter les likes
+      button.addEventListener('click', async function () {
+        try {
+          const response = await fetch('/.netlify/functions/like', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ post_id: postId }),
+          });
+
+          const text = await response.text(); // Lire la réponse brute avant JSON.parse
+          console.log("Raw response on like:", text); // 🔍 Voir la réponse avant de la parser
+
+          const result = JSON.parse(text);
+
+          if (result.message === "Like added successfully") {
+            likeCountElement.textContent = parseInt(likeCountElement.textContent) + 1;
+          } else {
+            alert('Error: ' + result.message);
+          }
+        } catch (error) {
+          console.error('Error on like button click:', error);
+        }
+      });
+    });
+  }
+
+  // 🔹 Exécuter l'initialisation dès que le DOM est chargé
+  initializeLikeButtons();
+
+  // 🔹 Observer si des nouveaux éléments sont ajoutés dynamiquement
+  const observer = new MutationObserver(() => {
+    initializeLikeButtons();
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+};
 
 </script>
 
