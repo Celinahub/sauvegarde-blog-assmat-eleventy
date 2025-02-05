@@ -25,24 +25,47 @@ exports.handler = async (event, context) => {
   console.log("🟢 post_id reçu:", post_id);
 
   try {
-    // Exécute la requête Supabase
-    const { data, error } = await supabase
+    // Vérifie si le post existe déjà
+    const { data: existingLike, error: fetchError } = await supabase
       .from('likes')
-      .upsert([{ post_id, count: 1 }], { onConflict: ['post_id'] });
+      .select('count')
+      .eq('post_id', post_id)
+      .single();
 
-    if (error) {
-      console.error("🚨 Erreur Supabase:", error);
+    if (fetchError && fetchError.code !== 'PGRST116') {
+      console.error("🚨 Erreur lors de la vérification du like:", fetchError);
       return {
         statusCode: 500,
-        body: JSON.stringify({ message: "Erreur lors de l'ajout du like", error }),
+        body: JSON.stringify({ message: "Erreur lors de la vérification du like", error: fetchError }),
       };
     }
 
-    console.log("✅ Like ajouté avec succès :", data);
+    let updatedData;
+
+    if (existingLike) {
+      // Met à jour le compteur de likes (+1)
+      const { data, error } = await supabase
+        .from('likes')
+        .update({ count: existingLike.count + 1 })
+        .eq('post_id', post_id);
+
+      updatedData = data;
+      if (error) throw error;
+    } else {
+      // Insère un nouveau like si aucun like n'existe encore
+      const { data, error } = await supabase
+        .from('likes')
+        .insert([{ post_id, count: 1 }]);
+
+      updatedData = data;
+      if (error) throw error;
+    }
+
+    console.log("✅ Like ajouté/mis à jour avec succès :", updatedData);
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: "Like ajouté avec succès", data }),
+      body: JSON.stringify({ message: "Like ajouté avec succès", data: updatedData }),
     };
   } catch (err) {
     console.error("🚨 Erreur inconnue:", err);

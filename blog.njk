@@ -141,20 +141,33 @@ pagination:
 
 
 <script>
-document.querySelector('#likeButton').addEventListener('click', async function () {
-  const postId = '1234'; // L'ID de l'article, que tu peux récupérer dynamiquement
-  const response = await fetch(`/.netlify/functions/like?post_id=${postId}`, { method: 'POST' });
+document.querySelectorAll('.likeButton').forEach(button => {
+  button.addEventListener('click', async function () {
+    // Récupère dynamiquement l'ID de l'article depuis `data-post-id`
+    const postId = this.getAttribute('data-post-id');
 
-  if (!response.ok) {
-    console.error('Erreur de réponse:', response.statusText);
-    return;
-  }
+    if (!postId) {
+      console.error('Erreur : postId est introuvable !');
+      return;
+    }
 
-  const result = await response.json();
-  console.log(result.message); // Affiche le message de succès ou d'erreur
+    try {
+      const response = await fetch(`https://gggggggzerrez.netlify.app/.netlify/functions/like?post_id=${postId}`, { 
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+
+      if (!response.ok) {
+        throw new Error(`Erreur de réponse : ${response.status} ${response.statusText}`);
+      }
+
+      const result = await response.json();
+      console.log(`Article ${postId} : ${result.message}`);
+    } catch (error) {
+      console.error(`Erreur pour l'article ${postId} :`, error);
+    }
+  });
 });
-
 </script>
-
-
-
