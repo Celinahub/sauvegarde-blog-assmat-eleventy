@@ -34,8 +34,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <!-- Optimisation des polices Google avec preload -->
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Finger+Paint:wght@400&display=swap">
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Finger+Paint:wght@400&display=swap" 
+      as="style" 
+      crossorigin="anonymous" 
+      onload="this.onload=null;this.rel='stylesheet'">
+
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900&display=swap" 
+      as="style" 
+      crossorigin="anonymous" 
+      onload="this.onload=null;this.rel='stylesheet'">
 
 <!-- Chargement des polices Google -->
 <noscript>
@@ -44,9 +51,21 @@
 </noscript>
 
 
+
 <!-- Lien vers le CSS de Bootstrap et CSS personnalisés -->
-<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+      as="style" 
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
+      crossorigin="anonymous" 
+      onload="this.onload=null;this.rel='stylesheet'">
+
+<noscript>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" 
+          rel="stylesheet" 
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" 
+          crossorigin="anonymous">
+</noscript>
+
 
 <!-- Précharger le fichier CSS personnalisé -->
 <link rel="preload" href="{{ '/css/style.css' | url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -66,3 +85,13 @@
 
 <!-- Script ScrollReveal avec defer -->
 <script src="https://unpkg.com/scrollreveal" defer></script>
+
+
+
+
+
+
+
+
+
+
