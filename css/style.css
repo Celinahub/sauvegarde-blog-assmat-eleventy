@@ -4,6 +4,25 @@
 /* Style pour toutes les pages */
 
 
+@font-face {
+   font-family: 'Poppins';
+   src: url('../fonts/poppins-v22-latin-regular.woff2') format('woff2'),
+        url('../fonts/poppins-v22-latin-regular.woff') format('woff');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+@font-face {
+   font-family: 'Finger Paint';
+   src: url('../fonts/finger-paint-v19-latin-regular.woff2') format('woff2'),
+        url('../fonts/finger-paint-v19-latin-regular.woff') format('woff');
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+
+
 /* Style général du body */
 
 body {
@@ -2298,8 +2317,37 @@ position: relative; /* Ajout de position relative */
    cursor: pointer;
 }
 
+.routine-icon {
+   width: 15px;
+   height: 15px;
+   transition: transform 0.3s ease-in-out; /* Animation fluide */
+}
 
-  
+/* Rotation de la flèche quand le bouton est activé */
+.routine-btn-toggle.active .routine-icon,
+.routine-picto-btn-toggle.active .routine-icon,
+.agrement-btn-toggle.active .routine-icon, 
+.faq-btn-toggle.active .routine-icon {
+   transform: rotate(90deg); /* Fait tourner la flèche de 90° */
+}
+
+
+ 
+
+
+/* Rotation de la croix quand le bouton a la classe 'active' */
+.btn-toggle.active .routine-icon {
+   transform: rotate(180deg); /* Tourne l'icône de 180° */
+}
+
+
+
+ 
+
+
+
+
+
 /* Styles pour la section agrement */
  
 #agrement {
@@ -2686,6 +2734,13 @@ position: relative; /* Ajout de position relative */
 .faq-description {
    display: none;
 }
+
+ .faq-icon {
+   width: 15px;
+   height: 15px;
+   transition: transform 0.3s ease; /* Douce transition pour la rotation */
+ }
+
 
 
 /* Styles pour les boutons découvrir rubrique faq + et - */
