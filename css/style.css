@@ -4,23 +4,70 @@
 /* Style pour toutes les pages */
 
 
+/* Définition de la police Poppins */
 @font-face {
    font-family: 'Poppins';
-   src: url('../fonts/poppins-v22-latin-regular.woff2') format('woff2'),
-        url('../fonts/poppins-v22-latin-regular.woff') format('woff');
-   font-weight: 400;
+   src: url('/fonts/poppins-v22-latin-regular.woff2') format('woff2'),
+        url('/fonts/poppins-v22-latin-regular.woff') format('woff');
+   font-weight: 400; /* Poids normal */
    font-style: normal;
    font-display: swap;
 }
 
 @font-face {
-   font-family: 'Finger Paint';
-   src: url('../fonts/finger-paint-v19-latin-regular.woff2') format('woff2'),
-        url('../fonts/finger-paint-v19-latin-regular.woff') format('woff');
-   font-weight: 400;
+   font-family: 'Poppins';
+   src: url('/fonts/poppins-v22-latin-700.woff2') format('woff2'),
+        url('/fonts/poppins-v22-latin-regular.woff') format('woff');
+   font-weight: 700; /* Poids gras */
    font-style: normal;
    font-display: swap;
 }
+
+@font-face {
+   font-family: 'Poppins';
+   src: url('/fonts/poppins-v22-latin-900.woff2') format('woff2'),
+        url('/fonts/poppins-v22-latin-regular.woff') format('woff');
+   font-weight: 900; /* Poids très gras */
+   font-style: normal;
+   font-display: swap;
+}
+
+/* Définition de la police Finger Paint */
+@font-face {
+   font-family: 'Finger Paint';
+   src: url('/fonts/finger-paint-v19-latin-regular.woff2') format('woff2'),
+        url('/fonts/finger-paint-v19-latin-regular.woff') format('woff');
+   font-weight: 400; /* Poids normal */
+   font-style: normal;
+   font-display: swap;
+}
+
+
+/* Appliquer Poppins (poids normal) */
+body {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 400; /* Poids normal */
+}
+
+/* Appliquer Poppins (poids gras) pour les titres */
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 700; /* Poids gras */
+}
+
+/* Appliquer Poppins (poids très gras) pour les titres importants */
+h1 {
+   font-family: 'Poppins', sans-serif;
+   font-weight: 900; /* Poids très gras */
+}
+
+/* Appliquer Finger Paint pour les éléments spécifiques */
+.special-text {
+   font-family: 'Finger Paint', cursive;
+   font-weight: 400;
+}
+
+
 
 
 /* Style général du body */
@@ -4102,7 +4149,7 @@ position: relative; /* Ajout de position relative */
 
 
 
- /* Style pour la 404 - Page Non Trouvée dans 404.md*/ */
+ /* Style pour la 404 - Page Non Trouvée dans 404.md*/
  
  body.introuvable-page {
    background-color: #96D2CA;
