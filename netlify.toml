@@ -1,6 +1,6 @@
 [build]
   publish = "_site"                # Dossier de sortie généré par Eleventy
-  command = "eleventy"             # Commande pour générer le site
+  command = "npm run build"  # Assure la génération du CSS minifié
   node_version = "20.10.0"
 
 [dev]
