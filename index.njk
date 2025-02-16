@@ -86,12 +86,20 @@ bodyClass: "bg-white presentation"
         </div>
         <div class="bordered-content-presentation-image">
             <div class="presentation-image mx-auto position-relative mb-4">
-                <picture>
-    <!-- Balise source pour WebP -->
-    <source srcset="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.webp' | url }}" type="image/webp">
-    <!-- Balise img pour les navigateurs ne prenant pas en charge WebP -->
-    <img class="photo-img-portrait" src="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg' | url }}" alt="Céline Hubert, assistante maternelle à Brétigny-sur-Orge" loading="lazy">
+
+              <picture>
+  <!-- Balise source pour WebP -->
+  <source srcset="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.webp' | url }}" type="image/webp">
+  
+  <!-- Balise img pour les navigateurs ne prenant pas en charge WebP -->
+  <img class="photo-img-portrait" 
+       src="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg' | url }}" 
+       alt="Céline Hubert, assistante maternelle à Brétigny-sur-Orge" 
+       loading="lazy" 
+       width="399" 
+       height="399">
 </picture>
+
 
                 <a href="{{ '/contact/' | url }}" class="position-icon-b" aria-label="Contacter Céline Hubert via icône bulle ou bouton SVG">
                     <!-- Contenu de l'icône ou bouton -->
@@ -464,15 +472,18 @@ bodyClass: "bg-white presentation"
                 <div class="container">
                     <p class="poppins-regular-rdv">
                         C'est avec plaisir que j'échangerai avec vous.
-                      <a href="{{ '/contact/' | url }}" aria-label="Contacter Céline Hubert directement via l'enveloppe">
-
- <img src="{{ '/images/presentation/enveloppe-contact-direct-assistante-maternelle-bretigny.svg' | url }}"
-     class="checked-localisation" 
-     alt="Icône d'enveloppe pour contacter Céline Hubert, assistante maternelle à Brétigny-sur-Orge"
-     loading="eager"  
-     fetchpriority="high"
-     decoding="async">
+                    <a href="{{ '/contact/' | url }}" aria-label="Contacter Céline Hubert directement via l'enveloppe">
+  <img src="{{ '/images/presentation/enveloppe-contact-direct-assistante-maternelle-bretigny.svg' | url }}"
+       class="checked-localisation"
+       alt="Icône d'enveloppe pour contacter Céline Hubert, assistante maternelle à Brétigny-sur-Orge"
+       loading="eager"  
+       fetchpriority="high"
+       decoding="async"
+       width="72"  <!-- Largeur en pixels (4.5rem en pixels, ici 1rem = 16px) -->
+       height="54" <!-- Hauteur en pixels basée sur l'aspect ratio -->
+   >
 </a>
+
                     </p>
                 </div>
             </div>
