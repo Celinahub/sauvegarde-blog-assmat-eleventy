@@ -24,6 +24,17 @@
   to = "/404.html"                 # Page 404 personnalisée
   status = 404                     # Code de statut HTTP
 
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact/contact/"
+  to = "/contact/"
+  status = 301
+  force = true
 
 
 
