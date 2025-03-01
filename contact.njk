@@ -1,0 +1,130 @@
+---
+layout: layouts/base.njk
+title: "Contactez Céline Hubert, assistante maternelle agréée à Brétigny-sur-Orge"
+description: "Localisez mon lieu d'accueil et remplissez le formulaire pour toute demande d'information."
+url: "https://chubert91assmat.netlify.app/contact"
+image: "contact-celine-assistante-maternelle.jpg"
+eleventyNavigation:
+  key: CONTACT
+  order: 5
+permalink: "/contact/"
+bodyClass: "bg-white contact"
+---
+
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+<!-- Section de la rubrique LOCALISATION -->
+<section id="contact" class="container-fluid-contact py-5"> <!-- Utilisation de container-fluid -->
+    <div class="text-center"> <!-- Retrait de la div supplémentaire -->
+        <!-- Ajout d'un titre pour la section -->
+        <h2 class="sr-only" aria-hidden="true">Me contacter</h2> <!-- Titre caché pour l'accessibilité -->
+       
+        <!-- SVG qui doit être placé au-dessus de la carte -->
+         <img src="{{ '/images/contact/map-top.svg' | url }}" class="map-top-curvy" alt="Décor de nuages en haut de la page de contact de Céline, assistante maternelle agréée" />
+      
+        
+        <!-- Contenu de la section -->
+      <div class="row-contact justify-content-center align-items-center"> <!-- Section contact -->
+    <div class="col-md-12-contact"> <!-- Conteneur principal -->
+
+      <div class="contact-form section-wrapper">
+                    <div class="leaflet-container">
+                        <!-- Carte Leaflet -->
+                        <div id="map"></div>
+                        <!-- Image SVG -->
+                        <img src="{{ '/images/contact/map-nuages.svg' | url }}" class="map-curvy" alt="Décor de nuages sur la carte de localisation de Céline, assistante maternelle à Brétigny-sur-Orge" />
+                    </div>
+
+                    <!-- Autres éléments de la section -->
+<img src="{{ '/images/contact/me-contacter.svg' | url }}" class="contact-curvy me-contacter-decor" alt="Décor de nuages en haut du formulaire de contact de Céline" />
+
+
+
+            <!-- Formulaire de contact -->
+            <div class="row justify-content-center"> <!-- Centrer le formulaire -->
+                <div class="col-md-6 col-lg-5"> <!-- Largeur réduite du formulaire -->
+                   <form name="contact" method="POST" data-netlify="true" class="p-4 shadow-lg-tablet rounded-md">
+                        <input type="hidden" name="form-name" value="contact" />
+
+                        <h1 class="contact-label">ME CONTACTER</h1>
+                        <h2 class="fade-in-out-contact">C'est avec plaisir que j'échangerai avec vous ...</h2>
+
+                        <div class="row g-3">
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom" required autocomplete="off">
+                                <label class="floating-label" for="prenom">Prénom</label>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="email" class="form-control" id="email" name="email" placeholder=" " required>
+                                <label class="floating-label" for="email">E-mail</label>
+                            </div>
+                            <div class="col-md-12 form-group">
+                                <input type="text" class="form-control" id="message" name="message" placeholder=" " required>
+                                <label class="floating-label" for="message">Message</label>
+                            </div>
+                        </div>
+                        <div class="text-center mt-4">
+                            <button type="submit" class="btn btn-custom">
+                                <img src="{{ '/images/contact/car-police-security-svgrepo-com.svg' | url }}" class="car-send" alt="Icône pour envoyer le formulaire de contact" />
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Décoration après le formulaire -->
+            <img src="{{ '/images/contact/me-contacter-form.svg' | url }}" class="contact-curvy mt-4" alt="Décor de nuages en bas du formulaire de contact de Céline, assistante maternelle agréée" />
+        </div>
+
+    </div>
+</div>
+
+    </div>
+</section>
+
+
+ 
+<!-- Charger Leaflet -->
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> <!-- Charger sans defer -->
+
+
+
+<!-- Initialisation de la carte Leaflet -->
+<script>
+
+    // Script 1 carte
+
+	document.addEventListener('DOMContentLoaded', function() {
+		// Utiliser les nouvelles coordonnées pour centrer la carte
+		var lat = 48.60744467870966; // Latitude pour emplacement 
+		var lng = 2.299350436793167;  // Longitude
+	
+		// Créer la carte centrée sur le lieu souhaité
+		var map = L.map('map').setView([lat, lng], 13);
+	
+		// Ajouter la couche de tuiles (OpenStreetMap)
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+			maxZoom: 19,
+		}).addTo(map);
+	
+		// Ajouter un marqueur à l'emplacement souhaité
+		var marker = L.marker([lat, lng]).addTo(map);
+		marker.bindPopup("SECTEUR CAROUGE-CLAUSE, Brétigny-sur-Orge").openPopup(); // Popup d'information
+	
+		// Ajouter un cercle pour délimiter un secteur autour du marqueur
+		var circle = L.circle([lat, lng], {
+			color: '#9786BD',       // Couleur de la bordure du cercle
+			fillColor: '#9786BD',  // Couleur de remplissage
+			fillOpacity: 0.2,   // Opacité du remplissage
+			radius: 200        // Rayon du cercle en mètres
+		}).addTo(map);
+	});
+
+	</script>
+	
+	
+
+<!-- Charger d'autres scripts avec defer pour qu'ils ne bloquent pas le rendu de la page -->
+<script src="https://unpkg.com/simplebar@5.3.0/dist/simplebar.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
