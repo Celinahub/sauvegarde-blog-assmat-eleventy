@@ -202,7 +202,7 @@ eleventyConfig.addFilter("truncateWords", function (content, numWords) {
 
   // Retourner la configuration de l'entrée et de la sortie
   return {
-    pathPrefix: process.env.NODE_ENV === 'production' ? '/blog/' : '/',
+    pathPrefix: '/',
     dir: {
       input: ".",           // Dossier d'entrée
       includes: "_includes", // Dossier contenant les layouts et widgets
