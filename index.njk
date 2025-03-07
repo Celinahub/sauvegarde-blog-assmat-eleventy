@@ -87,17 +87,22 @@ bodyClass: "bg-white presentation"
         <div class="bordered-content-presentation-image">
             <div class="presentation-image mx-auto position-relative mb-4">
 
-                    <picture>
-  <!-- Balise source pour WebP -->
-  <source srcset="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.webp' | url }}" type="image/webp">
-  
-  <!-- Balise img pour les navigateurs ne prenant pas en charge WebP -->
-  <img class="photo-img-portrait" 
-       src="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg' | url }}" 
-       alt="Céline Hubert, assistante maternelle à Brétigny-sur-Orge" 
-       loading="lazy" 
-       width="399" 
-       height="399">
+                   <picture>
+    <source srcset="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny-400w.webp' | url }} 400w,
+                    {{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny-800w.webp' | url }} 800w,
+                    {{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny-1200w.webp' | url }} 1200w"
+            sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            type="image/webp">
+    
+    <img class="photo-img-portrait" 
+         src="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny-800w.jpg' | url }}" 
+         srcset="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny-400w.jpg' | url }} 400w,
+                 {{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny-800w.jpg' | url }} 800w,
+                 {{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny-1200w.jpg' | url }} 1200w"
+         sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+         width="400" height="600"
+         alt="Céline Hubert, assistante maternelle à Brétigny-sur-Orge"
+         fetchpriority="high">
 </picture>
 
                 <a href="{{ '/contact/' | url }}" class="position-icon-b" aria-label="Contacter Céline Hubert via icône bulle ou bouton SVG">
