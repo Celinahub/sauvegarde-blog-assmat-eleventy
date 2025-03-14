@@ -194,6 +194,7 @@ eleventyConfig.addFilter("truncateWords", function (content, numWords) {
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("google0b7250a45fd279a1.html");
+  eleventyConfig.addPassthroughCopy("_redirects");
 
   // Ajouter des alias pour les layouts
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
