@@ -1027,9 +1027,19 @@ h2, h3 {
 
 
 
-.image-frame-services {
+ .image-frame-services {
+   width: 100%;
+   aspect-ratio: 1 / 1;  /* Pour garder un ratio de 1:1 (carré) */
    position: relative;
+   overflow: hidden;  /* Si tu veux que l'image ne dépasse pas du cadre */
 }
+
+.image-frame-services img {
+   width: 100%;    /* L'image occupe toute la largeur du conteneur */
+   height: 100%;   /* L'image occupe toute la hauteur du conteneur */
+   object-fit: cover;  /* Cela permet de recadrer l'image pour garder le ratio */
+}
+
 
 .image-overlay {
    position: absolute;
