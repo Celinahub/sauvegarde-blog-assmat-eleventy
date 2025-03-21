@@ -1,7 +1,7 @@
 ---
 layout: layouts/base.njk
-title: "Céline Hubert - Assistante Maternelle Agréée à Brétigny-sur-Orge"
-description: "Confiez votre enfant à Céline Hubert, assistante maternelle agréée à Brétigny-sur-Orge. Un mode de garde alternatif à la crèche, avec un accueil personnalisé."
+title: "Assistante Maternelle à Brétigny | Garde d'enfants Céline Hubert"
+description: "Confiez votre enfant à Céline, assistante maternelle agréée à Brétigny-sur-Orge. Garde d'enfants alternative à la crèche avec un accueil personnalisé."
 url: "https://chubert91assmat.netlify.app/"
 image: "presentation-assistante-maternelle-agreee.jpg"
 eleventyNavigation:
@@ -13,55 +13,77 @@ bodyClass: "bg-white presentation"
 
 
     <script type="application/ld+json">
-        {
-          "@context": "http://schema.org",
-          "@type": "LocalBusiness",
-          "name": "Assistante maternelle agréée - chez Céline",
-          "image": "presentation-assistante-maternelle-agreee.jpg",
-          "priceRange": "Fixé en fonction de vos besoins d'accueil",
-          "description": "Assistante maternelle agréée proposant un accueil personnalisé pour les enfants à Brétigny-sur-Orge. Une alternative chaleureuse et professionnelle à la crèche.",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "22 Rue du Parc",
-            "addressLocality": "Brétigny-sur-Orge",
-            "addressRegion": "Essonne",
-            "postalCode": "91220",
-            "addressCountry": "FR"
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "reviewCount": "1"
-          },
-          "review": [
-            {
-              "@type": "Review",
-              "itemReviewed": {
-                "@type": "Service",
-                "name": "Garde d'enfants",
-                "description": "Services de garde d'enfants par une assistante maternelle agréée."
-    
-            },
-                "contactPoint": {
-                  "@type": "ContactPoint",
-                  "contactType": "customer service",
-                  "url": "https://chubert91assmat.netlify.app/contact/"
-    
-              },
-              "author": {
-                "@type": "Person",
-                "name": "Sophie NGO LEANG"
-              },
-              "reviewRating": {
-                "@type": "Rating",
-                "ratingValue": "5",
-                "bestRating": "5"
-              },
-              "reviewBody": "Très belle expérience chez Céline avec notre fils, il a appris à être en collectivité, il a gagné en autonomie et il s'est épanoui ! Les petits plats maison et les gâteaux improvisés étaient très appréciés. Il est maintenant prêt pour rentrer à l'école ! Merci Céline pour l'accueil !"
-            }
-          ]
-        }
-        </script>
+{
+  "@context": "http://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Assistante maternelle agréée - chez Céline",
+  "image": "https://chubert91assmat.netlify.app/images/presentation-assistante-maternelle-agreee.jpg",
+  "priceRange": "Fixé en fonction de vos besoins d'accueil",
+  "description": "Assistante maternelle agréée proposant un accueil personnalisé pour les enfants à Brétigny-sur-Orge. Une alternative chaleureuse et professionnelle à la crèche.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "22 Rue du Parc",
+    "addressLocality": "Brétigny-sur-Orge",
+    "addressRegion": "Île-de-France",
+    "postalCode": "91220",
+    "addressCountry": "FR"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "itemReviewed": {
+        "@type": "Service",
+        "name": "Garde d'enfants",
+        "description": "Services de garde d'enfants par une assistante maternelle agréée."
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Sophie NGO LEANG"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Très belle expérience chez Céline avec notre fils, il a appris à être en collectivité, il a gagné en autonomie et il s'est épanoui ! Les petits plats maison et les gâteaux improvisés étaient très appréciés. Il est maintenant prêt pour rentrer à l'école ! Merci Céline pour l'accueil !"
+    }
+  ],
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Céline Hubert - Assistante Maternelle Agréée",
+    "url": "https://chubert91assmat.netlify.app"
+
+ }
+}
+</script>
+
+<!-- Ajout du JSON-LD pour le fil d'Ariane -->
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://chubert91assmat.netlify.app"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Garde d'enfants",
+      "item": "https://chubert91assmat.netlify.app/projet-accueil/"
+    }
+  ]
+}
+</script>
+
     
 
 
@@ -74,20 +96,22 @@ bodyClass: "bg-white presentation"
 
 
 <section id="portrait" class="container-fluid py-5 position-relative">
- <h2 class="sr-only" aria-hidden="true">Portrait de Céline Hubert</h2> <!-- Titre caché pour l'accessibilité -->
+ <h1 class="sr-only" aria-hidden="true">Céline, assistante maternelle à Brétigny</h1> <!-- Titre caché pour l'accessibilité -->
     <div class="row justify-content-center text-center position-relative">
         <div class="col-md-12">
-       <img src="{{ '/images/presentation/arriere-plan-nuages-bleus-bretigny-assistante-maternelle.svg' | url }}" 
+      <img src="{{ '/images/presentation/arriere-plan-nuages-bleus-bretigny-assistante-maternelle.svg' | url }}" 
      class="fond-curvy background-portrait" 
      alt="Nuages bleus enfantins"
      loading="eager"  
      fetchpriority="high"
-     decoding="async">
+     decoding="async"
+     width="842" height="597">
+
         </div>
         <div class="bordered-content-presentation-image">
             <div class="presentation-image mx-auto position-relative mb-4">
-
-                    <picture>
+            
+               <picture>
   <!-- Balise source pour WebP -->
   <source srcset="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.webp' | url }}" type="image/webp">
   
@@ -99,11 +123,6 @@ bodyClass: "bg-white presentation"
        width="399" 
        height="399">
 </picture>
-
-
-
-
-
 
                 <a href="{{ '/contact/' | url }}" class="position-icon-b" aria-label="Contacter Céline Hubert via icône bulle ou bouton SVG">
                     <!-- Contenu de l'icône ou bouton -->
@@ -132,8 +151,8 @@ bodyClass: "bg-white presentation"
 <section id="services-garde-enfants" class="container-fluid py-5">
     <div class="services-garde-enfants-section section-wrapper">
         <div class="profile-text text-center">
-            <h1 class="poppins-bold-titre-accueil">{{ accueilTitre | default("Céline, Assistante Maternelle Agréée") }}</h1>
-            <h2 class="fade-in-out-bretigny">{{ sousTitreAccueil | default("à Brétigny-sur-Orge") }}</h2>
+            <h2 class="poppins-bold-titre-accueil">{{ accueilTitre | default("Céline, Assistante Maternelle Agréée") }}</h2>
+            <h3 class="fade-in-out-bretigny">{{ sousTitreAccueil | default("à Brétigny-sur-Orge") }}</h3>
         </div>
 
         <!-- Premier ligne -->
@@ -143,7 +162,7 @@ bodyClass: "bg-white presentation"
                 <div class="services-garde-enfants-item w-100">
                     <div class="services-garde-enfants-text-space p-4">
                         
-                        <h3 class="introduction-titre"><strong>{{ aProposTitre | default("A PROPOS") }}</strong></h3>
+                        <h3 class="introduction-titre">{{ aProposTitre | default("A PROPOS") }}</h3>
                         <hr class="horizontal-line">
                         <div class="description-atout-services">
                             <p class="poppins-regular-accueil">{{ aProposDescription | default("En 2016, après une immersion en tant que particulier-employeur, j'ai amorcé une reconversion professionnelle pour devenir assistante maternelle agréée. Trouver un mode de garde sécurisant pour notre premier enfant a renforcé ma conviction d'offrir un accueil personnalisé et de qualité aux familles.") }}</p>
@@ -164,7 +183,14 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-                {% image "/images/presentation/reconversion.jpg", "Photo illustrant la reconversion professionnelle en assistante maternelle", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
+              {% image "/images/presentation/reconversion.jpg",
+   "Photo illustrant la reconversion professionnelle en assistante maternelle",
+   "(min-width: 1024px) 50vw, 100vw",
+   width=1200, height=1200,
+   loading="lazy", fetchpriority="auto", format="webp"
+%}
+
+
 
                     
                             <div class="image-overlay"></div>
@@ -180,7 +206,7 @@ bodyClass: "bg-white presentation"
             <div class="col-md-6 order-md-2 p-0 d-flex align-items-center">
                 <div class="services-garde-enfants-item w-100">
                     <div class="services-garde-enfants-text-space p-4">
-                        <h3 class="introduction-titre"><strong>{{ environnementTitre | default("ENVIRONNEMENT FAMILIAL") }}</strong></h3>
+                        <h2 class="introduction-titre">{{ environnementTitre | default("ENVIRONNEMENT FAMILIAL") }}</h2>
                         <hr class="horizontal-line">
                         <div class="description-atout-services">
                             <p class="poppins-regular-accueil">{{ environnementDescription | default("Chaque enfant accueilli bénéficie de sa propre chambre dans un environnement calme, favorisant son bien-être, et profite d'interactions enrichissantes avec mes enfants plus âgés, contribuant à son développement psychomoteur, social et à son autonomie.") }}</p>
@@ -197,7 +223,16 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-               {% image "/images/presentation/anniversaire-accueilli.jpg", "Anniversaire accueilli", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
+
+
+              {% image "/images/presentation/anniversaire-accueilli.jpg",
+   "Anniversaire accueilli",
+   "(min-width: 1024px) 50vw, 100vw",
+   width=1200, height=1200,
+   loading="lazy", fetchpriority="auto", format="webp"
+%}
+
+
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -211,7 +246,7 @@ bodyClass: "bg-white presentation"
     <div class="col-md-6 p-0 d-flex align-items-center">
         <div class="services-garde-enfants-item w-100">
             <div class="services-garde-enfants-text-space p-4">
-                <h3 class="introduction-titre"><strong>{{ capacitesTitre | default("CAPACITES D'ACCUEIL") }}</strong></h3>
+                <h2 class="introduction-titre">{{ capacitesTitre | default("CAPACITES D'ACCUEIL") }}</h2>
                 <hr class="horizontal-line">
                 <div class="description-atout-services">
                     <p class="poppins-regular-accueil">{{ capacitesDescription | default("Mon agrément limite le nombre d'enfants, offrant un ratio enfants/adulte plus bas que l'accueil collectif pour garantir une attention individualisée, une surveillance renforcée, et un cadre sécurisant lors des repas et de la sieste, tout en assurant un service de qualité basé sur les principes de la Protection maternelle et infantile.") }}</p>
@@ -229,7 +264,14 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-{% image "/images/presentation/agrement-limite.jpg", "Agrement Limite", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
+  {% image "/images/presentation/agrement-limite.jpg",
+   "Agrement Limite",
+   "(min-width: 1024px) 50vw, 100vw",
+   width=1200, height=1200,
+   loading="lazy", fetchpriority="auto", format="webp"
+%}
+
+
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -243,7 +285,7 @@ bodyClass: "bg-white presentation"
             <div class="col-md-6 order-md-2 p-0 d-flex align-items-center">
                 <div class="services-garde-enfants-item w-100">
                     <div class="services-garde-enfants-text-space p-4">
-                        <h3 class="introduction-titre"><strong>{{ activitesTitre | default("ACTIVITES ET PROMENADES") }}</strong></h3>
+                        <h2 class="introduction-titre">{{ activitesTitre | default("ACTIVITES ET PROMENADES") }}</h2>
                         <hr class="horizontal-line">
                         <div class="description-atout-services">
                             <p class="poppins-regular-accueil">{{ activitesDescription | default("Lorsque la météo le permet, nous effectuons des sorties quotidiennes dans les parcs et grands espaces de la ville, permettant aux enfants de rencontrer leurs pairs et de stimuler leur développement du langage, tout en luttant contre la sédentarité et en favorisant leur santé physique et mentale.") }}</p>
@@ -260,7 +302,15 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-{% image "/images/presentation/parc-bretigny.jpg", "Parc Bretigny", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
+{% image "/images/presentation/parc-bretigny.jpg",
+   "Parc Bretigny",
+   "(min-width: 1024px) 50vw, 100vw",
+   width=1200, height=1200,
+   loading="lazy", fetchpriority="auto", format="webp"
+%}
+
+
+
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -274,7 +324,7 @@ bodyClass: "bg-white presentation"
             <div class="col-md-6 p-0 d-flex align-items-center">
                 <div class="services-garde-enfants-item w-100">
                     <div class="services-garde-enfants-text-space p-4">
-                        <h3 class="introduction-titre"><strong>{{ communicationTitre | default("COMMUNICATION") }}</strong></h3>
+                        <h2 class="introduction-titre">{{ communicationTitre | default("COMMUNICATION") }}</h2>
                         <hr class="horizontal-line">
                         <div class="description-atout-services">
                             <p class="poppins-regular-accueil">{{ communicationDescription | default("Je privilégie une communication directe et personnalisée avec les familles, sans intermédiaires, pour assurer une coordination fluide des soins et renforcer la confiance, garantissant ainsi un environnement serein et sécurisant pour l'enfant.") }}</p>
@@ -291,7 +341,14 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-{% image "/images/presentation/communication-directe.jpg", "Communication Directe", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
+{% image "/images/presentation/communication-directe.jpg",
+   "Communication Directe",
+   "(min-width: 1024px) 50vw, 100vw",
+   width=1200, height=1200,
+   loading="lazy", fetchpriority="auto", format="webp"
+%}
+
+
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -305,7 +362,7 @@ bodyClass: "bg-white presentation"
             <div class="col-md-6 order-md-2 p-0 d-flex align-items-center">
                 <div class="services-garde-enfants-item w-100">
                     <div class="services-garde-enfants-text-space p-4">
-                        <h3 class="introduction-titre"><strong>{{ sociabilisationTitre | default("SOCIABILISATION") }}</strong></h3>
+                        <h2 class="introduction-titre">{{ sociabilisationTitre | default("SOCIABILISATION") }}</h2>
                         <hr class="horizontal-line">
                         <div class="description-atout-services">
                             <p class="poppins-regular-accueil">{{ sociabilisationDescription | default("Les visites bi-mensuelles au Relais Petite Enfance (RPE) de Brétigny-sur-Orge offrent aux enfants un environnement stimulant pour enrichir leur cercle social, développer des compétences essentielles comme le partage et la communication, et renforcer le lien avec l'assistante maternelle.") }}</p>
@@ -324,7 +381,14 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-{% image "/images/presentation/rpe-bretigny.jpg", "RPE Bretigny", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
+{% image "/images/presentation/rpe-bretigny.jpg",
+   "RPE Bretigny",
+   "(min-width: 1024px) 50vw, 100vw",
+   width=1200, height=1200,
+   loading="lazy", fetchpriority="auto", format="webp"
+%}
+
+
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -338,7 +402,7 @@ bodyClass: "bg-white presentation"
             <div class="col-md-6 p-0 d-flex align-items-center">
                 <div class="services-garde-enfants-item w-100">
                     <div class="services-garde-enfants-text-space p-4">
-                        <h3 class="introduction-titre"><strong>{{ assistanceTitre | default("ASSISTANCE") }}</strong></h3>
+                        <h2 class="introduction-titre">{{ assistanceTitre | default("ASSISTANCE") }}</h2>
                         <hr class="horizontal-line">
                         <div class="description-atout-services">
                             <p class="poppins-regular-accueil">{{ assistanceDescription | default("Je vous accompagne dans toutes vos démarches administratives, y compris la saisie Pajemploi, avec une expertise juridique spécialisée grâce à mon affiliation au syndicat UNSA PRO ASSMAT garantissant ainsi simplicité et tranquillité d'esprit. La FEPEM offre des ressources pour les particuliers-employeurs.") }}</p>
@@ -356,7 +420,14 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-{% image "/images/presentation/syndicat-unsa-pro-assmat.jpg", "UNSA Pro Assmat", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
+{% image "/images/presentation/syndicat-unsa-pro-assmat.jpg",
+   "UNSA Pro Assmat",
+   "(min-width: 1024px) 50vw, 100vw",
+   width=1200, height=1200,
+   loading="lazy", fetchpriority="auto", format="webp"
+%}
+
+
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -370,7 +441,7 @@ bodyClass: "bg-white presentation"
     <div class="col-md-6 order-md-2 p-0 d-flex align-items-center">
         <div class="services-garde-enfants-item w-100">
             <div class="services-garde-enfants-text-space p-4">
-                <h3 class="introduction-titre"><strong>{{ resteACargeTitre | default("RESTE À CHARGE COMPÉTITIF") }}</strong></h3>
+                <h2 class="introduction-titre">{{ resteACargeTitre | default("RESTE À CHARGE COMPÉTITIF") }}</h2>
                 <hr class="horizontal-line">
                 <div class="description-atout-services">
                     <p class="poppins-regular-accueil">{{ resteACargeDescription | default("Découvrez sur ma page Foire aux questions des informations détaillées sur les tarifs, les aides financières, et le reste à charge, et découvrez comment choisir une assistante maternelle peut être une option financièrement avantageuse.") }}</p>
@@ -386,7 +457,14 @@ bodyClass: "bg-white presentation"
                     <div class="services-garde-enfants-image">
                         <div class="image-frame-services position-relative">
 
-{% image "/images/presentation/tarif-assmat.jpg", "CAF aides", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
+{% image "/images/presentation/tarif-assmat.jpg",
+   "CAF aides",
+   "(min-width: 1024px) 50vw, 100vw",
+   width=1200, height=1200,
+   loading="lazy", fetchpriority="auto", format="webp"
+%}
+
+
                             <div class="image-overlay"></div>
                         </div>
                     </div>
@@ -443,7 +521,7 @@ bodyClass: "bg-white presentation"
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h2 class="titre-rencontrons-nous">
+                <h3 class="titre-rencontrons-nous">
                     <span>
                      
     <img src="{{ '/images/presentation/validation-rencontre-assistante-bretigny.svg' | url }}"
@@ -455,9 +533,19 @@ bodyClass: "bg-white presentation"
                     
                     </span>
                     <strong>RENCONTRONS - NOUS</strong>
-                </h2>   
+                </h3>   
                 
                 <hr class="horizontal-line">
+
+<a href="{{ 'images/presentation/disponibilites-assistante-maternelle-bretigny-sur-orge.pdf' | url }}" 
+   class="btn btn-action-primary my-4" 
+   aria-label="Téléchargez le fichier des disponibilités d'accueil">
+    Découvrez mes disponibilités en un clic !
+</a>
+
+
+
+
                 <!-- Description générale -->
                 <p class="poppins-regular-rencontre"><strong>Découvrez comment un accueil personnalisé peut répondre aux besoins de votre enfant.</strong></p>
                 
@@ -478,15 +566,12 @@ bodyClass: "bg-white presentation"
                         C'est avec plaisir que j'échangerai avec vous.
                       <a href="{{ '/contact/' | url }}" aria-label="Contacter Céline Hubert directement via l'enveloppe">
 
-  <img src="{{ '/images/presentation/enveloppe-contact-direct-assistante-maternelle-bretigny.svg' | url }}"
-     class="checked-localisation"
+ <img src="{{ '/images/presentation/enveloppe-contact-direct-assistante-maternelle-bretigny.svg' | url }}"
+     class="checked-localisation" 
      alt="Icône d'enveloppe pour contacter Céline Hubert, assistante maternelle à Brétigny-sur-Orge"
      loading="eager"  
      fetchpriority="high"
-     decoding="async"
-     width="72" 
-     height="54">
-
+     decoding="async">
 </a>
                     </p>
                 </div>
