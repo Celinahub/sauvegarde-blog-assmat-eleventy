@@ -327,6 +327,24 @@ h2, h3 {
 }
  
 
+/* Style de l'icône de flèche vers le haut */
+.scroll-chatbot {
+   position: fixed;
+   bottom: 20px; /* Ajustez la position verticale selon vos besoins */
+   right: 20px; /* Ajustez la position horizontale selon vos besoins */
+   font-size: 24px; /* Taille de l'icône */
+   background-color: #F79927; /* Couleur de fond */
+   color: #fff; /* Couleur de l'icône (blanc) */
+   width: 50px; /* Largeur du cercle */
+   height: 50px; /* Hauteur du cercle */
+   border-radius: 50%; /* Forme arrondie */
+   transition: background-color 0.3s, transform 0.3s; /* Effets de transition */
+   z-index: 999; /* Assurez-vous que l'icône est au-dessus du contenu */
+   text-align: center; /* Centre le texte horizontalement */
+   line-height: 50px; /* Centre l'icône verticalement */
+
+}
+
 
 
 

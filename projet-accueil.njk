@@ -1472,9 +1472,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
     
+<!-- Bouton pour charger le chatbot -->
+<button id="load-chatbot" class="scroll-chatbot">Chatter avec nous</button>
 
-    <!-- Start of HubSpot Embed Code -->
-    <script id="hs-script-loader" async defer src="//js-eu1.hs-scripts.com/144730300.js"></script>
+<script>
+  // Fonction pour charger le script HubSpot
+  function loadChatbot() {
+    const script = document.createElement('script');
+    script.src = "//js-eu1.hs-scripts.com/144730300.js";
+    script.id = "hs-script-loader";
+    script.async = true;
+    script.defer = true;
+    document.body.appendChild(script);
+  }
+
+  // Ajouter l'événement au bouton
+  document.getElementById('load-chatbot').addEventListener('click', function() {
+    loadChatbot();
+    this.style.display = 'none'; // Cache le bouton une fois le script chargé
+  });
+</script>
+
 
 <!-- End of HubSpot Embed Code -->
 
