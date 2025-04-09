@@ -1,10 +1,14 @@
 # Sécurisation des ressources appliquée à tout le site
 / 
   Content-Security-Policy: default-src 'self'; 
-                           script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://static.elfsight.com; 
-                           style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; 
-                           img-src 'self' https://cdn.jsdelivr.net; 
-                           font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com;
+                           script-src 'self' https://cdn.jsdelivr.net https://static.elfsight.com; 
+                           style-src 'self' https://cdn.jsdelivr.net; 
+                           img-src 'self' https://cdn.jsdelivr.net https://www.google.com; 
+                           font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; 
+                           connect-src 'self'; 
+                           object-src 'none'; 
+                           frame-src 'none'; 
+                           upgrade-insecure-requests;
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: no-referrer-when-downgrade
