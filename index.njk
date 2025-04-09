@@ -488,8 +488,7 @@ bodyClass: "bg-white presentation"
     <div class="svg-container">
       
 
-  <link rel="preload" href="{{ '/images/presentation/nuage-introduction.svg' | url }}" as="image">
-
+  <img src="{{ '/images/presentation/nuage-introduction.svg' | url }}" 
      class="nuages-bleus-curvy" 
      alt="Décor nuages"
      loading="eager"  
@@ -504,22 +503,22 @@ bodyClass: "bg-white presentation"
 
 
 
-
-<section id="avis" class="container-fluid-contact py-5"> <!-- Utilisation de container-fluid -->
-
+<section id="avis" class="container-fluid-contact py-5">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <h2 class="google-fiche-avis"><strong>VOS AVIS COMPTENT</strong></h2>
                 <hr class="horizontal-line">
-                <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-                <div class="elfsight-app-e1c8b1af-d1eb-4f3b-abba-dd006fd956c3" data-elfsight-app-lazy></div>
+                
+                <!-- Contenu vide au départ -->
+                <div id="avis-container" style="display:none;">
+                    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+                    <div class="elfsight-app-e1c8b1af-d1eb-4f3b-abba-dd006fd956c3" data-elfsight-app-lazy></div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-
-
 
 
 
@@ -588,6 +587,15 @@ bodyClass: "bg-white presentation"
 
 
 <!-- Autres contenus précédents -->
+
+
+<script>
+  // Fonction qui charge les avis après un délai de 10 secondes
+  setTimeout(function() {
+    // Affiche le contenu des avis
+    document.getElementById('avis-container').style.display = 'block';
+  }, 10000); // 10000 millisecondes = 10 secondes
+</script>
 
 
 
