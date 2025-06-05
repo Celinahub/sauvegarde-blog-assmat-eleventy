@@ -1,19 +1,7 @@
-# Cache les fichiers CSS pendant 1 an
-/css/*
-  Cache-Control: public, max-age=31536000, immutable
+/*
 
-# Cache les fichiers JS pendant 1 an
-/js/*
-  Cache-Control: public, max-age=31536000, immutable
-
-# Cache les images pendant 1 an
-/images/*
-  Cache-Control: public, max-age=31536000, immutable
-
-# Cache les fonts (polices) pendant 1 an
-/fonts/*
-  Cache-Control: public, max-age=31536000, immutable
-
-# Autres ressources comme le fichier Bootstrap
-/bootstrap.min.css
-  Cache-Control: public, max-age=31536000, immutable
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://trusted-cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://trusted-cdn.com; font-src 'self' https://trusted-cdn.com; frame-ancestors 'self';
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
