@@ -1,19 +1,18 @@
-# Cache les fichiers CSS pendant 1 an
-/css/*
-  Cache-Control: public, max-age=31536000, immutable
+/*
+  # Sécurité du contenu – contrôle des sources autorisées
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://trusted-cdn.com; style-src 'self' 'unsafe-inline'; img-src 'self' https://trusted-cdn.com; font-src 'self' https://trusted-cdn.com; frame-ancestors 'self';
 
-# Cache les fichiers JS pendant 1 an
-/js/*
-  Cache-Control: public, max-age=31536000, immutable
+  # Empêche l'inclusion du site dans des iframes externes
+  X-Frame-Options: SAMEORIGIN
 
-# Cache les images pendant 1 an
-/images/*
-  Cache-Control: public, max-age=31536000, immutable
+  # Empêche les navigateurs de deviner le type MIME
+  X-Content-Type-Options: nosniff
 
-# Cache les fonts (polices) pendant 1 an
-/fonts/*
-  Cache-Control: public, max-age=31536000, immutable
+  # Politique de referrer renforcée
+  Referrer-Policy: strict-origin-when-cross-origin
 
-# Autres ressources comme le fichier Bootstrap
-/bootstrap.min.css
-  Cache-Control: public, max-age=31536000, immutable
+  # Désactive l'accès aux permissions sensibles par défaut
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
+
+  # Renforce l'utilisation de HTTPS sur le long terme
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
