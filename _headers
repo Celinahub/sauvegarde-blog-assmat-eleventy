@@ -1,6 +1,8 @@
 /*
   # ✅ Politique de sécurité du contenu complète
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://static.elfsight.com https://unpkg.com https://static.axept.io https://js-eu1.hs-scripts.com https://js-eu1.hscollectedforms.net https://js-eu1.hs-analytics.net https://js-eu1.usemessages.com https://js-eu1.hs-banner.com https://universe-static.elfsightcdn.com 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://core.service.elfsight.com https://client.axept.io; img-src 'self' data:; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; frame-ancestors 'self'
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.jsdelivr.net https://static.elfsight.com https://unpkg.com https://static.axept.io https://js-eu1.hs-scripts.com https://js-eu1.hscollectedforms.net https://js-eu1.hs-analytics.net https://js-eu1.usemessages.com https://js-eu1.hs-banner.com https://universe-static.elfsightcdn.com https://*.hubspot.com https://*.hsforms.com 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://core.service.elfsight.com https://client.axept.io https://*.hubspot.com https://*.hsforms.com; img-src 'self' data:; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; frame-ancestors 'self'; report-uri https://report-to.dev/abcd1234
+
+  Report-To: {"group":"csp-endpoint","max_age":10886400,"endpoints":[{"url":"https://report-to.dev/abcd1234"}]}
 
 
   # ✅ Protection contre l’injection dans des iframes externes
