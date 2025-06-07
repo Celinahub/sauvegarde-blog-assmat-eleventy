@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://static.elfsight.com https://unpkg.com https://static.axept.io https://js-eu1.hs-scripts.com https://js-eu1.hscollectedforms.net https://js-eu1.hs-analytics.net https://js-eu1.usemessages.com https://js-eu1.hs-banner.com https://universe-static.elfsightcdn.com; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; connect-src 'self' https://core.service.elfsight.com https://client.axept.io https://forms-eu1.hscollectedforms.net https://api-eu1.hubspot.com https://api.axept.io; img-src 'self' data: https://forms-eu1.hsforms.com https://track-eu1.hubspot.com; font-src 'self' https://cdn.jsdelivr.net https://fonts.gstatic.com; frame-ancestors 'self';
+  Content-Security-Policy: default-src *; script-src * 'unsafe-inline' 'unsafe-eval'; style-src * 'unsafe-inline'; img-src * data:; connect-src *; font-src *; frame-src *;
   X-Frame-Options: SAMEORIGIN
   X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
