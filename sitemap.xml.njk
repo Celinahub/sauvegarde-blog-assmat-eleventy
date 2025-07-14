@@ -8,17 +8,42 @@ eleventyExcludeFromCollections: true
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-{%- for page in collections.all %}
-  {%- if page.url != "/admin/" and page.url != "/404/" and not page.data.eleventyExcludeFromCollections %}
-  {% set absoluteUrl = page.url | url | absoluteUrl(metadata.url) %}
-  <url>
-    <loc>{{ absoluteUrl }}</loc>
-    {%- if page.date %}
-    <lastmod>{{ page.date | dateToRfc3339 }}</lastmod>
+  
+  {%- for page in collections.all %}
+    {%- if page.url != "/admin/" 
+          and page.url != "/404/" 
+          and page.url != "/google0b7250a45fd279a1/" 
+          and page.url != "/README/"
+          and page.url != "/robots.txt"
+          and not page.data.eleventyExcludeFromCollections %}
+      
+      {% set absoluteUrl = page.url | url | absoluteUrl(metadata.url) %}
+      <url>
+        <loc>{{ absoluteUrl }}</loc>
+        {%- if page.date %}
+        <lastmod>{{ page.date | dateToRfc3339 }}</lastmod>
+        {%- endif %}
+        <priority>
+          {% if page.url == "/" %}1.00
+          {% elseif page.url == "/projet-accueil/" %}1.00
+          {% elseif page.url == "/contact/" %}1.00
+          {% elseif page.url == "/faq/" %}0.80
+          {% elseif page.url == "/blog/" %}0.80
+          {% elseif "/blog/" in page.url %}0.64
+          {% else %}0.80
+          {% endif %}
+        </priority>
+      </url>
     {%- endif %}
-    <priority>{% if page.url == "/" %}1.00{% elseif "/blog/" in page.url %}0.64{% else %}0.80{% endif %}</priority>
+  {%- endfor %}
+
+  
+
+  <!-- 📰 Ajout du flux RSS -->
+  <url>
+    <loc>{{ metadata.url }}rss.xml</loc>
+    <lastmod>{{ currentDate }}</lastmod>
+    <priority>0.50</priority>
   </url>
-  {%- endif %}
-{%- endfor %}
+
 </urlset>
-<!-- Ajout du lien vers le flux RSS -->

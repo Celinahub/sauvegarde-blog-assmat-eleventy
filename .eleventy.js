@@ -57,6 +57,21 @@ module.exports = function(eleventyConfig) {
     author: { name: "Céline Hubert" }
   });
 
+
+ // Ajouter un filtre pour définir une image Open Graph par défaut
+ eleventyConfig.addFilter("defaultOGImage", function(data) {
+  return data.image || "/images/presentation/rpe-bretigny.jpg";
+});
+
+
+
+  // Ajouter les images spécifiques pour chaque page
+  eleventyConfig.addGlobalData("pageImages", {
+    "/projet-accueil/": "/images/presentation/parc-bretigny.jpg",
+    "/": "/images/presentation/rpe-bretigny.jpg"
+  });
+
+
   // Ajouter le filtre absoluteUrl
   eleventyConfig.addFilter("absoluteUrl", function(url) {
     return new URL(url, BASE_URL).toString();
@@ -73,6 +88,10 @@ module.exports = function(eleventyConfig) {
       language: "fr"
     }
   });
+
+eleventyConfig.addGlobalData("currentDate", () => new Date().toISOString());
+
+
 
   // Ajouter le plugin de minification HTML
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
@@ -195,7 +214,6 @@ eleventyConfig.addFilter("truncateWords", function (content, numWords) {
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("google0b7250a45fd279a1.html");
   eleventyConfig.addPassthroughCopy("_redirects");
-  eleventyConfig.addPassthroughCopy("_headers");
 
   // Ajouter des alias pour les layouts
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");
@@ -204,7 +222,7 @@ eleventyConfig.addFilter("truncateWords", function (content, numWords) {
 
   // Retourner la configuration de l'entrée et de la sortie
   return {
-    
+    pathPrefix: process.env.NODE_ENV === 'production' ? '/blog/' : '/',
     dir: {
       input: ".",           // Dossier d'entrée
       includes: "_includes", // Dossier contenant les layouts et widgets
