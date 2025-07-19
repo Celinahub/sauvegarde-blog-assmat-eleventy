@@ -17,7 +17,7 @@
 @font-face {
    font-family: 'Poppins';
    src: url('/fonts/poppins-v22-latin-700.woff2') format('woff2'),
-        url('/fonts/poppins-v22-latin-regular.woff') format('woff');
+        url('/fonts/poppins-v22-latin-700.woff') format('woff');
    font-weight: 700; /* Poids gras */
    font-style: normal;
    font-display: swap;
@@ -26,7 +26,7 @@
 @font-face {
    font-family: 'Poppins';
    src: url('/fonts/poppins-v22-latin-900.woff2') format('woff2'),
-        url('/fonts/poppins-v22-latin-regular.woff') format('woff');
+        url('/fonts/poppins-v22-latin-900.woff') format('woff');
    font-weight: 900; /* Poids très gras */
    font-style: normal;
    font-display: swap;
@@ -34,6 +34,9 @@
 
 /* Définition de la police Finger Paint */
 @font-face {
+
+
+   
    font-family: 'Finger Paint';
    src: url('/fonts/finger-paint-v19-latin-regular.woff2') format('woff2'),
         url('/fonts/finger-paint-v19-latin-regular.woff') format('woff');
@@ -41,7 +44,6 @@
    font-style: normal;
    font-display: swap;
 }
-
 
 /* Appliquer Poppins (poids normal) */
 body {
@@ -66,8 +68,6 @@ h1 {
    font-family: 'Finger Paint', cursive;
    font-weight: 400;
 }
-
-
 
 
 /* Style général du body */
@@ -124,20 +124,8 @@ h2, h3 {
 }
 
 
+
 /* Style PIED DE PAGE */
-
-
-
-
-/* Style du logo rond chez celine */
-.logo-pied-page {
-   height: 170px;
-   width: 170px;
-   margin-top: 25px;
-   margin-bottom: 10px;
-}
-
-/* Style du pied de page */
 .index-footer-section,
 .projet-footer-section,
 .faq-footer-section,
@@ -147,22 +135,18 @@ h2, h3 {
    position: relative; 
    width: 100%; 
    background: #143854; /* Couleur de fond du pied de page */
-
-  
 }
 
-.titre-footer {
-   color: #143854; /* Changez la couleur selon votre préférence */
-   font-size: 1px;
+@media (max-width: 767px) {
+   .index-footer-section {
+       margin-left: 0;
+       padding-left: 0;
+       width: 100%;
+       overflow-x: hidden;
+   }
 }
 
 
-
-.heart-icon {
-   width: 0.8rem; /* Ajustez la taille du SVG */
-   height: 0.8rem; 
-   
- }
 
 
 /* Style de la section bordure rayée au dessus du pied de page */
@@ -191,11 +175,6 @@ h2, h3 {
 }
 
 
-/* Styles spécifiques pour l'espace entre les liens PIED DE PAGE */
-.pied-page-spacer {
-   margin-bottom: 10px; /* Ajoutez de l'espace entre les éléments */
-}
-
 
 
 /* Style pour les horaires d'accueil*/
@@ -223,6 +202,117 @@ h2, h3 {
    font-style: normal;
 }
 
+
+.acces-horaires {
+   margin-top: 20px;   /* Ajuste la marge en haut */
+   margin-bottom: 20px; /* Ajuste la marge en bas */
+}
+
+
+
+/* Styles pour l'icône et le texte des horaires */
+.horaires-footer {
+   display: flex;
+   align-items: flex-start; /* Aligne l'icône avec la première ligne de texte */
+   gap: 8px; /* Espacement entre l'icône et le texte */
+   justify-content: flex-start; /* Aligne tout à gauche par défaut */
+   margin-bottom: 30px;
+}
+
+/* Ajustement pour les petits écrans (mobile) */
+@media (max-width: 767px) {
+   .horaires-footer {
+      justify-content: flex-start; /* Aligne le bloc à gauche sur mobile */
+      align-items: flex-start; /* Garde l'icône et le texte alignés sur le haut du bloc */
+      text-align: left; /* Aligne le texte à gauche */
+   }
+}
+
+
+/* Style de l'icône svg des horaires */
+.icone-horaires {
+   flex-shrink: 0; /* Empêche l'icône de se réduire */
+   width: 40px; /* Ajuste la taille de l'icône */
+   height: auto;
+}
+
+.horaires-text {
+   text-align: left; /* Aligne le texte à gauche */
+   white-space: normal; /* Permet un retour à la ligne naturel */
+}
+
+
+/* Styles spécifiques pour l'espace entre les liens PIED DE PAGE */
+.localisation-pied-page-spacer {
+   margin-bottom: 30px; /* Ajoute de l'espace entre les éléments */
+}
+
+.localisation-footer {
+   display: flex;
+   align-items: center; /* Aligne verticalement l'icône et le texte */
+   gap: 8px; /* Espacement entre l'icône et le texte */
+   justify-content: flex-start; /* Aligne tout à gauche par défaut */
+   margin-bottom: 30px;
+}
+
+/* Ajustement pour les petits écrans */
+@media (max-width: 767px) { 
+   .localisation-footer {
+      justify-content: flex-start; /* Aligne le bloc à gauche sur mobile */
+      align-items: flex-start; /* Garde l'icône et le texte alignés sur le haut du bloc */
+      text-align: left; /* Aligne le texte à gauche */
+   }
+}
+
+/* Style de l'icône svg */
+.icone-localisation {
+   flex-shrink: 0; /* Empêche l'icône de se réduire */
+   width: 40px; /* Ajuste la taille de l'icône */
+   height: auto;
+}
+
+.localisation-text {
+   text-align: left; /* Aligne le texte à gauche */
+   white-space: normal; /* Permet un retour à la ligne naturel */
+}
+
+
+
+
+.liens-utiles {
+   margin-top: 20px;   /* Ajuste la marge en haut */
+   margin-bottom: 20px; /* Ajuste la marge en bas */
+}
+
+
+
+/* Styles pour l'icône et le texte des liens utiles */
+.liens-utiles-footer {
+   display: flex;
+   align-items: flex-start; /* Aligne l'icône avec la première ligne de texte */
+   gap: 8px; /* Espacement entre l'icône et le texte */
+   justify-content: flex-start; /* Aligne tout à gauche par défaut */
+   margin-bottom: 30px;
+}
+
+/* Ajustement pour les petits écrans (mobile) */
+@media (max-width: 767px) {
+   .liens-utiles-footer {
+      justify-content: flex-start; /* Aligne le bloc à gauche sur mobile */
+      align-items: flex-start; /* Garde l'icône et le texte alignés sur le haut du bloc */
+      text-align: left; /* Aligne le texte à gauche */
+   }
+}
+
+/* Style de l'icône svg des liens utiles */
+.icone-liens-utiles {
+   flex-shrink: 0; /* Empêche l'icône de se réduire */
+   width: 40px; /* Ajuste la taille de l'icône */
+   height: auto;
+}
+
+
+
 /* Classe pour les liens utiles */
 .liens-utiles-typo {
    color: #F8F9F6; /* Par exemple, un bleu plus foncé */
@@ -233,15 +323,11 @@ h2, h3 {
    font-style: normal;
 }
 
-
-
-
 /* Alignement du SVG avec le texte des liens */
 .liens-utiles-typo a span {
    vertical-align: middle; /* Aligne le SVG avec le texte */
    margin-right: 5px; /* Espace entre le SVG et le texte */
 }
-
 
 /* Style des liens pied de page*/
 .liens-utiles-typo a {
@@ -253,21 +339,11 @@ h2, h3 {
    color: #9786BD; /* Couleur pour l'effet hover */
 }
 
-
-.align-center {
-   text-align: center;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
+.me-contacter {
+   margin-top: 20px;   /* Ajuste la marge en haut */
+   margin-bottom: 20px; /* Ajuste la marge en bas */
 }
 
-
-/* Style des icônes svg des liens pied de page*/
-.icone-liens {
-   max-height: 15px;
-   vertical-align: middle;
-   margin-right: 5px;
-}
 
 /* Style des icônes svg des liens pied de page*/
 .love-letter {
@@ -276,12 +352,38 @@ h2, h3 {
    margin-right: 5px;
 }
 
+
+
+.suivez-chez-celine {
+   margin-top: 20px;   /* Ajuste la marge en haut */
+   margin-bottom: 20px; /* Ajuste la marge en bas */
+}
+
+
 /* Style des icônes svg des liens pied de page*/
 .social-icons {
    width: 40px; /* Taille de l'icône */
    margin-right: 10px; /* Espacement entre l'icône et le texte */
    vertical-align: middle; /* Alignement vertical */
 }
+
+/* Styles spécifiques pour l'espace entre les liens PIED DE PAGE */
+.pied-page-spacer {
+   margin-bottom: 10px; /* Ajoutez de l'espace entre les éléments */
+}
+
+
+/* Style du logo rond chez celine */
+.logo-pied-page {
+   height: 170px;
+   width: 170px;
+   display: block; /* S'assurer que l'image prend toute la largeur dispo */
+   margin-left: 0; /* S'assurer qu'il n'y a pas de marge gauche automatique */
+   text-align: left; /* Alignement texte si jamais nécessaire */
+   margin-top: 40px; /* Ajuste la marge en haut */
+   margin-bottom: 40px; /* Ajuste la marge en bas */
+}
+
 
 
  /* Styles pour la ligne horizontale de séparation de la faq */
@@ -291,7 +393,11 @@ h2, h3 {
    margin: 20px 0; /* Optional: Add some margin for spacing */
  }
 
-
+ .heart-icon {
+   width: 0.8rem; /* Ajustez la taille du SVG */
+   height: 0.8rem; 
+   
+ }
 
 
  
@@ -326,26 +432,6 @@ h2, h3 {
    margin-right: 0px; /* Ajoutez un espacement entre le logo et le texte */
 }
  
-
-/* Style de l'icône de flèche vers le haut */
-.scroll-chatbot {
-   position: fixed;
-   bottom: 20px; /* Ajustez la position verticale selon vos besoins */
-   right: 20px; /* Ajustez la position horizontale selon vos besoins */
-   font-size: 24px; /* Taille de l'icône */
-   background-color: #F79927; /* Couleur de fond */
-   color: #fff; /* Couleur de l'icône (blanc) */
-   width: 50px; /* Largeur du cercle */
-   height: 50px; /* Hauteur du cercle */
-   border-radius: 50%; /* Forme arrondie */
-   transition: background-color 0.3s, transform 0.3s; /* Effets de transition */
-   z-index: 999; /* Assurez-vous que l'icône est au-dessus du contenu */
-   text-align: center; /* Centre le texte horizontalement */
-   line-height: 50px; /* Centre l'icône verticalement */
-
-}
-
-
 
 
 /* Style de l'icône de flèche vers le haut */
@@ -554,10 +640,6 @@ h2, h3 {
 }
 
 
-
-
-
-
 .me-contacter-decor {
    margin-bottom: 20px; /* Espace en dessous de l'image */
 }
@@ -695,7 +777,6 @@ h2, h3 {
 
 
 
-
 /* Ajustez la taille de l'icône de voiture SVG */
 .btn-custom svg {
    width: 50px; /* Ajustez la largeur de l'icône selon vos besoins */
@@ -724,7 +805,7 @@ h2, h3 {
 
 
 
-/* Style pour la section "portrait" */
+/* Style pour la section "portrait" page index */
 #portrait {
    
    background-color: #F8F9F6;
@@ -732,7 +813,10 @@ h2, h3 {
    padding-top: 300px; /* Ajustez l'espacement en haut de la section pour accueillir l'image SVG */
    overflow: hidden; /* Cachez le débordement de l'image SVG */
    padding-bottom: 80px; /* Hauteur de la bande de couleur */
+   margin-bottom: 0; /* Assurez-vous qu'il n'y ait pas d'espace inutile sous cette section */
 }
+
+
 
 /* Définition du style pour la bande de couleur en bas de la section */
 #portrait::after {
@@ -786,9 +870,6 @@ h2, h3 {
  }
  
 
- 
- 
-
 
 #portrait {
    background-color: #F8F9F6;
@@ -799,19 +880,19 @@ h2, h3 {
 }
 
 
-/* Style de la photo animée et le style de la bordure autour photos animation projet-accueil */
+/* Style de la photo animée et le style de la bordure autour photo portrait celine */
 .bordered-content-presentation-image .presentation-image img {
    max-width: 300px; /* Définissez la largeur maximale souhaitée */
    max-height: 300px; /* Définissez la hauteur maximale souhaitée */
    border-radius: 50%; /* Pour garder la forme ronde */
    margin-top: 20px; /* Espace sur l'image */
    margin-bottom: -50px; /* Espace sous l'image */
-   border: 0.5em solid #F8F9F6; /* Ajoute une bordure autour photos animation projet-accueil */
+   border: 0.5em solid #F8F9F6; /* Ajoute une bordure autour photo portrait celine */
    
  }
 
 
-/* Styles pour positionner l'icône de position sur la photo animée */
+/* Styles pour positionner l'icône de position sur photo portrait celine */
 .presentation-image {
    position: relative;
    display: inline-block; /* Pour empêcher le débordement de l'icône position */
@@ -819,7 +900,7 @@ h2, h3 {
 }
 
 
-/* Style de la photo animée et le style de la bordure autour photos animation projet-accueil */
+/* Style de la photo animée et le style de la bordure autour photo portrait celine */
 @media (max-width: 768px) {
    .bordered-content-presentation-image .presentation-image img {
       max-width: 200px; /* Définissez la largeur maximale souhaitée */
@@ -850,12 +931,6 @@ h2, h3 {
 }
 
 
-
-
-
-
-
-
 /* Style de l'icône position */
 .position-icon-b {
    position: absolute;
@@ -872,10 +947,6 @@ h2, h3 {
        height: 2.5em;
    }
 }
-
-
-
-
 
 
 @media (max-width: 768px) {
@@ -901,11 +972,32 @@ h2, h3 {
 
 
 
+/* Styles pour eviter espace blanc sur mobile entre sections portrait et services-garde-enfants index.njk */
+@media only screen and (max-width: 768px) {
+   .mb-4{
+       margin-top: -30px; /* Ajoutez l'espace nécessaire entre les éléments lorsque la largeur de l'écran est inférieure à 768px */
+     
+      }
+   }
 
 
 
+/* Styles pour la section accompagnement-petite-enfance */
 
-/* Styles pour la rubrique services-garde-enfants */
+#accompagnement-petite-enfance {
+   background-color: #103754;
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+ 
+ 
+ .container-accompagnement {
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+ 
+
+/* Styles pour la rubrique services-garde-enfants page index */
 
 #services-garde-enfants {
    background-color: #103653;
@@ -915,6 +1007,90 @@ h2, h3 {
 }
 
 
+
+
+
+.etoiles {
+  color: #FFD700;       /* jaune doré */
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.btn-action-primary-d:hover .etoiles {
+  color: #FFD700;
+  text-shadow: 0 0 1px #103653, 0 0 2px #103653;
+}
+
+/* Centré par défaut (desktop) */
+.cta-avis {
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box; /* Ajouté ici aussi pour la sécurité */
+}
+
+/* Sur mobile : alignement à gauche avec marges internes */
+@media (max-width: 767px) {
+  .cta-avis {
+    display: block;
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box; /* INDISPENSABLE */
+  }
+}
+
+@media (max-width: 576px) {
+  .btn-action-primary-g {
+    width: 100%;
+    box-sizing: border-box; /* INDISPENSABLE */
+    
+  }
+}
+
+ /* Styles pour le bouton appel à l'action cesu-entreprise page index */
+ .btn-action-primary-g {
+   color: #F8F9F6; /* Couleur du texte */
+   border-color: #F8F9F6; /* Couleur de la bordure */
+   font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    
+   
+  }
+
+
+ .btn-action-primary-g:hover {
+   background-color: #F8F9F6; /* Couleur #F8F9F6 avec 40% de transparence */
+   color: #103653; /* Couleur du texte au survol */
+   outline: none; /* Supprime le contour par défaut */
+   border: 1px solid #103653; /* Ajoute un contour personnalisé */
+ 
+}
+
+
+
+.custom-container {
+   width: 100%;
+   max-width: 1920px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 0;
+   padding-right: 0;
+   box-sizing: border-box;
+ }
+ 
+ @media (min-width: 768px) {
+   .custom-container {
+     padding-left: 15px;
+     padding-right: 15px;
+   }
+ }
+ 
+
+
 @media (max-width: 768px) {
    #services-garde-enfants {
       padding: 0; /* contenu plein ecran sans marges */
@@ -922,53 +1098,111 @@ h2, h3 {
 }
 
 
+/* Styles pour le texte du titre à l'intérieur de la section services-garde-enfants */
+#services-garde-enfants .profile-text h2 {
+    text-align: center; /* Centré par défaut sur desktop */
+    margin-top: -40px; /* Valeur par défaut pour les écrans de taille moyenne et plus grande */
+}
 
-#services-garde-enfants .profile-text {
-   margin-top: -40px; /* Valeur par défaut pour les écrans de taille moyenne et plus grande */
+/* Sur les écrans de taille mobile, aligner à gauche */
+@media (max-width: 767px) {
+    #services-garde-enfants .profile-text h2 {
+        text-align: left; /* Alignement à gauche sur mobile */
+        margin-top: -50px; /* Réduction de la marge typo sur les écrans plus petits */
+        padding-left: 20px;
+      padding-right: 20px;
+    }
+}
+
+
+
+
+
+
+/* Styles pour la rubrique services-garde-enfants page index */
+
+#services-garde-enfants {
+   background-color: #103653;
+   margin-bottom: 0; /* Corrige le margin-bottom négatif */
+   padding: 0; /* contenu plein ecran sans marges */
   
 }
 
-@media (max-width: 767px) { 
-   #services-garde-enfants .profile-text {
-      margin-top: -50px; /* Réduction de la marge typo sur les écrans plus petits */
-      
+.custom-container {
+   width: 100%;
+   max-width: 1920px;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: 0;
+   padding-right: 0;
+   box-sizing: border-box;
+ }
+ 
+ @media (min-width: 768px) {
+   .custom-container {
+     padding-left: 15px;
+     padding-right: 15px;
+   }
+ }
+ 
+
+
+@media (max-width: 768px) {
+   #services-garde-enfants {
+      padding: 0; /* contenu plein ecran sans marges */
    }
 }
 
 
+/* Styles pour le texte du titre à l'intérieur de la section services-garde-enfants */
+#services-garde-enfants .profile-text h2 {
+    text-align: center; /* Centré par défaut sur desktop */
+    margin-top: -40px; /* Valeur par défaut pour les écrans de taille moyenne et plus grande */
+}
+
+/* Sur les écrans de taille mobile, aligner à gauche */
+@media (max-width: 767px) {
+    #services-garde-enfants .profile-text h2 {
+        text-align: left; /* Alignement à gauche sur mobile */
+        margin-top: -50px; /* Réduction de la marge typo sur les écrans plus petits */
+        padding-left: 20px;
+      padding-right: 20px;
+    }
+}
+
+
+
+
 /* Styles spécifiques le titre "CELINE ASSISTANTE MATERNELLE AGREEE" */
+
+.header-container {
+   display: flex;
+   align-items: center; /* Aligner verticalement */
+   justify-content: center; /* Centrer horizontalement */
+   gap: 20px; /* Espacement entre le H1 et le bouton */
+   flex-wrap: wrap; /* Permet le passage à la ligne sur mobile */
+   text-align: center; /* Centrer le texte pour une bonne lisibilité */
+   margin-bottom: 30px; /* Marge en bas du titre */
+}
+
 .poppins-bold-titre-accueil {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-size: 1.5em;
+   color: #103754;
+   margin: 0; /* Supprime les marges par défaut */
+}
+
+
+
+.poppins-bold-sous-titre-accueil {
    font-family: "Poppins", sans-serif;
    font-weight: 700;
    font-style: normal;
    color: #F8F9F6;
-   font-size: 1,5em; /* Taille de la police relative */
-   margin-bottom: 10px; /* Marge en bas du titre */
+   font-size: 1.1em; /* Taille de la police relative */
+   margin-bottom: 30px; /* Marge en bas du titre */
    z-index: 1;
-}
-
-
- /* Animation de fondu pour "à Brétigny-sur-Orge" */
- @keyframes fadeInOutbretigny {
-   0%, 100% {
-       opacity: 0;
-   }
-   25%, 75% {
-       opacity: 1;
-   }
-}
-
-/* Appliquer l'animation "à Brétigny-sur-Orge" avec une durée de 3 secondes, répétition infinie */
-.fade-in-out-bretigny {
-   animation: fadeInOutbretigny 8s infinite;
-   color: #96D2CA; /* Couleur du texte souhaitée */
-   display: inline-block; /* Maintient sur la même ligne */
-   font-family: "Finger Paint", sans-serif;
-   font-weight: 400;
-   font-style: normal;
-   font-size: 1.5em;
-   position: relative; /* Ajout de position relative */
-   margin-bottom: 50px; /* Marge en bas du titre */
 }
 
 
@@ -981,7 +1215,7 @@ h2, h3 {
    font-size: 12px;
    font-style: normal;
    color: #103653;
-   text-align: center; /* Centrer le texte sous le titre */
+   text-align: left; /* le texte a gauche */
 }
  
 
@@ -996,24 +1230,26 @@ h2, h3 {
 
 
 
-/* Styles spécifiques les titres de l'agrément */
+/* Styles spécifiques les titres presentation de services-garde-enfants */
 .introduction-titre {
    color: #103653;
    font-family: "Finger Paint", sans-serif;
    font-weight: 400;
    font-size: 20px;
    font-style: normal;
-   position: relative; /* Ajout de position relative */
+   position: relative;
    z-index: 1;
+   padding-left: 2vw; /* ajuste la valeur si besoin */
 }
 
 
-/* Styles spécifiques pour l'arrière plan oval des titres de l'agrément */
+
+/* Styles spécifiques pour l'arrière plan oval des titres presentation de services-garde-enfants */
 .introduction-titre::after {
    content: '';
    position: absolute;
    bottom: -5px;
-   left: 50%;
+   left: 60%;
    transform: translateX(-50%);
    width: 100%; /* Largeur de l'ovale horizontal */
    height: 100%; /* Hauteur de l'ovale horizontal */
@@ -1021,13 +1257,18 @@ h2, h3 {
    border-radius: 90px / 30px; /* Border radius pour créer la forme d'un ovale */
    z-index: -1;
    overflow: hidden; /* Cacher le contenu qui dépasse de l'ovale */
-   
+     
+}
+
+/* Styles pour rendre l'arrière plan oval responsive */
+@media (max-width: 768px) {
+   .introduction-titre::after {
+      left: 50%;
+   }
 }
 
 
-
-/* Styles pour le bouton appel à l'action */
-
+/* Styles pour le bouton appel à l'action rubriques presentation de services-garde-enfants */
  .btn-action-primary {
   color: #103653; /* Couleur du texte */
   border-color: #103653; /* Couleur de la bordure */
@@ -1035,6 +1276,7 @@ h2, h3 {
    font-weight: 400;
    font-size: 12px;
    font-style: normal;
+   padding: 5px 10px; /* Espacement interne */
   
  }
  
@@ -1046,10 +1288,21 @@ h2, h3 {
   border: 1px solid #103653; /* Ajoute un contour personnalisé */
  }
 
+ @media (max-width: 576px) {
+  
+   .btn-action-primary {
+       width: 100%; /* Les boutons occupent toute la largeur du conteneur */
+   }
+}
+
+
+ 
+
 
 
 .image-frame-services {
    position: relative;
+   
 }
 
 .image-overlay {
@@ -1060,25 +1313,25 @@ h2, h3 {
    height: 100%;
    background-color: rgba(20, 56, 84, 0.0); /* Color overlay */
    z-index: 1; /* Ensure it sits on top of the image */
+   
+   
 }
 
 .services-garde-enfants-text-space {
-   background-color: #F8F9F6; /* Fond similaire à .uni-frame si nécessaire */
+   background-color: #F8F9F6;
    width: 100%;
-   height: 100%; /* S'assure que la hauteur de la zone de texte correspond à celle de l'image */
-   text-align: center;
+   height: 100%;
    display: flex;
-   flex-direction: column; /* Permet de positionner le titre et le texte en colonne */
-   align-items: center;
+   flex-direction: column;
+   align-items: flex-start; /* aligne tout à gauche */
    justify-content: center;
-   padding: 20px; /* Ajustez le padding selon vos besoins */
+   padding: 20px;
    box-sizing: border-box;
+   text-align: left; /* texte aligné à gauche */
+   padding-left: 2vw;
+   padding-right: 2vw;
 }
 
-
-.align-items-center {
-   align-items: center; /* Centre verticalement le contenu de la colonne texte */
-}
 
 .services-garde-enfants-item {
    height: 100%; /* Assure que le contenu remplit toute la hauteur */
@@ -1106,12 +1359,168 @@ h2, h3 {
 
 
 
+/* Styles pour la section garde-enfant-bretigny page projet-accueil */
+
+#garde-enfant-bretigny {
+   background-color: #F8F9F6;
+   padding-left: 10px;
+   padding-right: 10px;
+ }
+ 
+
+.icones-service-container .row {
+   display: flex;
+   flex-wrap: wrap; /* Permet aux éléments de se déplacer sur une nouvelle ligne */
+   justify-content: space-between; /* Aligne les éléments avec de l'espace entre eux */
+ }
+ 
+ .container-service {
+   padding-left: 10px;
+   padding-right: 10px;
+ }
+ 
+
+
+ /* Styles pour eviter le scroll horizontal sur mobile */
+ .icones-service-container {
+   overflow-x: hidden;
+   width: 100%;
+   box-sizing: border-box;
+ }
+ 
+
+
+
+
+/* Styles spécifiques le titre "UNE ADAPTATION REUSSIE" */
+.poppins-bold-service-title {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   color: #103653;
+   font-size: 2.5em; /* Taille de la police relative */
+  
+}
+
+@media (max-width: 768px) {
+   .poppins-bold-service-title {
+     font-size: 1.8em; /* ou une autre taille plus adaptée au mobile */
+   }
+ }
+ 
+
+ .icone-service {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start; /* Aligne tout à gauche */
+   text-align: left;
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+   margin: 1rem;
+   width: 22%;
+ }
+ @media (max-width: 767px) {
+   .icone-service img {
+     margin-bottom: 1rem; /* ou plus si besoin */
+   }
+ }
+
+
+ .icone-service.visible {
+   opacity: 1;
+   transform: translateY(0);
+ }
+ 
+ .icone-service-img {
+   width: 80px;
+   height: auto;
+   margin-bottom: 0.4rem;
+ }
+ 
+ .titre-icone-service {
+   font-weight: bold;
+   font-size: 1.1rem;
+   margin-bottom: 0.5rem;
+   display: block;
+ }
+ 
+
+ .poppins-regular-icone-service {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   font-style: normal;
+   color: #103653;
+   margin-top: 10px; /* Ajoute un espace entre l'icône et le texte */
+}
+.icone-service a {
+   text-decoration: none; /* Supprime le soulignement du lien */
+   color: inherit; /* Garde la couleur du texte normale */
+}
+
+ 
+ /* Pour les petits écrans, chaque icône prendra toute la largeur */
+@media (max-width: 767px) {
+   .icones-service-container .col-12 {
+     flex: 0 0 100%;
+     max-width: 100%;
+   }
+ 
+   .icone-service {
+     width: 100%;
+     margin-left: auto;
+     margin-right: auto;
+     padding-left: 1.5rem; /* marge gauche homogène */
+     padding-right: 1.5rem;
+     align-items: flex-start; /* aligne à gauche */
+     text-align: left; /* texte aligné à gauche */
+   }
+ 
+   .icone-service-img {
+     width: 80px;
+     height: auto;
+     margin-bottom: 0.4rem;
+   }
+ 
+   .poppins-regular-icone-service {
+     margin: 0;
+   }
+ }
+ 
+ 
+.icone-service h3 strong.titre {
+   display: block;
+   margin-bottom: 0.75rem; /* ajuste la valeur selon l’espace souhaité */
+ }
+ 
+
+ .service-icon-wrapper {
+   display: inline-flex;
+   align-items: center;
+ }
+ 
+ .service-icon {
+   height: 24px;
+   width: 24px;
+   object-fit: contain;
+ }
+ 
+ .titre-service {
+   display: inline-block;
+   vertical-align: middle;
+ }
+ 
+
+
 
 
 /* Styles pour la section avis */
 
 #avis {
    background-color: #96D2CA;
+   padding-left: 40px;
+   padding-right: 40px;
  
 }
 
@@ -1120,16 +1529,36 @@ h2, h3 {
    font-size: 1px;
 }
 
+
+#avis-container {
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 8s;
+ }
+ 
+ #avis-container.avis-visible {
+   opacity: 1;
+   visibility: visible;
+ }
+ 
+
 .google-fiche-avis {
    font-family: "Poppins", sans-serif;
-   font-weight: 400;
-   font-size: 25px;
+   font-weight: 700;
    font-style: normal;
    color: #103653;
-   margin-bottom: 20px; /* Espace entre le titre et le texte */
-   margin-top: 0px; /* Espace entre le titre et le texte */
-   text-align: center;
+   font-size: 2.5em; /* Taille de la police relative */
+   margin-top: 20px; /* Marge en haut du titre */
+   margin-bottom: 20px; /* Marge en bas du titre */
+   margin-left: 0px;
+
+
 }
+@media (max-width: 768px) {
+   .google-fiche-avis {
+     font-size: 1.8em; /* ou une autre taille plus adaptée au mobile */
+   }
+ }
 
 
 .horizontal-line {
@@ -1171,41 +1600,200 @@ h2, h3 {
 
 
 
-/* Style section rencontre assistante maternelle bretigny sur orge */
+/* Style section disponibilite assistante maternelle bretigny sur orge */
 
-.rencontre-assistante-maternelle-bretigny-sur-orge {
+#disponibilite-assistante-maternelle-bretigny-sur-orge {
    background-color: #F8F9F6;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   text-align: center;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 20px;
+   padding-bottom: 80px;
 }
 
-.container {
+
+.content-wrapper-rencontre {
+   padding-left: 20px;
+   padding-right: 20px;
+   box-sizing: border-box;
+}
+
+ 
+.container-rencontre {
+   position: relative; /* Pour placer le contenu au-dessus du SVG */
+   z-index: 1; /* Assure que le contenu est au-dessus de l'image */
+   
+}
+
+/* Titres des sous-sections (ex. : Un Mode d'Accueil...) */
+.poppins-regular-disponibilite {
+   font-family: "Poppins", sans-serif;
+   font-weight: 600;
+   font-size: 16px;
+   font-style: normal;
+   color: #103754;
+   text-align: left;
+   margin-bottom: 20px; /* Augmente l'espace sous le titre */
+ }
+ 
+.poppins-regular-informations {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+   text-align: left;
+   margin-bottom: 20px; /* Augmente l'espace sous le titre */
+ }
+
+/* Styles spécifiques pour les Icônes svg des titres de l'agrément */
+.bloc-note {
+width:2.2em; 
+height:2.2em;
+}
+@media (max-width: 768px) {
+.bloc-note {
+width:1.5em; 
+height:1.5em;
+   }
+ }
+
+
+
+.disponibilite-container {
+   display: flex;
+   align-items: center;         /* Garde l'alignement vertical */
+   justify-content: flex-start; /* Aligne horizontalement à gauche */
+   gap: 10px;                   /* Espacement entre les éléments */
+   flex-wrap: wrap;            /* Passe à la ligne sur mobile */
+   text-align: left;           /* Aligne le texte à gauche */
+   margin-bottom: 20px;        /* Marge en bas */
+   
+}
+@media (max-width: 600px) {
+  .disponibilite-container {
+    row-gap: 5px; /* Réduction uniquement sur petit écran */
+  }
+}
+
+
+
+
+.container-enveloppe {
    position: relative; /* Pour placer le contenu au-dessus du SVG */
    z-index: 1; /* Assure que le contenu est au-dessus de l'image */
    padding-top: 8rem; /* Ajustez la valeur pour donner un espace au-dessus du contenu si nécessaire */
+   margin-top: 10px; /* Réduit l'espace au-dessus du contenu suivant */
 }
 
 
+
+/* Styles pour le bouton appel à l'action */
+.btn-action-primary-c {
+   color: #103653; /* Couleur du texte */
+   border-color: #103653; /* Couleur de la bordure */
+   font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+   
+  }
+  
+  
+  .btn-action-primary-c:hover {
+   background-color: rgba(150, 210, 202, 0.4); /* Couleur de fond au survol */
+   color: #103653; /* Couleur du texte au survol */
+   outline: none; /* Supprime le contour par défaut */
+   border: 1px solid #103653; /* Ajoute un contour personnalisé */
+  }
+
+  .left-aligned-btn {
+   text-align: left;
+ 
+ }
+ 
+
 .checked {
    display: inline-block; /* Maintenir le SVG sur la même ligne */
-   width: 3rem; /* Ajustez la taille du SVG */
+   width: 2.5rem; /* Ajustez la taille du SVG */
    height: auto; /* Conserver les proportions */
    margin-right: 10px; /* Espace entre le SVG et le texte */
  }
  
+ @media (max-width: 768px) {
+   .checked {
+      width: 2rem; /* Ajustez la taille du SVG */
+   }
+ }
 
- .titre-rencontrons-nous {
+
+.titre-rencontrons-nous {
    font-family: "Poppins", sans-serif;
-   font-weight: 400;
-   font-size: 25px;
+   font-weight: 700;
    font-style: normal;
    color: #103653;
-   margin-bottom: 20px; /* Espace entre le titre et le texte */
-   margin-top: 0px; /* Espace entre le titre et le texte */
-   text-align: center;
+   font-size: 2.5em; /* Taille de la police relative */
+   margin-top: 20px; /* Marge en haut du titre */
+   margin-bottom: 20px; /* Marge en bas du titre */
+   margin-left: 0px;
+
+
 }
+@media (max-width: 768px) {
+   .titre-rencontrons-nous {
+     font-size: 1.8em; /* ou une autre taille plus adaptée au mobile */
+   }
+ }
+ 
+ .rencontre-icon {
+   width: 24px; /* Ajuste la taille du SVG */
+   height: auto; /* Conserver les proportions */
+   margin-right: 15px; /* Augmente l'espace entre l'icône et le texte */
+   vertical-align: middle; /* Assure un bon alignement de l'icône et du texte */
+ }
+
+ .rencontre-icon-nomade {
+   width: 20px; /* Ajuste la taille du SVG */
+   height: auto; /* Conserver les proportions */
+   margin-right: 15px; /* Augmente l'espace entre l'icône et le texte */
+   vertical-align: middle; /* Assure un bon alignement de l'icône et du texte */
+ }
+
+
+ .liste-avantages {
+   list-style-type: none; /* Supprime les puces */
+   padding: 0;
+   margin-top: 20px; /* Augmente l'espace au-dessus de la liste */
+   margin-bottom: 10px; /* Réduit l'espace sous la liste */
+ }
+ 
+ .liste-avantages li {
+   display: flex;
+   align-items: center; /* Aligne l'icône et le texte sur la même ligne */
+   font-family: "Poppins", sans-serif;
+   font-size: 14px;
+   color: #103754;
+   margin-bottom: 15px; /* Espacement entre les éléments de la liste */
+ }
+
+ 
+ .icon-avantage {
+   width: 1.2rem;
+   height: 1.2rem;
+   margin-right: 10px;
+   vertical-align: middle;
+ }
+ .liste-avantages li {
+   display: flex;
+   align-items: center;
+   font-family: "Poppins", sans-serif;
+   font-size: 14px;
+   color: #103754;
+   margin-bottom: 12px;
+ }
+ .liste-avantages svg {
+   flex-shrink: 0;
+ }
+ 
 
  .poppins-regular-rencontre {
    font-family: "Poppins", sans-serif;
@@ -1215,22 +1803,52 @@ h2, h3 {
    color: #103754;
    margin-bottom: 50px; /* Espace entre le titre et le texte */
    margin-top: 50px; /* Espace entre le titre et le texte */
+   text-align: left; /* Alignement à gauche */
+  
  }
 
 
- .poppins-regular-rdv {
+/* Titres des sous-sections (ex. : Un Mode d'Accueil...) */
+.poppins-regular-atouts {
+   font-family: "Poppins", sans-serif;
+   font-weight: 600;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+   margin-top: 30px;
+   margin-bottom: 10px;
+   text-align: left;
+   margin-bottom: 20px; /* Augmente l'espace sous le titre */
+ }
+ 
+ /* Paragraphes explicatifs sous les titres */
+ .poppins-regular-atouts + p {
    font-family: "Poppins", sans-serif;
    font-weight: 400;
    font-size: 14px;
    font-style: normal;
    color: #103754;
-   display: inline-flex; /* Garde les éléments en ligne */
-   align-items: center; /* Aligne verticalement le texte et le SVG */
+   margin-bottom: 20px;
+   text-align: left;
+ }
+ 
+
+
+/* Paragraphe d’invitation à l’échange (avec enveloppe) */
+.poppins-regular-rdv {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+   display: inline-flex;
+   align-items: center;
  }
  
  .checked-localisation {
    margin-left: 10px; /* Ajoute de l'espace entre le texte et le SVG */
    width: 4.5rem; /* Ajustez la taille du SVG */
+   
  }
  
 
@@ -1240,9 +1858,70 @@ h2, h3 {
 
 /* Style pour la page projet-accueil.html */
 
+/* Style pour la personnalisation widget chatbot */
+.chatbot-launcher {
+   position: fixed;
+   bottom: 20px;
+   right: 20px;
+   font-size: 24px; /* Taille de l'icône */
+   background-color: #F79927;
+   border: none;
+   border-radius: 50%;
+   padding: 0;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+   cursor: pointer;
+   z-index: 1000;
+   transition: transform 0.3s ease, background-color 0.3s ease;
+ 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: visible; /* Laisse le robot dépasser */
+ }
+ 
+ .chatbot-launcher:hover {
+   background-color: #9786BD;
+   transform: scale(1.05);
+ }
+ 
+ .robot-icon {
+   width: 54px; /* Plus grand que le fond rond */
+   height: 54px;
+   transform: translateY(-10px); /* Décale le robot vers le haut pour le faire dépasser */
+ }
+ 
+ 
+
+
+/* Style de l'icône de flèche vers le haut */
+.scroll-to-top {
+   position: fixed;
+   bottom: 20px; /* Ajustez la position verticale selon vos besoins */
+   right: 20px; /* Ajustez la position horizontale selon vos besoins */
+   font-size: 24px; /* Taille de l'icône */
+   background-color: #F79927; /* Couleur de fond */
+   color: #fff; /* Couleur de l'icône (blanc) */
+   width: 50px; /* Largeur du cercle */
+   height: 50px; /* Hauteur du cercle */
+   border-radius: 50%; /* Forme arrondie */
+   transition: background-color 0.3s, transform 0.3s; /* Effets de transition */
+   z-index: 999; /* Assurez-vous que l'icône est au-dessus du contenu */
+   text-align: center; /* Centre le texte horizontalement */
+   line-height: 50px; /* Centre l'icône verticalement */
+
+}
+
+/* Au survol, changez la couleur de la flèche (blanche) */
+.scroll-to-top:hover {
+   background-color: #9786BD; /* Couleur de fond au survol */
+
+  
+}
+
+
 /* Style pour la section "chezceline" */
+
 #chezceline {
-   
    background: #F8F9F6; /* Création du dégradé avec bande réglable */
    position: relative; /* Nécessaire pour l'alignement des pseudo-éléments */
    padding-top: 300px; /* Ajustez l'espacement en haut de la section pour accueillir l'image SVG */
@@ -1262,7 +1941,6 @@ h2, h3 {
    background-color: #98D1CA; /* Couleur de la bande de couleur */
  
 }
-
 
 
 #chezceline .col-md-12 img.fond-curvy {
@@ -1286,19 +1964,21 @@ h2, h3 {
 
 
 
-
-
 /* Ajoutez une marge intérieure à la sections de la page projet-accueil.html */
-.valeur-section,
+
 .team-section,
 .planning-section,
-.securite-section,
-.role-section {
+.chat-enfant-accueil-section,
+.bien-etre-securite-section,
+.coeducation-enfant-famille-section,
+.garde-enfant-bretigny-section,
+.accueil-assistante-maternelle-section {
    padding-left: 20px; /* Ajoutez une marge de 20px à gauche */
    padding-right: 20px; /* Ajoutez une marge de 20px à droite */
    padding-bottom: 40px; /* Ajoutez une marge de 20px en bas */
-   
 }
+
+
 
 /* Style de l'icône position */
 .position-icon {
@@ -1381,279 +2061,131 @@ picture img {
 
 
 
-
-/* Styles pour la section role */
-
-#role {
+ 
+/* Styles pour la section coeducation-enfant-famille */
+ 
+#coeducation-enfant-famille {
    background-color: #98D1CA;
+   padding-left: 20px;
+   padding-right: 20px;
+   padding-top: 80px;
+   padding-bottom: 80px;
+    }
+    
 
-}
 
-.role-assmat img {
-   display: block; /* Pour éviter l'espace réservé au texte sous l'image */
-   width: 100%; /* Pour que l'image occupe toute la largeur de son conteneur */
- }
-
-
-/* Styles spécifiques le titre "BIENVENUE" */
-.poppins-bold-role-title {
+/* Styles spécifiques le titre "POURQUOI ME CHOISIR ?" */
+.poppins-bold-coeducation-title {
    font-family: "Poppins", sans-serif;
    font-weight: 700;
    font-style: normal;
    color: #103653;
-   font-size: 1.5em; /* Taille de la police relative */
-   margin-bottom: 10px; /* Marge en bas du titre */
+   font-size: 2.5em; /* Taille de la police relative */
+   margin-top: 20px; /* Marge en haut du titre */
+   margin-bottom: 20px; /* Marge en bas du titre */
+   margin-left: 0px;
+
 
 }
-
-
-
-/* Styles spécifiques le titre "BIENVENUE chez Céline" */
-.title-container {
-   display: flex;
-   align-items: baseline; /* Aligner sur la ligne de base */
-   margin-bottom: 50px;
-}
-
-
- /* Animation de fondu pour "chez Céline" */
- @keyframes fadeInOutrole {
-   0%, 100% {
-       opacity: 0;
+@media (max-width: 768px) {
+   .poppins-bold-coeducation-title {
+     font-size: 1.8em; /* ou une autre taille plus adaptée au mobile */
    }
-   25%, 75% {
-       opacity: 1;
-   }
-}
+ }
+ 
 
-/* Appliquer l'animation "chez Céline" avec une durée de 3 secondes, répétition infinie */
-.fade-in-out-role {
-   animation: fadeInOuteducative 8s infinite;
-   color: #F8F9F6; /* Couleur du texte souhaitée */
-   display: inline-block; /* Maintient sur la même ligne */
-   font-family: "Finger Paint", sans-serif;
-   font-weight: 400;
+
+/* Styles spécifiques le titre "DOUDOU" */
+.poppins-bold-doudou-title {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
    font-style: normal;
-   font-size: 1em;
-   position: relative; /* Ajout de position relative */
-}
-
-
-.role-item {
-   
-   display: flex;
-   flex-direction: column;
-   text-align: left;
-   padding: 0; /* Supprimer tout rembourrage */
-   margin-bottom: 0px; /* Espacement entre les éléments */
-   
-}
-
-
-
-
-
-/* Styles pour la section securite */
-
-#securite {
-   background-color: #F8F9F6;
-   
-}
-
-
-/* Styles spécifiques le titre "LA SECURITE" */
-.poppins-bold-securite-title {
-font-family: "Poppins", sans-serif;
-font-weight: 700;
-font-style: normal;
-color: #103653;
-font-size: 1.5em; /* Taille de la police relative */
-margin-bottom: 10px; /* Marge en bas du titre */
+   color: #103653;
+   font-size: 1.8em; /* Taille de la police relative */
+   margin-top: 20px; /* Marge en haut du titre */
+   margin-bottom: 20px; /* Marge en bas du titre */
 
 }
-
-
-
-/* Styles spécifiques le titre "LA SECURITE en priorité" */
-.title-container {
-display: flex;
-align-items: baseline; /* Aligner sur la ligne de base */
-margin-bottom: 50px;
-}
-
-
-/* Animation de fondu pour "en priorité" */
-@keyframes fadeInOutsecurite {
-0%, 100% {
-    opacity: 0;
-}
-25%, 75% {
-    opacity: 1;
-}
-}
-
-/* Appliquer l'animation "éducatives" avec une durée de 3 secondes, répétition infinie */
-.fade-in-out-securite {
-animation: fadeInOutsecurite 8s infinite;
-color: #96D2CA; /* Couleur du texte souhaitée */
-display: inline-block; /* Maintient sur la même ligne */
-font-family: "Finger Paint", sans-serif;
-font-weight: 400;
-font-style: normal;
-font-size: 1em;
-position: relative; /* Ajout de position relative */
-}
-
-
-
-/* Styles spécifiques pour l'espace entre les titres "Routine" et "Dejeuner" et le texte */
-.canaille-spacer {
-margin-bottom: 40px; /* Ajoutez de l'espace entre les éléments */
-}
-
-/* Styles spécifiques pour l'espace entre les titres "Routine" et "Dejeuner" et le texte */
-.canaille-title-spacer {
-margin-bottom: 20px; /* Ajoutez de l'espace entre les éléments */
-}
-
-.flex-container {
-display: flex;
-justify-content: center; /* Centrer horizontalement */
-align-items: center; /* Centrer verticalement */
-
-}
-
-
-/* Styles spécifiques le titre "BIENVENUE chez Céline" */
-.title-cat-container {
-display: flex;
-align-items: baseline; /* Aligner sur la ligne de base */
-margin-bottom: 50px;
-margin-top: 50px;
-justify-content: center; /* Centrer horizontalement */
-}
-
-
-
-
-@keyframes fadeInOutcanaille {
-0%, 100% {
-    opacity: 1; /* Complètement visible */
-}
-50% {
-    opacity: 0; /* Complètement transparent */
-}
-}
-
-.fade-in-out-canaille {
-animation: fadeInOutsecurite 8s infinite;
-color: #96D2CA; /* Couleur du texte souhaitée */
-display: inline-block; /* Maintient sur la même ligne */
-font-family: "Finger Paint", sans-serif;
-font-weight: 400;
-font-style: normal;
-font-size: 1em;
-position: relative; /* Ajout de position relative */
-
-}
-
-.securite-item {
-   
-   display: flex;
-   flex-direction: column;
-   text-align: left;
-   padding: 0; /* Supprimer tout rembourrage */
-   margin-bottom: 20px; /* Espacement entre les éléments */
-   
-}
-
-@media only screen and (max-width: 768px) {
-   
-   .securite-item{
-       margin-top: 60px; /* Ajoutez l'espace nécessaire entre les éléments lorsque la largeur de l'écran est inférieure à 768px */
-       margin-bottom: -40px;
+@media (max-width: 768px) {
+   .poppins-bold-doudou-title {
+     font-size: 1.2em; /* ou une autre taille plus adaptée au mobile */
    }
-}
-
-
- .securite-assmat img {
-   display: block; /* Pour éviter l'espace réservé au texte sous l'image */
-   width: 100%; /* Pour que l'image occupe toute la largeur de son conteneur */
  }
 
 
- .doudou {
-   z-index: 1;
-   width: 100%; 
-  
-}
-
-.celine-cat {
-   z-index: 1;
-   width: 70%; 
-}
-
-@media (max-width: 768px) {
-   
-   .celine-cat {
-      width: 100%; 
-   }
-}
-
-
-/* Ordre des images doudou et Canaille sur petits écrans" */
-@media (max-width: 768px) {
-   .order-md-1,
-   .order-md-2 {
-       order: 0;
-   }
-}
-
-
-
-/* Style image doudou marges */
-@media only screen and (max-width: 768px) {
-   
-   .valeur-item {
-       margin-top: 60px; /* Ajoutez l'espace nécessaire entre les éléments lorsque la largeur de l'écran est inférieure à 768px */
-       margin-bottom: 0px;
-   }
-}
-
-
-@media only screen and (max-width: 768px) {
-   .mb-4{
-       margin-top: -30px; /* Ajoutez l'espace nécessaire entre les éléments lorsque la largeur de l'écran est inférieure à 768px */
-     
-      }
-   }
-
-
+ .doudou-icone {
+   margin-right: 10px;
+   vertical-align: middle;
+ }
  
-/* Styles pour la section valeur */
+ .img-doudou {
+   height: 120px;
+   width: auto;
+ }
+ 
+ .doudou-texte {
+   vertical-align: middle;
+ }
+ 
+/* Styles pour le bouton appel à l'action section coeducation-enfant-famille */
+ .btn-action-primary-b {
+   color: #103653; /* Couleur du texte */
+   border-color: #103653; /* Couleur de la bordure */
+   font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+    margin-top: 10px;
+    margin-bottom: 20px;
+   
+  }
 
-/* Style pour la section */
-#valeur {
-   position: relative;
-   padding: 50px 0; /* Ajoute de l'espace autour du contenu */
+
+ .btn-action-primary-b:hover {
+   background-color: rgba(248, 249, 246, 0.4); /* Couleur #F8F9F6 avec 40% de transparence */
+   color: #103653; /* Couleur du texte au survol */
+   outline: none; /* Supprime le contour par défaut */
+   border: 1px solid #103653; /* Ajoute un contour personnalisé */
+ 
 }
+
+
+
+/* Styles pour la section accueil-adaptation-enfant */
+
+#accueil-adaptation-enfant {
+   position: relative;
+   padding: 50px 0;
+   overflow: hidden; /* Évite le débordement horizontal causé par ::before et ::after */
+ 
+}
+
 
 /* Style pour l'image de fond */
-#valeur::before {
+#accueil-adaptation-enfant::before {
    content: '';
    position: absolute;
    top: 0;
    left: 0;
    width: 100%;
    height: 100%;
-   background-image: url('../images/projet-accueil/valeur/motricite-libre-nb.jpg'); /* Image de fond */
-   background-size: cover; /* Pour que l'image couvre toute la section */
-   background-position: center; /* Centre l'image */
-   z-index: -1; /* Placez-le en dessous du contenu */
+   background-image: url('../images/projet-accueil/valeur/motricite-libre-nb.jpg');
+   background-size: cover;        /* Remplit tout le conteneur sans déformation */
+   background-repeat: no-repeat;  /* Évite que l'image se répète */
+   background-position: center center; /* Centre l’image horizontalement et verticalement */
+   background-attachment: scroll; /* Permet le scroll avec le contenu (modifiable selon ton effet désiré) */
+   z-index: -1;
 }
 
+@media (max-width: 768px) {
+   #accueil-adaptation-enfant::before {
+     background-position: top center;
+   }
+ }
+ 
+
 /* Style pour le voile noir */
-#valeur::after {
+#accueil-adaptation-enfant::after {
    content: '';
    position: absolute;
    top: 0;
@@ -1664,115 +2196,479 @@ position: relative; /* Ajout de position relative */
    z-index: -1; /* Placez-le en dessous du contenu */
 }
 
-/* Style pour le cadre avec fond transparent */
-.valeur-item-4 {
-   background-color: transparent; /* Fond transparent */
-   border: 0.3em solid #CBD265; /* Bordure noire de 5 pixels autour du contenu */
-   border-radius: 10px; /* Coins arrondis */
-   padding: 20px; /* Ajoute de l'espace à l'intérieur du cadre */
-}
 
 
-
-/* Styles spécifiques le titre "VALEURS" */
-.poppins-bold-valeur-title {
+/* Styles spécifiques le titre "UNE ADAPTATION REUSSIE" */
+.poppins-bold-adaptation-title {
    font-family: "Poppins", sans-serif;
    font-weight: 700;
    font-style: normal;
    color: #F8F9F6;
-   font-size: 1.5em; /* Taille de la police relative */
-   margin-bottom: 50px; /* Marge en bas du titre */
-
+   font-size: 2.5em; /* Taille de la police relative */
+   margin-top: 20px; /* Marge en haut du titre */
+   margin-bottom: 20px; /* Marge en bas du titre */
 }
 
-/* Styles spécifiques le titre "VALEURS éducatives" */
-.title-container {
+@media (max-width: 768px) {
+   .poppins-bold-adaptation-title {
+     font-size: 1.8em; /* ou une autre taille plus adaptée au mobile */
+   }
+ }
+ 
+
+/* Styles spécifiques pour texte introduction section adaptation */
+.poppins-adaptation {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   color: #F8F9F6;
+   font-size: 14px;
+ }
+
+
+.timeline {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+
+
+/* Styles spécifiques le titre "UNE ADAPTATION REUSSIE" */
+.adaptation-title-container {
    display: flex;
    align-items: baseline; /* Aligner sur la ligne de base */
+   justify-content: flex-start; /* Aligner à gauche */
    margin-bottom: 50px;
 }
 
 
- /* Animation de fondu pour "éducatives" */
- @keyframes fadeInOuteducative {
-   0%, 100% {
-       opacity: 0;
-   }
-   25%, 75% {
-       opacity: 1;
-   }
+
+/* Styles spécifiques les titres de "jour 1, 2, 3 etc" */
+.poppins-bold-jour-title {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   color: #F8F9F6;
+   font-size: 0.9em; /* Taille de la police relative */
+   margin-top: 20px; /* Marge en haut du titre */
+   margin-bottom: 20px; /* Marge en bas du titre */
+
 }
 
-/* Appliquer l'animation "éducatives" avec une durée de 3 secondes, répétition infinie */
-.fade-in-out-educative {
-   animation: fadeInOuteducative 8s infinite;
-   color: #98D1CA; /* Couleur du texte souhaitée */
-   display: inline-block; /* Maintient sur la même ligne */
+@media (max-width: 768px) {
+   .poppins-bold-jour-title {
+     font-size: 0.9em; /* ou une autre taille plus adaptée au mobile */
+   }
+ }
+ 
+/* Styles spécifiques pour les Icônes svg des jours d'adaptation */
+.temps-adaptation {
+   
+   width:2.2em; 
+   height:2.2em;
+}
+
+ .adaptation {
+   display: flex;
+}
+
+
+ 
+
+
+ /* Styles spécifiques pour le texte en gras de la frise caché */
+ .poppins-bold-adaptation-hidden {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   color: #103754;
+   font-size: 14px;
+ }
+
+
+/* Styles spécifiques pour le texte de la frise caché */
+ .poppins-regular-adaptation-hidden {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+ }
+
+
+/* Styles spécifiques de la ligne verticale en pointillé et de l'espacement du contenu */
+.adaptation-info {
+   flex: 1;
+   padding: 20px;
+   background-color: transparent; /* Fond transparent */
+   border-left: 3px dotted #F8F9F6; /* Ligne verticale en pointillé */
+  
+ }
+ 
+ /* Styles pour le positionnement des icônes SVG et les titres de jours sur la frise verticale */
+ .adaptation-icone-horloge {
+   position: absolute; /* Positionnement absolu pour fixer l'icône */
+   left: -45px; /* Ajuste l'icône par rapport à la ligne verticale, modifie si nécessaire */
+   top: 0; /* Aligne l'icône en haut de l'élément */
+   transform: translateY(0); /* Ajuste l'icône de manière fluide, au besoin */
+   font-size: 15px; /* Ajuste la taille de l'icône si nécessaire */
+  
+ }
+ 
+ /* Assurez-vous que le titre du jour s'ajuste correctement */
+ .adaptation-title {
+   margin-left: 10px; /* Assure-toi qu'il y a assez d'espace pour le titre et l'icône */
+   font-size: 16px;
+   position: relative; /* Ajouté pour permettre à l'icône de se positionner par rapport à cet élément */
+ }
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* Style de la flèche  */
+.adaptation-icon {
+   width: 15px;
+   height: 15px;
+   transition: transform 0.3s ease-in-out; /* Animation fluide */
+}
+
+/* Rotation de la flèche quand le bouton est activé */
+.adaptation-btn-toggle.active .adaptation-icon {
+   transform: rotate(90deg); /* Fait tourner la flèche de 90° */
+}
+
+
+/* Styles pour le fond du texte caché */
+ .adaptation-description {
+   background-color: rgba(248, 249, 246, 0.8); /* Couleur de fond #F8F9F6 avec 20% de transparence */
+    padding: 10px;
+    border-radius: 5px;
+    display: none; /* Gardez la description cachée au chargement de la page */
+ }
+ 
+   
+/* Cachez initialement la description texte caché */
+.adaptation-description {
+   display: none;
+}
+
+
+/* Styles pour les boutons "En savoir plus" + et - */
+.adaptation-btn-toggle {
+   background-color: transparent; /* Fond transparent */
+   color: #F8F9F6;
+   border: none;
+   cursor: pointer;
+}
+
+
+
+
+/* Styles pour la section accueil-assistante-maternelle */
+
+#accueil-assistante-maternelle {
+   background-color: #98D1CA;
+
+}
+
+.accueil-assistante-maternelle-assmat img {
+   display: block; /* Pour éviter l'espace réservé au texte sous l'image */
+   width: 100%; /* Pour que l'image occupe toute la largeur de son conteneur */
+ }
+
+
+ .poppins-bold-titre-bienvenue {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-size: 1.5em;
+   color: #103754;
+   margin: 0; /* Supprime les marges par défaut */
+}
+
+
+
+.bienvenue-container {
+   display: flex;
+   align-items: center; /* Aligner verticalement */
+   justify-content: center; /* Centrer horizontalement */
+   gap: 20px; /* Espacement entre le H1 et le bouton */
+   flex-wrap: wrap; /* Permet le passage à la ligne sur mobile */
+   text-align: center; /* Centrer le texte pour une bonne lisibilité */
+   margin-bottom: 30px; /* Marge en bas du titre */
+}
+
+
+
+
+
+
+/* Sous-texte "chez Céline" */
+.finger-paint-accueil-assistante-maternelle {
+   animation: none;
+   color: #F8F9F6;
    font-family: "Finger Paint", sans-serif;
    font-weight: 400;
    font-style: normal;
    font-size: 1em;
-   position: relative; /* Ajout de position relative */
+   display: inline-block;
+   position: relative;
+   margin-top: 0;
+   margin-bottom: 0;
 }
 
-/* Styles spécifiques le texte de la section valeur */
-.poppins-regular-valeur-texte {
+
+
+
+/* Styles pour la section bien-etre-securite */
+
+#bien-etre-securite {
+   background-color: #F8F9F6;
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+
+/* Styles spécifiques le titre "BIEN-ÊTRE ET SÉCURITÉ" */
+.poppins-bold-securite-title {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   color: #103653;
+   font-size: 2.5em; /* Taille de la police relative */
+   margin-top: 20px; /* Marge en haut du titre */
+   margin-bottom: 0px; /* Marge en bas du titre */
+}
+
+@media (max-width: 768px) {
+   .poppins-bold-securite-title {
+     font-size: 1.8em; /* ou une autre taille plus adaptée au mobile */
+   }
+ }
+ 
+
+ .securite-title-container {
+   display: flex;
+   align-items: baseline; /* Aligner les éléments sur la ligne de base */
+   justify-content: flex-start; /* Aligner à gauche */
+   margin-bottom: 40px;  /* Réduit la marge inférieure de 100px à 30px */
+}
+
+ 
+ .securite-icon-wrapper {
+   display: inline-flex;
+   align-items: center; /* Aligne verticalement l'icône et le texte */
+   margin-right: 8px; /* Ajuste l'espace entre l'icône et le texte */
+ }
+ 
+ .bien-etre-icon {
+   width: 50px; /* Taille contrôlée de l'icône */
+   height: 50px;
+   object-fit: contain; /* Assure que l'image conserve ses proportions */
+ }
+
+
+ .securite-card {
+   background-color: #eaf3f0;
+   padding: 20px;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   height: 100%; /* Permet à toutes les cartes de s'étirer sur la même hauteur */
+ }
+ 
+ .securite-card h3 {
+   display: inline-flex;
+   align-items: center;
+ }
+ 
+ 
+
+
+/* Styles pour la section chat-enfant-accueil */
+
+#chat-enfant-accueil {
+   background-color: #F8F9F6;
+   padding-left: 20px;
+   padding-right: 20px;
+}
+
+.align-items-center {
+   align-items: center; /* Centre verticalement le contenu de la colonne texte */
+}
+
+ .card-chat {
+   background-color: #eaf3f0;
+   padding: 20px;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   height: 100%; /* Permet à toutes les cartes de s'étirer sur la même hauteur */
+ }
+ 
+ .card-chat h3 {
+   display: inline-flex;
+   align-items: center;
+ }
+ 
+
+ .chat-title-container {
+   display: flex;
+   align-items: center;
+   justify-content: left; /* Centre horizontalement le contenu */
+   gap: 10px;
+   margin-bottom: 0px;
    font-family: "Poppins", sans-serif;
    font-weight: 400;
    font-size: 14px;
-   color: #F8F9F6;
+   font-style: normal;
+   color: #103754;
+  
+}
+
+/* Styles spécifiques le titre "LE CHAT" */
+.poppins-bold-chat-title {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   color: #103653;
+   font-size: 1.8em; /* Taille de la police relative */
+   margin-top: 20px; /* Marge en haut du titre */
+   margin-bottom: 20px; /* Marge en bas du titre */
+
+}
+@media (max-width: 768px) {
+   .poppins-bold-chat-title {
+     font-size: 1.5em; /* ou une autre taille plus adaptée au mobile */
+   }
  }
 
+ .poppins-regular-chat {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+   text-align: left;
+ }
+
+ .poppins-regular-atout-chat {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+   text-align: left;
+   padding-left: 18px;
+   margin-top: 15px;
+ }
+
+
+/* Style pour l'image dans la section chat */
+.image-chat img {
+   max-width: 100%; /* L'image ne dépasse jamais la largeur de son parent */
+   height: auto;
+   display: block;
+   margin: 0 auto; /* Centrer l'image */
+   width: 250px; /* Taille fixe pour l'image, à ajuster selon la maquette */
+   border-radius: 12px; /* Coins arrondis */
+}
+
+/* Adaptation de l'image sur les écrans mobiles */
+@media (max-width: 768px) {
+   .image-chat img {
+      width: 100%; /* L'image s'ajuste à la largeur de l'écran sur mobile */
+   }
+}
+
+
+ 
 
 /* Styles pour la rubrique ACTIVITES */
 
 #activites {
    background-color: #F9FAF7;
+   padding-left: 0px;
+   padding-right: 0px;
  
 }
 
 
-/* Styles spécifiques le titre "MA JOURNEE" */
+/* Styles pour le bouton appel à l'action rubriques presentation de services-garde-enfants */
+.btn-action-primary-e {
+   color: #103653; /* Couleur du texte */
+   border-color: #103653; /* Couleur de la bordure */
+   font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+  }
+  
+  
+  .btn-action-primary-e:hover {
+   background-color: rgba(150, 210, 202, 0.4); /* Couleur de fond au survol */
+   color: #103653; /* Couleur du texte au survol */
+   outline: none; /* Supprime le contour par défaut */
+   border: 1px solid #103653; /* Ajoute un contour personnalisé */
+  }
+ 
+  .ml-custom {
+   margin-left: 10px;
+ }
+ 
+
+
+
+/* Styles spécifiques le titre "APPRENDRE EN S'AMUSANT" */
+.activites-title-container {
+   display: flex;
+   align-items: baseline; /* Aligner sur la ligne de base */
+   justify-content: flex-start;
+   margin-bottom: 50px;
+   margin-left: 10px;
+}
+
+/* Styles spécifiques le titre "MA JOURNEE DE MINISTRE" */
 .poppins-bold-activites-title {
    font-family: "Poppins", sans-serif;
    font-weight: 700;
    font-style: normal;
    color: #103754;
-   font-size: 1.5em; /* Taille de la police relative */
-   margin-bottom: 50px; /* Marge en bas du titre */
-
+   font-size: 2.5em; /* Taille de la police relative */
+   margin-top: 20px; /* Marge en haut du titre */
+   margin-bottom: 20px; /* Marge en bas du titre */
 }
 
-/* Styles spécifiques le titre "MA JOURNEE de ministre" */
-.title-container {
-   display: flex;
-   align-items: baseline; /* Aligner sur la ligne de base */
-   margin-bottom: 50px;
-}
-
-
- /* Animation de fondu pour "de ministre" */
- @keyframes fadeInOutplay {
-   0%, 100% {
-       opacity: 0;
+@media (max-width: 768px) {
+   .poppins-bold-activites-title {
+     font-size: 1.8em; /* ou une autre taille plus adaptée au mobile */
    }
-   25%, 75% {
-       opacity: 1;
-   }
-}
-
-/* Appliquer l'animation " de ministre" avec une durée de 3 secondes, répétition infinie */
-.fade-in-out-play {
-   animation: fadeInOutMinistre 8s infinite;
-   color: #96D2CA; /* Couleur du texte souhaitée */
-   display: inline-block; /* Maintient sur la même ligne */
-   font-family: "Finger Paint", sans-serif;
-   font-weight: 400;
-   font-style: normal;
-   font-size: 1em;
-   position: relative; /* Ajout de position relative */
-}
-
+ }
+ 
 
 
 .next-button-e,
@@ -1873,7 +2769,7 @@ position: relative; /* Ajout de position relative */
    position: relative;
    border-radius: 5px; /* Assure que les coins sont arrondis */
    overflow: hidden; /* Assure que l'ombre ne dépasse pas le cadre */
-   filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.4)); /* Ajoutez une ombre portée */
+   filter: drop-shadow(0px 4px 8px rgba(0, 0, 0, 0.0)); /* Ajoutez une ombre portée */
    margin-bottom: 20px; /* Espacement entre les éléments */
 }
 
@@ -1913,44 +2809,38 @@ position: relative; /* Ajout de position relative */
    font-weight: 700;
    font-style: normal;
    color: #103754;
-   font-size: 1.5em; /* Taille de la police relative */
-   margin-bottom: 50px; /* Marge en bas du titre */
-
+   font-size: 2.5em; /* Taille de la police relative */
+   margin-top: 20px; /* Marge en haut du titre */
+   margin-bottom: 20px; /* Marge en bas du titre */
 }
+
+@media (max-width: 768px) {
+   .poppins-bold-team-title {
+     font-size: 1.8em; /* ou une autre taille plus adaptée au mobile */
+   }
+ }
+ 
+
+
 
 
 
 /* Styles spécifiques le titre "COLLABORATEURS mes partenaires pour un accueil de qualité" */
-.title-container {
+.team-title-container {
    display: flex;
    align-items: baseline; /* Aligner sur la ligne de base */
    margin-bottom: 50px;
 }
 
-
- /* Animation de fondu pour "mes partenaires pour un accueil de qualité" */
- @keyframes fadeInOutteam {
-   0%, 100% {
-       opacity: 0;
-   }
-   25%, 75% {
-       opacity: 1;
+/* Media Query pour les écrans mobiles (max-width: 767px) */
+@media (max-width: 767px) {
+   .team-title-container {
+     justify-content: center; /* Centre horizontalement */
+     align-items: center; /* Centre verticalement */
+     text-align: center; /* Aligne le texte au centre */
+     margin-bottom: 20px;  /* Optionnel : Ajuste la marge inférieure sur mobile */
    }
 }
-
-/* Appliquer l'animation " de ministre" avec une durée de 3 secondes, répétition infinie */
-.fade-in-out-team {
-   animation: fadeInOutteam 8s infinite;
-   color: #F8F9F6; /* Couleur du texte souhaitée */
-   display: inline-block; /* Maintient sur la même ligne */
-   font-family: "Finger Paint", sans-serif;
-   font-weight: 400;
-   font-style: normal;
-   font-size: 1em;
-   position: relative; /* Ajout de position relative */
-}
-
-
 
 
 
@@ -1966,11 +2856,6 @@ position: relative; /* Ajout de position relative */
 
 @media screen and (max-width: 768px) {
    
-   .poppins-bold-team-title {
-     
-      font-size: 0.8em; /* Taille de la police relative */
-      margin-bottom: 40px; /* Marge en bas du titre */
-   }
 
    .poppins-team-text {
      
@@ -1999,11 +2884,11 @@ position: relative; /* Ajout de position relative */
    margin-bottom: 20px;
    display: flex;
    flex-direction: column;
-   align-items: center;
-   text-align: center;
+   align-items: flex-start;
+   text-align: left;
    border: 0.3em solid #103754; /* Bordure noire de 5 pixels autour du contenu */
    border-radius: 5px; /* Coins arrondis */
-   padding: 0; /* Supprimer tout rembourrage */
+   padding: 0; /* bordures epousent l'image */
    z-index: 2;
    
 }
@@ -2047,6 +2932,7 @@ position: relative; /* Ajout de position relative */
  .team-member p {
    margin: 10px 0 0; /* Ajuster les marges autour du texte */
    padding: 10px; /* Ajouter du rembourrage autour du texte */
+   text-align: left;
  }
  
  .team-frame {
@@ -2097,6 +2983,38 @@ position: relative; /* Ajout de position relative */
    }
 }
 
+/* Styles pour le bouton appel à l'action rubriques presentation de services-garde-enfants */
+.btn-action-primary-f {
+   color: #103653; /* Couleur du texte */
+   border-color: #103653; /* Couleur de la bordure */
+   font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+  }
+  
+  
+  .btn-action-primary-f:hover {
+   background-color: rgba(248, 249, 246, 0.4); /* Couleur #F8F9F6 avec 40% de transparence */
+   color: #103653; /* Couleur du texte au survol */
+   outline: none; /* Supprime le contour par défaut */
+   border: 1px solid #103653; /* Ajoute un contour personnalisé */
+  }
+ 
+  .ml-rpe {
+   margin-left: 10px;
+ }
+ @media only screen and (max-width: 768px) {
+   .ml-rpe {
+       margin-left: 10px; /* Ajoutez l'espace nécessaire entre les éléments lorsque la largeur de l'écran est inférieure à 768px */
+   }
+}
+
+@media only screen and (max-width: 240px) {
+   .ml-rpe {
+       margin-left: 0px; /* Ajoutez l'espace nécessaire entre les éléments lorsque la largeur de l'écran est inférieure à 768px */
+   }
+}
 
 
 
@@ -2114,56 +3032,57 @@ position: relative; /* Ajout de position relative */
 }
 
 
-/* Styles spécifiques de la ligne verticale en pointillé et de l'espacement du contenu */
-.routine-info {
-   flex: 1;
-   padding: 20px;
-   background-color: #97D3CB; /* Couleur de fond pour chaque élément de la frise */
-   border-left: 3px dotted #103754; /* Ligne verticale en pointillé */
-}
-
-
-/* Styles spécifiques le titre "MA JOURNEE" */
+/* Styles spécifiques le titre "MA JOURNEE DE MINISTRE" */
 .poppins-bold-routine-title {
    font-family: "Poppins", sans-serif;
    font-weight: 700;
    font-style: normal;
    color: #103754;
-   font-size: 1.5em; /* Taille de la police relative */
-   margin-bottom: 50px; /* Marge en bas du titre */
+   font-size: 2.5em;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   text-align: left;
+   width: 100%; /* <-- clé ici */
+ }
+ 
 
-}
-
-/* Styles spécifiques le titre "MA JOURNEE de ministre" */
-.title-container {
-   display: flex;
-   align-items: baseline; /* Aligner sur la ligne de base */
-   margin-bottom: 50px;
-}
-
-
- /* Animation de fondu pour "de ministre" */
- @keyframes fadeInOutMinistre {
-   0%, 100% {
-       opacity: 0;
+@media (max-width: 768px) {
+   .poppins-bold-routine-title {
+     font-size: 1.8em; /* ou une autre taille plus adaptée au mobile */
    }
-   25%, 75% {
-       opacity: 1;
-   }
-}
+ }
+ 
 
-/* Appliquer l'animation " de ministre" avec une durée de 3 secondes, répétition infinie */
-.fade-in-out-ministre {
-   animation: fadeInOutMinistre 8s infinite;
-   color: #F8F9F6; /* Couleur du texte souhaitée */
-   display: inline-block; /* Maintient sur la même ligne */
-   font-family: "Finger Paint", sans-serif;
-   font-weight: 400;
-   font-style: normal;
-   font-size: 1em;
-   position: relative; /* Ajout de position relative */
-}
 
+
+/* Styles spécifiques de la ligne verticale en pointillé et de l'espacement du contenu */
+.routine-info {
+   flex: 1;
+   padding: 20px;
+   background-color: transparent; /* Fond transparent */
+   border-left: 3px dotted #103754; /* Ligne verticale en pointillé */
+  
+ }
+ 
+ /* Styles pour le positionnement des icônes SVG et les titres de jours sur la frise verticale */
+
+.routine-icone-frise {
+   position: absolute; /* Positionnement absolu pour fixer l'icône */
+   left: -45px; /* Ajuste l'icône par rapport à la ligne verticale, modifie si nécessaire */
+   top: 0; /* Aligne l'icône en haut de l'élément */
+   transform: translateY(0); /* Ajuste l'icône de manière fluide, au besoin */
+   font-size: 15px; /* Ajuste la taille de l'icône si nécessaire */
+  
+ }
+ 
+ /* Assurez-vous que le titre du jour s'ajuste correctement */
+.routine-title {
+   margin-left: 10px; /* Assure-toi qu'il y a assez d'espace pour le titre et l'icône */
+   font-size: 16px;
+   position: relative; /* Ajouté pour permettre à l'icône de se positionner par rapport à cet élément */
+ }
+
+ 
 
 
 
@@ -2202,19 +3121,31 @@ position: relative; /* Ajout de position relative */
 }
 
 /* Styles spécifiques pour les Icônes svg des titres "Routine" et "Dejeuner" */
-.day {
+.temps-forts {
    
    width:2.5em; 
    height:2.5em;
 }
 
 /* Styles spécifiques pour les Icônes svg des titres "Routine" et "Dejeuner" */
-.day-eat {
+.temps-fort-repas {
    
    width:2.2em; 
    height:2.2em;
 }
 
+
+.modalite {
+   
+   width:2.1em; 
+   height:2.1em;
+}
+
+.vignette-routine {
+   width:2.1em; 
+   height:2.1em;
+ 
+}
  
  /* Styles spécifiques pour les sous titres "Modalité" et "Pictogrammes" */
  .routine {
@@ -2223,12 +3154,6 @@ position: relative; /* Ajout de position relative */
 
 
  
-/* Frise chronologique taille icônes svg et titres */ 
- .routine-title { 
-
-   font-size: 18px;
-  
- }
 
 
 /* Styles spécifiques pour "Modalité" et "Pictogrammes" */
@@ -2335,26 +3260,12 @@ position: relative; /* Ajout de position relative */
 }
 
 
-/* Styles pour le positionnement des icônes svg et les titres "Routine" et "Dejeuner" sur la frise verticale */
- .routine-icon-3,
- .routine-icon-2,
- .routine-icon-1 {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 10px; /* Ajustez la position de l'icône par rapport à la ligne verticale */
- }
 
- .routine-icon-3 i,
- .routine-icon-2 i,
- .routine-icon-1 i {
-   font-size: 20px; /* Ajustez la taille de l'icône */
-}
- 
+
 
 /* Styles pour le fond du texte caché */
  .routine-description {
-   background-color: rgba(255, 255, 255, 0.3); /* Fond blanc transparent */
+   background-color: rgba(255, 255, 255, 0.5); /* Fond blanc transparent */
     padding: 10px;
     border-radius: 5px;
     display: none; /* Gardez la description cachée au chargement de la page */
@@ -2429,13 +3340,55 @@ position: relative; /* Ajout de position relative */
    margin: 0;
 }
 
+
 /* Styles spécifiques de la ligne verticale en pointillé et de l'espacement du contenu */
 .agrement-info {
    flex: 1;
    padding: 20px;
-   background-color: #F8F9F6; /* Couleur de fond pour chaque élément de la frise */
+   background-color: transparent; /* Fond transparent */
    border-left: 3px dotted #103754; /* Ligne verticale en pointillé */
+  
+ }
+ 
+ /* Styles pour le positionnement des icônes SVG et les titres de jours sur la frise verticale */
+
+.agrement-icone-frise {
+   position: absolute; /* Positionnement absolu pour fixer l'icône */
+   left: -45px; /* Ajuste l'icône par rapport à la ligne verticale, modifie si nécessaire */
+   top: 0; /* Aligne l'icône en haut de l'élément */
+   transform: translateY(0); /* Ajuste l'icône de manière fluide, au besoin */
+   font-size: 15px; /* Ajuste la taille de l'icône si nécessaire */
+  
+ }
+ 
+ /* Assurez-vous que le titre du jour s'ajuste correctement */
+.agrement-title {
+   margin-left: 10px; /* Assure-toi qu'il y a assez d'espace pour le titre et l'icône */
+   font-size: 16px;
+   position: relative; /* Ajouté pour permettre à l'icône de se positionner par rapport à cet élément */
+ }
+
+
+
+ .agrement-icon {
+   width: 15px;
+   height: 15px;
+   transition: transform 0.3s ease-in-out; /* Animation fluide */
 }
+
+/* Rotation de la flèche quand le bouton est activé */
+.routine-btn-toggle.active .routine-icon,
+.routine-picto-btn-toggle.active .routine-icon,
+.agrement-btn-toggle.active .agrement-icon, 
+.faq-btn-toggle.active .agrement-icon {
+   transform: rotate(90deg); /* Fait tourner la flèche de 90° */
+}
+
+
+
+
+
+
 
 
 /* Styles spécifiques le titre "MON AGREMENT" */
@@ -2444,39 +3397,26 @@ position: relative; /* Ajout de position relative */
    font-weight: 700;
    font-style: normal;
    color: #103754;
-   font-size: 1.5em; /* Taille de la police relative */
-   margin-bottom: 50px; /* Marge en bas du titre */
+   font-size: 2.5em;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   text-align: left;
+   width: 100%; /* <-- clé ici */
+ }
+ 
 
-}
+@media (max-width: 768px) {
+   .poppins-bold-agrement-title {
+     font-size: 1.8em; /* ou une autre taille plus adaptée au mobile */
+   }
+ }
+
 
 /* Styles spécifiques le titre "MON AGREMENT un accueil personnalisé" */
 .title-container {
    display: flex;
    align-items: baseline; /* Aligner sur la ligne de base */
    margin-bottom: 50px;
-}
-
-
- /* Animation de fondu pour "un accueil personnalisé" */
- @keyframes fadeInOutpersonnel {
-   0%, 100% {
-       opacity: 0;
-   }
-   25%, 75% {
-       opacity: 1;
-   }
-}
-
-/* Appliquer l'animation "un accueil personnalisé" avec une durée de 3 secondes, répétition infinie */
-.fade-in-out-personnel {
-   animation: fadeInOutpersonnel 8s infinite;
-   color: #97D3CB; /* Couleur du texte souhaitée */
-   display: inline-block; /* Maintient sur la même ligne */
-   font-family: "Finger Paint", sans-serif;
-   font-weight: 400;
-   font-style: normal;
-   font-size: 1em;
-   position: relative; /* Ajout de position relative */
 }
 
 
@@ -2530,6 +3470,7 @@ position: relative; /* Ajout de position relative */
    height:2.2em;
 }
 
+
  
  /* Styles spécifiques */
  .agrement {
@@ -2537,14 +3478,6 @@ position: relative; /* Ajout de position relative */
 }
 
 
- 
- 
-/* Frise chronologique taille icônes svg et titres */ 
- .agrement-title { 
-
-   font-size: 18px;
-  
- }
 
 
 /* Styles spécifiques pour "En savoir plus" */
@@ -2593,26 +3526,10 @@ position: relative; /* Ajout de position relative */
 }
 
 
-/* Styles pour le positionnement des icônes svg et les titres de l'agrément sur la frise verticale */
- .agrement-icon-3,
- .agrement-icon-2,
- .agrement-icon-1 {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 10px; /* Ajustez la position de l'icône par rapport à la ligne verticale */
- }
-
- .agrement-icon-3 i,
- .agrement-icon-2 i,
- .agrement-icon-1 i {
-   font-size: 20px; /* Ajustez la taille de l'icône */
-}
- 
 
 /* Styles pour le fond du texte caché */
  .agrement-description {
-   background-color: rgba(151, 211, 203, 0.5); /* La couleur #97D3CB avec 50% de transparence */
+   background-color: #eaf3f0; 
     padding: 10px;
     border-radius: 5px;
     display: none; /* Gardez la description cachée au chargement de la page */
@@ -2634,7 +3551,6 @@ position: relative; /* Ajout de position relative */
    border: none;
    cursor: pointer;
 }
-
 
 /* Page mentions-legales.html */
 
@@ -3288,18 +4204,72 @@ position: relative; /* Ajout de position relative */
    background-color: rgba(20, 56, 84, 0.5); /* Couleur du voile avec opacité */
  }
  
+
+
+
  
+ .header-banniere-container {
+   display: flex;
+   align-items: center; /* Aligner verticalement */
+   justify-content: center; /* Centrer horizontalement */
+   gap: 20px; /* Espacement entre le H1 et le bouton */
+   flex-wrap: wrap; /* Permet le passage à la ligne sur mobile */
+   text-align: center; /* Centrer le texte pour une bonne lisibilité */
+   margin-bottom: 30px; /* Marge en bas du titre */
+   padding-top: 5rem;
+   padding-bottom: 5rem;
+}
+
+
+
+/* Styles pour le bouton appel à l'action rubriques presentation de services-garde-enfants */
+.btn-action-primary-a {
+   color: #F8F9F6; /* Couleur du texte */
+   border-color: #F8F9F6; /* Couleur de la bordure */
+   font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+   
+  }
+  
+  .btn-action-primary-a:hover {
+   background-color: #F8F9F6; /* Couleur #F8F9F6 avec 40% de transparence */
+   color: #103653; /* Couleur du texte au survol */
+   outline: none; /* Supprime le contour par défaut */
+   border: 1px solid #103653; /* Ajoute un contour personnalisé */
+ 
+}
+
+
+
+
+
  /* Styles spécifiques le titre "Le journal de Céline," */
  .poppins-bold-titre-banniere {
    font-family: "Poppins", sans-serif;
    font-weight: 700;
    font-style: normal;
    color: #F8F9F6;
-   font-size: 1,5em; /* Taille de la police relative */
-   margin-bottom: 10px; /* Marge en bas du titre */
+   font-size: 1.5em; /* Taille de la police relative */
+   margin: 0; /* Supprime les marges par défaut */
    z-index: 1;
  }
  
+ .poppins-bold-sous-titre-banniere {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   color: #F8F9F6;
+   font-size: 1.1em; /* Taille de la police relative */
+   margin-bottom: 30px; /* Marge en bas du titre */
+   z-index: 1;
+}
+
+
+
+
+
  
  /* Animation de fondu pour "assistante maternelle à Brétigny-sur-Orge" */
  @keyframes fadeInOutbanniere {
@@ -3371,12 +4341,12 @@ position: relative; /* Ajout de position relative */
    }
  }
  
-
-
-
-
-
-
+/* Quand tu remplaces class="container" par class="container-blog", tu perds toutes ces règles automatiques de Bootstrap */
+ .container {
+   position: relative; /* Pour placer le contenu au-dessus du SVG */
+   z-index: 1; /* Assure que le contenu est au-dessus de l'image */
+   padding-top: 4rem; /* Ajustez la valeur pour donner un espace au-dessus du contenu si nécessaire */
+}
 
 
 
@@ -3667,17 +4637,15 @@ position: relative; /* Ajout de position relative */
 
 
 
-
-
 /* Style pour le bouton liens des fichiers md article*/
 .btn-article {
    text-align: center;
    background-color: #103754; /* Couleur de fond */
    color: #F8F9F6; /* Couleur du texte */
-   border-radius: 8px; /* Coins arrondis */
+   border-radius: 5px; /* Coins arrondis */
    border: none; /* Retirer la bordure par défaut */
-   padding: 10px 20px; /* Espacement interne */
-   font-size: 16px; /* Taille du texte */
+   padding: 5px 10px; /* Espacement interne */
+   font-size: 12px; /* Taille du texte */
    cursor: pointer; /* Changer le curseur au survol */
    transition: background-color 0.3s; /* Transition pour un effet au survol */
   
@@ -3710,7 +4678,7 @@ position: relative; /* Ajout de position relative */
 
 
 
-/* Styles pour le lien de 404 - Page Non Trouvée dans 404.md*/
+/* Styles pour les liens dans les articles.md*/
 .styled-link-article {
    font-family: "Poppins", sans-serif;
    font-weight: bold;
@@ -3729,8 +4697,96 @@ position: relative; /* Ajout de position relative */
    }
  }
 
+ #sommaire {
+   background-color: #f3f4f6;
+   padding: 15px;
+   border-radius: 8px;
+   margin-bottom: 20px;
+}
+
+#sommaire a {
+   display: block; /* Met chaque lien sur une nouvelle ligne */
+   margin-bottom: 5px; /* Espacement entre les liens */
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+/* Styles pour les liens dans les articles.md*/
+.styled-link-sommaire {
+   font-family: "Poppins", sans-serif;
+   font-weight: normal;
+   font-size: 14px;
+   font-style: normal;
+   color: #34556e;
+   text-decoration: none;
+}
+.styled-link-sommaire:hover {
+   text-decoration: underline;
+}
+/* Media query pour écrans plus petits */
+@media (max-width: 768px) {
+   .styled-link-sommaire  {
+      font-size: 14px;
+   }
+ }
+
+ #sommaire h2 {
+   margin-bottom: 10px; /* Réduit l'espace sous le titre */
+   font-size: 18px; /* Réduit la taille du titre */
+   color: #34556e; /* Applique la couleur */
+   font-weight: bold;
+}
 
 
+
+
+
+
+.highlighted-note {
+   border-left: 4px solid #103754; /* couleur Bootstrap primary */
+   padding-left: 1rem;
+   margin: 1rem 0;
+ }
+ 
+ .source-box {
+   border-left: 4px solid #103754;
+   padding-left: 1rem;
+   margin-top: 2rem;
+   background-color: #f9f9f9;
+   font-size: 1rem;
+   line-height: 1.6;
+ }
+ 
+ /* Liens */
+ .source-box a {
+   color: #103754;
+   text-decoration: underline;
+   font-weight: 500;
+   display: inline-block;
+   margin-right: 0.5rem;
+ }
+ 
+ .source-box a:hover {
+   color: #0c2a45;
+   text-decoration: none;
+ }
+ 
+ /* Responsive pour petits écrans */
+ @media (max-width: 576px) {
+   .source-box {
+     font-size: 0.9rem;
+     padding-left: 0.75rem;
+   }
+ 
+   .source-box a {
+     display: block;
+     margin-bottom: 0.5rem;
+   }
+ }
+ 
+ 
 
 
  
@@ -4170,7 +5226,7 @@ position: relative; /* Ajout de position relative */
 
 
 
- /* Style pour la 404 - Page Non Trouvée dans 404.md*/
+ /* Style pour la 404 - Page Non Trouvée dans 404.md*/ */
  
  body.introuvable-page {
    background-color: #96D2CA;
@@ -4343,6 +5399,7 @@ body.rss-info-page {
    display: inline-block; /* Permet d'ajouter du margin */
    margin: 20px 0; /* Ajustez cette valeur pour espacer le lien */
 }
+
 .styled-link-rss:hover {
    text-decoration: underline;
 }
@@ -4356,10 +5413,10 @@ body.rss-info-page {
 
  .button-wrapper {
    display: flex;
-   justify-content: center; /* Centre les boutons horizontalement */
-   align-items: center; /* Centre les boutons verticalement, si nécessaire */
-   flex-wrap: wrap; /* Permet aux boutons de passer à la ligne en cas de manque d'espace */
-   gap: 15px; /* Ajuste l'espacement entre les boutons */
+   justify-content: flex-start; /* Aligne les boutons à gauche */
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 15px;
  }
  
 
@@ -4373,6 +5430,7 @@ body.rss-info-page {
    cursor: pointer; /* Changer le curseur au survol */
    transition: background-color 0.3s; /* Transition pour un effet au survol */
  }
+
  .custom-button:hover {
    background-color: #041427; /* Couleur au survol */
    color: #F8F9F6; /* Couleur du texte */
@@ -4388,7 +5446,7 @@ body.rss-info-page {
    }
 }
  
-/* Dans votre fichier CSS */
+
 .poppins-regular-titre-page-flux-rss {
    font-family: "Poppins", sans-serif;
    font-weight: 700;
@@ -4405,7 +5463,7 @@ body.rss-info-page {
    }
 }
 
-/* Dans votre fichier CSS */
+
 .poppins-regular-sous-titre-page-flux-rss {
    font-family: "Poppins", sans-serif;
    font-weight: 700;
@@ -4430,7 +5488,7 @@ body.rss-info-page {
    color: #103754;
  }
 
- /* Styles spécifiques pour l'espace entre les titres "Routine" et "Dejeuner" et le texte */
+ /* Styles spécifiques pour l'espace entre les titres et le texte */
 .flux-spacer {
    margin-bottom: 80px; /* Ajoutez de l'espace entre les éléments */
 }
@@ -4438,4 +5496,645 @@ body.rss-info-page {
 .rss-icon {
    width: 50px;
    height: 50px;
+}
+
+
+
+
+/* Styles pour la section cesu-entreprise */
+
+#cesu-entreprise {
+   background-color: #103754;
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+ 
+ .icones-cesu-container .row {
+   display: flex;
+   flex-wrap: wrap; /* Permet aux éléments de se déplacer sur une nouvelle ligne */
+   justify-content: space-between; /* Aligne les éléments avec de l'espace entre eux */
+ }
+ 
+ .container-cesu {
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+ 
+
+ /* Styles pour eviter le scroll horizontal sur mobile */
+ .icones-cesu-container {
+   overflow-x: hidden;
+   width: 100%;
+   box-sizing: border-box;
+ }
+ 
+
+/* Styles spécifiques le titre "UNE ADAPTATION REUSSIE" */
+.poppins-bold-cesu-title {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-style: normal;
+   color: #F8F9F6;
+   font-size: 2.5em; /* Taille de la police relative */
+   margin-top: 20px; /* Marge en haut du titre */
+   margin-bottom: 20px; /* Marge en bas du titre */
+}
+
+@media (max-width: 768px) {
+   .poppins-bold-cesu-title {
+     font-size: 1.8em; /* ou une autre taille plus adaptée au mobile */
+   }
+ }
+ 
+ .titre-entreprise {
+   display: block;
+   margin-top: 0.5rem;
+ }
+ 
+
+ .icone-cesu {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start; /* Aligne tout à gauche */
+   text-align: left;
+   opacity: 0;
+   transform: translateY(20px);
+   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+   margin: 1rem;
+   width: 22%;
+ }
+ 
+ .icone-cesu.visible {
+   opacity: 1;
+   transform: translateY(0);
+ }
+ 
+ .icone-cesu-img {
+   width: 80px;
+   height: auto;
+   margin-bottom: 0.75rem; 
+ }
+ @media (max-width: 767px) {
+   .icone-cesu img {
+     margin-bottom: 1rem; /* ou plus si besoin */
+   }
+ }
+ 
+ 
+ .titre-icone-cesu {
+   font-weight: bold;
+   font-size: 1.1rem;
+   margin-bottom: 0.5rem;
+   display: block;
+ }
+ 
+
+ .poppins-regular-icone-cesu {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   font-style: normal;
+   color: #F8F9F6;
+   margin-top: 10px; /* Ajoute un espace entre l'icône et le texte */
+}
+.icone-cesu a {
+   text-decoration: none; /* Supprime le soulignement du lien */
+   color: inherit; /* Garde la couleur du texte normale */
+}
+
+ 
+ /* Pour les petits écrans, chaque icône prendra toute la largeur */
+@media (max-width: 767px) {
+   .icones-cesu-container .col-12 {
+     flex: 0 0 100%;
+     max-width: 100%;
+   }
+ 
+   .icone-cesu {
+     width: 100%;
+     margin-left: auto;
+     margin-right: auto;
+     padding-left: 1.5rem; /* marge gauche homogène */
+     padding-right: 1.5rem;
+     align-items: flex-start; /* aligne à gauche */
+     text-align: left; /* texte aligné à gauche */
+   }
+ 
+   .icone-cesu-img {
+     width: 80px;
+     height: auto;
+     margin-bottom: 0.4rem;
+   }
+ 
+   .poppins-regular-icone-cesu {
+     margin: 0;
+   }
+ }
+ 
+ 
+.icone-cesu h3 strong.titre {
+   display: block;
+   margin-bottom: 0.75rem; /* ajuste la valeur selon l’espace souhaité */
+ }
+ 
+
+ 
+ .titre {
+   display: inline-block;
+   vertical-align: middle;
+ }
+ 
+
+ /* Styles pour le bouton appel à l'action cesu-entreprise page index */
+ .btn-action-primary-d {
+   color: #F8F9F6; /* Couleur du texte */
+   border-color: #F8F9F6; /* Couleur de la bordure */
+   font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+    margin-top: 10px;
+    margin-bottom: 20px;
+   
+  }
+
+
+ .btn-action-primary-d:hover {
+   background-color: #F8F9F6; /* Couleur #F8F9F6 avec 40% de transparence */
+   color: #103653; /* Couleur du texte au survol */
+   outline: none; /* Supprime le contour par défaut */
+   border: 1px solid #103653; /* Ajoute un contour personnalisé */
+ 
+}
+
+
+
+
+/* Styles pour la page simulateur-cout-creche-assistante-maternelle */
+
+
+/* Styles pour la section simulateur-reforme-cmg-assmat-creche */
+ #simulateur-reforme-cmg-assmat-creche {
+   background: #98D1CA; /* Création du dégradé avec bande réglable */
+   position: relative; /* Nécessaire pour l'alignement des pseudo-éléments */
+   padding-top: 300px; /* Ajustez l'espacement en haut de la section pour accueillir l'image SVG */
+   overflow: hidden; /* Cachez le débordement de l'image SVG */
+   padding-bottom: 80px; /* Hauteur de la bande de couleur */
+}
+
+#simulateur-reforme-cmg-assmat-creche .col-md-12 img.fond-curvy {
+   position: absolute;
+   width: 100%;
+   top: 100px;
+   left: 0;
+   right: 0;
+   margin: 0;
+   z-index: 1;
+}
+
+#simulateur-reforme-cmg-assmat-creche .fond-curvy {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: -1; /* Assurez-vous que l'image SVG est derrière le contenu */
+}
+
+
+.reforme-cmg-container {
+   display: flex;
+   align-items: center; /* Aligner verticalement */
+   justify-content: center; /* Centrer horizontalement */
+   gap: 20px; /* Espacement entre le H1 et le bouton */
+   flex-wrap: wrap; /* Permet le passage à la ligne sur mobile */
+   text-align: center; /* Centrer le texte pour une bonne lisibilité */
+   margin-bottom: 30px; /* Marge en bas du titre */
+}
+
+
+.poppins-bold-titre-reforme-cmg {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-size: 1.5em;
+   color: #103754;
+   margin: 0; /* Supprime les marges par défaut */
+}
+
+
+
+/* Styles pour la section comparer-creche-assistante-maternelle */
+#comparer-creche-assistante-maternelle {
+   background-color: #F8F9F6;
+   padding-left: 10px;
+   padding-right: 10px;
+ }
+
+ .comparatif-card {
+   background-color: #eaf3f0;
+   padding: 20px;
+   border-radius: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   height: 100%; /* Permet à toutes les cartes de s'étirer sur la même hauteur */
+ }
+ 
+ .comparatif-card h3 {
+   display: inline-flex;
+   align-items: center;
+ }
+ 
+ 
+ .comparatif-icon-wrapper {
+   display: inline-flex;
+   align-items: center; /* Aligne verticalement l'icône et le texte */
+   margin-right: 8px; /* Ajuste l'espace entre l'icône et le texte */
+ }
+ 
+ .poppins-regular-comparatif {
+   font-family: "Poppins", sans-serif;
+   font-weight: 400;
+   font-size: 14px;
+   font-style: normal;
+   color: #103754;
+   text-align: left;
+   padding-left: 18px;
+   margin-top: 15px;
+ }
+
+
+
+#barometre {
+  height: 80px;
+  position: relative;
+}
+
+#curseur {
+  position: absolute;
+  top: -15px; /* position au-dessus des blocs */
+  font-size: 1.5rem;
+  transition: left 0.5s ease;
+  z-index: 5;
+}
+
+
+.poppins-regular-simulateur {
+   font-family: "Poppins", sans-serif;
+   font-weight: 700;
+   font-size: 25px;
+   font-style: normal;
+   color: #103754;
+   margin-bottom: 0px; /* Espace entre le titre et le texte */
+ }
+
+
+ /* Styles de typo pour les champs du simulateur */
+.poppins-regular-simucmg {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: normal;
+  color: #103754;
+}
+
+ .idee-icon {
+   width: 80px; /* Taille contrôlée de l'icône */
+   height: 80px;
+   object-fit: contain; /* Assure que l'image conserve ses proportions */
+ }
+
+.poppins-regular-comparatif li:first-child {
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1.5em;
+  }
+
+
+
+/* Styles de base pour les champs du simulateur */
+.simu-control {
+   width: 100%; /* Remplit le conteneur */
+   border: none;
+   border-bottom: 2px solid #103653; /* Couleur par défaut */
+   border-radius: 0; /* Pas de coins arrondis */
+   outline: none; /* Pas de bordure au focus */
+   padding: 10px 0; /* Espace intérieur du champ */
+   font-family: "Poppins", sans-serif;
+   background-color: #F8F9F6;
+   color: #103653; /* Couleur du texte */
+   transition: all 0.2s ease; /* Pour une transition fluide */
+}
+
+/* Quand le champ est en focus ou non vide, déplace le label vers le haut */
+.simu-control:focus + .floating-label,
+.simu-control:not(:placeholder-shown) + .floating-label {
+   top: -20px; /* Position du label lorsqu'il flotte */
+   font-size: 12px; /* Taille du texte réduite */
+   color: #103653; /* Couleur du label */
+}
+
+
+
+/* Style pour le champ de saisie lorsqu'il est en focus */
+.simu-control:focus {
+   border-bottom-color: #103653; /* Enlève la couleur de la ligne en focus */
+   outline: none; /* Enlève également l'encadrement bleu du focus */
+   box-shadow: none; /* Enlève également toute ombre portée (shadow) */
+}
+
+/* Effet pour le texte lorsqu'il y a du contenu (non vide) */
+.simu-control:not(:placeholder-shown) {
+   color: #103653; /* Couleur du texte quand du contenu est saisi */
+ }
+
+
+
+
+
+
+/* Styles de base pour les champs AUTOMATIQUES du simulateur */
+.simu-auto-control {
+   width: 100%; /* Remplit le conteneur */
+   border: none;
+   border-bottom: 2px solid #3b5c6e; /* Couleur par défaut */
+   border-radius: 0; /* Pas de coins arrondis */
+   outline: none; /* Pas de bordure au focus */
+   padding: 10px 0; /* Espace intérieur du champ */
+   font-family: "Poppins", sans-serif;
+   background-color: #eaf3f0;
+   color: #3b5c6e; /* Couleur du texte */
+   transition: all 0.2s ease; /* Pour une transition fluide */
+}
+
+/* Quand le champ est en focus ou non vide, déplace le label vers le haut */
+.simu-auto-control:focus + .floating-label,
+.simu-auto-control:not(:placeholder-shown) + .floating-label {
+   top: -20px; /* Position du label lorsqu'il flotte */
+   font-size: 12px; /* Taille du texte réduite */
+   color: #3b5c6e; /* Couleur du label */
+}
+
+/* Style pour le champ de saisie lorsqu'il est en focus */
+.simu-auto-control:focus {
+   border-bottom-color: #3b5c6e; /* Enlève la couleur de la ligne en focus */
+   outline: none; /* Enlève également l'encadrement bleu du focus */
+   box-shadow: none; /* Enlève également toute ombre portée (shadow) */
+}
+
+/* Effet pour le texte lorsqu'il y a du contenu (non vide) */
+.simu-auto-control:not(:placeholder-shown) {
+   color: #3b5c6e; /* Couleur du texte quand du contenu est saisi */
+ }
+
+
+
+
+
+ /* Styles personnalisés pour le background des champs lors de la saisie sur simulateur */
+.styled-input {
+  background-color: #FDFCF7; /* Couleur du fond normale */
+  border: none;
+  border-bottom: 2px solid #103653;
+  border-radius: 0;
+  outline: none;
+  box-shadow: none;
+  padding: 10px 0;
+  color: #103653;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.styled-input:focus {
+  background-color: #FDFCF7 !important; /* Force la couleur même au focus */
+  border-bottom: 2px solid #103653;
+  outline: none;
+  box-shadow: none;
+}
+
+/* Styles personnalisés pour le background du champs select lors du choix des âges sur simulateur */
+.styled-select {
+  background-color: #FDFCF7;
+  color: #103653;
+  border: none;
+  border-bottom: 2px solid #103653;
+  border-radius: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 10px 0;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  box-shadow: none;
+}
+
+.styled-select:focus {
+  background-color: #FDFCF7;
+  border-bottom: 2px solid #103653;
+  outline: none;
+  box-shadow: none;
+}
+
+
+/* Bouton personnalisé */
+.custom-btn {
+  background-color: #103754;
+  border: none;
+  color: #F8F9F6;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.custom-btn:hover {
+  background-color: #0b2a3d; /* Légère variation au hover */
+  color: #F8F9F6;
+}
+
+/* Radios + labels en style cohérent */
+.form-check-input:checked {
+  background-color: #103754;
+  border-color: #103754;
+}
+
+.form-check-input:focus {
+  box-shadow: 0 0 0 0.15rem rgba(16, 55, 84, 0.3);
+}
+
+.form-check-label {
+  color: #103754;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+}
+
+
+/* Centrer l'icône SVG */
+.curseur-tetine {
+   width: 110px; /* Ajustez la largeur de l'icône selon vos besoins */
+   height: auto; /* Maintient le rapport hauteur-largeur */
+   position: absolute;
+   top: -25px;
+   transform: translateX(-50%);
+
+}
+ /* Pour les petits écrans, chaque icône prendra toute la largeur */
+@media (max-width: 767px) {
+   .curseur-tetine {
+   width: 80px; /* Ajustez la largeur de l'icône selon vos besoins */
+   top: -10px;
+   }
+   }
+
+
+
+ .bullet-dot {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 8px;
+  background-color: #666; /* couleur par défaut */
+}
+
+.bullet-orange {
+  background-color: #F79927; /* orange */
+}
+
+.bullet-green {
+  background-color: #d8dd8e; /* vert pâle comme demandé */
+}
+
+ 
+
+.result-profil-1 {
+  background-color: #eaf3f0;
+  color: #103754;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  padding: 1rem;
+}
+
+.result-profil-2 {
+  background-color: #efedf2;
+  color: #103754;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  padding: 1rem;
+}
+
+
+.result-profil-3 {
+  background-color: #fef4ea;
+  color: #103754;
+  border: 1px solid #dee2e6;
+  border-radius: 0.375rem;
+  padding: 1rem;
+}
+
+/* Styles correction fond colore des resultats ajuste sur mobile */
+@media (max-width: 767px) {
+  .result-profil-1,
+  .result-profil-2,
+  .result-profil-3 {
+    padding: 2.75rem; /* ou même 0.5rem */
+  }
+  .recap-saisie {
+    padding: 6px;
+    margin-bottom: 8px;
+  }
+}
+
+
+
+
+/* Styles personnalisés pour la section exemples-cout-reel-assistante-maternelle */
+#exemples-cout-reel-assistante-maternelle {
+   background-color: #96D2CA;
+   padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 20px;
+   padding-bottom: 80px;
+ }
+
+ .exemple-container {
+   display: flex;
+   align-items: flex-start;
+   justify-content: left; /* Centrer horizontalement */
+   gap: 20px; /* Espacement entre le H1 et le bouton */
+   flex-wrap: wrap; /* Permet le passage à la ligne sur mobile */
+   text-align: center; /* Centrer le texte pour une bonne lisibilité */
+   margin-bottom: 30px; /* Marge en bas du titre */
+}
+
+
+/* Styles pour la section comparer-creche-assistante-maternelle */
+#calculs-automatiques-assistante-maternelle {
+   background-color: #F8F9F6;
+   padding-left: 10px;
+   padding-right: 10px;
+ }
+
+.recap-saisie {
+  margin-bottom: 6px;
+  padding: 4px 8px;
+  page-break-inside: avoid; /* pour éviter un saut de page dans le bloc */
+}
+.recap-saisie h3 {
+  margin-bottom: 2px;
+  font-size: 1.1rem;
+}
+.recap-saisie li {
+  margin-bottom: 2px;
+  font-size: 0.95rem;
+}
+
+.recap-saisie {
+  page-break-inside: avoid;
+  break-inside: avoid;
+  display: block;
+}
+
+
+.anti-coupure {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  display: block;
+}
+
+
+
+
+/* Style pour les boutons de la simulation*/
+.btn-simu {
+   text-align: center;
+   background-color: #103754; /* Couleur de fond */
+   color: #F8F9F6; /* Couleur du texte */
+   border-radius: 5px; /* Coins arrondis */
+   border: none; /* Retirer la bordure par défaut */
+   padding: 5px 10px; /* Espacement interne */
+   font-size: 16px; /* Taille du texte */
+   cursor: pointer; /* Changer le curseur au survol */
+   transition: background-color 0.3s; /* Transition pour un effet au survol */
+  
+}
+
+.btn-simu:hover {
+   background-color: #041427; /* Couleur au survol */
+   color: #F8F9F6; /* Couleur du texte */
+}
+
+@media (max-width: 576px) {
+   .btn-simu-wrapper {
+       flex-direction: column; /* Aligne les boutons verticalement */
+       width: 100%; /* Assure que le conteneur occupe toute la largeur */
+   }
+   
+   .btn-simu {
+       width: 100%; /* Les boutons occupent toute la largeur du conteneur */
+   }
 }
