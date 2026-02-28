@@ -1,6 +1,6 @@
 [build]
   publish = "_site"                # Dossier de sortie généré par Eleventy
-  command = "npm run build"  # Assure la génération du CSS minifié
+  command = "eleventy"             # Commande pour générer le site
   node_version = "20.10.0"
 
 [dev]
@@ -24,27 +24,49 @@
   to = "/404.html"                 # Page 404 personnalisée
   status = 404                     # Code de statut HTTP
 
-[[redirects]]
-  from = "/contact.html"
-  to = "/contact/"
-  status = 301
-  force = true
-
-[[redirects]]
-  from = "/contact/contact/"
-  to = "/contact/"
-  status = 301
-  force = true
 
 
 
-# Configuration des en-têtes HTTP
+# =========================
+# CACHE STRATEGY (OPTIMISÉ ELEVENTY)
+# =========================
+
+# HTML → toujours revalider
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# CSS
 [[headers]]
   for = "/*.css"
   [headers.values]
-    Cache-Control = "max-age=31536000, immutable"
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# JS
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Images
+[[headers]]
+  for = "/*.(jpg|jpeg|png|gif|svg|webp|avif)"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Fonts
+[[headers]]
+  for = "/*.woff2"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# =========================
+# SECURITE LEGERE
+# =========================
 
 [[headers]]
-  for = "/*.(jpg|jpeg|png|gif|svg|webp)"
+  for = "/*"
   [headers.values]
-    Cache-Control = "max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
