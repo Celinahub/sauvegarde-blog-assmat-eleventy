@@ -3,100 +3,70 @@ layout: layouts/base.njk
 bodyClass: "blog-posts-page"
 ---
 
-
-
-<section id="contenu-article">
-
-
+<div id="contenu-article">
 <article class="container-article my-4 visuel-content">
 
-<h1 class="poppins-regular-titre-article text-center">{{ title }}</h1>
+  <h1 class="poppins-bold-titre-h1 text-center">{{ title }}</h1>
 
-<div class="meta-info">
-   <p>{{ category }} - {{ date | date("dd MMMM yyyy") }}</p>
+  <div class="meta-info">
+  <p>
+    {{ category }} - {{ date | date("dd MMMM yyyy") }}
+    {% if lastModified and lastModified != date %}
+      <br><small>(Mis à jour: {{ lastModified | date("dd MMMM yyyy") }})</small>
+    {% endif %}
+  </p>
 </div>
 
 
-<div class="content-wrapper"> <!-- Nouveau conteneur pour l'image et le texte -->
-<img src="{{ featuredImage | url }}" alt="{{ imageAlt }}" class="img-fluid mx-auto d-block">
+  <div class="content-wrapper">
+    {% image featuredImage, imageAlt, '(min-width: 1024px) 100vw, (min-width: 768px) 75vw, 50vw' %}
 
-<!-- Boutons de partage -->
-<div class="d-flex justify-content-between align-items-center mt-3">
-    
-
-    <!-- Onglet Partager -->
-    <div class="dropdown share-dropdown">
+    <!-- Boutons de partage -->
+    <div class="d-flex justify-content-between align-items-center mt-3">
+      <div class="dropdown share-dropdown">
         <button class="btn btn-light dropdown-toggle" type="button" id="dropdownShareButton" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="{{ '/images/blog/share-icon.svg' | url }}" alt="Partager" class="me-2">
-            Partager
+          <img src="{{ '/images/blog/share-icon.svg' | url }}" alt="Partager" class="me-2">
+          Partager
         </button>
-
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownShareButton">
-           
-
-
-    <li>
-    <!-- Facebook -->
-  <a class="dropdown-item" 
-   href="https://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url | urlencode }}" 
-   target="_blank">
-    <img src="{{ '/images/blog/social-facebook-bretigny.svg' | url }}" alt="Facebook" class="me-2">
-    Facebook
-</a>
-</li>
-
-
-
-<li>
-  <!-- LinkedIn -->
-  <a class="dropdown-item" 
-     href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url | urlencode }}&title={{ page.title | urlencode }}" 
-     target="_blank">
-     <img src="{{ '/images/blog/linkedin-bretigny.svg' | url }}" alt="LinkedIn" class="me-2">
-     LinkedIn
-  </a>
-</li>
-
-
-
-
-            <li>
- <button class="dropdown-item" data-url="{{ page.url | absoluteUrl }}" onclick="copyLink(this)">
-                <img src="{{ '/images/blog/lien-article-bretigny.svg' | url }}" alt="Copier le lien" class="me-2">
-                Copier le lien
+          <li>
+            <a class="dropdown-item" href="https://www.facebook.com/sharer.php?u={{ site.url }}{{ page.url | urlencode }}" target="_blank">
+              <img src="{{ '/images/blog/social-facebook-bretigny.svg' | url }}" alt="Facebook" class="me-2">Facebook
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url | urlencode }}&title={{ page.title | urlencode }}" target="_blank">
+              <img src="{{ '/images/blog/linkedin-bretigny.svg' | url }}" alt="LinkedIn" class="me-2">LinkedIn
+            </a>
+          </li>
+          <li>
+            <button class="dropdown-item" onclick="copyLink(this)">
+              <img src="{{ '/images/blog/lien-article-bretigny.svg' | url }}" alt="Copier le lien" class="me-2">
+              Copier le lien
             </button>
-            </li>
-
+          </li>
         </ul>
+      </div>
     </div>
-</div>
 
-
-
-
-
-
-
-
-    
-
-    <div class="article-content">
-        {{ content | safe }}
+    <div class="poppins-regular-balise-p">
+      {{ content | safe }}
     </div>
-    </div> <!-- Fin du conteneur -->
+  </div>
 </article>
 
-
-<!-- Ajout du JSON-LD pour le référencement -->
+<!-- JSON-LD pour référencement optimisé -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Article",
-  "headline": "{{ title }}",
-  "image": "{{ image }}",
-  "datePublished": "{{ date }}",
-  "dateModified": "{{ date }}",
-  "description": "{{ description }}",
+  "@type": "BlogPosting",
+  "headline": "{{ title | truncate(110) | safe }}",
+  "url": "{{ url | default(site.url ~ page.url) | replace('#gsc.tab=0','') }}",
+  "image": "{{ site.url }}{{ featuredImage | safe }}",
+  "description": "{{ description | safe }}",
+  "datePublished": "{{ date | dateToRfc3339 }}",
+  "dateModified": "{{ lastModified | dateModified | default(date | dateToRfc3339) }}",
+  "articleSection": "{{ category | safe }}",
   "author": {
     "@type": "Person",
     "name": "Céline Hubert"
@@ -104,52 +74,42 @@ bodyClass: "blog-posts-page"
   "publisher": {
     "@type": "Organization",
     "name": "Chubert Assmat Brétigny Blog",
-    "url": "https://chubert91assmat.netlify.app/"
+    "url": "https://celine-assmat-bretigny.fr/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://celine-assmat-bretigny.fr/images/presentation/rpe-bretigny.jpg"
+    }
   },
-  "keywords": [{% for tag in tags %}"{{ tag }}"{% if not loop.last %}, {% endif %}{% endfor %}],
+  "keywords": "{{ tags | join(', ') }}",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://chubert91assmat.netlify.app/article/{{ slug }}"
+    "@id": "{{ url | default(site.url ~ page.url) | replace('#gsc.tab=0','') }}"
   }
 }
 </script>
 
 
- 
+<!-- Bouton de retour -->
+<div class="back-button">
+  <a href="javascript:history.back()" class="btn-back">
+    <img src="{{ '/images/blog/car-demi-tour-svgrepo-com.svg' | url }}" alt="Retour" class="back-icon">
+  </a>
+</div>
 
-
-
-
-
-
-<!-- Bouton de retour à la fin de l'article -->
-  <div class="back-button">
-    <a href="javascript:history.back()" class="btn-back">
-      <img src="{{ '/images/blog/car-demi-tour-svgrepo-com.svg' | url }}" alt="Retour" class="back-icon">
-    
-    </a>
-  </div>
-
-
-</section> <!-- Fin de la section du contenu du l'article-->
-
-
-
+</div>
 
 <script>
-    function copyLink() {
-        var tempInput = document.createElement("input");
-        tempInput.style.position = "absolute";
-        tempInput.style.left = "-1000px"; 
-        document.body.appendChild(tempInput);
-        
-        tempInput.value = window.location.href; 
-        tempInput.select();
-        document.execCommand("copy");
-        document.body.removeChild(tempInput);
-        
-        alert("Lien copié dans le presse-papier !");
-    }
+  function copyLink() {
+    var tempInput = document.createElement("input");
+    tempInput.style.position = "absolute";
+    tempInput.style.left = "-1000px";
+    document.body.appendChild(tempInput);
+
+    tempInput.value = window.location.href;
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+
+    alert("Lien copié dans le presse-papier !");
+  }
 </script>
-
-

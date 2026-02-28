@@ -1,25 +1,27 @@
 ---
 layout: layouts/base.njk
-title: "Le Journal des Petits chez Céline - Activités pour Enfants à Brétigny-sur-Orge"
-description: "Articles sur les activités d'éveil, conseils et astuces pour enfants de moins de 3 ans à Brétigny-sur-Orge. Découvrez comment rendre l'apprentissage amusant avec Céline, assistante maternelle agréée."
+title: "Blog parentalité et petite enfance à Brétigny | Céline Hubert"
+description: "Conseils parents, recettes, aides CAF et activités enfants à Brétigny (91). Blog d’une assistante maternelle sur la petite enfance."
 tags: "assistante maternelle, nounou, activités enfants, Brétigny-sur-Orge, blog"
-url: "https://chubert91assmat.netlify.app/blog"
+url: "https://celine-assmat-bretigny.fr/blog/"
 image: "capture-site-blog-celine-hubert.jpg"
-eleventyNavigation:
-  key: "BLOG"
-  title: "BLOG"
-  order: 4
 pagination:
   data: collections.posts
   size: 5
   alias: posts
-  bodyClass: "blog-page"
-  permalink: "/blog/"
+bodyClass: "blog-page"
+permalink: "/blog/{% if pagination.pageNumber > 0 %}page/{{ pagination.pageNumber }}/{% endif %}"
+
+# ⚠️ Ajouter pour générer correctement le breadcrumb
+breadcrumb:
+  key: "Blog"
 ---
 
 
+
+
   <!-- Icône de défilement vers le haut utilisant une image SVG -->
-  <a href="#first-article" class="scroll-to-top">
+  <a href="#contenu-blog" class="scroll-to-top">
     <img class="rocket-icon" src="{{ '/images/rocket-svgrepo-com.svg' | url }}" alt="Icône de fusée pour remonter en haut de la page blog">
 </a>
 
@@ -56,11 +58,11 @@ pagination:
                                 <div class="card-body text-center"> <!-- Début du corps de la carte de l'article -->
                                     <span class="badge text-bg-secondary">{{ post.data.category | default('ACTIVITE') }}</span>
                                     <div class="poppins-regular-blog-date">{{ post.date | date('dd MMMM yyyy') }}</div>
-                                    <h2 class="poppins-regular-titre-blog">
+                                    <h2 class="poppins-bold-titre-blog-h2">
                                         <a href="{{ post.url }}" style="text-decoration: none; color: inherit;">{{ post.data.title | default('Titre de l\'article') }}</a>
                                     </h2>
 
-                                   <div class="poppins-regular-blog">{{ post.content | truncateWords(20) }}</div><!-- Limité à 20 mots avec "..." -->
+                                   <div class="poppins-regular-titre-h3">{{ post.content | truncateWords(20) }}</div><!-- Limité à 20 mots avec "..." -->
                                    <a href="{{ post.url }}" class="btn btn-custom">
                                 <img src="{{ '/images/blog/baby-nipple-blog.svg' | url }}" class="bouton-tetine" alt="Lire l'article sur les meilleures activités pour enfants chez Céline, nounou à Brétigny-sur-Orge">
                                 </a>
@@ -140,34 +142,59 @@ pagination:
 
 
 
+
 <script>
-document.querySelectorAll('.likeButton').forEach(button => {
-  button.addEventListener('click', async function () {
-    // Récupère dynamiquement l'ID de l'article depuis `data-post-id`
-    const postId = this.getAttribute('data-post-id');
+  // Fonction d'initialisation des likes au chargement de la page
+  function initializeLikes() {
+      let allLikes = JSON.parse(localStorage.getItem('likes')) || {};
 
-    if (!postId) {
-      console.error('Erreur : postId est introuvable !');
-      return;
-    }
+      document.querySelectorAll('.like-button').forEach(button => {
+          const postId = encodeURIComponent(button.getAttribute('data-id')); 
+          const likeCountElement = document.getElementById(`like-count-${postId}`);
 
-    try {
-      const response = await fetch(`https://gggggggzerrez.netlify.app/.netlify/functions/like?post_id=${postId}`, { 
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        }
+          if (allLikes[postId]) {
+              likeCountElement.innerText = allLikes[postId].count;
+              if (allLikes[postId].isLiked) {
+                  button.classList.add('liked');
+              } else {
+                  button.classList.remove('liked');
+              }
+          } else {
+              likeCountElement.innerText = "0"; // Valeur par défaut si jamais liké
+          }
       });
+  }
 
-      if (!response.ok) {
-        throw new Error(`Erreur de réponse : ${response.status} ${response.statusText}`);
+  // Fonction pour gérer les "likes"
+  function toggleLike(button) {
+      let allLikes = JSON.parse(localStorage.getItem('likes')) || {};
+      const postId = encodeURIComponent(button.getAttribute('data-id')); 
+      const likeCountElement = document.getElementById(`like-count-${postId}`);
+
+      // Initialisation des données si elles n'existent pas
+      if (!allLikes[postId]) {
+          allLikes[postId] = { count: 0, isLiked: false };
       }
 
-      const result = await response.json();
-      console.log(`Article ${postId} : ${result.message}`);
-    } catch (error) {
-      console.error(`Erreur pour l'article ${postId} :`, error);
-    }
-  });
-});
+      // Mise à jour de l'état du like
+      if (allLikes[postId].isLiked) {
+          allLikes[postId].count--;
+          allLikes[postId].isLiked = false;
+          button.classList.remove('liked');
+      } else {
+          allLikes[postId].count++;
+          allLikes[postId].isLiked = true;
+          button.classList.add('liked');
+      }
+
+      // Mettre à jour le compteur et sauvegarder les données
+      likeCountElement.innerText = allLikes[postId].count;
+      localStorage.setItem('likes', JSON.stringify(allLikes));
+  }
+
+  // Exécuter l'initialisation des likes au chargement de la page
+  document.addEventListener('DOMContentLoaded', initializeLikes);
 </script>
+
+
+

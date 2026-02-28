@@ -1,14 +1,105 @@
 ---
 layout: layouts/base.njk
-title: "Foire aux questions - Céline Hubert, assistante maternelle agréée à Brétigny-sur-Orge"
-description: "Découvrez tout sur la convention collective, la législation applicable, les démarches à effectuer pour embaucher une assistante maternelle, les aides financières, et les tarifs de garde d'enfants."
-url: "https://chubert91assmat.netlify.app/faq"
+title: "Tarifs, aides et démarches assistante maternelle à Brétigny | Céline Hubert"
+description: "Aides CAF, tarifs et démarches pour employer une assistante maternelle à Brétigny-sur-Orge. Guide pratique pour les parents."
+url: "https://celine-assmat-bretigny.fr/faq/"
 image: "faq-celine-assistante-maternelle.jpg"
 eleventyNavigation:
   key: FAQ
-  order: 3
+  order: 5
 permalink: "/faq/"
 bodyClass: "bg-white faq"
+
+# JSON-LD FAQ pour injection dans breadcrumb-schema.njk
+jsonldFAQ:
+  "@context": "https://schema.org"
+  "@type": "FAQPage"
+  "mainEntity":
+    - "@type": "Question"
+      name: "Qu'est ce que la convention collective ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Depuis le 1er janvier 2022, le secteur des particuliers employeurs..."
+    - "@type": "Question"
+      name: "Législation applicable"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Le contrat de travail des assistantes maternelles est encadré par..."
+    - "@type": "Question"
+      name: "Les aides pour employer une assistante maternelle à Brétigny-sur-Orge"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "• Les prestations de la PAJE..."
+    - "@type": "Question"
+      name: "Quand la réforme du CMG est-elle entrée en vigueur ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "La réforme s’applique depuis le 1er septembre 2025..."
+    - "@type": "Question"
+      name: "Faut-il faire une nouvelle demande pour bénéficier du CMG ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Non, le calcul est automatiquement mis à jour..."
+    - "@type": "Question"
+      name: "Que change la réforme pour le calcul du CMG ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Le CMG est désormais calculé de façon personnalisée..."
+    - "@type": "Question"
+      name: "Qu’est-ce que le complément transitoire ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "C’est un dispositif automatique..."
+    - "@type": "Question"
+      name: "Quels changements pour les parents isolés ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Le CMG est prolongé jusqu’aux 12 ans..."
+    - "@type": "Question"
+      name: "Que se passe-t-il pour la résidence alternée ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "À partir de décembre 2025, chaque parent..."
+    - "@type": "Question"
+      name: "Quel est le seuil de 8 € mentionné ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Le CMG couvre désormais jusqu’à 8 € par heure..."
+    - "@type": "Question"
+      name: "Démarches à effectuer avant l’embauche"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Réserver ma place : rédigez un engagement réciproque..."
+    - "@type": "Question"
+      name: "Sites utiles pour particuliers employeurs"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Voici une sélection de sites officiels..."
+    - "@type": "Question"
+      name: "Tarifs d’une assistante maternelle à Brétigny-sur-Orge"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Le tarif d’une assistante maternelle à Brétigny-sur-Orge..."
+    - "@type": "Question"
+      name: "Calcul du coût de la place et des indemnités d’une assistante maternelle"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Déterminez votre montant du CMG..."
+    - "@type": "Question"
+      name: "Comment régler le salaire d’une assistante maternelle ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Par virement bancaire..."
+    - "@type": "Question"
+      name: "Comment remplir l’attestation employeur assistante maternelle ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Pour créer votre espace employeur..."
+    - "@type": "Question"
+      name: "Pourquoi choisir l’accueil chez Céline à Brétigny-sur-Orge ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "L’accueil chez Céline à Brétigny-sur-Orge se distingue..."
 ---
 
 
@@ -28,20 +119,37 @@ bodyClass: "bg-white faq"
         <!-- Image plus petite pour les écrans mobiles -->
         <img src="{{ '/images/faq/nuages-bleus-dessins-naifs-faq-small.png' | url }}" class="faq-bottom-curvy mobile-image" alt="png image illustration questions">
 
-        <div class="col-md-12 d-flex justify-content-center">
-            <div class="faq-section">
-                <div class="profile-text text-center">
+            <div class="col-md-12">
+            <div class="container-md">
+            <div class="d-flex justify-content-center">
+             <div class="faq-section">
+             <div class="profile-text">
                     <!-- Titre principal de la page -->           
-                    <h1 class="poppins-bold-faq-title">LA PHASE DU « POURQUOI ? »</h1>
-                    <!-- Texte qui apparaît et disparaît en boucle -->
-                    <p class="fade-in-out-faq">Ne concerne pas que les enfants ...</p>
+                    <h1 class="poppins-bold-titre-h1">Questions fréquentes pour les parents à Brétigny-sur-Orge</h1>
+                    
 
                     <!-- Introduction générale -->
-                    <p class="poppins-regular-faq">En tant que parents, vous connaissez tous cette phase des « pourquoi ? » du « combien ? » et « comment ? » lorsqu'il s'agit de gérer la relation contractuelle avec une assistante maternelle agréée. Chez Céline, salaire ne rime pas avec galère ! Pour vous aider à vivre cette aventure sereinement, j'ai préparé cette FAQ qui répondra à toutes vos questions :</p>
+
+                   <p class="poppins-regular-balise-p">
+En tant que parents, vous connaissez bien la phase des « pourquoi ? », « combien ? » et « comment ? » lorsqu’il s’agit d’employer une assistante maternelle agréée.
+</p>
+
+  <p class="poppins-regular-balise-p">
+Basée à Brétigny-sur-Orge, je propose un accueil familial et professionnel pour les enfants de 0 à 3 ans.
+</p>
+
+  <p class="poppins-regular-balise-p">
+Ce guide a été conçu pour aider les familles brétignolais(es) et des communes voisines à mieux comprendre les tarifs, les aides CAF et les démarches d’embauche.﻿
+</p>
+
+
                 </div>
 
-                <!-- Espacement entre le titre et le paragraphe -->
-                <div class="faq-spacer"></div>
+               
+
+<!-- Espacement entre le titre et le paragraphe -->
+      <div class="espace-force"></div>
+
                     
 <ul class="faq-list">
    
@@ -52,20 +160,26 @@ bodyClass: "bg-white faq"
     <hr class="faq-separator">
 
     <div class="faq-header">
-        <h2 class="poppins-regular-faq">QU'EST CE QUE LA CONVENTION COLLECTIVE ?</h2>
-        <button class="btn-toggle" id="toggle-convention" title="Toggle Description convention" onclick="toggleDescription()">
-            <i class="fas fa-plus"></i> <span class="sr-only">Activer Description convention</span>
-        </button>
+        <h2 class="poppins-regular-faq">Qu'est ce que la convention collective ?</h2>
+    
+
+<button class="btn-toggle" id="toggle-convention" title="Toggle familles" onclick="toggleDescriptionmagie('convention-description', this)">
+    <img src="../images/faq/croix-en-savoir-plus-faq.svg" alt="Flèche" class="faq-icon"> 
+    <span class="sr-only">Toggle Description familles</span>
+</button>
+ 
+
+
     </div>
 
-    <div class="faq-description">
-        <p>Depuis le 1er janvier 2022, le secteur des particuliers employeurs et de l’emploi à domicile est régi par une nouvelle convention collective unique. Ce cadre juridique modernisé assure une relation d'emploi sereine durant la relation contractuelle.</p>
+     <div class="faq-description" id="convention-description">
+        <p class="poppins-regular-marron-balise-p">Depuis le 1er janvier 2022, le secteur des particuliers employeurs et de l’emploi à domicile est régi par une nouvelle convention collective unique. Ce cadre juridique modernisé assure une relation d'emploi sereine durant la relation contractuelle.</p>
 
         <!-- Espacement entre le titre et le paragraphe -->
         <div class="convention-spacer"></div>
 
-        <p>
-            Retrouvez la <a href="https://www.legifrance.gouv.fr/conv_coll/id/KALICONT000044594539" target="_blank" class="styled-link">convention collective</a> sur le site Légifrance en cliquant sur l'icône. Téléchargez la C.C.N en PDF et faites vos recherches rapides avec l'outil ChatPDF.
+        <p class="poppins-regular-marron-balise-p">
+            Retrouvez la <a href="https://www.legifrance.gouv.fr/conv_coll/id/KALICONT000044594539" target="_blank" class="style-liens">convention collective</a> sur le site Légifrance en cliquant sur l'icône. Téléchargez la C.C.N en PDF et faites vos recherches rapides avec l'outil ChatPDF.
         </p>
 
         <div class="faq-keywords">
@@ -103,71 +217,85 @@ bodyClass: "bg-white faq"
    <li>
     <hr class="faq-separator">
     <div class="faq-header">
-        <h2 class="poppins-regular-faq">LEGISLATION APPLICABLE</h2>
-        <button class="btn-toggle" id="toggle-legislation" title="Toggle familles" onclick="toggleDescription()">
-            <i class="fas fa-plus"></i> <span class="sr-only">Toggle Description familles</span>
-        </button>
+        <h2 class="poppins-regular-faq">Législation applicable</h2>
+        <button class="btn-toggle" id="toggle-legislation" title="Toggle familles" onclick="toggleDescriptionmagie('legislation-description', this)">
+
+    <img src="../images/faq/croix-en-savoir-plus-faq.svg" alt="Flèche" class="faq-icon"> 
+    <span class="sr-only">Toggle Description familles</span>
+</button>
+
     </div>
-    <div class="faq-description">
-        <p>Le contrat de travail des assistantes maternelles est encadré par une hiérarchie de textes : le Code du travail fixe le cadre général, le CASF s'applique spécifiquement à la profession, puis vient la Convention Collective Nationale (CCN), et enfin les clauses spécifiques du contrat, qui prévalent sur tout le reste dans les limites de la loi.</p>
+    <div class="faq-description" id="legislation-description">
+        <p class="poppins-regular-marron-balise-p">Le contrat de travail des assistantes maternelles est encadré par une hiérarchie de textes : le Code du travail fixe le cadre général, le CASF s'applique spécifiquement à la profession, puis vient la Convention Collective Nationale (CCN), et enfin les clauses spécifiques du contrat, qui prévalent sur tout le reste dans les limites de la loi.</p>
         
         <!-- Espacement entre le titre et le paragraphe -->
         <div class="convention-spacer"></div>
 
-        <h3>
-            <span>
-                <img src="{{ '/images/faq/book-and-magnifying-glass-svgrepo-com.svg' | url }}" class="checked-legislation" alt="icône page avec loupe legislation">
-            </span>
-            <strong>La C.C.N:</strong>
+
+  <h3 class="poppins-bold-marron-balise-p">
+          <span>
+            <img src="{{ '/images/faq/book-and-magnifying-glass-svgrepo-com.svg' | url }}" class="checked-legislation" alt="icône page avec loupe legislation" loading="lazy">
+          </span>
+          La C.C.N:
         </h3>
-        <p class="poppins-regular-faq-text">
+
+
+
+        <p class="poppins-regular-marron-balise-p">
             Convention collective du secteur des particuliers employeurs et de l’emploi à domicile, (en vigueur depuis le 1er janvier 2022).
         </p>
 
-        <h3>
-            <span>
-                <img src="{{ '/images/faq/book-and-magnifying-glass-svgrepo-com.svg' | url }}" class="checked-legislation" alt="icône page avec loupe legislation">
-            </span>
-            <strong>Code CASF:</strong>
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+            <img src="{{ '/images/faq/book-and-magnifying-glass-svgrepo-com.svg' | url }}" class="checked-legislation" alt="icône page avec loupe legislation" loading="lazy">
+          </span>
+          Code CASF:
         </h3>
-        <p class="poppins-regular-faq-text">
+
+
+        <p class="poppins-regular-marron-balise-p">
             Code de l’action sociale et des familles. Articles 
-            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798025?dateVersion=21%2F09%2F2023&nomCode=V3JscA%3D%3D&page=1&query=L.423-1&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="styled-link">L.423-1</a> et suivants, 
-            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018261020?dateVersion=21%2F09%2F2023&nomCode=V3JscA%3D%3D&page=1&query=D.+423-5&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="styled-link">D.423-5</a> et suivants.
+            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006798025?dateVersion=21%2F09%2F2023&nomCode=V3JscA%3D%3D&page=1&query=L.423-1&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="style-liens">L.423-1</a> et suivants, 
+            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000018261020?dateVersion=21%2F09%2F2023&nomCode=V3JscA%3D%3D&page=1&query=D.+423-5&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="style-liens">D.423-5</a> et suivants.
         </p>
 
-        <h3>
-            <span>
-                <img src="{{ '/images/faq/book-and-magnifying-glass-svgrepo-com.svg' | url }}" class="checked-legislation" alt="icône page avec loupe legislation">
-            </span>
-            <strong>Le Code du travail:</strong>
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+            <img src="{{ '/images/faq/book-and-magnifying-glass-svgrepo-com.svg' | url }}" class="checked-legislation" alt="icône page avec loupe legislation" loading="lazy">
+          </span>
+         Le Code du travail:
         </h3>
-        <p class="poppins-regular-faq-text">
+
+
+        <p class="poppins-regular-marron-balise-p">
             Pour certains articles listés à l’article 
-            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047293307?dateVersion=21%2F09%2F2023&nomCode=V3JscA%3D%3D&page=1&query=L.423-2&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="styled-link">L.423-2</a> du CASF.
+            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047293307?dateVersion=21%2F09%2F2023&nomCode=V3JscA%3D%3D&page=1&query=L.423-2&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="style-liens">L.423-2</a> du CASF.
             Articles sur la maternité 
-            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900880?dateVersion=21%2F09%2F2023&nomCode=mjXqUg%3D%3D&page=1&query=L.1225-1&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="styled-link">L.1225-1</a>, 
+            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006900880?dateVersion=21%2F09%2F2023&nomCode=mjXqUg%3D%3D&page=1&query=L.1225-1&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="style-liens">L.1225-1</a>, 
             Congés payés 
-            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033020826?dateVersion=21%2F09%2F2023&nomCode=mjXqUg%3D%3D&page=1&query=L.+3141-3&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="styled-link">L.3141-3</a>, 
+            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033020826?dateVersion=21%2F09%2F2023&nomCode=mjXqUg%3D%3D&page=1&query=L.+3141-3&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="style-liens">L.3141-3</a>, 
             Événements familiaux 
-            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045205234" target="_blank" class="styled-link">L.3142-1</a>, 
+            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000045205234" target="_blank" class="style-liens">L.3142-1</a>, 
             Paiement du salaire 
-            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044605341" target="_blank" class="styled-link">L.3241-1</a>, 
+            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044605341" target="_blank" class="style-liens">L.3241-1</a>, 
             et Mensualisation 
-            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006902858" target="_blank" class="styled-link">L.3242-1</a>.
+            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006902858" target="_blank" class="style-liens">L.3242-1</a>.
         </p>
 
-        <h3>
-            <span>
-                <img src="{{ '/images/faq/book-and-magnifying-glass-svgrepo-com.svg' | url }}" class="checked-legislation" alt="icône page avec loupe legislation">
-            </span>
-            <strong>Code de la sécurité sociale:</strong>
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+            <img src="{{ '/images/faq/book-and-magnifying-glass-svgrepo-com.svg' | url }}" class="checked-legislation" alt="icône page avec loupe legislation" loading="lazy">
+          </span>
+        Code de la sécurité sociale:
         </h3>
-        <p class="poppins-regular-faq-text">
+
+       
+        <p class="poppins-regular-marron-balise-p">
             Articles sur les accidents du travail et maladies professionnelles 
-            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047452603?dateVersion=21%2F09%2F2023&nomCode=CKHyIA%3D%3D&page=1&query=L.+411-1&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="styled-link">L.411-1</a>, 
-            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036393217" target="_blank" class="styled-link">L.461-1 à 8</a>, 
-            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006750477?dateVersion=21%2F09%2F2023&nomCode=CKHyIA%3D%3D&page=1&query=R.+461-1&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="styled-link">R.461-1</a>.
+            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047452603?dateVersion=21%2F09%2F2023&nomCode=CKHyIA%3D%3D&page=1&query=L.+411-1&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="style-liens">L.411-1</a>, 
+            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036393217" target="_blank" class="style-liens">L.461-1 à 8</a>, 
+            <a href="https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006750477?dateVersion=21%2F09%2F2023&nomCode=CKHyIA%3D%3D&page=1&query=R.+461-1&searchField=ALL&tab_selection=code&typeRecherche=date" target="_blank" class="style-liens">R.461-1</a>.
             Les articles du Code du travail sur la durée du travail, le temps partiel, l’entretien préalable et la cause réelle et sérieuse pour un licenciement (retrait d’enfant) ne s’appliquent pas.
         </p>
     </div>
@@ -181,93 +309,226 @@ bodyClass: "bg-white faq"
     <li>
     <hr class="faq-separator">
     <div class="faq-header">
-        <h2 class="poppins-regular-faq">LES AIDES</h2>
-        <button class="btn-toggle" id="toggle-aides" title="Toggle aides" onclick="toggleDescription('faq-details')">
-            <i class="fas fa-plus"></i> <span class="sr-only">Toggle Description aides</span>
-        </button>
+        <h2 class="poppins-regular-faq">Les aides pour employer une assistante maternelle à Brétigny-sur-Orge</h2>
+
+
+<button class="btn-toggle" id="toggle-aides" title="Toggle familles" onclick="toggleDescriptionmagie('aides-description', this)">
+    <img src="../images/faq/croix-en-savoir-plus-faq.svg" alt="Flèche" class="faq-icon"> 
+    <span class="sr-only">Toggle Description familles</span>
+</button>
+
+
     </div>
-    <div class="faq-description">
-        <p><strong>• Les prestations de la PAJE et le complément de libre choix du mode de garde (CMG) :</strong> Ces aides sont versées par la CAF pour réduire le coût de la garde.</p>
+    <div class="faq-description" id="aides-description">
+        <p><strong>• Les prestations de la PAJE et le complément de libre choix du mode de garde (CMG) :</strong> Ces aides sont versées par la CAF pour réduire le coût de la garde de vos enfants.</p>
 
-        <p><strong>• Le crédit d’impôt :</strong> Vous pouvez bénéficier d'un crédit d'impôt pour les frais de garde d'enfants de moins de 6 ans.</p>
+        <p><strong>• Le crédit d’impôt :</strong> Vous pouvez bénéficier d'un crédit d’impôt égal à 50% des dépenses engagées pour la garde d’enfants de moins de 6 ans hors domicile (par exemple assistante maternelle, crèche), dans la limite de 1 750 € par enfant par an. Les aides perçues doivent être déduites de ces dépenses lors du calcul.</p>
 
-        <p><strong>• Le CESU préfinancé :</strong> Les chèques CESU préfinancés peuvent être partiellement ou totalement financés par plusieurs entités, telles que l'entreprise des parents, le comité d'entreprise (CE), des organismes publics (comme les conseils généraux, régions ou municipalités), ou les parents eux-mêmes. Ils permettent de réduire les frais de garde en étant utilisés directement pour payer l’assistante maternelle agréée.</p>
+        <p><strong>• Le CESU préfinancé :</strong> Ces chèques peuvent être financés par votre employeur, comité d’entreprise, collectivités territoriales ou parents eux-mêmes. Ils servent à payer directement l’assistante maternelle agréée et réduisent ainsi vos frais.</p>
 
-        <h3 class="poppins-faq-hidden"><strong>Autres bons plans :</strong></h3>
-        <p>• Les aides de votre région ou de votre département.</p>
-        <p>• Les aides de certaines municipalités.</p>
-        <p>• Si vous travaillez dans la fonction publique et dans le cas où vous ne dépassez pas un certain plafond de salaire, vous pouvez bénéficier des chèques « C.E.S.U. fonction publique » (entre 220 à 655€ annuels).</p>
+<div class="button-agrement-wrapper">
+ <a href="/posts/entreprises/cesu-prefinances/" target="_blank" class="btn btn-primary btn-article-agrement">
+  J'économise avec les CESU pré-financés →
+</a>
+</div>
+
+        <p><strong>• Les aides locales :</strong> Certaines régions, départements ou municipalités proposent des aides complémentaires.</p>
+
+        <p><strong>• Les CESU fonction publique  :</strong> « Si vous travaillez dans la fonction publique, vous pouvez bénéficier des chèques CESU « fonction publique » pour la garde d’enfants de moins de 6 ans. Le montant annuel attribué varie généralement entre 200 € et 840 €, modulé selon vos ressources et votre quotient familial. Cette aide est versée sous forme de tickets préfinancés, pouvant être utilisés directement pour rémunérer une assistante maternelle agréée ou une structure d’accueil.</p>
+
 
         <h3 class="poppins-faq-hidden"><strong>Fonctionnement des aides :</strong></h3>
-        <p>En crèche, les aides sont déduites du montant total, vous laissant le solde à payer. Avec une assistante maternelle agréée, vous payez le salaire NET, puis déduisez vos aides (CMG, CESU préfinancés, et crédit d'impôt) pour déterminer votre reste à charge.</p>
+        <p>En crèche municipale, les aides sont déduites du montant total, vous laissant le solde à payer. Avec une assistante maternelle agréée, vous payez le salaire NET, puis déduisez vos aides (CMG, CESU préfinancés, et crédit d'impôt) pour déterminer votre reste à charge.</p>
 
         <p>Pour vous aider à comprendre ces coûts, je vous fournirai un tableau de mensualisation lors de notre rendez-vous de signature. Ce tableau vous donnera une vision claire des montants à prévoir et de votre budget final.</p>
     </div>
 </li>
 
 
+
+<li>
+    <hr class="faq-separator">
+    <div class="faq-header">
+        <h2 class="poppins-regular-faq">Réforme CMG 2025 : questions fréquentes</h2>
+
+
+      <button class="btn-toggle" id="toggle-reforme" title="Toggle reforme" onclick="toggleDescriptionmagie('reforme-description', this)">
+    <img src="../images/faq/croix-en-savoir-plus-faq.svg" alt="Flèche" class="faq-icon"> 
+    <span class="sr-only">Toggle Description familles</span>
+</button>
+
+
+    </div>
+    <div class="faq-description" id="reforme-description">
+
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+             <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important" loading="lazy">
+          </span>
+        Quand la réforme du CMG est-elle entrée en vigueur ?
+        </h3>
+
+       
+        <p class="poppins-regular-marron-balise-p">La réforme s’applique depuis le 1er septembre 2025. Tous les dossiers sont automatiquement traités selon les nouvelles règles, sans démarche à effectuer pour les bénéficiaires actuels.
+        </p>
+      
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+             <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important" loading="lazy">
+          </span>
+        Faut-il faire une nouvelle demande pour bénéficier du CMG ?
+        </h3>
+
+
+      
+        <p class="poppins-regular-marron-balise-p">Non, le calcul est automatiquement mis à jour par l’Urssaf via Pajemploi. Une demande est nécessaire uniquement en cas de situation nouvelle, comme la garde d’un enfant de plus de 6 ans ou la résidence alternée.</p>
+
+       
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+             <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important" loading="lazy">
+          </span>
+        Que change la réforme pour le calcul du CMG ?
+        </h3>
+
+  
+      
+        <p class="poppins-regular-marron-balise-p">Le CMG est désormais calculé de façon personnalisée en fonction des revenus du foyer, du nombre d’enfants, du coût horaire réel et des heures de garde effectuées. Le reste à charge minimum obligatoire est supprimé.</p>
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+             <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important" loading="lazy">
+          </span>
+       Qu’est-ce que le complément transitoire ?
+        </h3>
+
+       
+        <p class="poppins-regular-marron-balise-p">C’est un dispositif automatique qui évite une baisse trop forte de CMG lors du passage au nouveau barème, versé sous conditions spécifiques de ressources et d’heures de garde.</p>
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+             <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important" loading="lazy">
+          </span>
+       Quels changements pour les parents isolés ?
+        </h3>
+
+
+        
+        <p class="poppins-regular-marron-balise-p">Le CMG est prolongé jusqu’aux 12 ans de l’enfant au lieu de 6 ans, ce qui améliore la prise en charge des familles monoparentales.</p>
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+             <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important" loading="lazy">
+          </span>
+      Que se passe-t-il pour la résidence alternée ?
+        </h3>
+
+
+      
+        <p class="poppins-regular-marron-balise-p">À partir de décembre 2025, chaque parent peut bénéficier du CMG pour sa part des frais de garde, à condition que le partage de l’allocation familiale soit mis en place.</p>
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+             <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important" loading="lazy">
+          </span>
+      Quel est le seuil de 8 € mentionné ?
+        </h3>
+
+        <p class="poppins-regular-marron-balise-p">Le CMG couvre désormais jusqu’à 8 € par heure pour la garde en emploi direct (assistante maternelle ou garde à domicile). Le CMG reste versé, seule la part au-delà du plafond reste à votre charge.</p>
+            
+
+
+    </div>
+</li>
+
+
+
+
+
+
+
+
 	<li>
     <hr class="faq-separator">
     <div class="faq-header">
-        <h2 class="poppins-regular-faq">DEMARCHES A EFFECTUER</h2>
-        <button class="btn-toggle" id="toggle-demarches" title="Toggle demarches" onclick="toggleDescription()">
-            <i class="fas fa-plus"></i> <span class="sr-only">Toggle Description demarches</span>
-        </button>
+        <h2 class="poppins-regular-faq">Démarches à effectuer avant l’embauche</h2>
+
+       
+<button class="btn-toggle" id="toggle-demarches" title="Toggle familles" onclick="toggleDescriptionmagie('demarches-description', this)">
+    <img src="../images/faq/croix-en-savoir-plus-faq.svg" alt="Flèche" class="faq-icon"> 
+    <span class="sr-only">Toggle Description familles</span>
+</button>
+
+
     </div>
-    <div class="faq-description">
-        <h3>
-            <span>
-             <img src="{{ '/images/faq/check-square-svgrepo-com.svg' | url }}" class="checked-demarches" alt="icône check carré de validation démarches">
-            </span>
-            <strong>Réserver ma place.</strong>
-        </h3>
-        <p class="poppins-regular-faq-text">Rédigez un engagement réciproque, qui est un accord écrit entre vous et l'assistante maternelle. Cet accord assure à la famille une place réservée pour la période de son choix. En contrepartie, l'assistante maternelle s'engage à arrêter ses recherches et à bloquer la place.</p>
+    <div class="faq-description" id="demarches-description">
 
-        <h3>
-            <span>
-             <img src="{{ '/images/faq/check-square-svgrepo-com.svg' | url }}" class="checked-demarches" alt="icône check carré de validation démarches">
-            </span>
-            <strong>Faire mes démarches pour le CMG.</strong>
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+              <img src="{{ '/images/faq/check-square-svgrepo-com.svg' | url }}" class="checked-demarches" alt="icône check carré de validation démarches" loading="lazy">
+          </span>
+      Réserver ma place
         </h3>
-        <p class="poppins-regular-faq-text">La demande de CMG (Complément de libre choix du mode de garde) doit être effectuée quelques mois avant l’embauche d’un salarié ou le recours à une structure. Pour faire une demande, rendez-vous sur caf.fr. La CAF déclarera ensuite l’emploi de l'assistante maternelle au centre national Pajemploi. Vous recevrez un identifiant par courrier pour vous connecter à Pajemploi.</p>
 
-        <h3>
-            <span>
-                <img src="{{ '/images/faq/check-square-svgrepo-com.svg' | url }}" class="checked-demarches" alt="icône check carré de validation démarches">
-            </span>
-            <strong>Signer le contrat de travail.</strong>
-        </h3>
-        <p class="poppins-regular-faq-text">Le contrat de travail doit être signé au plus tard le jour de l’embauche. Il doit être rédigé par écrit et signé en deux exemplaires, un pour chaque partie, afin de formaliser l'accueil.</p>
+       
+        <p class="poppins-regular-marron-balise-p">Rédigez un engagement réciproque, qui est un accord écrit entre vous et l'assistante maternelle. Cet accord assure à la famille une place réservée pour la période de son choix. En contrepartie, l'assistante maternelle s'engage à arrêter ses recherches et à bloquer la place.</p>
 
-        <h3>
-            <span>
-                <img src="{{ '/images/faq/check-square-svgrepo-com.svg' | url }}" class="checked-demarches" alt="icône check carré de validation démarches">
-            </span>
-            <strong>Déclaration à PAJEMPLOI.</strong>
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+              <img src="{{ '/images/faq/check-square-svgrepo-com.svg' | url }}" class="checked-demarches" alt="icône check carré de validation démarches" loading="lazy">
+          </span>
+     Faire mes démarches pour le CMG
         </h3>
-        <p class="poppins-regular-faq-text">Avec le code employeur fourni après votre demande de CMG, vous pourrez déclarer le salaire de l'assistante maternelle à l'URSSAF sur Pajemploi à la fin de chaque mois. Cela permettra le versement de votre prestation CMG.</p>
 
-        <h3>
-            <span>
-                <img src="{{ '/images/faq/check-square-svgrepo-com.svg' | url }}" class="checked-demarches" alt="icône check carré de validation démarches">
-            </span>
-            <strong>La fin de contrat.</strong>
-        </h3>
-        <p class="poppins-regular-faq-text">Que ce soit à l'initiative du parent ou de l'assistante maternelle, la lettre de fin de contrat doit être adressée par courrier recommandé avec accusé de réception ou remise en main propre contre décharge.</p>
+       
+        <p class="poppins-regular-marron-balise-p">La demande de CMG (Complément de libre choix du mode de garde) doit être effectuée quelques mois avant l’embauche d’un salarié ou le recours à une structure. Pour faire une demande, rendez-vous sur caf.fr. La CAF déclarera ensuite l’emploi de l'assistante maternelle au centre national Pajemploi. Vous recevrez un identifiant par courrier pour vous connecter à Pajemploi.</p>
 
-        <h3>
-            <span>
-                 <img src="{{ '/images/faq/check-square-svgrepo-com.svg' | url }}" class="checked-demarches" alt="icône check carré de validation démarches">
-            </span>
-            <strong>Les documents administratifs.</strong>
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+              <img src="{{ '/images/faq/check-square-svgrepo-com.svg' | url }}" class="checked-demarches" alt="icône check carré de validation démarches" loading="lazy">
+          </span>
+     Signer le contrat de travail
         </h3>
-        <p class="poppins-regular-faq-text">À la fin du contrat, qu'il s'agisse d'une démission ou d'un retrait de l'enfant par le parent, les documents suivants devront être remis :</p>
+
         
-        <p class="poppins-regular-faq-text">• Une attestation France Travail</p>
-        <p class="poppins-regular-faq-text">• Un certificat de travail</p>
-        <p class="poppins-regular-faq-text">• Un solde de tout compte</p>
+        <p class="poppins-regular-marron-balise-p">Le contrat de travail doit être signé au plus tard le jour de l’embauche. Il doit être rédigé par écrit et signé en deux exemplaires, un pour chaque partie, afin de formaliser l'accueil.</p>
 
-        <p class="poppins-regular-faq-text">Les trois documents doivent être remis le dernier jour de préavis. Si l'assistante maternelle ne réalise pas totalement le préavis à sa demande, l'employeur dispose de deux semaines après la fin du contrat pour les remettre. Un dernier bulletin de salaire, incluant toutes les sommes versées lors de la rupture du contrat, doit être édité par l'URSSAF - Pajemploi. La déclaration doit être faite entre le 25 du mois d'emploi et le 5 du mois suivant, en respectant la date limite de paiement stipulée dans le contrat.</p>
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+              <img src="{{ '/images/faq/check-square-svgrepo-com.svg' | url }}" class="checked-demarches" alt="icône check carré de validation démarches" loading="lazy">
+          </span>
+     Déclaration à PAJEMPLOI
+        </h3>
+
+       
+        <p class="poppins-regular-marron-balise-p">Avec le code employeur fourni après votre demande de CMG, vous pourrez déclarer le salaire de l'assistante maternelle à l'URSSAF sur Pajemploi à la fin de chaque mois. Cela permettra le versement de votre prestation CMG.</p>
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+              <img src="{{ '/images/faq/check-square-svgrepo-com.svg' | url }}" class="checked-demarches" alt="icône check carré de validation démarches" loading="lazy">
+          </span>
+     La fin de contrat
+        </h3>
+
+      
+        <p class="poppins-regular-marron-balise-p">Que ce soit à l'initiative du parent ou de l'assistante maternelle, la lettre de fin de contrat doit être adressée par courrier recommandé avec accusé de réception ou remise en main propre contre décharge.</p>
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+              <img src="{{ '/images/faq/check-square-svgrepo-com.svg' | url }}" class="checked-demarches" alt="icône check carré de validation démarches" loading="lazy">
+          </span>
+     Les documents administratifs
+        </h3>
+
+       
+        <p class="poppins-regular-marron-balise-p">À la fin du contrat, qu'il s'agisse d'une démission ou d'un retrait de l'enfant par le parent, les documents suivants devront être remis :</p>
+        
+        <p class="poppins-regular-marron-balise-p">• Une attestation France Travail</p>
+        <p class="poppins-regular-marron-balise-p">• Un certificat de travail</p>
+        <p class="poppins-regular-marron-balise-p">• Un solde de tout compte</p>
+
+        <p class="poppins-regular-marron-balise-p">Les trois documents doivent être remis le dernier jour de préavis. Si l'assistante maternelle ne réalise pas totalement le préavis à sa demande, l'employeur dispose de deux semaines après la fin du contrat pour les remettre. Un dernier bulletin de salaire, incluant toutes les sommes versées lors de la rupture du contrat, doit être édité par l'URSSAF - Pajemploi. La déclaration doit être faite entre le 25 du mois d'emploi et le 5 du mois suivant, en respectant la date limite de paiement stipulée dans le contrat.</p>
     </div>
 </li>
 
@@ -278,35 +539,39 @@ bodyClass: "bg-white faq"
 <li>
     <hr class="faq-separator">
     <div class="faq-header">
-        <h2 class="poppins-regular-faq">LES SITES UTILES</h2>
-        <button class="btn-toggle" id="toggle-sites" title="Toggle demarches" onclick="toggleDescription()">
-            <i class="fas fa-plus"></i> <span class="sr-only">Toggle Description demarches</span>
-        </button>
+        <h2 class="poppins-regular-faq">Sites utiles pour particuliers employeurs</h2>
+
+<button class="btn-toggle" id="toggle-sites" title="Toggle familles" onclick="toggleDescriptionmagie('sites-description', this)">
+    <img src="../images/faq/croix-en-savoir-plus-faq.svg" alt="Flèche" class="faq-icon"> 
+    <span class="sr-only">Toggle Description familles</span>
+</button>
+
+
     </div>
-    <div class="faq-description">
+    <div class="faq-description" id="sites-description">
         <p>
-            <a href="https://www.caf.fr/" target="_blank" class="styled-link-sites">https://www.caf.fr</a>
+            <a href="https://www.caf.fr/" target="_blank" class="style-liens">https://www.caf.fr</a>
         </p>
         <p>
-            <a href="https://www.pajemploi.urssaf.fr/pajewebinfo/cms/sites/pajewebinfo/accueil.html" target="_blank" class="styled-link-sites">https://www.pajemploi.urssaf.fr</a>
+            <a href="https://www.pajemploi.urssaf.fr/pajewebinfo/cms/sites/pajewebinfo/accueil.html" target="_blank" class="style-liens">https://www.pajemploi.urssaf.fr</a>
         </p>
         <p>
-            <a href="https://www.francetravail.fr/accueil/" target="_blank" class="styled-link-sites">https://www.francetravail.fr</a>
+            <a href="https://www.francetravail.fr/accueil/" target="_blank" class="style-liens">https://www.francetravail.fr</a>
         </p>
         <p>
-            <a href="https://www.facebook.com/groups/unsa.assmat" target="_blank" class="styled-link-sites">UNSA-PROASSMAT juridique et postures PRO</a>
+            <a href="https://www.facebook.com/groups/unsa.assmat" target="_blank" class="style-liens">UNSA-PROASSMAT juridique et postures PRO</a>
         </p>
         <p>
-            <a href="https://www.fepem.fr/" target="_blank" class="styled-link-sites">https://www.fepem.fr</a>
+            <a href="https://www.fepem.fr/" target="_blank" class="style-liens">https://www.fepem.fr</a>
         </p>
         <p>
-            <a href="https://www.urssaf.fr/accueil.html" target="_blank" class="styled-link-sites">https://www.urssaf.fr</a>
+            <a href="https://www.urssaf.fr/accueil.html" target="_blank" class="style-liens">https://www.urssaf.fr</a>
         </p>
         <p>
-            <a href="https://www.service-public.fr/" target="_blank" class="styled-link-sites">https://www.service-public.fr</a>
+            <a href="https://www.service-public.fr/" target="_blank" class="style-liens">https://www.service-public.fr</a>
         </p>
         <p>
-            <a href="https://www.cr-cesu.fr/cesu-prefinance/" target="_blank" class="styled-link-sites">https://www.cr-cesu.fr/cesu-prefinance/</a>
+            <a href="https://www.cr-cesu.fr/cesu-prefinance/" target="_blank" class="style-liens">https://www.cr-cesu.fr/cesu-prefinance/</a>
         </p>
     </div>
 </li>
@@ -316,162 +581,214 @@ bodyClass: "bg-white faq"
 <li>
     <hr class="faq-separator">
     <div class="faq-header">
-        <h2 class="poppins-regular-faq">QUEL EST LE TARIF ?</h2>
-        <button class="btn-toggle" id="toggle-disparite" title="Toggle disparite" onclick="toggleDescription()">
-            <i class="fas fa-plus"></i> <span class="sr-only">Toggle Description disparite</span>
-        </button>
+        <h2 class="poppins-regular-faq">Tarifs d’une assistante maternelle à Brétigny-sur-Orge</h2>
+
+     <button class="btn-toggle" id="toggle-tarif" title="Toggle familles" onclick="toggleDescriptionmagie('tarif-description', this)">
+    <img src="../images/faq/croix-en-savoir-plus-faq.svg" alt="Flèche" class="faq-icon"> 
+    <span class="sr-only">Toggle Description familles</span>
+</button>
+
+
     </div>
-    <div class="faq-description">
-        <p class="poppins-regular-faq-text">Le tarif est calculé en fonction de vos besoins spécifiques en matière d’accueil. Pour vous fournir une estimation précise et adaptée, nous commençons par un premier rendez-vous sans engagement. Cet échange me permet de bien comprendre vos attentes afin de vous proposer un tarif personnalisé et juste.</p>
+    <div class="faq-description" id="tarif-description">
+        <p class="poppins-regular-marron-balise-p">Le tarif est calculé en fonction de vos besoins spécifiques en matière d’accueil. Pour vous fournir une estimation précise et adaptée, nous commençons par un premier rendez-vous sans engagement. Cet échange me permet de bien comprendre vos attentes afin de vous proposer un tarif personnalisé et juste.</p>
         <p class="poppins-faq-hidden">
             <strong>Contrairement à la crèche, où votre participation augmente chaque année avec la revalorisation du plafond de ressources, mon salaire et l'indemnité d'entretien restent stables sur 2 à 3 ans sans avenant. De plus, votre reste à charge diminue progressivement grâce aux revalorisations de l'aide CMG. Ces petites économies mensuelles deviennent significatives sur 3 ans !</strong>
         </p>
     </div>
 </li>
 
-                    <li>
+
+
+
+
+<li>
     <hr class="faq-separator">
     <div class="faq-header">
-        <h2 class="poppins-regular-faq">COMMENT CALCULER LE COÛT DE LA PLACE ET LES INDEMNITÉS ?</h2>
-        <button class="btn-toggle" id="toggle-place" title="Toggle place" onclick="toggleDescription()">
-            <i class="fas fa-plus"></i> <span class="sr-only">Toggle Description place</span>
-        </button>
+        <h2 class="poppins-regular-faq">Calcul du coût de la place et des indemnités d’une assistante maternelle</h2>
+
+
+      <button class="btn-toggle" id="toggle-indemnite" title="Toggle familles" onclick="toggleDescriptionmagie('indemnite-description', this)">
+    <img src="../images/faq/croix-en-savoir-plus-faq.svg" alt="Flèche" class="faq-icon"> 
+    <span class="sr-only">Toggle Description familles</span>
+</button>
+
+
     </div>
-    <div class="faq-description">
-        <h3>
-            <span>
-             <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important">
-            </span>
-            <strong>Déterminez votre montant du CMG.</strong>
+    <div class="faq-description" id="indemnite-description">
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+              <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important" loading="lazy">
+          </span>
+     Déterminez votre montant du CMG
         </h3>
-        <p class="poppins-regular-faq-text">Pour commencer, déterminez votre montant du Complément de libre choix du Mode de Garde (CMG) en fonction de vos ressources sur le site 
-            <a href="https://www.service-public.fr/particuliers/vosdroits/F345" target="_blank" class="styled-link">service-public.fr</a>
+
+
+
+        <p class="poppins-regular-marron-balise-p">Évaluez le montant de votre Complément de libre choix du Mode de Garde (CMG) en fonction de vos ressources en vous rendant sur le simulateur officiel de l’URSSAF. Cet outil vous permet d’estimer précisément votre reste à charge selon les règles en vigueur. Accédez au simulateur ici : 
+            <a href="https://www.urssaf.fr/accueil/outils-documentation/simulateurs/calculer-reste-a-charge-cmg-pe.html" target="_blank" class="style-liens">simulateur URSSAF du reste à charge</a>
         </p>
-        <p>Ensuite consultez: "Quel est le montant du complément de libre choix du mode de garde ?"</p>
-
-        <h3>
-            <span>
-               <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important">
-            </span>
-            <strong>Un taux horaire validé par la CAF.</strong>
+      
+      <h3 class="poppins-bold-marron-balise-p">
+          <span>
+              <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important" loading="lazy">
+          </span>
+    Un accueil individuel au prix du collectif
         </h3>
-        <p class="poppins-regular-faq-text">La CAF fixe un taux horaire plafond en fonction de votre besoin d'accueil. Ce plafond est conçu pour être juste et cohérent, aligné avec les autres modes d'accueil. Je respecte ce plafond journalier fixé par la CAF ; mon barème tarifaire est calculé en fonction de ce plafond et de vos besoins, garantissant ainsi un équilibre entre un salaire décent pour l'assistante maternelle et l'éligibilité à l'aide CMG pour le parent. L'objectif est que ni l'assistante maternelle ni le parent ne soient lésés.</p>
 
-        <h3>
-            <span>
-                <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important">
-            </span>
-            <strong>Le coût réel par heure.</strong>
-        </h3>
-        <p class="poppins-regular-faq-text">Le taux horaire sert uniquement à calculer le salaire de l'assistante maternelle. Il ne doit pas être confondu avec le coût réel par heure, qui est important et intéressant à connaître pour vous. Vous constaterez que ce coût réel est comparable à celui des crèches.</p>
-
-        <h3>
-            <span>
-                 <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important">
-            </span>
-            <strong>Le reste à charge.</strong>
-        </h3>
-        <p class="poppins-regular-faq-text">Le salaire net de l'assistante maternelle ne correspond pas à votre reste à charge. Pour déterminer ce reste à charge, vous devez déduire du salaire net le montant du CMG (Complément de libre choix du Mode de Garde), le crédit d'impôt, ainsi que le montant des CESU préfinancés, si vous y avez droit.</p>
-
-        <h3>
-            <span>
-                <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important">
-            </span>
-            <strong>L'indemnité d'entretien.</strong>
-        </h3>
-        <p class="poppins-regular-faq-text">Le montant minimum légal de l'indemnité d'entretien est calculé en fonction de l'amplitude horaire la plus importante. Pour obtenir ce montant, renseignez les informations concernant vos besoins d'accueil sur le site 
-            <a href="https://www.service-public.fr/simulateur/calcul/IndemniteEntretienAssistanteMaternelle" target="_blank" class="styled-link">service-public.fr</a>. Comme le minimum légal peut augmenter régulièrement, j'ajoute 60 centimes pour garantir un montant stable tout au long de la durée du contrat.</p>
-
-        <h3>
-            <span>
-                 <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important">
-            </span>
-            <strong>L'indemnité de repas.</strong>
-        </h3>
-        <p class="poppins-regular-faq-text">Mon indemnité de repas est calculée en fonction de l'âge de l'enfant et de l'inflation, en me basant sur le montant en vigueur au 1er janvier, tel qu'indiqué sur le site 
-            <a href="https://www.pajemploi.urssaf.fr/pajewebinfo/cms/sites/pajewebinfo/accueil/employeur-de-garde-denfants-a-do/je-minforme/le-cout-de-la-garde.html" target="_blank" class="styled-link">pajemploi.urssaf.fr</a>. Vous trouverez cette information dans la rubrique « Les prestations en nature ». Vous avez la possibilité de fournir le repas ; rien n'est imposé.</p>
-    </div>
-</li>
-
-
-
-
-
-
-                       <li>
-    <hr class="faq-separator">
-    <div class="faq-header">
-        <h2 class="poppins-regular-faq">COMMENT PUIS-JE RÉGLER LE SALAIRE ?</h2>
-        <button class="btn-toggle" id="toggle-reglement" title="Toggle demarches" onclick="toggleDescription()">
-            <i class="fas fa-plus"></i> <span class="sr-only">Toggle Description demarches</span>
-        </button>
-    </div>
-    <div class="faq-description">
-        <h3>
-            <span>
-             <img src="{{ '/images/faq/credit-card-credit-svgrepo-com.svg' | url }}" class="checked-salaire" alt="icône carte de crédit paiement">
-            </span>
-            <strong>Par virement bancaire :</strong>
-        </h3>
-        <p class="poppins-regular-faq-text">Le règlement s'effectue par virement bancaire. Je vous transmettrai un RIB pour procéder au paiement.</p>
         
-        <h3>
-            <span>
-               <img src="{{ '/images/faq/credit-card-credit-svgrepo-com.svg' | url }}" class="checked-salaire" alt="icône carte de crédit paiement">
-            </span>
-            <strong>Par CESU :</strong>
-        </h3>
-        <p class="poppins-regular-faq-text">Je n'accepte que les Chèques Emploi Service Universel (CESU) préfinancés <strong>dématérialisés.</strong> Je vous fournirai mon numéro d'affiliation nationale (NAN), nécessaire pour le virement en ligne.</p>
+        <p class="poppins-regular-marron-balise-p">
 
-        <h3>
-            <span>
-              <img src="{{ '/images/faq/credit-card-credit-svgrepo-com.svg' | url }}" class="checked-salaire" alt="icône carte de crédit paiement">
-            </span>
-            <strong>Date de paiement :</strong>
-        </h3>
-        <p class="poppins-regular-faq-text">Je propose de régler le salaire le 5 de chaque mois. Cependant, nous pouvons convenir d'une autre date si nécessaire. L'essentiel est de respecter la date de paiement mentionnée dans le contrat pour éviter tout retard.</p>
+La réforme CMG 2025 vise à garantir un équilibre équitable afin que ni les familles ni les assistantes maternelles ne soient pénalisées. En fonction de votre situation familiale et de vos besoins d’accueil, qu’ils soient proches d’un contrat plein temps (environ 45 heures par semaine) ou à temps partiel significatif, je vous propose un service au coût intermédiaire entre une crèche collective et une micro-crèche en Essonne, complété par un accueil personnalisé et des séances en collectivité proposées en partenariat avec le Relais Petite Enfance.</p>
 
-        <h3>
-            <span>
-               <img src="{{ '/images/faq/credit-card-credit-svgrepo-com.svg' | url }}" class="checked-salaire" alt="icône carte de crédit paiement">
-            </span>
-            <strong>Des difficultés de paiement ?</strong>
+        <p>Estimez précisément le coût d’une garde individuelle par rapport à une place en crèche. Accédez au simulateur ici : <a href="/simulateur-cout-creche-assistante-maternelle/" target="_blank" class="style-liens">simulateur comparatif assistante maternelle/crèche</a>.</p> 
+        
+    <h3 class="poppins-bold-marron-balise-p">
+          <span>
+              <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important" loading="lazy">
+          </span>
+    Le tarif horaire
         </h3>
-        <p class="poppins-regular-faq-text">Un contrat est un engagement mutuel. En cas de non-paiement ou d'accumulation de dettes, cela peut entraîner la rupture du contrat et l'arrêt de l'accueil de votre enfant. La situation pourra nécessiter une action en justice pour résilier le contrat à vos torts exclusifs, en saisissant le Conseil des Prud'hommes, plutôt qu'une démission de ma part. Cette option pourrait entraîner des intérêts de retard ainsi que des dommages et intérêts à votre charge.</p>
+
+
+        <p class="poppins-regular-marron-balise-p">Le taux horaire sert uniquement à calculer le salaire de l'assistante maternelle. Il ne doit pas être confondu avec le coût réel par heure, qui est important et intéressant à connaître pour vous. Vous constaterez que ce coût réel est comparable à celui des crèches.</p>
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+              <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important" loading="lazy">
+          </span>
+    Le reste à charge
+        </h3>
+
+      
+        <p class="poppins-regular-marron-balise-p">Le salaire net de l'assistante maternelle ne correspond pas à votre reste à charge. Pour déterminer ce reste à charge, vous devez déduire du salaire net le montant du CMG (Complément de libre choix du Mode de Garde), le crédit d'impôt, ainsi que le montant des CESU préfinancés, si vous y avez droit.</p>
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+              <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important" loading="lazy">
+          </span>
+    L'indemnité d'entretien
+        </h3>
+
+      
+        <p class="poppins-regular-marron-balise-p">Le montant minimum légal de l'indemnité d'entretien est calculé en fonction de l'amplitude horaire la plus importante. Pour obtenir ce montant, renseignez les informations concernant vos besoins d'accueil sur le site 
+            <a href="https://www.service-public.fr/simulateur/calcul/IndemniteEntretienAssistanteMaternelle" target="_blank" class="style-liens">service-public.fr</a>. Comme le minimum légal peut augmenter régulièrement, j'ajoute 60 centimes pour garantir un montant stable tout au long de la durée du contrat.</p>
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+              <img src="{{ '/images/faq/money-bag-svgrepo-com.svg' | url }}" class="checked-money" alt="icône important" loading="lazy">
+          </span>
+   L'indemnité de repas
+        </h3>
+
+        
+        <p class="poppins-regular-marron-balise-p">Mon indemnité de repas est calculée en tenant compte de l'âge de l'enfant ainsi que de l'inflation, à partir du montant en vigueur au 1er janvier, tel qu'indiqué sur le site officiel de 
+            <a href="https://www.urssaf.fr/accueil/employeur/cotisations/avantages-en-nature.html" target="_blank" class="style-liens">pajemploi.urssaf.fr</a>.</p>
+            
+           <p>L’assistante maternelle demeure libre de fixer ses tarifs, comme expliqué sur le site <a href="https://www.nounou-top.fr/guide/assmat/administratif/indemnite-assmat/indemnites-repas/" target="_blank" class="style-liens">nounou-top.fr</a>.</p>
+           
+          <p>Vous avez également la possibilité de fournir les repas à votre enfant ; cette option n’entraîne aucune obligation tarifaire spécifique.</p>
     </div>
 </li>
 
 
-                           <li>
+
+
+<li>
     <hr class="faq-separator">
     <div class="faq-header">
-        <h2 class="poppins-regular-faq">GUIDE POUR REMPLIR L'ATTESTATION EMPLOYEUR</h2>
-        <button class="btn-toggle" id="toggle-travail" title="Toggle travail" onclick="toggleDescription()">
-            <i class="fas fa-plus"></i> <span class="sr-only">Toggle Description travail</span>
-        </button>
+        <h2 class="poppins-regular-faq">Comment régler le salaire d’une assistante maternelle ?</h2>
+
+
+
+<button class="btn-toggle" id="toggle-salaire" title="Toggle familles" onclick="toggleDescriptionmagie('salaire-description', this)">
+    <img src="../images/faq/croix-en-savoir-plus-faq.svg" alt="Flèche" class="faq-icon"> 
+    <span class="sr-only">Toggle Description familles</span>
+</button>
+
+
     </div>
-    <div class="faq-description">
+    <div class="faq-description" id="salaire-description">
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+             <img src="{{ '/images/faq/credit-card-credit-svgrepo-com.svg' | url }}" class="checked-salaire" alt="icône carte de crédit paiement" loading="lazy">
+          </span>
+   Par virement bancaire :
+        </h3>
+
+       
+        <p class="poppins-regular-marron-balise-p">Le règlement s'effectue par virement bancaire. Je vous transmettrai un RIB pour procéder au paiement.</p>
+        
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+             <img src="{{ '/images/faq/credit-card-credit-svgrepo-com.svg' | url }}" class="checked-salaire" alt="icône carte de crédit paiement" loading="lazy">
+          </span>
+   Par CESU :
+        </h3>
+
+       
+        <p class="poppins-regular-marron-balise-p">Je n'accepte que les Chèques Emploi Service Universel (CESU) préfinancés <strong>dématérialisés.</strong> Je vous fournirai mon numéro d'affiliation nationale (NAN), nécessaire pour le virement en ligne.</p>
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+             <img src="{{ '/images/faq/credit-card-credit-svgrepo-com.svg' | url }}" class="checked-salaire" alt="icône carte de crédit paiement" loading="lazy">
+          </span>
+   Date de paiement :
+        </h3>
+
+
+        <p class="poppins-regular-marron-balise-p">Je propose de régler le salaire le 5 de chaque mois. Cependant, nous pouvons convenir d'une autre date si nécessaire. L'essentiel est de respecter la date de paiement mentionnée dans le contrat pour éviter tout retard.</p>
+
+<h3 class="poppins-bold-marron-balise-p">
+          <span>
+             <img src="{{ '/images/faq/credit-card-credit-svgrepo-com.svg' | url }}" class="checked-salaire" alt="icône carte de crédit paiement" loading="lazy">
+          </span>
+   Des difficultés de paiement ?
+        </h3>
+
+        
+        <p class="poppins-regular-marron-balise-p">Un contrat est un engagement mutuel. En cas de non-paiement ou d'accumulation de dettes, cela peut entraîner la rupture du contrat et l'arrêt de l'accueil de votre enfant. La situation pourra nécessiter une action en justice pour résilier le contrat à vos torts exclusifs, en saisissant le Conseil des Prud'hommes, plutôt qu'une démission de ma part. Cette option pourrait entraîner des intérêts de retard ainsi que des dommages et intérêts à votre charge.</p>
+    </div>
+</li>
+
+
+<li>
+    <hr class="faq-separator">
+    <div class="faq-header">
+        <h2 class="poppins-regular-faq">Comment remplir l’attestation employeur assistante maternelle ?</h2>
+
+
+ <button class="btn-toggle" id="toggle-attestation" title="Toggle familles" onclick="toggleDescriptionmagie('attestation-description', this)">
+    <img src="../images/faq/croix-en-savoir-plus-faq.svg" alt="Flèche" class="faq-icon"> 
+    <span class="sr-only">Toggle Description familles</span>
+</button>
+
+
+    </div>
+    <div class="faq-description" id="attestation-description">
         <p>
             Pour créer un "espace employeur" sur 
-            <a href="https://www.francetravail.fr/employeur/vous-etes-un-particulier-employe.html" target="_blank" class="styled-link">le site de France Travail</a> utilisez votre identifiant URSSAF (Pajemploi), que vous pouvez trouver dans votre lettre de bienvenue, votre espace personnel en ligne, vos e-mails de confirmation, ou en contactant le service client de Pajemploi ou de l'URSSAF. Vous recevrez ensuite un code d'accès par e-mail. Je vous fournirai une saisie personnalisée pour vous guider.
+            <a href="https://www.francetravail.fr/employeur/vous-etes-un-particulier-employe.html" target="_blank" class="style-liens">le site de France Travail</a> utilisez votre identifiant URSSAF (Pajemploi), que vous pouvez trouver dans votre lettre de bienvenue, votre espace personnel en ligne, vos e-mails de confirmation, ou en contactant le service client de Pajemploi ou de l'URSSAF. Vous recevrez ensuite un code d'accès par e-mail. Je vous fournirai une saisie personnalisée pour vous guider.
         </p>
         
         <p>Les étapes à suivre:</p>
-        
-        <h3><strong>1. Employeur</strong></h3>
-        <p class="poppins-regular-faq-text">Les informations sont préremplies selon votre inscription.</p>
 
-        <h3><strong>2. Salarié</strong></h3>
-        <p class="poppins-regular-faq-text">Renseignez les coordonnées, le numéro de Sécurité Sociale, et l'organisme de retraite (IRCEM).</p>
+<h3 class="poppins-bold-marron-balise-p">1. Employeur</h3>
+        <p class="poppins-regular-marron-balise-p">Les informations sont préremplies selon votre inscription.</p>
 
-        <h3><strong>3. Emploi</strong></h3>
-        <p class="poppins-regular-faq-text">Indiquez la durée de l'emploi, le dernier poste occupé, les détails du préavis, et les heures de travail hebdomadaires.</p>
+<h3 class="poppins-bold-marron-balise-p">2. Salarié</h3>
+        <p class="poppins-regular-marron-balise-p">Renseignez les coordonnées, le numéro de Sécurité Sociale, et l'organisme de retraite (IRCEM).</p>
 
-        <h3><strong>4. Motif de la rupture</strong></h3>
-        <p class="poppins-regular-faq-text">Sélectionnez le motif, généralement "Retrait de l'enfant".</p>
+<h3 class="poppins-bold-marron-balise-p">3. Emploi</h3>
+        <p class="poppins-regular-marron-balise-p">Indiquez la durée de l'emploi, le dernier poste occupé, les détails du préavis, et les heures de travail hebdomadaires.</p>
 
-        <h3><strong>5. Salaires des 25 derniers mois</strong></h3>
-        <p class="poppins-regular-faq-text">Indiquez les salaires bruts de chaque mois en utilisant les fiches de paie de Pajemploi. Ajustez pour 37 mois si la salariée a plus de 53 ans.</p>
+<h3 class="poppins-bold-marron-balise-p">4. Motif de la rupture</h3>
+        <p class="poppins-regular-marron-balise-p">Sélectionnez le motif, généralement "Retrait de l'enfant".</p>
+
+<h3 class="poppins-bold-marron-balise-p">5. Salaires des 25 derniers mois</h3>
+        <p class="poppins-regular-marron-balise-p">Indiquez les salaires bruts de chaque mois en utilisant les fiches de paie de Pajemploi. Ajustez pour 37 mois si la salariée a plus de 53 ans.</p>
 
         <p>
             <span>
@@ -501,20 +818,38 @@ bodyClass: "bg-white faq"
             Salaire mensuel brut : Consultez la colonne "base" du bulletin de paie Pajemploi (ne pas saisir les montants des deux premières lignes CSG).
         </p>
 
-        <h3><strong>6. Primes</strong></h3>
-        <p class="poppins-regular-faq-text">Mentionnez toute prime exceptionnelle en argent (comme une prime de Noël).</p>
+<h3 class="poppins-bold-marron-balise-p">6. Primes</h3>
+        <p class="poppins-regular-marron-balise-p">Mentionnez toute prime exceptionnelle en argent (comme une prime de Noël).</p>
 
-        <h3><strong>7. Sommes versées à la rupture</strong></h3>
-        <p class="poppins-regular-faq-text">Incluez les indemnités de congés payés non pris et autres indemnités liées à la rupture.</p>
+<h3 class="poppins-bold-marron-balise-p">7. Sommes versées à la rupture</h3>
+        <p class="poppins-regular-marron-balise-p">Incluez les indemnités de congés payés non pris et autres indemnités liées à la rupture.</p>
 
-        <h3><strong>8. Authentification</strong></h3>
-        <p class="poppins-regular-faq-text">Inscrivez votre nom en tant qu'employeur, précisez la cause de la rupture ("Retrait d'enfant"), et signez l'attestation.</p>
+<h3 class="poppins-bold-marron-balise-p">8. Authentification</h3>
+        <p class="poppins-regular-marron-balise-p">Inscrivez votre nom en tant qu'employeur, précisez la cause de la rupture ("Retrait d'enfant"), et signez l'attestation.</p>
 
-        <h3><strong>Validez en ligne et remettez une copie imprimée et signée à l'assistante maternelle.</strong></h3>
+<h3 class="poppins-bold-marron-balise-p">Validez en ligne et remettez une copie imprimée et signée à l'assistante maternelle.</h3>
+       
     </div>
 </li>
 
-                                  
+<li>
+    <hr class="faq-separator">
+    <div class="faq-header">
+        <h2 class="poppins-regular-faq">Pourquoi choisir l’accueil chez Céline à Brétigny-sur-Orge ?</h2>
+        <button class="btn-toggle" id="toggle-difference" title="Toggle difference" onclick="toggleDescriptionmagie('difference-description', this)">
+            <img src="../images/faq/croix-en-savoir-plus-faq.svg" alt="Flèche" class="faq-icon"> 
+            <span class="sr-only">Toggle Description famille</span>
+        </button>
+   </div>
+    <div class="faq-description" id="difference-description">
+        <p class="poppins-regular-marron-balise-p">Mon mode d’accueil se distingue par un environnement familial, cocooning et individualisé. Pour mieux comprendre les différences avec les autres modes de garde, vous pouvez consulter cet article détaillé&nbsp;: 
+        <a href="/posts/petite-enfance-bretigny-91/choix-mode-de-garde-bretigny/#differenciation" target="_blank" class="style-liens">Découvrir l’article</a></p>
+    </div> 
+</li>
+
+
+
+
                     
                   
    
@@ -525,87 +860,48 @@ bodyClass: "bg-white faq"
 <div class="mentions-spacer"></div>
 
 </div> <!-- profile-text -->
-
+</div> <!-- container-md -->
 </div> <!-- Fermeture de la col-md-12 -->
 
-<!-- SVG qui doit être placé au-dessus de la carte -->
- <img src="{{ '/images/mentions-legales/bottom-mentions.svg' | url }}" class="map-top-curvy" alt="SVG Description">
+
 
 </div> <!-- Fermeture de la row -->
+
+<!-- SVG qui doit être placé au-dessus de la carte -->
+ <img src="{{ '/images/mentions-legales/bottom-mentions.svg' | url }}" class="map-top-curvy" alt="nuages décoratifs fin de la page faq">
 
 </section> <!-- Fermeture de la section -->
 
 
 
 
-<!-- Autres contenus précédents -->
-
-
-<script>
-    function toggleDescription() {
-    const button = document.querySelector('.btn-toggle');
-
-    // Ajouter la classe seulement si elle n'est pas déjà présente
-    if (!button.classList.contains('button-text-visible')) {
-        button.classList.add('button-text-visible');
-    }
-}
-
-</script>
-
 
 
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      // Récupérez tous les boutons "+" dans la section "Diplômes"
-      const toggleButtonsfaq = document.querySelectorAll('.btn-toggle');
-      const specificTitlesfaq = document.querySelectorAll('.faq-title-specific');
-  
-      // Ajoutez un gestionnaire d'événement à chaque bouton "+"
-      toggleButtonsfaq.forEach((button, index) => {
-        button.addEventListener('click', () => {
-          // Trouvez la description de diplôme correspondante
-          const descriptions = document.querySelectorAll('.faq-description');
-          
-          // Vérifiez si l'index est valide
-          if (index < descriptions.length) {
-            const description = descriptions[index];
-  
-            // Vérifiez si la description existe et si elle est visible ou cachée
-            const isVisible = description && window.getComputedStyle(description).display !== 'none';
-  
-            // Inversez la visibilité en ajoutant ou supprimant la classe 'visible'
-            if (isVisible) {
-              description.style.display = 'none'; // Cachez la description
-              button.innerHTML = '<i class="fas fa-plus"></i>'; // Changez l'icône du bouton en "+"
-            } else {
-              description.style.display = 'block'; // Affichez la description
-              button.innerHTML = '<i class="fas fa-minus"></i>'; // Changez l'icône du bouton en "-"
-            }
-          }
-        });
-      });
-  
-     
-        });
-  
-  
-  </script>
-  
-  <script>
   function toggleDescriptionmagie(id, btn) {
   var element = document.getElementById(id);
+  var icon = btn.querySelector('.faq-icon'); // Sélectionner l'icône SVG à l'intérieur du bouton
+  
   if (element) {
     if (element.style.display === "none" || element.style.display === "") {
+      // Afficher la description et tourner l'icône
       element.style.display = "block";
-      btn.innerHTML = '<span><strong>En savoir moins</strong></span><i class="fas fa-minus"></i>';
+      icon.style.transform = "rotate(45deg)"; // Rotation de l'icône SVG
+      icon.style.transition = "transform 0.3s ease"; // Transition douce de la rotation
     } else {
+      // Masquer la description et réinitialiser l'icône
       element.style.display = "none";
-      btn.innerHTML = '<span><strong>En savoir plus</strong></span><i class="fas fa-plus"></i>';
+      icon.style.transform = "rotate(0deg)"; // Réinitialisation de la rotation
+      icon.style.transition = "transform 0.3s ease"; // Transition douce de la rotation
     }
   } else {
     console.error("Element with ID '" + id + "' not found.");
   }
 }
+
+
     </script>
+
+
+

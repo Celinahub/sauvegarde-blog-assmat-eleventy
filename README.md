@@ -1,6 +1,6 @@
 # Site Web de Céline Hubert - Assistante Maternelle Agréée
 
-![Capture d'écran](capture-site-projet-accueil-celine-hubert.jpg)
+![Capture d'écran](capture-site-blog-celine-hubert.jpg)
 
 Bienvenue sur le site web de Céline Hubert, assistante maternelle agréée, créé avec l'aide des outils AI, de tutoriels youtube et d'un repo public "eleventy-blog-staticman". Ce site présente mes services de garde d'enfants, mon projet d'accueil personnalisé, et fournit des moyens de contact pour les parents intéressés.
 
@@ -96,7 +96,7 @@ Vous devez télecharger Node.js et npm installés sur votre machine pour exécut
 ## Structure du Projet
 
 ```bash
-assmatprojet/
+audit-sauvegarde-blog-assmat-eleventy/
 |-- _data/ 
 |    |-- metadata.json <!-- Fichier de métadonnées utilisé pour configurer ou enrichir le contenu -->
 |-- _includes/

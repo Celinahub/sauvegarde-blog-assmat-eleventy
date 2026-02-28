@@ -1,29 +1,32 @@
- {
-  "title": "Céline Hubert - Assistante Maternelle Agréée",
-  "url": "https://chubert91assmat.netlify.app/",
+{
+  "title": "Céline Hubert - Assistante Maternelle",
+  "url": "https://celine-assmat-bretigny.fr/",
   "language": "fr",
-  "description": "Assistante maternelle agréée à Brétigny-sur-Orge. Découvrez un accueil personnalisé pour votre enfant, une alternative aux crèches et nounous. Contactez-moi !",
+  "description": "Assistante maternelle à Brétigny-sur-Orge, Céline Hubert vous accueille avec bienveillance.",
   "feed": {
-      "subtitle": "Les derniers articles de mon blog",
-      "filename": "atom.xml",
-      "path": "/feed/atom.xml",
-      "id": "https://chubert91assmat.netlify.app/feed/atom.xml"
-    },
-    "author": {
-      "name": "Céline Hubert",
-    "instagram": "https://www.instagram.com/chez.celine.assmat.bretigny91/?utm_source=qr&igsh=MWU3a2xmOHZwMjNwMA%3D%3D",
-    "facebook": "https://www.facebook.com/people/Assistante-maternelle-agr%C3%A9%C3%A9e-chez-C%C3%A9line/61568196129740",
-    "linkedin": "https://www.linkedin.com/in/celinehubertch/",
-    "pinterest": "https://fr.pinterest.com/chubert91assmat/_profile/"
+    "subtitle": "Les derniers articles de mon blog",
+    "filename": "atom.xml",
+    "path": "/feed/atom.xml",
+    "id": "https://celine-assmat-bretigny.fr/feed/atom.xml"
   },
-    "socialImage": "/images/social-default.jpg",
-   "navigation": [
-    { "title": "Accueil", "url": "/" },
-    { "title": "Projet d'accueil", "url": "/projet-accueil/" },
-    { "title": "Faq", "url": "/faq/" },
-    { "title": "Blog", "url": "/blog/" },
-    { "title": "Contact", "url": "/contact/" },
+  "author": {
+  "name": "Céline Hubert",
+    "instagram": "https://www.instagram.com/celine.assmat.bretigny91/",
+    "facebook": "https://www.facebook.com/celine.assmat.bretigny/",
+    "linkedin": "https://www.linkedin.com/in/celinehubertch/",
+    "pinterest": "https://fr.pinterest.com/celine_assmat_bretigny/"
+  },
+  "socialImage": "/presentation/rpe-bretigny.jpg",
+  "pageImages": {
+    "projet-accueil": "/presentation/parc-bretigny.jpg"
+  },
+  "navigation": [
+    { "title": "ASSISTANTE MATERNELLE À BRÉTIGNY-SUR-ORGE", "url": "/" },
+    { "title": "PROJET D'ACCUEIL", "url": "/projet-accueil/" },
+    { "title": "FAQ", "url": "/faq/" },
+    { "title": "BLOG", "url": "/blog/" },
+    { "title": "SIMULATION COÛT CRECHE/ASSMAT 2025", "url": "/simulateur-cout-creche-assistante-maternelle/" },
+    { "title": "CONTACT", "url": "/contact/" },
     { "title": "Mentions légales", "url": "/mentions-legales/" }
   ]
-  }
-  
+}

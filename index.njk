@@ -1,94 +1,89 @@
 ---
 layout: layouts/base.njk
-title: "Assistante Maternelle à Brétigny | Garde d'enfants Céline Hubert"
-description: "Confiez votre enfant à Céline, assistante maternelle agréée à Brétigny-sur-Orge. Garde d'enfants alternative à la crèche avec un accueil personnalisé."
-url: "https://chubert91assmat.netlify.app/"
+title: "Assistante maternelle à Brétigny-sur-Orge – Chez Céline"
+description: "Assistante maternelle agréée à Brétigny-sur-Orge (Essonne). Maison avec jardin près du RER C, accueil familial qui se distingue de la crèche."
+url: "https://celine-assmat-bretigny.fr/"
 image: "presentation-assistante-maternelle-agreee.jpg"
-eleventyNavigation:
-  key: PRESENTATION
-  order: 1
 permalink: "/"
-bodyClass: "bg-white presentation"
+bodyClass: "bg-white accueil"
+
+eleventyNavigation:
+  key: Accueil
+  order: 1
+
+# =========================
+# JSON-LD : FAQ (SEO)
+# =========================
+jsonldFAQ:
+  "@context": "https://schema.org"
+  "@type": "FAQPage"
+  mainEntity:
+    - "@type": "Question"
+      name: "Quels sont les avantages d'une assistante maternelle à Brétigny-sur-Orge ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Une assistante maternelle offre un accueil personnalisé et sécurisé à Brétigny-sur-Orge, souvent plus souple et chaleureux qu'en crèche. Céline est agréée, proche de la gare RER C et du parc Clause-Bois Badeau."
+    - "@type": "Question"
+      name: "Puis-je visiter avant de réserver ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Oui, lors d'un premier rendez-vous je propose une visite du lieu d'accueil avant toute réservation, afin de vous assurer que l'environnement correspond bien aux besoins de votre enfant et de votre famille. Cette visite permet également d'établir un premier contact, poser des questions, et discuter du projet d'accueil."
+    - "@type": "Question"
+      name: "Êtes-vous accessible depuis Le Plessis-Pâté ou Saint-Michel-sur-Orge ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Oui, mon domicile est à quelques minutes de ces communes en voiture ou en bus."
+    - "@type": "Question"
+      name: "Accueillez-vous des enfants de Saint-Germain-lès-Arpajon ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Oui, j'accueille des familles des villes voisines comme Saint-Germain-lès-Arpajon, Le Plessis-Pâté ou Saint-Michel-sur-Orge."
+
+# =========================
+# JSON-LD : Activité locale
+# =========================
+jsonldBusiness:
+  "@context": "https://schema.org"
+  "@type": "ChildCare"
+  "@id": "https://celine-assmat-bretigny.fr/#business"
+  name: "Assistante maternelle agréée - chez Céline"
+  url: "https://celine-assmat-bretigny.fr/"
+  image: "https://celine-assmat-bretigny.fr/presentation-assistante-maternelle-agreee.webp"
+  logo: "https://celine-assmat-bretigny.fr/images/navbar/logo-navbar-paint.png"
+  description: "Assistante maternelle agréée proposant un accueil personnalisé pour les enfants à Brétigny-sur-Orge. Une alternative chaleureuse et professionnelle à la crèche."
+
+  address:
+    "@type": "PostalAddress"
+    streetAddress: "30 Bis Av. Lucien Clause"
+    addressLocality: "Brétigny-sur-Orge"
+    addressRegion: "Île-de-France"
+    postalCode: "91220"
+    addressCountry: "FR"
+
+  geo:
+    "@type": "GeoCoordinates"
+    latitude: 48.609
+    longitude: 2.25
+
+  openingHoursSpecification:
+    - "@type": "OpeningHoursSpecification"
+      dayOfWeek:
+        - Monday
+        - Tuesday
+        - Thursday
+        - Friday
+      opens: "07:15"
+      closes: "18:45"
+
+  hasMap: "https://www.google.com/maps/place/30+Bis+Av.+Lucien+Clause,+Brétigny-sur-Orge"
+  priceRange: "€"
+
+  sameAs:
+    - "https://g.page/r/CQsVBcwjVgVtEBM/review"
 ---
 
 
-    <script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Assistante maternelle agréée - chez Céline",
-  "image": "https://chubert91assmat.netlify.app/images/presentation-assistante-maternelle-agreee.jpg",
-  "priceRange": "Fixé en fonction de vos besoins d'accueil",
-  "description": "Assistante maternelle agréée proposant un accueil personnalisé pour les enfants à Brétigny-sur-Orge. Une alternative chaleureuse et professionnelle à la crèche.",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "22 Rue du Parc",
-    "addressLocality": "Brétigny-sur-Orge",
-    "addressRegion": "Île-de-France",
-    "postalCode": "91220",
-    "addressCountry": "FR"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "1"
-  },
-  "review": [
-    {
-      "@type": "Review",
-      "itemReviewed": {
-        "@type": "Service",
-        "name": "Garde d'enfants",
-        "description": "Services de garde d'enfants par une assistante maternelle agréée."
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Sophie NGO LEANG"
-      },
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "5",
-        "bestRating": "5"
-      },
-      "reviewBody": "Très belle expérience chez Céline avec notre fils, il a appris à être en collectivité, il a gagné en autonomie et il s'est épanoui ! Les petits plats maison et les gâteaux improvisés étaient très appréciés. Il est maintenant prêt pour rentrer à l'école ! Merci Céline pour l'accueil !"
-    }
-  ],
-  "parentOrganization": {
-    "@type": "Organization",
-    "name": "Céline Hubert - Assistante Maternelle Agréée",
-    "url": "https://chubert91assmat.netlify.app"
-
- }
-}
-</script>
-
-<!-- Ajout du JSON-LD pour le fil d'Ariane -->
-<script type="application/ld+json">
-{
-  "@context": "http://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Accueil",
-      "item": "https://chubert91assmat.netlify.app"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Garde d'enfants",
-      "item": "https://chubert91assmat.netlify.app/projet-accueil/"
-    }
-  ]
-}
-</script>
-
-    
-
-
-    
-
+  
 <!-- Icône de défilement vers le haut utilisant une image SVG -->
 <a href="#portrait" class="scroll-to-top">
     <img class="rocket-icon" src="../images/rocket-svgrepo-com.svg" alt="Icône de fusée pour remonter en haut de la page" />
@@ -99,18 +94,37 @@ bodyClass: "bg-white presentation"
 
 
 
+{% block preload %}
+  <link rel="preload" href="/images/presentation/arriere-plan-nuages-bleus-bretigny-assistante-maternelle.svg" as="image" type="image/svg+xml">
+{% endblock %}
 
-<section id="portrait" class="container-fluid py-5 rubrique-frame">
- <h1 class="sr-only" aria-hidden="true">Céline, assistante maternelle à Brétigny</h1> <!-- Titre caché pour l'accessibilité -->
+{% block content %}
+<section id="portrait" class="container-fluid py-5 position-relative">
+  <div class="header-container text-center text-md-start">
+  <h1 class="poppins-bold-titre-h1 mb-3">
+    Assistante Maternelle Agréée à Brétigny-sur-Orge
+  </h1>
+
+  <!-- La ligne magique qui transforme « complet » en aimant à parents -->
+  <p class="poppins-regular-balise-p">
+   <strong>Une place d'accueil se libère en septembre 2027</strong> –  Envie d'en savoir plus? Contactez-moi pour un premier échange  →
+  </p>
+
+
+
+
+</div>
+
     <div class="row justify-content-center text-center position-relative">
         <div class="col-md-12">
-      <img src="{{ '/images/presentation/arriere-plan-nuages-bleus-bretigny-assistante-maternelle.svg' | url }}" 
+
+     <img src="{{ '/images/presentation/arriere-plan-nuages-bleus-bretigny-assistante-maternelle.svg' | url }}" 
      class="fond-curvy background-portrait" 
      alt="Nuages bleus enfantins"
-     loading="eager"  
-     fetchpriority="high"
+     loading="eager"
      decoding="async"
      width="842" height="597">
+
 
         </div>
         <div class="bordered-content-presentation-image">
@@ -121,15 +135,17 @@ bodyClass: "bg-white presentation"
   <source srcset="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.webp' | url }}" type="image/webp">
   
   <!-- Balise img pour les navigateurs ne prenant pas en charge WebP -->
-  <img class="photo-img-portrait" 
-       src="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg' | url }}" 
-       alt="Céline Hubert, assistante maternelle à Brétigny-sur-Orge" 
-       loading="lazy" 
-       width="399" 
-       height="399">
+ <img class="photo-img-portrait"
+     src="/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg"
+     alt="Céline Hubert, assistante maternelle à Brétigny-sur-Orge"
+     loading="eager"
+     fetchpriority="high"
+     width="399"
+     height="399">
+
 </picture>
 
-                <a href="{{ '/contact/' | url }}" class="position-icon-b" aria-label="Contacter Céline Hubert via icône bulle ou bouton SVG">
+                <a href="/contact/#message" class="position-icon-b" aria-label="Envoyer un message à Céline Hubert">
                     <!-- Contenu de l'icône ou bouton -->
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          width="5em" height="5em" viewBox="0 41.206 800 717.588" enable-background="new 0 41.206 800 717.588"
@@ -146,340 +162,255 @@ bodyClass: "bg-white presentation"
                         </g>
                     </svg>
                 </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-<section id="services-garde-enfants" class="container-fluid py-5">
-    <div class="services-garde-enfants-section section-wrapper">
-        <div class="profile-text text-center">
-            <h2 class="poppins-bold-titre-accueil">{{ accueilTitre | default("Céline, Assistante Maternelle Agréée") }}</h2>
-            <h3 class="fade-in-out-bretigny">{{ sousTitreAccueil | default("à Brétigny-sur-Orge") }}</h3>
-        </div>
-
-        <!-- Premier ligne -->
-        <div class="row g-0">
-            <!-- A PROPOS (Texte à gauche) -->
-            <div class="col-md-6 p-0 d-flex align-items-center">
-                <div class="services-garde-enfants-item w-100">
-                    <div class="services-garde-enfants-text-space p-4">
-                        
-                        <h3 class="introduction-titre">{{ aProposTitre | default("A PROPOS") }}</h3>
-                        <hr class="horizontal-line">
-                        <div class="description-atout-services">
-                            <p class="poppins-regular-accueil">{{ aProposDescription | default("En 2016, après une immersion en tant que particulier-employeur, j'ai amorcé une reconversion professionnelle pour devenir assistante maternelle agréée. Trouver un mode de garde sécurisant pour notre premier enfant a renforcé ma conviction d'offrir un accueil personnalisé et de qualité aux familles.") }}</p>
-                            
-                            <!-- Bouton "lien interne" -->
-                       <a href="{{ '/contact/' | url }}" class="btn btn-action-primary my-4" aria-label="Accédez au formulaire de contact pour envoyer un e-mail">
-    Accédez au formulaire de contact
-</a>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Image à droite -->
-            <div class="col-md-6 p-0">
-                <div class="services-garde-enfants-item">
-                    <div class="services-garde-enfants-image">
-                        <div class="image-frame-services position-relative">
-
-              {% image "/images/presentation/reconversion.jpg",
-   "Photo illustrant la reconversion professionnelle en assistante maternelle",
-   "(min-width: 1024px) 50vw, 100vw",
-   width=1200, height=1200,
-   loading="lazy", fetchpriority="auto", format="webp"
-%}
-
-
-
-                    
-                            <div class="image-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Deuxième ligne -->
-        <div class="row g-0">
-            <!-- ENVIRONNEMENT FAMILIAL (Texte à droite) -->
-            <div class="col-md-6 order-md-2 p-0 d-flex align-items-center">
-                <div class="services-garde-enfants-item w-100">
-                    <div class="services-garde-enfants-text-space p-4">
-                        <h2 class="introduction-titre">{{ environnementTitre | default("ENVIRONNEMENT FAMILIAL") }}</h2>
-                        <hr class="horizontal-line">
-                        <div class="description-atout-services">
-                            <p class="poppins-regular-accueil">{{ environnementDescription | default("Chaque enfant accueilli bénéficie de sa propre chambre dans un environnement calme, favorisant son bien-être, et profite d'interactions enrichissantes avec mes enfants plus âgés, contribuant à son développement psychomoteur, social et à son autonomie.") }}</p>
-                            
-                            <!-- Bouton "lien interne" -->
-                            <a href="{{ '/projet-accueil/#routine' | url }}" class="btn btn-action-primary my-4">{{ boutonTexte | default("Découvrez notre routine") }}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Image à gauche -->
-            <div class="col-md-6 order-md-1 p-0">
-                <div class="services-garde-enfants-item">
-                    <div class="services-garde-enfants-image">
-                        <div class="image-frame-services position-relative">
-
-
-
-              {% image "/images/presentation/anniversaire-accueilli.jpg",
-   "Anniversaire accueilli",
-   "(min-width: 1024px) 50vw, 100vw",
-   width=1200, height=1200,
-   loading="lazy", fetchpriority="auto", format="webp"
-%}
-
-
-                            <div class="image-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-       <!-- Troisième ligne -->
-<div class="row g-0">
-    <!-- RATIO ENFANTS/ADULTES PLUS BAS (Texte à gauche) -->
-    <div class="col-md-6 p-0 d-flex align-items-center">
-        <div class="services-garde-enfants-item w-100">
-            <div class="services-garde-enfants-text-space p-4">
-                <h2 class="introduction-titre">{{ capacitesTitre | default("CAPACITES D'ACCUEIL") }}</h2>
-                <hr class="horizontal-line">
-                <div class="description-atout-services">
-                    <p class="poppins-regular-accueil">{{ capacitesDescription | default("Mon agrément limite le nombre d'enfants, offrant un ratio enfants/adulte plus bas que l'accueil collectif pour garantir une attention individualisée, une surveillance renforcée, et un cadre sécurisant lors des repas et de la sieste, tout en assurant un service de qualité basé sur les principes de la Protection maternelle et infantile.") }}</p>
-                    
-                    <!-- Bouton "lien interne" -->
-                    <a href="{{ '/projet-accueil/#agrement' | url }}" class="btn btn-action-primary my-4">{{ boutonTexte | default("Consultez les capacités de mon agrément") }}</a>
                 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Image à droite -->
-            <div class="col-md-6 p-0">
-                <div class="services-garde-enfants-item">
-                    <div class="services-garde-enfants-image">
-                        <div class="image-frame-services position-relative">
-
-  {% image "/images/presentation/agrement-limite.jpg",
-   "Agrement Limite",
-   "(min-width: 1024px) 50vw, 100vw",
-   width=1200, height=1200,
-   loading="lazy", fetchpriority="auto", format="webp"
-%}
 
 
-                            <div class="image-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Quatrième ligne -->
-        <div class="row g-0">
-            <!-- SORTIES ET ACTIVITES EXTERIEURES (Texte à droite) -->
-            <div class="col-md-6 order-md-2 p-0 d-flex align-items-center">
-                <div class="services-garde-enfants-item w-100">
-                    <div class="services-garde-enfants-text-space p-4">
-                        <h2 class="introduction-titre">{{ activitesTitre | default("ACTIVITES ET PROMENADES") }}</h2>
-                        <hr class="horizontal-line">
-                        <div class="description-atout-services">
-                            <p class="poppins-regular-accueil">{{ activitesDescription | default("Lorsque la météo le permet, nous effectuons des sorties quotidiennes dans les parcs et grands espaces de la ville, permettant aux enfants de rencontrer leurs pairs et de stimuler leur développement du langage, tout en luttant contre la sédentarité et en favorisant leur santé physique et mentale.") }}</p>
-                            
-                            <!-- Bouton "lien interne" -->
-                            <a href="{{ '/projet-accueil/#activites' | url }}" class="btn btn-action-primary my-4">{{ boutonTexte | default("Explorez nos activités") }}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Image à gauche -->
-            <div class="col-md-6 order-md-1 p-0">
-                <div class="services-garde-enfants-item">
-                    <div class="services-garde-enfants-image">
-                        <div class="image-frame-services position-relative">
-
-{% image "/images/presentation/parc-bretigny.jpg",
-   "Parc Bretigny",
-   "(min-width: 1024px) 50vw, 100vw",
-   width=1200, height=1200,
-   loading="lazy", fetchpriority="auto", format="webp"
-%}
-
-
-
-                            <div class="image-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Cinquième ligne -->
-        <div class="row g-0">
-            <!-- COMMUNICATION DIRECTE AVEC LES PARENTS (Texte à gauche) -->
-            <div class="col-md-6 p-0 d-flex align-items-center">
-                <div class="services-garde-enfants-item w-100">
-                    <div class="services-garde-enfants-text-space p-4">
-                        <h2 class="introduction-titre">{{ communicationTitre | default("COMMUNICATION") }}</h2>
-                        <hr class="horizontal-line">
-                        <div class="description-atout-services">
-                            <p class="poppins-regular-accueil">{{ communicationDescription | default("Je privilégie une communication directe et personnalisée avec les familles, sans intermédiaires, pour assurer une coordination fluide des soins et renforcer la confiance, garantissant ainsi un environnement serein et sécurisant pour l'enfant.") }}</p>
-                            
-                            <!-- Bouton "lien interne" -->
-                            <a href="{{ '/projet-accueil/#role' | url }}" class="btn btn-action-primary my-4">{{ boutonTexte | default("Découvrez comment je peux vous aider") }}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Image à droite -->
-            <div class="col-md-6 p-0">
-                <div class="services-garde-enfants-item">
-                    <div class="services-garde-enfants-image">
-                        <div class="image-frame-services position-relative">
-
-{% image "/images/presentation/communication-directe.jpg",
-   "Communication Directe",
-   "(min-width: 1024px) 50vw, 100vw",
-   width=1200, height=1200,
-   loading="lazy", fetchpriority="auto", format="webp"
-%}
-
-
-                            <div class="image-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Sixième ligne -->
-        <div class="row g-0">
-            <!-- SOCIABILISATION AU RELAIS PETITE ENFANCE (Texte à droite) -->
-            <div class="col-md-6 order-md-2 p-0 d-flex align-items-center">
-                <div class="services-garde-enfants-item w-100">
-                    <div class="services-garde-enfants-text-space p-4">
-                        <h2 class="introduction-titre">{{ sociabilisationTitre | default("SOCIABILISATION") }}</h2>
-                        <hr class="horizontal-line">
-                        <div class="description-atout-services">
-                            <p class="poppins-regular-accueil">{{ sociabilisationDescription | default("Les visites bi-mensuelles au Relais Petite Enfance (RPE) de Brétigny-sur-Orge offrent aux enfants un environnement stimulant pour enrichir leur cercle social, développer des compétences essentielles comme le partage et la communication, et renforcer le lien avec l'assistante maternelle.") }}</p>
-                            
-                            <!-- Bouton "lien interne" -->
-                           <a href="{{ '/projet-accueil/#team' | url }}" class="btn btn-action-primary my-4" aria-label="Découvrez les avantages du RPE et de l'équipe">
-    {{ boutonTexte | default("Découvrez les avantages du RPE") }}
-</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Image à gauche -->
-            <div class="col-md-6 order-md-1 p-0">
-                <div class="services-garde-enfants-item">
-                    <div class="services-garde-enfants-image">
-                        <div class="image-frame-services position-relative">
-
-{% image "/images/presentation/rpe-bretigny.jpg",
-   "RPE Bretigny",
-   "(min-width: 1024px) 50vw, 100vw",
-   width=1200, height=1200,
-   loading="lazy", fetchpriority="auto", format="webp"
-%}
-
-
-                            <div class="image-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Septième ligne -->
-        <div class="row g-0">
-            <!-- ACCOMPAGNEMENT ADMINISTRATIF (Texte à gauche) -->
-            <div class="col-md-6 p-0 d-flex align-items-center">
-                <div class="services-garde-enfants-item w-100">
-                    <div class="services-garde-enfants-text-space p-4">
-                        <h2 class="introduction-titre">{{ assistanceTitre | default("ASSISTANCE") }}</h2>
-                        <hr class="horizontal-line">
-                        <div class="description-atout-services">
-                            <p class="poppins-regular-accueil">{{ assistanceDescription | default("Je vous accompagne dans toutes vos démarches administratives, y compris la saisie Pajemploi, avec une expertise juridique spécialisée grâce à mon affiliation au syndicat UNSA PRO ASSMAT garantissant ainsi simplicité et tranquillité d'esprit. La FEPEM offre des ressources pour les particuliers-employeurs.") }}</p>
-                           <a href="{{ '/projet-accueil/#team' | url }}" class="btn btn-action-primary my-4" aria-label="En savoir plus sur le syndicat, section équipe">
-    {{ boutonTexte | default("En savoir plus sur le syndicat") }}
-</a>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Image à droite -->
-            <div class="col-md-6 p-0">
-                <div class="services-garde-enfants-item">
-                    <div class="services-garde-enfants-image">
-                        <div class="image-frame-services position-relative">
-
-{% image "/images/presentation/syndicat-unsa-pro-assmat.jpg",
-   "UNSA Pro Assmat",
-   "(min-width: 1024px) 50vw, 100vw",
-   width=1200, height=1200,
-   loading="lazy", fetchpriority="auto", format="webp"
-%}
-
-
-                            <div class="image-overlay"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Huitième ligne -->
-<div class="row g-0">
-    <!-- RESTE À CHARGE COMPÉTITIF (Texte à droite) -->
-    <div class="col-md-6 order-md-2 p-0 d-flex align-items-center">
-        <div class="services-garde-enfants-item w-100">
-            <div class="services-garde-enfants-text-space p-4">
-                <h2 class="introduction-titre">{{ resteACargeTitre | default("RESTE À CHARGE COMPÉTITIF") }}</h2>
-                <hr class="horizontal-line">
-                <div class="description-atout-services">
-                    <p class="poppins-regular-accueil">{{ resteACargeDescription | default("Découvrez sur ma page Foire aux questions des informations détaillées sur les tarifs, les aides financières, et le reste à charge, et découvrez comment choisir une assistante maternelle peut être une option financièrement avantageuse.") }}</p>
-                    <!-- Bouton "lien interne" -->
-                    <a href="{{ '/faq/' | url }}" class="btn btn-action-primary my-4">{{ boutonTexte | default("Trouvez les réponses à toutes vos questions ici") }}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Image à gauche -->
-            <div class="col-md-6 order-md-1 p-0">
-                <div class="services-garde-enfants-item">
-                    <div class="services-garde-enfants-image">
-                        <div class="image-frame-services position-relative">
-
-{% image "/images/presentation/tarif-assmat.jpg",
-   "CAF aides",
-   "(min-width: 1024px) 50vw, 100vw",
-   width=1200, height=1200,
-   loading="lazy", fetchpriority="auto", format="webp"
-%}
-
-
-                            <div class="image-overlay"></div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
-
-   
 </section>
+{% endblock %}
+
+
+
+
+
+
+
+
+<section id="presentation-celine" class="py-5" style="background-color: #103653;">
+  <div class="container-md">
+    <h2 class="visually-hidden">Présentation de Céline, assistante maternelle à Brétigny-sur-Orge</h2>
+
+    <p class="poppins-regular-blanc-balise-p text-white">
+      Bonjour ! Je suis <strong>Céline</strong>, assistante maternelle agréée à <strong>Brétigny-sur-Orge</strong> (quartier Carouge–Clause). 
+      J’accueille vos enfants de <strong>10 semaines à 3 ans</strong> dans une maison avec jardin. 
+      Mon accueil est idéalement situé pour les parents actifs, à seulement 
+      <a href="/assistante-maternelle-bretigny-sur-orge/" class="style-liens-blanc"><strong>8 min à pied du RER C et des écoles</strong></a>.
+    </p>
+
+    <p class="poppins-regular-blanc-balise-p text-white">
+      Sorties quotidiennes au parc Clause-Bois Badeau et accueil en petit comité pour un suivi individualisé.
+    </p>
+
+    <div class="mt-4">
+      <a href="/contact/" class="btn btn-action-primary-g btn-lg">
+        Vérifier mes disponibilités →
+      </a>
+    </div>
+
+    <div class="mt-4">
+      <p class="poppins-regular-blanc-balise-p text-white mb-2">Rien ne vaut les témoignages des parents :</p>
+      <a href="/#avis" class="styled-link-white">
+        <span class="etoiles" style="color: #FFD700;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 
+        <span class="ms-1">100% de parents satisfaits (Lire les avis)</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<section id="services-garde-enfants" class="py-5">
+  <div class="custom-container">
+    <div class="services-garde-enfants-section section-wrapper">
+
+      <!-- 1. MON PARCOURS & PHILOSOPHIE -->
+      <div class="row g-0">
+        <div class="col-md-6 p-0 d-flex align-items-center">
+          <div class="services-garde-enfants-item w-100">
+            <div class="services-garde-enfants-text-space p-4">
+             
+              <div class="description-atout-services">
+ <h2 class="poppins-bold-titre-h2">Mon parcours & ma philosophie</h2>
+              <hr class="horizontal-line">
+
+                <p class="poppins-regular-balise-p">
+                  Ancienne particulier-employeur, j’ai choisi en 2017 de me reconvertir pour devenir <strong>assistante maternelle agréée à Brétigny-sur-Orge</strong>. 
+                  J'accompagne vos enfants en favorisant l’autonomie par le jeu libre et les sorties quotidiennes.
+                </p>
+
+<a href="/projet-accueil/" class="btn btn-action-primary">Voir mon projet d’accueil →</a>
+
+        
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 p-0">
+          <div class="services-garde-enfants-item">
+            <div class="services-garde-enfants-image">
+              <div class="image-frame-services position-relative">
+                 {% image "/images/presentation/rpe-bretigny.jpg", "Jeux libres au Relais Petite Enfance de Brétigny-sur-Orge avec Céline, assistante maternelle agréée", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager" %}
+
+                <div class="image-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. ACCUEIL FAMILIAL + FAIBLE RATIO (fusion des 2 anciens blocs) -->
+      <div class="row g-0">
+        <div class="col-md-6 order-md-2 p-0 d-flex align-items-center">
+          <div class="services-garde-enfants-item w-100">
+            <div class="services-garde-enfants-text-space p-4">
+            <div class="description-atout-services">
+
+              <h2 class="poppins-bold-titre-h2">Un cocon familial avec jardin & faible ratio</h2>
+              <hr class="horizontal-line">
+              
+                <p class="poppins-regular-balise-p">
+                  Maison avec jardin dans le quartier calme Carouge–Clause, à 8 min à pied du RER C. 
+                  Agrément pour maximum <strong>3 enfants</strong> : un vrai suivi individualisé pendant les repas, la sieste et les moments clés plus facile à mettre en place qu'en crèche.
+                </p>
+                <a href="{{ '/projet-accueil/#agrement' | url }}" class="btn btn-action-primary">
+                  Voir mon agrément complet →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 order-md-1 p-0">
+          <div class="services-garde-enfants-item">
+            <div class="services-garde-enfants-image">
+              <div class="image-frame-services position-relative">
+                {% image "/images/presentation/anniversaire-accueilli.jpg", "Anniversaire d'un enfant accueilli dans le jardin", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager" %}
+                <div class="image-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. SORTIES QUOTIDIENNES & SOCIABILISATION -->
+      <div class="row g-0">
+        <div class="col-md-6 p-0 d-flex align-items-center">
+          <div class="services-garde-enfants-item w-100">
+            <div class="services-garde-enfants-text-space p-4">
+            <div class="description-atout-services">
+
+              <h2 class="poppins-bold-titre-h2">Sorties & trajets simplifiés</h2>
+              <hr class="horizontal-line">
+              
+                <p class="poppins-regular-balise-p">
+            Parcs Clause-Bois Badeau, RPE, médiathèque... nous bougeons tous les jours ! 
+            Mon accueil est idéalement situé à <strong>8 min du RER C et des écoles</strong> (Césaire, Jeanne d’Arc).
+          </p>
+
+          <div class="d-flex flex-column flex-sm-row gap-2">
+            <a href="{{ '/assistante-maternelle-bretigny-sur-orge/' | url }}" class="btn btn-action-primary">
+              Accès & Écoles →
+            </a>
+            <a href="{{ '/posts/petite-enfance-bretigny-91/activites-essonne-bebes-bretigny/' | url }}" class="btn btn-action-primary">
+              Nos sorties →
+            </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 p-0">
+          <div class="services-garde-enfants-item">
+            <div class="services-garde-enfants-image">
+              <div class="image-frame-services position-relative">
+                {% image "/images/presentation/parc-bretigny.jpg", "Sortie au parc Clause-Bois Badeau", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager" %}
+                <div class="image-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. COMMUNICATION & ACCOMPAGNEMENT ADMINISTRATIF -->
+      <div class="row g-0">
+        <div class="col-md-6 order-md-2 p-0 d-flex align-items-center">
+          <div class="services-garde-enfants-item w-100">
+            <div class="services-garde-enfants-text-space p-4">
+            <div class="description-atout-services">
+
+              <h2 class="poppins-bold-titre-h2">Échanges directs & zéro paperasse pour vous</h2>
+              <hr class="horizontal-line">
+              
+                <p class="poppins-regular-balise-p">
+                  J’accompagne les parents dans la saisie Pajemploi et les calculs tout au long du contrat.
+Membre UNSA PRO ASSMAT pour être à jour juridiquement.
+Moins de paperasse, plus de temps pour l’essentiel : l’épanouissement de votre enfant.
+                </p>
+                <a href="{{ '/faq/' | url }}" class="btn btn-action-primary">
+                  Voir les questions fréquentes →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 order-md-1 p-0">
+          <div class="services-garde-enfants-item">
+            <div class="services-garde-enfants-image">
+              <div class="image-frame-services position-relative">
+              {% image "/images/presentation/syndicat-unsa-pro-assmat.jpg", "UNSA Pro Assmat", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager" %}
+                
+                <div class="image-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. TARIFS & RESTE À CHARGE (closing fort) -->
+      <div class="row g-0">
+        <div class="col-md-6 p-0 d-flex align-items-center">
+          <div class="services-garde-enfants-item w-100">
+            <div class="services-garde-enfants-text-space p-4">
+
+  <div class="description-atout-services">
+
+              <h2 class="poppins-bold-titre-h2">Aussi avantageux financièrement qu’une crèche</h2>
+              <hr class="horizontal-line">
+            
+                <p class="poppins-regular-balise-p">
+                  Grâce au CMG CAF + crédit d’impôt 50 % + éventuels CESU entreprise, 
+                  de nombreuses familles paient <strong>un montant équivalent</strong> que la crèche tout en ayant un accueil individualisé.
+                </p>
+                <a href="{{ '/simulateur-cout-creche-assistante-maternelle/' | url }}" class="btn btn-action-primary">
+                  Simulation tarif & aides 2025 →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 p-0">
+          <div class="services-garde-enfants-item">
+            <div class="services-garde-enfants-image">
+              <div class="image-frame-services position-relative">
+                {% image "/images/presentation/tarif-assmat.jpg", "Aides CAF et reste à charge", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager" %}
+                <div class="image-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -488,12 +419,15 @@ bodyClass: "bg-white presentation"
     <div class="svg-container">
       
 
-  <img src="{{ '/images/presentation/nuage-introduction.svg' | url }}" 
-     class="nuages-bleus-curvy" 
-     alt="Décor nuages"
-     loading="eager"  
-     fetchpriority="high"
-     decoding="async">
+ <img src="{{ '/images/presentation/nuage-introduction-pc.svg' | url }}" 
+         class="nuages-bleus-curvy pc-svg" 
+         alt="Illustration de nuages pour la présentation du blog sur PC"
+         loading="lazy">
+    
+    <img src="{{ '/images/presentation/nuage-introduction-mobile.svg' | url }}" 
+         class="nuages-bleus-curvy mobile-svg" 
+         alt="Illustration de nuages pour la présentation du blog sur mobile"
+         loading="lazy">
 
 
     </div>
@@ -503,113 +437,490 @@ bodyClass: "bg-white presentation"
 
 
 
+
 <section id="avis" class="container-fluid-contact py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="google-fiche-avis"><strong>VOS AVIS COMPTENT</strong></h2>
-                <hr class="horizontal-line">
-                
-                <!-- Contenu vide au départ -->
-                <div id="avis-container" style="display:none;">
-                    <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-                    <div class="elfsight-app-e1c8b1af-d1eb-4f3b-abba-dd006fd956c3" data-elfsight-app-lazy></div>
-                </div>
-            </div>
+  <div class="container-avis container-md">
+    <div class="row">
+  <div class="col-12">
+
+        <h2 class="poppins-bold-titre-h1"><strong>Vos avis comptent</strong></h2>
+        <hr class="horizontal-line">
+
+        <p class="poppins-bold-balise-p mb-3">
+          Les familles de Brétigny-sur-Orge m’ont fait confiance et ont partagé leurs retours sur Google.  
+          Vous pouvez consulter ci-dessous leurs avis authentiques, affichés via un module d’avis vérifiés.
+        </p>
+
+       
+          <p class="poppins-regular-balise-p">
+            <strong>Note moyenne :</strong> 5/5 ⭐ sur Google  
+            <br>
+            <strong>Basée sur 2 avis vérifiés</strong> laissés par des parents de Brétigny-sur-Orge.
+          </p>
+       
+
+        <h3 class="poppins-bold-titre-h2 mt-3">Avis Google vérifiés</h3>
+
+        <div id="avis-container">
+          <div class="elfsight-app-e1c8b1af-d1eb-4f3b-abba-dd006fd956c3" data-elfsight-app-lazy></div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
 
 
 
-<section class="rencontre-assistante-maternelle-bretigny-sur-orge">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h3 class="titre-rencontrons-nous">
-                    <span>
-                     
-    <img src="{{ '/images/presentation/validation-rencontre-assistante-bretigny.svg' | url }}"
-     class="checked" 
-     alt="Validation rendez-vous avec Céline, assistante maternelle"
-     loading="eager"  
-     fetchpriority="high"
+<div class="svg-banniere-background">
+     <div class="svg-container">
+    <img src="{{ '/images/presentation/nuage-cesu-pc.svg' | url }}" 
+         class="nuages-bleus-curvy pc-svg" 
+         alt="Illustration de nuages pour la présentation du cesu sur PC"
+         loading="lazy">
+    
+    <img src="{{ '/images/presentation/nuage-cesu-mobile.svg' | url }}" 
+         class="nuages-bleus-curvy mobile-svg" 
+         alt="Illustration de nuages pour la présentation du cesu sur mobile"
+         loading="lazy">
+</div>
+
+
+
+
+
+    
+<section id="cesu-entreprise" class="icones-cesu-container">
+  <div class="container container-md">
+    <h2 class="poppins-bold-titre-blanc-h2">CESU par l'entreprise</h2>
+    <div class="row justify-content-center">
+
+      <!-- Bloc 1 -->
+      <div class="col-12 col-md-3 icone-cesu">
+
+        <img src="{{ '/images/presentation/equilibre-travail-bretigny.svg' | url }}"
+     alt="Équilibre vie pro/perso"
+     loading="lazy"
      decoding="async">
-                    
-                    </span>
-                    <strong>RENCONTRONS - NOUS</strong>
-                </h3>   
-                
-                <hr class="horizontal-line">
 
-<a href="{{ 'images/presentation/disponibilites-assistante-maternelle-bretigny-sur-orge.pdf' | url }}" 
-   class="btn btn-action-primary my-4" 
-   aria-label="Téléchargez le fichier des disponibilités d'accueil">
-    Découvrez mes disponibilités en un clic !
-</a>
+        <h3 class="poppins-regular-icone-cesu text-start">
+          <strong class="titre">Conciliation vie pro/perso</strong><br>
+          <span class="titre-salarie"><strong>Salarié :</strong> Moins de stress, plus d’équilibre.</span><br>
+          <span class="titre-entreprise"><strong>Entreprise :</strong> Talents fidélisés, image valorisée.</span>
+        </h3>
+      </div>
 
+      <!-- Bloc 2 -->
+      <div class="col-12 col-md-3 icone-cesu">
 
-
-
-                <!-- Description générale -->
-                <p class="poppins-regular-rencontre"><strong>Découvrez comment un accueil personnalisé peut répondre aux besoins de votre enfant.</strong></p>
-                
-                <div class="other-section">
-                    <!-- Sous-titres pour les différents aspects du service -->
-                    <h3 class="poppins-regular"><strong>Un Mode d'Accueil individuel à Brétigny-sur-Orge</strong></h3>
-                    <p class="poppins-regular">Si vous recherchez un mode d'accueil serein pour les temps forts comme le repas et la sieste, combiné à des moments d'éveil enrichissants au parc ou au Relais Petite Enfance à Brétigny-sur-Orge.</p>
-                    
-                    <h3 class="poppins-regular"><strong>Accueil Nomade contre la sédentarité</strong></h3>
-                    <p class="poppins-regular">Profitez d'un accueil nomade près de chez vous, où les sorties matinales favorisent le développement du langage et luttent contre la sédentarité.</p>
-                    
-                    <h3 class="poppins-regular"><strong>Un reste à charge compétitif</strong></h3>
-                    <p class="poppins-regular">Mon accueil sur-mesure, avec une gestion administrative simplifiée et un reste à charge compétitif, répondra aux besoins de votre enfant.</p>
-                </div>
-                
-                <div class="container">
-                    <p class="poppins-regular-rdv">
-                        C'est avec plaisir que j'échangerai avec vous.
-                      <a href="{{ '/contact/' | url }}" aria-label="Contacter Céline Hubert directement via l'enveloppe">
-
- <img src="{{ '/images/presentation/enveloppe-contact-direct-assistante-maternelle-bretigny.svg' | url }}"
-     class="checked-localisation" 
-     alt="Icône d'enveloppe pour contacter Céline Hubert, assistante maternelle à Brétigny-sur-Orge"
-     loading="eager"  
-     fetchpriority="high"
+  <img src="{{ '/images/presentation/reprise-travail-bretigny.svg' | url }}"
+     alt="Reprise de travail sereine"
+     loading="lazy"
      decoding="async">
-</a>
-                    </p>
-                </div>
-            </div>
-        </div>
+
+
+        <h3 class="poppins-regular-icone-cesu text-start">
+          <strong class="titre">Retour serein</strong><br>
+          <span class="titre-salarie"><strong>Salarié :</strong> Reprise facilitée après un congé.</span><br>
+          <span class="titre-entreprise"><strong>Entreprise :</strong> Absences mieux gérées, équipe stable.</span>
+        </h3>
+      </div>
+
+      <!-- Bloc 3 -->
+      <div class="col-12 col-md-3 icone-cesu">
+
+<img src="{{ '/images/presentation/economie-cesu-bretigny.svg' | url }}"
+     alt="Pouvoir d'achat augmenté"
+     loading="lazy"
+     decoding="async">
+
+       
+        <h3 class="poppins-regular-icone-cesu text-start">
+          <strong class="titre">Pouvoir d’achat</strong><br>
+          <span class="titre-salarie"><strong>Salarié :</strong> Reste à charge réduit, 50 % de crédit d’impôt, pouvoir d’achat augmenté.</span><br>
+          <span class="titre-entreprise"><strong>Entreprise :</strong> Jusqu’à 2 591 €/an exonérés de charges. Crédit d’impôt de 25 % et politique RH attractive.</span>
+        </h3>
+      </div>
+
+      <!-- Bloc 4 -->
+      <div class="col-12 col-md-3 icone-cesu">
+
+<img src="{{ '/images/presentation/bien-etre-travail-bretigny.svg' | url }}"
+     alt="Fidélisation des salariés"
+     loading="lazy"
+     decoding="async">
+
+        
+        <h3 class="poppins-regular-icone-cesu text-start">
+          <strong class="titre">Bien-être & engagement</strong><br>
+          <span class="titre-salarie"><strong>Salarié :</strong> Reconnu et motivé au quotidien.</span><br>
+          <span class="titre-entreprise"><strong>Entreprise :</strong> Engagement et performance renforcés.</span>
+        </h3>
+      </div>
+
+      <!-- Bloc 5 -->
+      <div class="col-12 col-md-3 icone-cesu">
+
+<img src="{{ '/images/presentation/paperasse-bretigny.svg' | url }}"
+     alt="Gestion simplifiée"
+     loading="lazy"
+     decoding="async">
+
+       
+        <h3 class="poppins-regular-icone-cesu text-start">
+          <strong class="titre">Simplicité d’utilisation</strong><br>
+          <span class="titre-salarie"><strong>Salarié :</strong> Avantages accessibles, démarches réduites.</span><br>
+          <span class="titre-entreprise"><strong>Entreprise :</strong> Moins d’administratif, gain de temps.</span>
+        </h3>
+      </div>
+
+      <!-- Bloc 6 -->
+      <div class="col-12 col-md-3 icone-cesu">
+
+ <img src="{{ '/images/presentation/serenite-travail-bretigny.svg' | url }}"
+     alt="Sérénité au travail"
+     loading="lazy"
+     decoding="async">
+
+        
+        <h3 class="poppins-regular-icone-cesu text-start">
+          <strong class="titre">Sérénité au travail</strong><br>
+          <span class="titre-salarie"><strong>Salarié :</strong> Charge mentale diminuée, meilleure performance au travail.</span><br>
+          <span class="titre-entreprise"><strong>Entreprise :</strong> Employés sereins, meilleure efficacité</span>
+        </h3>
+      </div>
+
+      <!-- Bloc 7 -->
+      <div class="col-12 col-md-3 icone-cesu">
+
+ <img src="{{ '/images/presentation/acces-cesu-bretigny.svg' | url }}"
+     alt="Accès simplifié au CESU"
+     loading="lazy"
+     decoding="async">
+
+        
+        <h3 class="poppins-regular-icone-cesu text-start">
+          <strong class="titre">Solution flexible</strong><br>
+          <span class="titre-salarie"><strong>Salarié :</strong> Accueil adapté à chaque situation familiale (horaires, besoins spécifiques).</span><br>
+          <span class="titre-entreprise"><strong>Entreprise :</strong> Favorise l’inclusion de tous les parents salariés, quels que soient leurs besoins de garde d’enfants.</span>
+        </h3>
+      </div>
+
+      <!-- Bloc 8 -->
+      <div class="col-12 col-md-3 icone-cesu">
+
+ <img src="{{ '/images/presentation/image-valorisee-travail-bretigny.svg' | url }}"
+     alt="Image RSE de l'entreprise"
+     loading="lazy"
+     decoding="async">
+
+       
+        <h3 class="poppins-regular-icone-cesu text-start">
+          <strong class="titre">Image socialement responsable</strong><br>
+          <span class="titre-salarie"><strong>Salarié :</strong> Fierté de contribuer à une entreprise engagée.</span><br>
+          <span class="titre-entreprise"><strong>Entreprise :</strong> Entreprise "socialement responsable", réputation renforcée.</span>
+        </h3>
+      </div>
+
+      <!-- Bouton CTA -->
+      <div class="col-12 text-start my-4">
+        <a href="/posts/entreprises/cesu-prefinances/" class="btn btn-action-primary-h" aria-label="Comparez et découvrez mon accueil unique !">
+          J'économise avec les CESU pré-financés ! →
+        </a>
+      </div>
+
     </div>
+  </div>
 </section>
+
+
+
+<!-- Disponibilités -->
+<section id="disponibilite-assistante-maternelle-bretigny-sur-orge" class="py-5">
+<div class="container-rencontre container-md">
+<h2 class="poppins-bold-titre-h2">Prochaine disponibilité à Brétigny-sur-Orge</h2>
+<hr class="horizontal-line">
+<p class="poppins-regular-balise-p">Actuellement <strong>Une place se libérera en septembre 2027</strong>. Vous pouvez dès maintenant me contacter pour échanger sur vos besoins et préparer l'accueil de votre enfant.</p>
+
+
+<div class="disponibilites-assistante-maternelle mt-4">
+<div class="row g-4">
+<div class="col-md-4">
+<div class="securite-card">
+
+ <h3 class="fs-5 fw-bold poppins-bold-balise-p">
+          <span class="securite-icon-wrapper">
+             <img src="{{ '/images/presentation/place-disponible-bretigny.svg' | url }}" class="bien-etre-icon" alt="Icône place disponible" loading="lazy">
+          </span>
+          1 place dispo
+        </h3>
+
+<ul class="poppins-regular-balise-p"><li>Amplitude possible : 7h15 - 18h45</li></ul>
+</div>
+</div>
+<div class="col-md-4">
+<div class="securite-card">
+
+ <h3 class="fs-5 fw-bold poppins-bold-balise-p">
+          <span class="securite-icon-wrapper">
+          <img src="{{ '/images/presentation/agrement-bretigny.svg' | url }}" class="bien-etre-icon" alt="Icône capacité agrement" loading="lazy">
+          </span>
+          3 enfants
+        </h3>
+<ul class="poppins-regular-balise-p"><li>Agrément pour 3 enfants à la journée.</li></ul>
+</div>
+</div>
+<div class="col-md-4">
+<div class="securite-card">
+
+<h3 class="fs-5 fw-bold poppins-bold-balise-p">
+          <span class="securite-icon-wrapper">
+          <img src="{{ '/images/presentation/proximite-rer-bretigny.svg' | url }}" class="bien-etre-icon" alt="Icône horloge trajet gare rer" loading="lazy">
+          </span>
+          8 min du RER C
+        </h3>
+
+<ul class="poppins-regular-balise-p"><li>Quartier Carouge–Clause, proche du parc Clause–Bois Badeau.</li></ul>
+</div>
+</div>
+</div>
+
+
+<div class="mt-4 pt-4">
+  <a href="{{ '/contact/' | url }}" class="btn btn-action-primary mb-5">Échanger maintenant →</a>
+</div>
+
+
+
+
+     
+       
+
+
+ <h3 class="poppins-bold-titre-h2 mb-4">FAQ – accueil chez Céline à Brétigny-sur-Orge</h3>
+<div class="accordion accordion-flush" id="faqAccordion">
+
+      <!-- Question 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq-heading-1">
+          <button class="accordion-button poppins-bold-balise-p" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="true" aria-controls="faq-collapse-1">
+            Quels sont les avantages d'une assistante maternelle à Brétigny-sur-Orge ?
+          </button>
+        </h2>
+        <div id="faq-collapse-1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body poppins-regular-balise-p">
+         Agréée à Brétigny-sur-Orge, proche de la gare RER C et du parc Clause-Bois Badeau.
+           <ul class="liste-avantages">
+              <li>
+                <img src="{{ '/images/presentation/accueil-cocoon-bretigny.svg' | url }}" class="rencontre-icon" alt="Icône accueil cocoon" loading="lazy">
+                Accueil individuel, calme et sécurisé à Brétigny-sur-Orge, plus chaleureux qu'en crèche
+              </li>
+              <li>
+                <img src="{{ '/images/presentation/accueil-sorties-bretigny.svg' | url }}" class="rencontre-icon" alt="Icône accueil sorties" loading="lazy">
+                Sorties régulières au parc et au Relais Petite Enfance
+              </li>
+              <li>
+                <img src="{{ '/images/presentation/accueil-activites-bretigny.svg' | url }}" class="rencontre-icon" alt="Icône accueil activites" loading="lazy">
+                Activités d’éveil variées et adaptées à chaque âge
+              </li>
+              <li>
+                <img src="{{ '/images/presentation/accueil-nomade-bretigny.svg' | url }}" class="rencontre-icon-nomade" alt="Icône accueil nomade" loading="lazy">
+                Accueil nomade : moins d’écrans, plus de mouvement
+              </li>
+              <li>
+                <img src="{{ '/images/presentation/accueil-demarches-bretigny.svg' | url }}" class="rencontre-icon" alt="Icône accueil demarches" loading="lazy">
+                Démarches simplifiées pour les parents
+              </li>
+              <li>
+                <img src="{{ '/images/presentation/accueil-tarif-bretigny.svg' | url }}" class="rencontre-icon" alt="Icône accueil tarif" loading="lazy">
+                Un tarif accessible, reste à charge optimisé
+              </li>
+            </ul>
+          
+          </div>
+        </div>
+      </div>
+
+
+ <!-- Question 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq-heading-2">
+          <button class="accordion-button poppins-bold-balise-p" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
+            Puis-je visiter avant de réserver ?
+          </button>
+        </h2>
+        <div id="faq-collapse-2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body poppins-regular-balise-p">
+            Oui, lors d'un premier rendez-vous je propose une visite du lieu d'accueil avant toute réservation, afin de vous assurer que l'environnement correspond bien aux besoins de votre enfant et de votre famille. Cette visite permet également d'établir un premier contact, poser des questions, et discuter du projet d'accueil.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq-heading-3">
+          <button class="accordion-button poppins-bold-balise-p" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">
+            Êtes-vous accessible depuis Plessis-Pâté ou Saint-Michel-sur-Orge ?
+          </button>
+        </h2>
+        <div id="faq-collapse-3" class="accordion-collapse collapse"  data-bs-parent="#faqAccordion">
+          <div class="accordion-body poppins-regular-balise-p">
+            Oui, mon domicile est à quelques minutes de ces communes en voiture ou en bus.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq-heading-4">
+          <button class="accordion-button poppins-bold-balise-p" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-4" aria-expanded="false" aria-controls="faq-collapse-4">
+           Est-ce que vous accueillez aussi des enfants de Saint-Germain-lès-Arpajon ?
+          </button>
+        </h2>
+        <div id="faq-collapse-4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body poppins-regular-balise-p">
+            Oui, j'accueille des familles des villes voisines comme Saint-Germain-lès-Arpajon ou Le Plessis-Pâté.
+          </div>
+        </div>
+      </div>
+
+
+
+</div>
+</div>
+</section>
+
+
+
 
 
 <!-- Autres contenus précédents -->
 
 
+
 <script>
-  // Fonction qui charge les avis après un délai de 10 secondes
-  setTimeout(function() {
-    // Affiche le contenu des avis
-    document.getElementById('avis-container').style.display = 'block';
-  }, 10000); // 10000 millisecondes = 10 secondes
+document.addEventListener("DOMContentLoaded", function () {
+  const icons = document.querySelectorAll(".icone-cesu");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+      }
+    });
+  }, { threshold: 0.8 });
+
+  icons.forEach((icon) => observer.observe(icon));
+});
 </script>
 
 
 
+
+
 <script>
-  setTimeout(function() {
-    const script = document.createElement('script');
-    script.src = "//js-eu1.hs-scripts.com/144730300.js";
-    script.id = "hs-script-loader";
-    script.async = true;
-    script.defer = true;
-    document.body.appendChild(script);
-  }, 3000); // Charger après 5 secondes
+ document.addEventListener("DOMContentLoaded", function () {
+  const avisSection = document.getElementById("avis");
+  const avisContainer = document.getElementById("avis-container");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        avisContainer.classList.add("avis-visible");
+        observer.unobserve(avisSection);
+      }
+    });
+  }, { threshold: 0.8 }); // 40% visible
+
+  observer.observe(avisSection);
+});
 </script>
 
 
 
-<!-- End of HubSpot Embed Code -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (typeof tarteaucitron !== 'undefined') {
+    tarteaucitron.services.hubspot_chatbot = {
+      "key": "hubspot_chatbot",
+      "type": "api",
+      "name": "Chatbot HubSpot",
+      "needConsent": true,
+      "cookies": ['hubspotutk', '__hssc', '__hssrc', '__hstc'],
+      "readmoreLink": "https://legal.hubspot.com/fr/privacy-policy",
+      "js": function () {
+        "use strict";
+        setTimeout(function() {
+          var script = document.createElement('script');
+          script.src = "//js-eu1.hs-scripts.com/144730300.js"; 
+          script.id = "hs-script-loader";
+          script.async = true;
+          script.defer = true;
+          document.body.appendChild(script);
+        }, 3000);
+      },
+      "fallback": function () {}
+    };
+
+    tarteaucitron.job = tarteaucitron.job || [];
+    tarteaucitron.job.push('hubspot_chatbot');
+
+  } else {
+    console.error("tarteaucitron n'est pas défini");
+  }
+});
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ChildCare",
+  "@id": "https://celine-assmat-bretigny.fr/#business",
+  "name": "Assistante maternelle agréée - chez Céline",
+  "url": "https://celine-assmat-bretigny.fr/",
+  "image": "https://celine-assmat-bretigny.fr/presentation-assistante-maternelle-agreee.webp",
+  "logo": "https://celine-assmat-bretigny.fr/images/navbar/logo-navbar-paint.png",
+  "description": "Assistante maternelle agréée proposant un accueil personnalisé pour les enfants à Brétigny-sur-Orge. Une alternative chaleureuse et professionnelle à la crèche.",
+  
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "30 Bis Av. Lucien Clause",
+    "addressLocality": "Brétigny-sur-Orge",
+    "addressRegion": "Île-de-France",
+    "postalCode": "91220",
+    "addressCountry": "FR"
+  },
+
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.609,
+    "longitude": 2.25
+  },
+
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "07:15",
+      "closes": "18:45"
+    }
+  ],
+
+  "hasMap": "https://www.google.com/maps/place/30+Bis+Av.+Lucien+Clause,+Brétigny-sur-Orge",
+
+  "priceRange": "€",
+
+  "sameAs": [
+    "https://g.page/r/CQsVBcwjVgVtEBM/review"
+  ]
+}
+</script>
+
+
+

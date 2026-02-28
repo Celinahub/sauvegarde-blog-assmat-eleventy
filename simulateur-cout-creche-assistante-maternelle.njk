@@ -1,15 +1,74 @@
 ---
 layout: layouts/base.njk
-title: "Coût crèche vs assistante maternelle 2025 – Estimez en ligne"
-description: "Comparez le reste à charge entre assistante maternelle, crèche PSU et PAJE grâce au 1er simulateur comparatif en ligne 2025."
-url: "https://chubert91assmat.netlify.app/simulateur-cout-creche-assistante-maternelle/"
-image: "projet-accueil-assistante-maternelle.jpg"
+title: "Tarifs assistant maternel vs crèche 2026 Brétigny | Simulation"
+description: "Comparez le coût d’une crèche et d’une assistante maternelle à Brétigny. Simulation claire avec aides CAF et reste à charge."
+url: "https://celine-assmat-bretigny.fr/simulateur-cout-creche-assistante-maternelle/"
+image: "/images/uploads/simulateur-comparatif-creche-assistante-maternelle.jpg"
+
 eleventyNavigation:
-  key: SIMULATION COÛT CRÈCHE/ASSMAT 2025
-  order: 5
+  key: "Tarifs et simulation"
+  order: 4
+
 permalink: "/simulateur-cout-creche-assistante-maternelle/"
 bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
+
+# JSON-LD WebPage
+jsonldWebPage:
+  "@context": "https://schema.org"
+  "@type": "WebPage"
+  "@id": "https://celine-assmat-bretigny.fr/simulateur-cout-creche-assistante-maternelle/#webpage"
+  name: "Simulation coût crèche vs assistante maternelle 2026"
+  url: "https://celine-assmat-bretigny.fr/simulateur-cout-creche-assistante-maternelle/"
+  description: "Comparez le coût d’une crèche et d’une assistante maternelle à Brétigny avec aides CAF et reste à charge. Simulation claire et pratique pour les parents."
+  isPartOf:
+    "@type": "WebSite"
+    "@id": "https://celine-assmat-bretigny.fr/#website"
+  about:
+    "@id": "https://celine-assmat-bretigny.fr/#business"
+
+# JSON-LD FAQPage
+jsonldFAQ:
+  "@context": "https://schema.org"
+  "@type": "FAQPage"
+  description: "Foire aux questions sur les coûts et les simulateurs pour l'accueil d'enfants par une assistante maternelle à Brétigny-sur-Orge."
+  mainEntity:
+    - "@type": "Question"
+      name: "À quoi sert le simulateur de coût assistante maternelle vs crèche à Brétigny-sur-Orge ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Le simulateur vous aide à comparer le reste à charge entre différents modes d’accueil (assistante maternelle, crèche PSU, micro-crèche PAJE) à Brétigny-sur-Orge. Vous pouvez ainsi identifier la solution la plus adaptée à votre budget et à vos besoins familiaux, sans calculs complexes."
+    - "@type": "Question"
+      name: "Les résultats du simulateur sont-ils fiables ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Oui, mais il s’agit d’une estimation indicative. Les aides varient selon votre situation personnelle, le type de structure choisi et la validation de la CAF. Aucune donnée personnelle n’est conservée, garantissant votre confidentialité."
+    - "@type": "Question"
+      name: "Quels tarifs sont pris en compte pour les micro-crèches ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Les micro-crèches appliquent librement leurs tarifs, généralement entre 9 € et 10 € de l’heure pour la première tranche, avec un tarif dégressif selon le nombre d’heures. Le simulateur utilise une fourchette réaliste pour l’Essonne, mais le tarif précis dépend de chaque établissement."
+    - "@type": "Question"
+      name: "Où trouver les simulateurs officiels CAF et URSSAF ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Vous pouvez utiliser les simulateurs officiels suivants pour estimer les coûts liés à l’accueil de votre enfant : <ul><li>Simulateur URSSAF CMG – Assistante maternelle : <a href=\"https://www.urssaf.fr/accueil/outils-documentation/simulateurs/calculer-reste-a-charge-cmg-pe.html\">https://www.urssaf.fr/accueil/outils-documentation/simulateurs/calculer-reste-a-charge-cmg-pe.html</a></li><li>Simulateur CAF – Crèche PSU : <a href=\"https://monenfant.fr/simuler-le-cout-en-creche\">https://monenfant.fr/simuler-le-cout-en-creche</a></li></ul>"
+    - "@type": "Question"
+      name: "Pourquoi proposer un simulateur sur le site d’une assistante maternelle ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Ce simulateur est conçu pour : <ul><li>Faire gagner du temps aux parents en regroupant les trois modes d’accueil sur une seule page.</li><li>Apporter plus de clarté sur les différences de calcul entre crèches PSU, crèches PAJE et assistantes maternelles.</li><li>Corriger les idées reçues : la crèche n’est pas toujours la solution la moins chère.</li><li>Rassurer les familles : le salaire d’une assistante maternelle peut sembler élevé, mais le reste à charge réel, indemnités incluses, reste souvent comparable à celui d’une place en crèche PSU.</li><li>Adapter les tarifs pour maintenir une cohérence entre les offres locales tout en préservant la pérennité de l’activité professionnelle.</li></ul>"
+    - "@type": "Question"
+      name: "Où consulter des exemples concrets de coût réel ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Vous pouvez accéder à des exemples précis de reste à charge et de calculs pour différentes situations familiales à Brétigny-sur-Orge sur la page <a href=\"#exemples-cout-reel-assistante-maternelle\">Exemples de coût réel pour une assistante maternelle</a>."
+    - "@type": "Question"
+      name: "Pourquoi mon aide CMG peut-elle changer au cours du contrat ?"
+      acceptedAnswer:
+        "@type": "Answer"
+        text: "Le montant du Complément de mode de garde (CMG) n'est pas fixe. La CAF réévalue vos droits chaque année selon vos revenus N-2. Je vous aide à anticiper ces variations dès le début de l'accueil pour stabiliser votre budget et assurer une collaboration sereine sur le long terme."
 ---
+
 
     
 <!-- Icône de défilement vers le haut utilisant une image SVG -->
@@ -22,14 +81,51 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
 
 <section id="simulateur-reforme-cmg-assmat-creche" class="container-fluid py-5 position-relative">
+<div class="container-md">
 
-<div class="reforme-cmg-container">
-        <h1 class="poppins-bold-titre-reforme-cmg">Simulateur Réforme CMG 2025</h1>
-        <a href="https://chubert91assmat.netlify.app/posts/petite-enfance-bretigny-91/choix-mode-de-garde-bretigny/#differenciation" class="btn btn-action-primary my-1" aria-label="Lire l'article sur le choix d'un mode de garde par une assistante maternelle en Essonne">
-              Découvrir la solution gagnante qu'offre une assistante maternelle →
-            </a>
-    </div>
 
+
+  <!-- Premier ligne -->
+        <div class="row">
+            <!-- h1 (Texte à gauche) -->
+            <div class="col-md-6 p-0 d-flex align-items-center">
+                <div class="simulateur-garde-enfants-item">
+                    <div class="simulateur-garde-enfants-text-space p-4">
+                        <div class="description-atout-services">
+                        <h1 class="poppins-bold-titre-h1">Simulateur coût crèche vs assistante maternelle 2026 – Brétigny-sur-Orge</h1>
+                        <hr class="horizontal-line">
+                        
+                            <p class="poppins-regular-balise-p">{{ aProposDescription | default("À Brétigny-sur-Orge, trouvez l’accueil idéal pour votre enfant avec une assistante maternelle agréée qui partage vos valeurs. Le coût compte, mais le feeling et un projet d’accueil personnalisé font toute la différence. Estimez vos frais dès maintenant avec le simulateur !") }}</p>
+                            
+                            <!-- Bouton "lien interne" -->
+ <a href="#comparer-creche-assistante-maternelle" class="btn btn-action-primary">
+    Lancer ma simulation CMG →
+  </a>
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Image à droite -->
+            <div class="col-md-6 p-0">
+                <div class="services-garde-enfants-item">
+                    <div class="services-garde-enfants-image">
+                        <div class="image-frame-services position-relative">
+
+                {% image "/images/simulateur/valeur-accueil-bretigny91.jpg", "Photo illustrant une promenade en tant qu'assistante maternelle", "(min-width: 1024px) 100vw, 50vw", width=800, height=600, loading="eager", fetchpriority="high" %}
+
+                    
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+</div>
     
         </div>
     </div>
@@ -58,68 +154,28 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
 <section id="comparer-creche-assistante-maternelle">
   <div class="container-service container-md">
-  <h2 class="poppins-bold-service-title mb-5">COMPAREZ & ESTIMEZ</h2>
+  <h2 class="poppins-bold-titre-h2 mb-5">Estimez gratuitement votre reste à charge 2026</h2>
 
-   
 
- <div class="row gy-4">
-      <!-- Carte 1 -->
-      <div class="col-12">
-        <div class="comparatif-card h-100 p-4">
-          <h3 class="fs-5 fw-bold poppins-regular d-flex align-items-center mb-3">
-            <span class="comparatif-icon-wrapper me-2">
-              <img src="{{ '/images/projet-accueil/securite/communication-assmat-bretigny.svg' | url }}" class="bien-etre-icon" alt="Icône communication" loading="lazy">
-            </span>
-            Comparez les solutions pour faire le bon choix 
-          </h3>
-          <ul class="poppins-regular-comparatif">
-          <li>Cette simulation vous aide à y voir plus clair, mais les aides dépendent de votre situation personnelle, de la structure choisie et d’une confirmation par la CAF. Vos données ne sont pas conservées.</li>
-          <li><strong>Les micro-crèches PAJE</strong> appliquent librement leur tarif horaire, généralement entre 9 € et 10 €/h pour la première tranche, puis dégressif selon le volume horaire et la fratrie. <strong>Ce simulateur utilise une fourchette réaliste en Essonne, mais le tarif exact dépend de chaque établissement.</strong> Nous vous invitons à contacter la micro-crèche de votre choix pour obtenir un devis personnalisé.</li>
-          <li>
-            <a href="https://www.urssaf.fr/accueil/outils-documentation/simulateurs/calculer-reste-a-charge-cmg-pe.html" target="_blank" class="styled-link">Simulateur</a> officiel URSSAF pour le CMG chez une assistante maternelle.</li>
-          <li>
-            <a href="https://monenfant.fr/simuler-le-cout-en-creche" target="_blank" class="styled-link">Simulateur</a> officiel CAF pour la crèche PSU (monenfant.fr).</li>
-          </ul>
 
-<div class="exemple-container">
-  <a href="#exemples-cout-reel-assistante-maternelle" class="btn btn-action-primary">
-    Consultez des exemples concrets →
+  <p class="poppins-regular-balise-p small mb-2">
+    Le montant de vos aides peut varier d'une année à l'autre selon vos revenus N-2.
+  </p>
+  <a href="#conseil-expert-cmg" class="btn btn-action-primary">
+    Comment stabiliser mon budget sur 3 ans ? →
   </a>
-</div>
-
-        </div>
-      </div>
 
 
-     <!-- Carte 2 -->
-      <div class="col-12">
-        <div class="comparatif-card h-100 p-4">
-          <h3 class="fs-5 fw-bold poppins-regular d-flex align-items-center mb-3">
-            <span class="comparatif-icon-wrapper me-2">
-              <img src="{{ '/images/simulateur/idee-simulateur-bretigny.svg' | url }}" class="idee-icon" alt="Icône communication" loading="lazy">
-            </span>
-           Pourquoi proposer ce simulateur ?
-          </h3>
-          <ul class="poppins-regular-comparatif">
-            <li><strong>Gain de temps :</strong> Comparez instantanément les restes à charge des trois modes d’accueil, réunis pour la première fois sur une seule page.</li>
-          <li><strong>Plus de clarté :</strong> Les différences de calcul entre crèches PSU, crèches PAJE et assistantes maternelles rendent la comparaison difficile.</li>
-           <li><strong>Décision biaisée :</strong> Le choix du mode d’accueil se fait rarement sur le coût réel.</li>
-          <li><strong>Idée reçue :</strong> La crèche semble moins chère… mais ce n’est pas toujours vrai.</li>
-           <li><strong>Rassurer :</strong> Le salaire de l’assistante maternelle peut sembler élevé, mais comme l’illustrent les exemples ci-dessous, le reste à charge, indemnités comprises, peut être proche du coût d’une place en crèche PSU selon votre situation familiale.</li>
-           <li><strong>Tarifs justes et adaptés :</strong> Ce simulateur me permet d’ajuster mes tarifs pour qu’ils restent cohérents avec les autres solutions d’accueil proposées aux familles du secteur, à condition d'assurer la pérennité de mon activité.</li>
-          </ul>
 
-        </div>
-      </div>
-
+ 
 
     <div class="row">
       <div class="container my-5">
 
        
-      <h2 class="poppins-regular-simulateur mb-5">
-  Simulateur CMG 2025 – une solution adaptée à mon profil
-</h2>
+      <h3 class="poppins-bold-titre-h2 mb-5">
+  Simulateur CMG 2026 : Calculez le coût de votre assmat à Brétigny
+</h3>
 
 
 
@@ -130,15 +186,15 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
   <form id="simulateur-form" class="row g-4">
   <!-- Situation familiale -->
   <div class="col-md-6">
-    <label class="form-label poppins-regular-simucmg">Situation familiale</label>
+    <label class="form-label poppins-regular-balise-p">Situation familiale</label>
     <div>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="situation" value="couple" id="situationCouple" checked required>
-        <label class="form-check-label poppins-regular-simucmg" for="situationCouple">Couple</label>
+        <label class="form-check-label poppins-regular-balise-p" for="situationCouple">Couple</label>
       </div>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="situation" value="mono" id="situationMono" required>
-        <label class="form-check-label poppins-regular-simucmg" for="situationMono">Parent isolé</label>
+        <label class="form-check-label poppins-regular-balise-p" for="situationMono">Parent isolé</label>
       </div>
     </div>
   </div>
@@ -146,7 +202,7 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
 
 <div class="col-md-6">
-  <label for="nbEnfants" class="form-label poppins-regular-simucmg">Nombre d’enfants à charge</label>
+  <label for="nbEnfants" class="form-label poppins-regular-balise-p">Nombre d’enfants à charge</label>
   <input type="number" class="simu-control styled-input" id="nbEnfants" name="nbEnfants" min="1" max="4" required>
 </div>
 
@@ -154,7 +210,7 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
   <!-- Ressources -->
 <div class="col-md-6">
-  <label for="revenu" class="form-label poppins-regular-simucmg">Ressources annuelles 2023 (€)</label>
+  <label for="revenu" class="form-label poppins-regular-balise-p">Ressources annuelles 2024 (€)</label>
   <input 
     type="number" 
     class="simu-control styled-input" 
@@ -169,8 +225,8 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
  <!-- Âge enfant -->
 <div class="col-md-6">
-  <label class="form-label poppins-regular-simucmg">Âge de l’enfant à garder</label>
-  <div class="form-control-plaintext">0 à 3 ans</div>
+  <label class="form-label poppins-regular-balise-p">Âge de l’enfant à garder</label>
+  <div class="form-control-plaintext poppins-regular-titre-h3">0 à 3 ans</div>
   <input type="hidden" id="ageEnfant" name="ageEnfant" value="0-3">
 </div>
 
@@ -183,7 +239,7 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
 
 <div class="col-md-6">
-  <label for="heuresHebdo" class="form-label poppins-regular-simucmg">Heures de garde par semaine</label>
+  <label for="heuresHebdo" class="form-label poppins-regular-balise-p">Heures de garde par semaine</label>
   <input type="number" step="0.01" class="simu-control styled-input" id="heuresHebdo" name="heuresHebdo" min="0">
 </div>
 
@@ -196,7 +252,7 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
 
 <div class="col-md-6">
-  <label for="semainesParAn" class="form-label poppins-regular-simucmg">
+  <label for="semainesParAn" class="form-label poppins-regular-balise-p">
     Type de contrat
   </label>
  <select class="form-select styled-select" id="semainesParAn" name="semainesParAn" required>
@@ -219,7 +275,7 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
   <!-- Taux horaire -->
   <div class="col-md-6">
-    <label for="tauxHoraire" class="form-label poppins-regular-simucmg">Taux horaire net assmat (€)</label>
+    <label for="tauxHoraire" class="form-label poppins-regular-balise-p">Taux horaire net assmat (€)</label>
     <input type="number" step="0.01" class="simu-control" id="tauxHoraire" name="tauxHoraire" required>
   </div>
 
@@ -227,12 +283,12 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
   <!-- Indemnités -->
   <div class="col-md-3">
-    <label for="indemEntretien" class="form-label poppins-regular-simucmg">Indemnité d'entretien (€ / mois)</label>
+    <label for="indemEntretien" class="form-label poppins-regular-balise-p">Indemnité d'entretien (€ / mois)</label>
     <input type="number" step="0.01" class="simu-control" id="indemEntretien" name="indemEntretien" required>
   </div>
 
   <div class="col-md-3">
-    <label for="indemRepas" class="form-label poppins-regular-simucmg">Indemnité de repas (€ / mois)</label>
+    <label for="indemRepas" class="form-label poppins-regular-balise-p">Indemnité de repas (€ / mois)</label>
     <input type="number" step="0.01" class="simu-control" id="indemRepas" name="indemRepas" required>
   </div>
 
@@ -246,18 +302,19 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 <div class="col-md-6">
   <div class="form-check">
     <input class="form-check-input" type="checkbox" id="connaitPrixAccueil">
-    <label class="form-check-label poppins-regular-simucmg" for="connaitPrixAccueil">
-     
+   <label class="form-check-label" for="connaitPrixAccueil">
+  <span class="poppins-regular-balise-p">
     Tarif connu sur devis micro-crèche <strong>PAJE</strong>
     (Les simulateurs indiquent souvent le tarif PSU, qui ne s’applique pas ici.)
+  </span>
+</label>
 
-    </label>
   </div>
 </div>
 
-<!-- ⬇️ CHAMP SAAISI OU AUTOCALCULÉ -->
+<!-- ⬇️ CHAMP SAISI OU AUTOCALCULÉ -->
 <div class="col-md-6 d-none" id="prixAccueilWrapper">
-  <label for="prixAccueil" class="form-label poppins-regular-simucmg">Montant total mensuel facturé par la crèche sur devis <strong>(aide CAF non déduite)</strong> (€)</label>
+  <label for="prixAccueil" class="form-label poppins-regular-balise-p">Montant total mensuel facturé par la crèche sur devis <strong>(aide CAF (CMG) et crédit d'impôt non déduits)</strong> (€)</label>
   <input 
     type="number" 
     step="0.01" 
@@ -283,7 +340,7 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
  
   <!-- Bouton unique -->
   <div class="col-12 mb-5 text-center">
-    <button type="submit" class="btn btn-simu">Voir mon profil</button>
+    <button type="submit" class="btn btn-simu">Calculer mon reste à charge</button>
   </div>
 </form>
 
@@ -309,7 +366,7 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
 
   <!-- Titre -->
-  <h5 class="poppins-regular-simulateur mb-5">Baromètre comparatif prix</h5>
+  <h3 class="poppins-bold-titre-h3 mb-5">Comparatif visuel reste à charge (baromètre)</h3>
   
 
   <!-- Baromètre -->
@@ -322,8 +379,8 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
   <!-- Légende en dessous -->
   <div class="d-flex justify-content-between mt-5 px-1">
-    <span class="poppins-regular-simucmg"><strong>Crèche PSU</strong></span>
-  <span class="poppins-regular-simucmg"><strong>Micro-crèche PAJE</strong></span>
+    <span class="poppins-bold-titre-h3">Crèche PSU</span>
+  <span class="poppins-bold-titre-h3">Micro-crèche PAJE</span>
   </div>
 
 
@@ -349,7 +406,7 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
 <section id="calculs-automatiques-assistante-maternelle">
   <div class="container-service container-md">
-  <h2 class="poppins-bold-service-title mb-5">CHIFFRES CLES</h2>
+  <h2 class="poppins-bold-titre-h2 mb-5">Détails de votre calcul (heures, taux horaire, salaire net)</h2>
 
    
 
@@ -357,11 +414,11 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
       <!-- Carte 3 -->
       <div class="col-12 mb-5">
         <div class="comparatif-card h-100 p-4">
-          <h3 class="fs-5 fw-bold poppins-regular d-flex align-items-center mb-3">
+          <h3 class="poppins-bold-titre-h3">
             <span class="comparatif-icon-wrapper me-2">
-              <img src="{{ '/images/simulateur/auto-simulateur-bretigny.svg' | url }}" class="bien-etre-icon" alt="Icône communication" loading="lazy">
+              <img src="{{ '/images/simulateur/auto-simulateur-bretigny.svg' | url }}" class="bien-etre-icon" alt="Tableau comparatif coût crèche vs assistante maternelle Brétigny-sur-Orge" loading="lazy">
             </span>
-           Informations générées à partir de votre saisie
+          Vos données saisies (récapitulatif après calcul)
           </h3>
 
 
@@ -373,15 +430,15 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
   <div class="comparatif-card h-100 p-4">
    
- <p class="poppins-regular-simucmg mb-3">
-    <strong>Contrairement aux micro-crèches PAJE souvent au forfait annuel, les crèches PSU et les assistantes maternelles peuvent proposer des contrats plus souples, adaptés au nombre réel de semaines de garde souhaitées.</strong>
+ <p class="poppins-bold-balise-p mb-3">
+    Contrairement aux micro-crèches PAJE souvent au forfait annuel, les crèches PSU et les assistantes maternelles peuvent proposer des contrats plus souples, adaptés au nombre réel de semaines de garde souhaitées.
     </p>
 
 
 
 <!-- Heures -->
  <div class="col-md-6 mb-3">
-  <label for="heuresMensuelles" class="form-label poppins-regular-simucmg">
+  <label for="heuresMensuelles" class="form-label poppins-regular-balise-p">
     Heures de garde par mois (Assmat / Crèche PSU)
   </label>
   <input
@@ -401,7 +458,7 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
   >
 
   <!-- Heures micro-crèche : affichées aux parents -->
-  <label for="heuresMensuellesMicro" class="form-label mt-2 poppins-regular-simucmg">
+  <label for="heuresMensuellesMicro" class="form-label mt-2 poppins-regular-balise-p">
     Heures mensuelles micro-crèche PAJE (base 52 sem.)
   </label>
   <input
@@ -414,27 +471,27 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
   >
 </div>
 
- <p class="poppins-regular-simucmg mb-3">
-     <strong>Le taux horaire CMG 2025 sert de plafond pour le calcul de l’aide, afin que le montant versé aux parents soit proportionnel aux heures réellement travaillées, rendant l’aide plus équitable et adaptée à chaque famille.</strong>
+ <p class="poppins-bold-balise-p mb-3">
+     Le taux horaire CMG sert de plafond pour le calcul de l’aide, afin que le montant versé aux parents soit proportionnel aux heures réellement travaillées, rendant l’aide plus équitable et adaptée à chaque famille.
     </p>
 
   <!-- Taux horaire complet (calculé) -->
       <div class="col-md-6 mb-3">
-        <label for="tauxComplet" class="form-label poppins-regular-simucmg">Taux horaire complet CMG (€)</label>
+        <label for="tauxComplet" class="form-label poppins-regular-balise-p">Taux horaire complet CMG (€)</label>
         <input type="text" class="simu-auto-control" id="tauxComplet" name="tauxComplet" readonly>
         <div id="alertePlafondCMG" class="alert alert-warning mt-2 d-none"></div>
       </div>
 
 
 
- <p class="poppins-regular-simucmg mb-3">
+ <p class="poppins-bold-balise-p mb-3">
      <strong>Ne vous fiez pas au salaire net affiché : après déduction des aides de la CAF et du crédit d’impôt, le coût mensuel pour une assistante maternelle est généralement proche de celui d’une crèche.</strong>
     </p>
 
 
   <!-- Salaire net mensuel (calculé) -->
       <div class="col-md-6">
-        <label for="salaireNet" class="form-label poppins-regular-simucmg">Salaire net mensuel (€)</label>
+        <label for="salaireNet" class="form-label poppins-regular-balise-p">Salaire net mensuel (€)</label>
       <input type="text" class="simu-auto-control" id="salaireNet" name="salaireNet" readonly>
       </div>
 
@@ -444,8 +501,19 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 </div>
 
 
+
         </div>
       </div>
+
+
+<div class="highlight-box-maillage p-4 pb-5">
+  <p class="poppins-regular-balise-p">
+    <strong>Le saviez-vous ?</strong> Au-delà du tarif, le choix d'une assistante maternelle à Brétigny se joue aussi sur le gain de temps...
+  </p>
+  <a href="/assistante-maternelle-bretigny-sur-orge/" class="style-liens">
+    Voir ma proximité avec le RER C et les écoles de Brétigny →
+  </a>
+</div>
 
 
 </div> <!-- Fin de la carte 1 -->
@@ -457,9 +525,170 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
 
 
+<section id="reforme-cmg-2026" class="py-5">
+<div class="container-md"> <!-- Conteneur centré et responsive -->
+  <h2 class="poppins-bold-titre-h2 mb-4">Réforme CMG effective depuis 2025 (impacts 2026) : ce qui change vraiment pour les parents à Brétigny-sur-Orge</h2>
+  
+  <p class="poppins-regular-balise-p lead mb-4 mt-4">
+    Depuis le 1er septembre 2025, la réforme du Complément de mode de garde (CMG) simplifie et harmonise les aides. À Brétigny-sur-Orge, l'objectif est clair : <strong>rapprocher le coût d'une assistante maternelle de celui d'une place en crèche</strong>. Voici les ajustements clés pour votre budget 2026.
+  </p>
+
+  <div class="row g-4">
+    <div class="col-lg-6">
+      <div class="card-reforme">
+        <h3 class="poppins-bold-titre-h3 mb-3">1. Un calcul basé sur votre "reste à charge"</h3>
+        <p class="poppins-regular-balise-p">
+          Le montant de l'aide s'adapte désormais précisément à vos revenus et au nombre d'heures réelles. Pour beaucoup de familles à revenus modestes, le reste à charge diminue fortement, rendant l'emploi d'une assistante maternelle aussi accessible qu'une crèche publique.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card-reforme">
+        <h3 class="poppins-bold-titre-h3 mb-3">2. Aide étendue jusqu'aux 12 ans</h3>
+        <p class="poppins-regular-balise-p">
+          C'est une victoire pour les parents solos / monoparentaux à Brétigny : si vous élevez seul(e) votre enfant, vous pouvez désormais bénéficier du CMG <strong>jusqu'aux 12 ans de l'enfant</strong> (contre 6 ans auparavant) pour couvrir les gardes périscolaires.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card-reforme">
+        <h3 class="poppins-bold-titre-h3 mb-3">3. Partage de l'aide en cas de séparation</h3>
+        <p class="poppins-regular-balise-p">
+          Depuis 1er décembre 2025, en cas de <strong>résidence alternée</strong>, chaque parent peut désormais percevoir sa propre part de CMG, sous réserve de remplir les conditions d'éligibilité et d'avoir des contrats de travail distincts.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="card-reforme">
+        <h3 class="poppins-bold-titre-h3 mb-3">4. Un "bouclier" pour ne pas y perdre</h3>
+        <p class="poppins-regular-balise-p">
+          Si le nouveau calcul s'avérait moins favorable pour vous, un <strong>complément transitoire</strong> est automatiquement appliqué pour maintenir votre niveau d'aide habituel (sous conditions de ressources et de volume horaire).
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 mt-4">
+    <div class="card-reforme">
+      <h3 class="poppins-bold-titre-h3 mb-3">Ce qu'il faut retenir pour vos déclarations</h3>
+      <p class="poppins-regular-balise-p mb-3">
+        L'Urssaf Pajemploi applique ces changements <strong>automatiquement</strong>. Vous n'avez aucune démarche à faire, sauf en cas de changement de situation familiale (séparation ou garde d'un enfant de plus de 6 ans).
+      </p>
+      
+      <p class="poppins-regular-balise-p small text-muted">
+        Source officielle : 
+        <a href="https://www.urssaf.fr/accueil/actualites/evolution-cmg-ce-qui-va-changer.html" target="_blank" rel="noopener noreferrer" class="style-liens">
+          Urssaf / Pajemploi – Réforme CMG 2025-2026
+        </a>
+      </p>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <p class="poppins-bold-balise-p mb-3">
+      Vérifiez l'impact précis sur votre budget mensuel à Brétigny-sur-Orge :
+    </p>
+    <a href="#comparer-creche-assistante-maternelle" class="btn btn-action-primary-b">
+      Relancer ma simulation personnalisée 2026 →
+    </a>
+  </div>
+   </div>
+</section>
 
 
 
+
+
+
+
+
+<section id="conseil-expert-cmg">
+    <div class="container-md">
+        <div class="astuce-cmg-card">
+            
+            <div class="d-flex align-items-center mb-3">
+                <span class="comparatif-icon-wrapper me-3">
+                    <img src="{{ '/images/faq/ampoule.svg' | url }}" class="bien-etre-icon" alt="Astuce CMG" loading="lazy">
+                </span>
+               <h2 class="poppins-bold-titre-h2 mb-4">Baisse du CMG : Ma stratégie pour lisser vos aides sur 3 ans</h2>
+            </div>
+
+            <p class="poppins-regular-balise-p mb-4 mt-4">
+                Le montant de la CAF (CMG) évolue selon vos revenus d'il y a 2 ans. Pour éviter les variations brutales du budget, je vous aide à <strong>anticiper une moyenne stable</strong>.
+            </p>
+
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-7">
+                    <div class="card-strategie p-3 rounded border bg-white h-100">
+                      <h3 class="poppins-bold-balise-p mb-3">Anticiper la baisse des aides CAF</h3>
+                        <ul class="poppins-regular-balise-p mb-0">
+                            <li class="mb-2"><strong>Anticiper :</strong> Vous simulez la moyenne de vos aides sur 3 ans.</li>
+                            <li class="mb-2"><strong>Épargner :</strong> Vous mettez de côté le "surplus" quand l'aide est haute.</li>
+                            <li><strong>Piocher :</strong> Vous utilisez cette réserve quand l'aide diminue.</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-5">
+                    <div class="card-bleu-fonce p-3 rounded shadow-sm h-100 d-flex flex-column justify-content-center text-center">
+
+                        <span class="poppins-bold-titre-blanc-h1">382 € / mois CMG</span>
+                        <span class="small opacity-90">C'est votre aide réelle lissée (exemple basé sur 3 ans d'accueil: 263€ + 682€ + 201€ = 1 146€ / 3 = 382€ de CMG moyenne).</span>
+                    </div>
+                </div>
+            </div>
+
+           <div class="alert alert-custom-info mt-4 mb-0 border-0">
+                <h3 class="poppins-bold-balise-p mb-3"><i class="bi bi-calculator me-2"></i>Concrètement, comment ça marche ?</h3>
+                
+              <div class="row g-3 cards-equal-height">
+  <div class="col-md-4">
+    <div class="card-mini-equal bg-white p-2 rounded text-center border">
+    <small class="d-block text-muted">
+      Année 1 - <a href="#exemple-situation-b" class="style-liens text-decoration-none">Situation B</a>
+    </small>
+    <strong>263 €</strong> d'aide
+    <div class="poppins-regular-balise-p small mt-1">En couple avec 1 enfant</div>
+  </div>
+</div>
+
+                    <div class="col-md-4">
+                         <div class="card-mini-equal bg-white p-2 rounded text-center border">
+                           <small class="d-block text-muted">
+      Année 2 - <a href="#exemple-situation-a" class="style-liens text-decoration-none">Situation A</a>
+    </small>
+                            <strong>682 €</strong> d'aide
+                           <div class="poppins-regular-balise-p small mt-1">Année de transition (congé parental ou temps partiel)</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card-mini-equal bg-white p-2 rounded text-center border">
+                             <small class="d-block text-muted">
+      Année 3 - <a href="#exemple-situation-c" class="style-liens text-decoration-none">Situation C</a>
+    </small>
+                            <strong>201 €</strong> d'aide
+                            <div class="poppins-regular-balise-p small mt-1">Reprise d'activité à plein temps</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3 p-2 text-center">
+                    <p class="poppins-bold-balise-p mb-0">
+                        Résultat : Anticiper, c'est transformer des aides variables en un budget fixe et sans surprise pendant 3 ans !
+                    </p>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+             <a href="{{ '/contact/' | url }}" class="btn btn-action-primary mb-5">Préparons sereinement l'accueil de votre enfant →</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 
@@ -483,19 +712,37 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
 <section id="exemples-cout-reel-assistante-maternelle">
   <div class="container-service container-md">
-    <h2 class="poppins-bold-service-title mb-5">EXEMPLES CONCRETS</h2>
- <h3 class="poppins-regular-simucmg mb-5">À contrat équivalent et pour un accueil personnalisé et promenades journalières, le montant du reste à charge dépend de la situation de chaque famille (revenus, nombre d’enfants à charge, etc.)</h3>
+    <h2 class="poppins-bold-titre-h2 mb-5">Exemples concrets de reste à charge réel à Brétigny (2025–2026)</h2>
+
+ <!-- Mention mise à jour - SEO + confiance -->
+    <div class="card-reforme">
+      <small class="poppins-regular-balise-p mb-0">
+      <strong>Exemples basés sur les tarifs 2025</strong> – mise à jour prévue début 2026.
+      </small>
+    </div>
+
+
+ <p class="poppins-regular-balise-p mb-5">
+  À contrat équivalent et pour un accueil personnalisé, le montant du reste à charge dépend de la situation de chaque famille (revenus, nombre d’enfants à charge, etc.).
+</p>
+
+
+<div class="exemple-container">
+  <a href="/faq/" class="btn btn-action-primary-b">Je m'informe sur la réforme CMG →</a>
+</div>
+
+
     <div class="row gy-4">
       <!-- Carte 1 -->
       <div class="col-12">
-        <div class="comparatif-card h-100 p-4">
-          <h3 class="fs-5 fw-bold poppins-regular d-flex align-items-center mb-3">
+        <div class="comparatif-card h-100 p-4" id="exemple-situation-a">
+          <h3 class="poppins-bold-titre-h3">
             <span class="comparatif-icon-wrapper me-2">
               <img src="{{ '/images/faq/book-and-magnifying-glass-svgrepo-com.svg' | url }}" class="bien-etre-icon" alt="Icône communication" loading="lazy">
             </span>
-            Exemple
+            Situation A – Couple 2 enfants – 38 000 €
           </h3>
-          <ul class="poppins-regular-comparatif">
+          <ul class="poppins-regular-balise-p">
         
            <li><strong>Contrat en année complète - 52s sur 4 jours - tarif 2025</strong></li>
             <li>En couple</li>
@@ -513,14 +760,14 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
       <!-- Carte 2 -->
       <div class="col-12">
-        <div class="comparatif-card h-100 p-4">
-          <h3 class="fs-5 fw-bold poppins-regular d-flex align-items-center mb-3">
+        <div class="comparatif-card h-100 p-4" id="exemple-situation-b">
+          <h3 class="poppins-bold-titre-h3">
             <span class="comparatif-icon-wrapper me-2">
               <img src="{{ '/images/faq/book-and-magnifying-glass-svgrepo-com.svg' | url }}" class="bien-etre-icon" alt="Icône communication" loading="lazy">
             </span>
-            Exemple
+            Situation B – Couple 1 enfant – 70 000 €
           </h3>
-          <ul class="poppins-regular-comparatif">
+          <ul class="poppins-regular-balise-p">
            <li><strong>Contrat en année complète - 52s sur 4 jours - tarif 2025</strong></li>
             <li>En couple</li>
             <li>Ressources annuelles 2023 (€): 70000€.</li>
@@ -537,14 +784,14 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
 
       <!-- Carte 3 -->
       <div class="col-12">
-        <div class="comparatif-card h-100 p-4">
-          <h3 class="fs-5 fw-bold poppins-regular d-flex align-items-center mb-3">
+       <div class="comparatif-card h-100 p-4" id="exemple-situation-c">
+          <h3 class="poppins-bold-titre-h3">
             <span class="comparatif-icon-wrapper me-2">
               <img src="{{ '/images/faq/book-and-magnifying-glass-svgrepo-com.svg' | url }}" class="bien-etre-icon" alt="Icône communication" loading="lazy">
             </span>
-            Exemple
+            Situation C – Couple 2 enfants – 90 800 €
           </h3>
-          <ul class="poppins-regular-comparatif">
+          <ul class="poppins-regular-balise-p">
             <li><strong>Contrat en année complète - 52s sur 4 jours - tarif 2025</strong></li>
             <li>En couple</li>
             <li>Ressources annuelles 2023 (€): 90800€.</li>
@@ -561,6 +808,154 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
     </div>
   </div>
 </section>
+
+
+<div class="svg-banniere-background">
+     <div class="svg-container">
+    <img src="{{ '/images/projet-accueil/nuage-bienvenue-pc.svg' | url }}" 
+         class="nuages-bleus-curvy pc-svg" 
+         alt="Illustration de nuages pour la présentation du blog sur PC"
+         loading="lazy">
+    
+    <img src="{{ '/images/projet-accueil/nuage-bienvenue-mobile.svg' | url }}" 
+         class="nuages-bleus-curvy mobile-svg" 
+         alt="Illustration de nuages pour la présentation du blog sur mobile"
+         loading="lazy">
+</div>
+
+
+
+
+
+
+
+<section id="faq-simulateur-section">
+  <div class="container-md">
+    <h2 class="poppins-bold-titre-h2 mb-4">Questions fréquentes sur le coût assmat vs crèche à Brétigny</h2>
+
+    <div class="accordion accordion-flush" id="faqAccordion">
+
+      <!-- Question 1 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq-heading-1">
+          <button class="accordion-button poppins-bold-balise-p" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="true" aria-controls="faq-collapse-1">
+            À quoi sert le simulateur de coût assistante maternelle vs crèche à Brétigny-sur-Orge ?
+          </button>
+        </h2>
+        <div id="faq-collapse-1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body poppins-regular-balise-p">
+            Le simulateur vous aide à comparer le reste à charge entre différents modes d’accueil (assistante maternelle, crèche PSU, micro-crèche PAJE). Vous pouvez ainsi identifier la solution la plus adaptée à votre budget et à vos besoins familiaux, sans calculs complexes.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 2 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq-heading-2">
+          <button class="accordion-button poppins-bold-balise-p" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
+            Les résultats du simulateur sont-ils fiables ?
+          </button>
+        </h2>
+        <div id="faq-collapse-2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body poppins-regular-balise-p">
+            Oui, mais il s’agit d’une estimation indicative. Les aides varient selon votre situation personnelle, le type de structure choisi et la validation de la CAF. Aucune donnée personnelle n’est conservée, garantissant votre confidentialité.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 3 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq-heading-3">
+          <button class="accordion-button poppins-bold-balise-p" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">
+            Quels tarifs sont pris en compte pour les micro-crèches ?
+          </button>
+        </h2>
+        <div id="faq-collapse-3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body poppins-regular-balise-p">
+            Les micro-crèches appliquent librement leurs tarifs, généralement entre 9 € et 10 € de l’heure pour la première tranche, avec un tarif dégressif selon le nombre d’heures. Le simulateur utilise une fourchette réaliste pour l’Essonne, mais le tarif précis dépend de chaque établissement.
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 4 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq-heading-4">
+          <button class="accordion-button poppins-bold-balise-p" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-4" aria-expanded="false" aria-controls="faq-collapse-4">
+            Où trouver les simulateurs officiels CAF et URSSAF ?
+          </button>
+        </h2>
+        <div id="faq-collapse-4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body poppins-regular-balise-p">
+            <ul>
+              <li><a href="https://www.urssaf.fr/accueil/outils-documentation/simulateurs/calculer-reste-a-charge-cmg-pe.html" target="_blank" class="style-liens">Simulateur URSSAF CMG – Assistante maternelle</a></li>
+              <li><a href="https://monenfant.fr/simuler-le-cout-en-creche" target="_blank" class="style-liens">Simulateur CAF – Crèche PSU (monenfant.fr)</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 5 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq-heading-5">
+          <button class="accordion-button poppins-bold-balise-p" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-5" aria-expanded="false" aria-controls="faq-collapse-5">
+            Pourquoi proposer un simulateur sur le site d’une assistante maternelle ?
+          </button>
+        </h2>
+        <div id="faq-collapse-5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body poppins-regular-balise-p">
+            <strong>Ce simulateur est conçu pour :</strong>
+            <ul>
+              <li>Faire gagner du temps aux parents en regroupant les trois modes d’accueil sur une seule page.</li>
+              <li>Apporter plus de clarté sur les différences de calcul entre crèches PSU, crèches PAJE et assistantes maternelles.</li>
+              <li>Corriger les idées reçues : la crèche n’est pas toujours la solution la moins chère.</li>
+              <li>Rassurer les familles : le salaire d’une assistante maternelle peut sembler élevé, mais le reste à charge réel, indemnités incluses, reste souvent comparable à celui d’une place en crèche PSU.</li>
+              <li>Adapter les tarifs pour maintenir une cohérence entre les offres locales tout en préservant la pérennité de l’activité professionnelle.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Question 6 -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faq-heading-6">
+          <button class="accordion-button poppins-bold-balise-p" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-6" aria-expanded="false" aria-controls="faq-collapse-6">
+            Où consulter des exemples concrets de coût réel ?
+          </button>
+        </h2>
+        <div id="faq-collapse-6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body poppins-regular-balise-p">
+            Vous pouvez accéder à des exemples précis de reste à charge et de calculs pour différentes situations familiales à Brétigny-sur-Orge sur la page 
+            <a href="#exemples-cout-reel-assistante-maternelle" class="style-liens">Exemples de coût réel pour une assistante maternelle</a>.
+          </div>
+        </div>
+      </div>
+
+
+ <!-- Question 7 -->
+<div class="accordion-item">
+  <h2 class="accordion-header" id="faq-heading-7">
+    <button class="accordion-button poppins-bold-balise-p" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-7" aria-expanded="false" aria-controls="faq-collapse-7">
+      Pourquoi mon aide CMG peut-elle changer au cours du contrat ?
+    </button>
+  </h2>
+  <div id="faq-collapse-7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+    <div class="accordion-body poppins-regular-balise-p">
+      Le montant du Complément de mode de garde (CMG) n'est pas fixe. La CAF réévalue vos droits chaque année en fonction de vos revenus N-2. <a href="#conseil-expert-cmg" class="style-liens">Je vous aide à anticiper</a> dès le début de l'accueil pour une collaboration sur le long terme.
+    </div>
+  </div>
+</div>
+
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
 
 
 
@@ -581,33 +976,60 @@ bodyClass: "bg-white simulateur-cout-creche-assistante-maternelle"
   };
 
 // 👉 Ensuite on ajoute (si condition) le comparatif CMG AVANT le reste du contenu
-const anciensBarèmesCMG = {
+const anciensBarèmesCMG_couple = {
   1: [
-    { seuil: 23903, montant: 529.28 },
-    { seuil: 53119, montant: 333.75 },
-    { seuil: Infinity, montant: 200.22 }
+    { seuil: 23903, montant: 538.27 },
+    { seuil: 53119, montant: 339.42 },
+    { seuil: Infinity, montant: 203.62 }
   ],
   2: [
-    { seuil: 27295, montant: 529.28 },
-    { seuil: 60659, montant: 333.75 },
-    { seuil: Infinity, montant: 200.22 }
+    { seuil: 27295, montant: 538.27 },
+    { seuil: 60659, montant: 339.42 },
+    { seuil: Infinity, montant: 203.62 }
   ],
   3: [
-    { seuil: 30687, montant: 529.28 },
-    { seuil: 68199, montant: 333.75 },
-    { seuil: Infinity, montant: 200.22 }
+    { seuil: 30687, montant: 538.27 },
+    { seuil: 68199, montant: 339.42 },
+    { seuil: Infinity, montant: 203.62 }
   ],
   4: [
-    { seuil: 34079, montant: 529.28 },
-    { seuil: 75739, montant: 333.75 },
-    { seuil: Infinity, montant: 200.22 }
+    { seuil: 34079, montant: 538.27 },
+    { seuil: 75739, montant: 339.42 },
+    { seuil: Infinity, montant: 203.62 }
   ]
 };
 
-function getAncienCMG(nbEnfants, revenu) {
-  const bareme = anciensBarèmesCMG[Math.min(nbEnfants, 4)];
-  return bareme.find(bracket => revenu <= bracket.seuil).montant;
+const anciensBarèmesCMG_mono = {
+  1: [
+    { seuil: 33464, montant: 699.75 },    // Tranche 1 jusqu'à 33 464 €
+    { seuil: 74367, montant: 441.25 },    // Tranche 2 jusqu'à 74 367 €
+    { seuil: Infinity, montant: 264.71 }  // Tranche 3 au-delà
+  ],
+  2: [
+    { seuil: 38213, montant: 699.75 },
+    { seuil: 84923, montant: 441.25 },
+    { seuil: Infinity, montant: 264.71 }
+  ],
+  3: [
+    { seuil: 42962, montant: 699.75 },
+    { seuil: 95479, montant: 441.25 },
+    { seuil: Infinity, montant: 264.71 }
+  ],
+  4: [
+    { seuil: 47711, montant: 699.75 },
+    { seuil: 106035, montant: 441.25 },
+    { seuil: Infinity, montant: 264.71 }
+  ]
+};
+
+
+function getAncienCMG(nbEnfants, revenu, situation) {
+  const baremes = situation === 'mono' ? anciensBarèmesCMG_mono : anciensBarèmesCMG_couple;
+  const bareme = baremes[Math.min(nbEnfants, 4)] || [];
+  const found = bareme.find(bracket => revenu <= bracket.seuil);
+  return found ? found.montant : 0;
 }
+
 
 
   const seuilsHeures = {
@@ -694,26 +1116,46 @@ const cmgAssmatCeline = cmgRemunerationReduit
 };
 
 
+
 const seuilsCMGMicroCreche = {
-  1: [23903, 53119],  // 1 enfant à charge
-  2: [27295, 60659],  // 2 enfants
-  3: [30687, 68199],  // 3 enfants
-  extraParEnfant: [3392, 7540]  // [tranche1, tranche2]
+  couple: {
+    1: [24333, 54075],  // 1 enfant (standards)
+    2: [27786, 61751],
+    3: [31239, 69427],
+    extraParEnfant: [3453, 7676]
+  },
+  mono: {
+    1: [34066, 75705],  // Vos seuils monoparental 1 enfant
+    2: [38900, 86451],
+    3: [43734, 97197],
+    4: [48568, 107943],
+    extraParEnfant: [4866, 10752]  // Incrément par enfant supp.
+  }
 };
 
-function determineTrancheMicroCreche(revenuAnnuel, nbEnfants) {
-  const baseTranche1 = seuilsCMGMicroCreche[nbEnfants]?.[0] ?? 
-                       seuilsCMGMicroCreche[3][0] + (nbEnfants - 3) * seuilsCMGMicroCreche.extraParEnfant[0];
-  const baseTranche2 = seuilsCMGMicroCreche[nbEnfants]?.[1] ?? 
-                       seuilsCMGMicroCreche[3][1] + (nbEnfants - 3) * seuilsCMGMicroCreche.extraParEnfant[1];
+const plafondsMicroCreche = {
+  couple: { 1: 984.26, 2: 848.47, 3: 712.72 },
+  mono: { 1: 1279.54, 2: 1103.01, 3: 926.54 }
+};
+
+function determineTrancheMicroCreche(revenuAnnuel, nbEnfants, situation) {
+  const seuils = seuilsCMGMicroCreche[situation];
+  let baseTranche1 = seuils[nbEnfants]?.[0] ?? seuils[3]?.[0] ?? 0;
+  let baseTranche2 = seuils[nbEnfants]?.[1] ?? seuils[3]?.[1] ?? Infinity;
+
+  // Gère +4 enfants
+  const extra = nbEnfants > 4 ? (nbEnfants - 4) * (seuils.extraParEnfant ?? [3453, 7676]) : [0, 0];
+  baseTranche1 += extra[0];
+  baseTranche2 += extra[1];
 
   if (revenuAnnuel <= baseTranche1) return 1;
-  else if (revenuAnnuel <= baseTranche2) return 2;
-  else return 3;
+  if (revenuAnnuel <= baseTranche2) return 2;
+  return 3;
 }
 
+
 // Détermination de la tranche en micro-crèche (selon revenu et nb enfants)
-const tranche = determineTrancheMicroCreche(revenuAnnuel, nbEnfants);
+const tranche = determineTrancheMicroCreche(revenuAnnuel, nbEnfants, situation);
 
 
 
@@ -729,7 +1171,7 @@ if (checkboxPrixManuel.checked && !isNaN(prixAccueilSaisi)) {
 
 
 
-    const plafonds = { 1: 984.26, 2: 848.47, 3: 712.72 };
+    const plafonds = plafondsMicroCreche[situation];  
     const cmgMC = Math.min(coutMC * 0.85, plafonds[tranche]);
     const resteChargeMC = coutMC - cmgMC;
 
@@ -956,12 +1398,12 @@ const contenuCommunHTML = `
   </ul>
 
   <strong>Réduisez votre reste à charge :</strong>
-  <br><a href="https://chubert91assmat.netlify.app/posts/entreprises/cesu-prefinances/"
+  <br><a href="/posts/entreprises/cesu-prefinances/"
     class="btn btn-action-primary mt-3 d-inline-block">Je découvre les CESU pré-financés ! →</a><br><br>
 
   Je pourrais vous en dire plus, mais le mieux est de laisser parler ceux qui m’ont confié leur enfant : découvrez leurs avis
   sur Google :
-  <br><a href="https://chubert91assmat.netlify.app/#avis"
+  <br><a href="/#avis"
     class="btn btn-action-primary mt-3 d-inline-block"><span
       class="etoiles">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 100% de parents satisfaits →</a><br><br>
 
@@ -978,8 +1420,8 @@ function afficherMessageReforme(cmg, ancienCMG) {
       <div class="alert alert-info" role="alert">
         <img src="{{ '/images/simulateur/gain-simulateur-bretigny.svg' | url }}" class="bien-etre-icon" alt="icône tirelire">
         Grâce à la réforme du CMG, vous bénéficiez d'une aide <strong>plus élevée</strong> que celle prévue auparavant pour votre niveau de revenus et votre composition familiale.<br>
-        <strong>Ancien CMG barème 2025 :</strong> ${ancienCMG.toFixed(2)} €<br>
-        <strong>Nouveau CMG :</strong> ${cmg} €<br>
+        <strong>Ancien barème (avant réforme) CMG fixe :</strong> ${ancienCMG.toFixed(2)} €<br>
+        <strong>Nouveau calcul (depuis sept. 2025) CMG :</strong> ${cmg} €<br>
         <strong>Soit +${gain} €/mois d’aide supplémentaire</strong> avec la réforme cmg 2025.
       </div><br>
     `;
@@ -1019,9 +1461,13 @@ if (profil === 1) {
     <div class="recap-saisie mb-4">
     <div class="anti-coupure">
       <div class="html2pdf__page-break"></div>
-      <h3>Vos données de simulation</h3>
+     
+
+<h3 class="poppins-bold-titre-h3">Vos données de simulation</h3>
+
+
     
-      <ul class="list-unstyled">
+      <ul class="poppins-regular-balise-p">
         <li><strong>Situation familiale :</strong> ${typeFamilleLibelle}</li>
         <li><strong>Nombre d’enfants à charge :</strong> ${nbEnfants}</li>
         <li><strong>Ressources annuelles :</strong> ${revenu} €</li>
@@ -1037,7 +1483,7 @@ if (profil === 1) {
 
   // Injecte le récapitulatif + le résultat
   resultBox.classList.add("result-profil-1");
-  resultBox.classList.add("poppins-regular-simucmg");
+  resultBox.classList.add("poppins-regular-balise-p");
   resultBox.innerHTML = recapSaisie + `
 
 
@@ -1068,7 +1514,7 @@ if (profil === 1) {
 
 
 // Calcul ancien CMG
-const ancienCMG = getAncienCMG(nbEnfants, revenu);
+const ancienCMG = getAncienCMG(nbEnfants, revenu, typeFamille);
 const messageReforme = afficherMessageReforme(cmg, ancienCMG);
 resultBox.innerHTML += messageReforme;
 
@@ -1110,7 +1556,7 @@ document.getElementById("btn-reset").classList.remove("d-none");
 
   // Injecte le récapitulatif + le résultat
   resultBox.classList.add("result-profil-2");
-  resultBox.classList.add("poppins-regular-simucmg");
+  resultBox.classList.add("poppins-regular-balise-p");
   resultBox.innerHTML = recapSaisie + `
 
    Le CMG auquel vous avez droit représente une aide conséquente pour faciliter l’accueil de votre enfant. 
@@ -1181,7 +1627,7 @@ document.getElementById("btn-reset").classList.remove("d-none");
 
   // Injecte le récapitulatif + le résultat
   resultBox.classList.add("result-profil-3");
-  resultBox.classList.add("poppins-regular-simucmg");
+  resultBox.classList.add("poppins-regular-balise-p");
   resultBox.innerHTML = recapSaisie + `
 
 
@@ -1214,8 +1660,8 @@ if (cmg > ancienCMG) {
     <div class="alert alert-info" role="alert">
       <img src="{{ '/images/simulateur/gain-simulateur-bretigny.svg' | url }}" class="bien-etre-icon" alt="icône tirelire">
       Grâce à la réforme du CMG, vous bénéficiez d'une aide <strong>plus élevée</strong> que celle prévue auparavant pour votre niveau de revenus et votre composition familiale.<br>
-      <strong>Ancien CMG barème 2025 :</strong> ${ancienCMG.toFixed(2)} €<br>
-      <strong>Nouveau CMG :</strong> ${cmg} €<br>
+      <strong>Ancien barème (avant réforme) CMG fixe :</strong> ${ancienCMG.toFixed(2)} €<br>
+      <strong>Nouveau calcul (depuis sept. 2025) CMG :</strong> ${cmg} €<br>
       <strong>Soit +${gain} €/mois d’aide supplémentaire</strong> avec la réforme cmg 2025.
     </div><br>
   `;

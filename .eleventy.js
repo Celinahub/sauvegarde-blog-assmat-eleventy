@@ -3,10 +3,11 @@ const pluginRss = require("@11ty/eleventy-plugin-rss");
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const { fr } = require("date-fns/locale");
 const Image = require("@11ty/eleventy-img");
+const path = require("path");
 const htmlMinifier = require("html-minifier-terser"); // Plugin de minification HTML
 
 // URL de base centralisée
-const BASE_URL = "https://chubert91assmat.netlify.app";
+const BASE_URL = "https://celine-assmat-bretigny.fr";
 
 // Fonction pour gérer le shortcode d'image
 async function imageShortcode(src, alt = "", sizes = "100vw", width = 300, height = null, loading = "lazy", fetchpriority = "auto", className = "") {
@@ -18,7 +19,7 @@ async function imageShortcode(src, alt = "", sizes = "100vw", width = 300, heigh
   const imageSrc = src.startsWith("/") ? `.${src}` : `./images/${src}`;
 
   try {
-    let metadata = await Image(imageSrc, {
+     let metadata = await Image(imageSrc, {
       widths: [width, 600, 1200].filter(Boolean),
       formats: ["webp", "jpeg", "png"],
       outputDir: "./_site/images/",
@@ -26,6 +27,11 @@ async function imageShortcode(src, alt = "", sizes = "100vw", width = 300, heigh
       cacheOptions: {
         duration: "1d",
         directory: ".cache",
+      },
+      filenameFormat: function(id, src, width, format, options) {
+        // Extraire le nom de fichier sans extension
+        const name = path.parse(src).name;
+        return `${name}-${width}.${format}`;
       }
     });
 
@@ -88,10 +94,6 @@ module.exports = function(eleventyConfig) {
       language: "fr"
     }
   });
-
-eleventyConfig.addGlobalData("currentDate", () => new Date().toISOString());
-
-
 
   // Ajouter le plugin de minification HTML
   eleventyConfig.addTransform("htmlmin", function(content, outputPath) {
@@ -171,7 +173,10 @@ eleventyConfig.addGlobalData("currentDate", () => new Date().toISOString());
     return format(new Date(date), "EEE, dd MMM yyyy HH:mm:ss 'GMT'xxx", { locale: fr });
   });
 
-
+  eleventyConfig.addFilter("dateModified", (date) => {
+  if (!date) return ""; // Retourne vide si non définie
+  return format(new Date(date), "yyyy-MM-dd'T'HH:mm:ssxxx"); // ISO 8601 pour schema.org
+  });
 
 
 
@@ -213,7 +218,13 @@ eleventyConfig.addFilter("truncateWords", function (content, numWords) {
   eleventyConfig.addPassthroughCopy("favicon.ico");
   eleventyConfig.addPassthroughCopy("fonts");
   eleventyConfig.addPassthroughCopy("google0b7250a45fd279a1.html");
+  eleventyConfig.addPassthroughCopy("google4fe795a8d3aa5648.html");
+  eleventyConfig.addPassthroughCopy("BingSiteAuth.xml");
   eleventyConfig.addPassthroughCopy("_redirects");
+  eleventyConfig.addPassthroughCopy("tarteaucitron");
+  eleventyConfig.addPassthroughCopy("presentation-assistante-maternelle-agreee.webp");
+
+
 
   // Ajouter des alias pour les layouts
   eleventyConfig.addLayoutAlias("base", "layouts/base.njk");

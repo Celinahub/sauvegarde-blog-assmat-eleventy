@@ -1,11 +1,115 @@
 <!DOCTYPE html>
 <html lang="{{ metadata.language or 'fr' }}">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+
+
+<!-- Chargement du script principal de TarteAuCitron avec defer 
+     pour différer son exécution jusqu’à ce que le DOM soit chargé -->
+<script src="/tarteaucitron/tarteaucitron.min.js" defer></script>
+
+<!-- Début du script d’initialisation -->
+<script defer>
+/* On attend que le contenu du document soit complètement chargé avant d’initialiser TarteAuCitron */
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* Initialisation de TarteAuCitron avec les options de configuration */
+  tarteaucitron.init({
+    privacyUrl: "/mentions-legales/#politique-de-confidentialite", // Lien vers la politique de confidentialité
+    bodyPosition: "top", // Positionne le bandeau au début du code HTML (important pour l’accessibilité)
+    hashtag: "#tarteaucitron", // Hashtag utilisé pour rouvrir le panneau de gestion
+    cookieName: "tarteaucitron", // Nom du cookie de gestion des consentements
+
+    orientation: "middle", // Position du bandeau ("top", "bottom", "middle", "popup")
+    groupServices: true, // Regroupe les services par catégorie
+    showDetailsOnClick: true, // Affiche la description d’un service en cliquant
+    serviceDefaultState: "wait", // Par défaut, les services attendent le consentement
+
+    showAlertSmall: false, // N’affiche pas la mini-bannière en bas de l’écran
+    cookieslist: false, // N’affiche pas la liste complète des cookies (option mineure)
+    cookieslistEmbed: false, // N’intègre pas cette liste directement dans le panneau
+
+    closePopup: true, // Ajoute une croix (X) pour fermer la bannière
+    showIcon: true, // Affiche l’icône (cookie) permettant d’ouvrir le panneau à tout moment
+    iconPosition: "BottomLeft", // Position de l’icône (ici, bas à gauche)
+    adblocker: false, // Ne vérifie pas la présence d’un AdBlocker
+
+    DenyAllCta: true, // Affiche le bouton "Tout refuser"
+    AcceptAllCta: true, // Affiche le bouton "Tout accepter"
+    highPrivacy: true, // Attend explicitement le consentement avant d’activer un service
+    alwaysNeedConsent: false, // N’applique pas la demande à tous les services "privacy-friendly"
+    handleBrowserDNTRequest: false, // Ignore le signal "Do Not Track" du navigateur
+
+    removeCredit: false, // Garde le lien de crédit vers tarteaucitron.io (optionnel)
+    moreInfoLink: true, // Affiche le lien "En savoir plus"
+    useExternalCss: false, // Utilise les styles internes sans charger de .css externe
+    useExternalJs: false, // Même logique, pas de chargement .js externe additionnel
+
+    readmoreLink: "", // Permet de remplacer l’URL "En savoir plus" (vide ici)
+    mandatory: true, // Affiche un message concernant les cookies obligatoires
+    mandatoryCta: false, // Ne met pas de bouton d’action pour ces cookies (recommandé)
+
+    googleConsentMode: true, // Active le mode de consentement Google (GA4, Ads)
+    bingConsentMode: true, // Idem pour Bing (Clarity, Ads)
+    softConsentMode: false, // Le consentement est strict : rien ne se charge avant acceptation
+
+    dataLayer: false, // N’envoie pas d’événement dans le dataLayer
+    serverSide: false, // Les scripts sont gérés côté client (pas côté serveur)
+    partnersList: true // Affiche la liste des partenaires sur le bandeau
+  });
+
+  /* Définition d’un service personnalisé : YouTube */
+  tarteaucitron.services.youtube = {
+    key: "youtube", // Nom unique du service
+    type: "video", // Catégorie (ici vidéo)
+    name: "YouTube", // Nom affiché dans le panneau
+    needConsent: true, // Nécessite un consentement avant activation
+    cookies: ['PREF', 'VISITOR_INFO1_LIVE', 'YSC'], // Cookies déposés par YouTube
+
+    /* Code exécuté quand l’utilisateur donne son accord */
+    js: function () {
+      var youtubePlayers = document.querySelectorAll('.youtube_player'); // Sélectionne les conteneurs d’éléments à remplacer
+      youtubePlayers.forEach(function (el) { // Pour chaque élément trouvé
+        var videoID = el.getAttribute('videoID'); // Récupère l’identifiant de vidéo
+        if (videoID) { // Vérifie que l’attribut est présent
+          var iframe = document.createElement("iframe"); // Crée une balise <iframe>
+          iframe.src = "https://www.youtube-nocookie.com/embed/" + videoID + "?rel=0"; // Utilise le domaine sans cookies
+          iframe.allowFullscreen = true; // Permet le plein écran
+          iframe.loading = "lazy"; // Optimise le chargement différé
+          iframe.style.width = "100%"; // Largeur responsive
+          iframe.style.height = "100%"; // Hauteur responsive
+          el.replaceChildren(iframe); // Remplace le conteneur par l’iframe
+        }
+      });
+    }
+  };
+
+  /* Déclaration des services (jobs) à gérer par TarteAuCitron */
+  tarteaucitron.job = tarteaucitron.job || []; // Vérifie qu’un tableau "job" existe déjà
+  tarteaucitron.job.push('hubspot_chatbot'); // Active la gestion du chatbot HubSpot
+  tarteaucitron.job.push('youtube'); // Active la gestion du service YouTube défini ci-dessus
+  tarteaucitron.job.push('elfsight'); // Active la gestion du widget Elfsight
+});
+</script>
+
+
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 {% include "layouts/widget/head.njk" %} <!-- Inclusion des métadonnées  -->
+{% include "layouts/widget/breadcrumb-schema.njk" %} <!-- JSON-LD Fil d'Ariane SEO -->
 
+{% if jsonldBusiness %}
+<script type="application/ld+json">
+{{ jsonldBusiness | dump | safe }}
+</script>
+{% endif %}
+
+{% if jsonldFAQ %}
+<script type="application/ld+json">
+{{ jsonldFAQ | dump | safe }}
+</script>
+{% endif %}
 
 
 </head>
@@ -27,8 +131,8 @@
 
  <!-- Scripts JavaScript avec defer -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous" defer></script>
-  <script src="https://unpkg.com/scrollreveal" integrity="sha384-PdubLDIOlbUl+kBNCK0KdaW23JSjJx0gOYX/kcDfsGGrxnCHpYyX6JIWixXtwW1V" crossorigin="anonymous"></script>
-
+  <script src="https://unpkg.com/scrollreveal"></script>
+  
 
 
 
@@ -65,18 +169,10 @@ var a = "chubert.assmat91";
 </script>
 
 
-<script>
-window.axeptioSettings = {
-  clientId: "677bdfe88af3f66f0fdf7b78",
-  cookiesVersion: "fr-06-01-2025",
-};
- 
-(function(d, s) {
-  var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
-  e.async = true; e.src = "//static.axept.io/sdk.js";
-  t.parentNode.insertBefore(e, t);
-})(document, "script");
-</script>
+
+
+
+
 
 
 

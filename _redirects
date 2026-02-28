@@ -1,4 +1,3 @@
-/projet-accueil     /projet-accueil/     301
-/faq                /faq/                301
-/contact            /contact/            301
-/mentions-legales    /mentions-legales/    301
+# Migration ancien domaine (sur chubert91assmat.netlify.app)
+https://chubert91assmat.netlify.app/*    https://celine-assmat-bretigny.fr/:splat    301!
+

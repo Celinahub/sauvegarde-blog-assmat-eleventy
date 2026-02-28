@@ -1,20 +1,20 @@
 <div class="d-flex justify-content-between align-items-center mt-3">
     <!-- Onglet Like (Cœur) -->
- 
-<button id="likeButton" data-post-id="1234">Like</button>
-
-
-
-
+   <!-- Bouton Like pour un article -->
+<button class="btn btn-light like-button" onclick="toggleLike(this)" data-id="{{ post.url }}">
+    <img src="{{ '/images/blog/like-icon.svg' | url }}" alt="Like" class="me-2">
+    
+    <span id="like-count-{{ post.url | urlencode }}" class="ms-2">0</span> <!-- Compteur de likes -->
+</button>
 
     <!-- Onglet Partager -->
     <div class="dropdown share-dropdown">
-        <button class="btn btn-light dropdown-toggle" type="button" id="dropdownShareButton" data-bs-toggle="dropdown" aria-expanded="false">
+          <button class="btn btn-light dropdown-toggle share-button" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             <img src="{{ '/images/blog/share-icon.svg' | url }}" alt="Partager" class="me-2">
             Partager
         </button>
 
-        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownShareButton">
+       <ul class="dropdown-menu dropdown-menu-end">
           
 
 <li>
@@ -38,31 +38,15 @@
 </a>
 </li>
          
-
-<!-- Pinterest -->
-
 <li>
-<!-- Pinterest -->
-<a class="dropdown-item" href="https://www.pinterest.com/pin/create/button/?url=https://chubert91assmat.netlify.app/posts/test&media=https://chubert91assmat.netlify.app/images/test-image.jpg&description=Test+Description" target="_blank">
-    <img src="/images/blog/pinterest-bretigny.svg" alt="Pinterest" class="me-2">
-    Pinterest
-</a>
-
-
-  
+    <!-- Pinterest -->
+    <a class="dropdown-item" 
+       href="https://pinterest.com/pin/create/button/?url={{ site.url }}{{ post.url | urlencode }}&title={{ post.title | urlencode }}" 
+       target="_blank">
+        <img src="{{ '/images/blog/pinterest-bretigny.svg' | url }}" alt="Pinterest" class="me-2">
+        Pinterest
+    </a>
 </li>
-
-
-
-<li>
-  <a class="dropdown-item" href="https://www.pinterest.com/pin/create/button/?url=https://gggggggzerrez.netlify.app/posts/test&media=https:/gggggggzerrez.netlify.app/images/test-image.jpg&description=Test+Description" target="_blank">
-    <img src="/images/blog/pinterest-bretigny.svg" alt="Pinterest" class="me-2">
-    Pinterest
-  </a>
-</li>
-
-
-
 
 
             <li>

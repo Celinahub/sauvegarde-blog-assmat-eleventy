@@ -1,23 +1,27 @@
 ---
 layout: layouts/base.njk
-title: "Contactez Céline Hubert, assistante maternelle agréée à Brétigny-sur-Orge"
-description: "Localisez mon lieu d'accueil et remplissez le formulaire pour toute demande d'information."
-url: "https://chubert91assmat.netlify.app/contact"
-image: "contact-celine-assistante-maternelle.jpg"
+title: "Contact - Assistante Maternelle à Brétigny | Céline Hubert"
+description: "Besoin d'informations ? Contactez Céline Hubert, assistante maternelle à Brétigny (91). Localisation et formulaire pour toute demande."
+url: "https://celine-assmat-bretigny.fr/contact/"
+image: "/images/uploads/contact-celine-assistante-maternelle.jpg"
 eleventyNavigation:
-  key: CONTACT
+  key: "Contact"
   order: 6
 permalink: "/contact/"
 bodyClass: "bg-white contact"
 ---
+
+
+
 
  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 
 <!-- Section de la rubrique LOCALISATION -->
 <section id="contact" class="container-fluid-contact py-5"> <!-- Utilisation de container-fluid -->
     <div class="text-center"> <!-- Retrait de la div supplémentaire -->
-        <!-- Ajout d'un titre pour la section -->
-        <h2 class="sr-only" aria-hidden="true">Me contacter</h2> <!-- Titre caché pour l'accessibilité -->
+       <!-- ✅ H1/H2 cachés mais SEO/accessibilité OK -->
+  <h1 class="sr-only">Contact – Assistante maternelle Brétigny</h1>
+  <h2 class="sr-only">Me localiser et échanger avec Céline</h2>
        
         <!-- SVG qui doit être placé au-dessus de la carte -->
          <img src="{{ '/images/contact/map-top.svg' | url }}" class="map-top-curvy" alt="Décor de nuages en haut de la page de contact de Céline, assistante maternelle agréée" />
@@ -40,37 +44,66 @@ bodyClass: "bg-white contact"
 
 
 
-            <!-- Formulaire de contact -->
-            <div class="row justify-content-center"> <!-- Centrer le formulaire -->
-                <div class="col-md-6 col-lg-5"> <!-- Largeur réduite du formulaire -->
-                   <form name="contact" method="POST" data-netlify="true" class="p-4 shadow-lg-tablet rounded-md">
-                        <input type="hidden" name="form-name" value="contact" />
+          <!-- Formulaire de contact -->
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="p-4 shadow-lg-tablet rounded-md">
+        <input type="hidden" name="form-name" value="contact">
 
-                        <h1 class="contact-label">ME CONTACTER</h1>
-                        <h2 class="fade-in-out-contact">C'est avec plaisir que j'échangerai avec vous ...</h2>
+        <!-- Honeypot invisible -->
+        <p class="d-none">
+          <label>Ne pas remplir : <input name="bot-field"></label>
+        </p>
 
-                        <div class="row g-3">
-                            <div class="col-md-6 form-group">
-                                <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom" required autocomplete="off">
-                                <label class="floating-label" for="prenom">Prénom</label>
-                            </div>
-                            <div class="col-md-6 form-group">
-                                <input type="email" class="form-control" id="email" name="email" placeholder=" " required>
-                                <label class="floating-label" for="email">E-mail</label>
-                            </div>
-                            <div class="col-md-12 form-group">
-                                <input type="text" class="form-control" id="message" name="message" placeholder=" " required>
-                                <label class="floating-label" for="message">Message</label>
-                            </div>
-                        </div>
-                        <div class="text-center mt-4">
-                            <button type="submit" class="btn btn-custom">
-                                <img src="{{ '/images/contact/car-police-security-svgrepo-com.svg' | url }}" class="car-send" alt="Icône pour envoyer le formulaire de contact" />
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+        <!-- Titre principal -->
+        <h2 class="poppins-bold-titre-h2">Une réponse à votre demande garantie sous 24h</h2>
+
+      
+       
+
+        <div class="row g-3">
+          <!-- Prénom -->
+          <div class="col-md-6 form-group">
+            <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Prénom" required autocomplete="off">
+            <label class="floating-label" for="prenom">Prénom</label>
+          </div>
+
+          <!-- E-mail -->
+          <div class="col-md-6 form-group">
+            <input type="email" class="form-control" id="email" name="email" placeholder=" " required autocomplete="off">
+            <label class="floating-label" for="email">E-mail</label>
+          </div>
+
+          <!-- Message -->
+          <div class="col-md-12 form-group">
+            <textarea 
+              class="form-control" 
+              id="message" 
+              name="message" 
+              rows="5" 
+              placeholder=" " 
+              autocomplete="off"
+              required
+            ></textarea>
+            <label class="floating-label" for="message">Message</label>
+            <small class="form-text text-muted">
+              Par exemple : précisez vos jours et horaires souhaités, la durée d’accueil (année complète ou 46 semaines ou moins) et l’âge de votre enfant au début de l’accueil souhaité.
+            </small>
+          </div>
+        </div>
+
+        <!-- Bouton envoyer -->
+        <div class="text-center mt-4">
+          <button type="submit" class="btn btn-custom">
+            <img src="{{ '/images/contact/car-police-security-svgrepo-com.svg' | url }}" class="car-send" alt="Icône pour envoyer le formulaire de contact" />
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 
             <!-- Décoration après le formulaire -->
             <img src="{{ '/images/contact/me-contacter-form.svg' | url }}" class="contact-curvy mt-4" alt="Décor de nuages en bas du formulaire de contact de Céline, assistante maternelle agréée" />
@@ -78,6 +111,7 @@ bodyClass: "bg-white contact"
 
     </div>
 </div>
+
 
     </div>
 </section>
@@ -123,8 +157,3 @@ bodyClass: "bg-white contact"
 	</script>
 	
 	
-
-<!-- Charger d'autres scripts avec defer pour qu'ils ne bloquent pas le rendu de la page -->
-<script src="https://unpkg.com/simplebar@5.3.0/dist/simplebar.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.0/gsap.min.js" defer></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
