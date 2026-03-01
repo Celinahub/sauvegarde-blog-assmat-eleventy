@@ -130,19 +130,21 @@ eleventyNavigation:
         <div class="bordered-content-presentation-image">
             <div class="presentation-image mx-auto position-relative mb-4">
             
-               <picture>
-  <!-- Balise source pour WebP -->
-  <source srcset="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.webp' | url }}" type="image/webp">
-  
-  <!-- Balise img pour les navigateurs ne prenant pas en charge WebP -->
- <img class="photo-img-portrait"
-     src="/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg"
-     alt="Céline Hubert, assistante maternelle à Brétigny-sur-Orge"
-     loading="eager"
-     fetchpriority="high"
-     width="399"
-     height="399">
+<picture>
+  <source 
+    srcset="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.webp' | url }}"
+    type="image/webp"
+    sizes="(max-width: 768px) 300px, 399px">
 
+  <img 
+    class="photo-img-portrait"
+    src="{{ '/images/presentation/celine-hubert-assistante-maternelle-bretigny.jpg' | url }}"
+    alt="Céline Hubert, assistante maternelle à Brétigny-sur-Orge"
+    loading="eager"
+    fetchpriority="high"
+    width="399"
+    height="399"
+    sizes="(max-width: 768px) 300px, 399px">
 </picture>
 
                 <a href="/contact/#message" class="position-icon-b" aria-label="Envoyer un message à Céline Hubert">
