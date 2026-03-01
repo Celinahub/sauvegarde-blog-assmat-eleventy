@@ -6,82 +6,82 @@ url: "https://celine-assmat-bretigny.fr/"
 image: "presentation-assistante-maternelle-agreee.jpg"
 permalink: "/"
 bodyClass: "bg-white accueil"
-
 eleventyNavigation:
   key: Accueil
   order: 1
-
-# =========================
-# JSON-LD : FAQ (SEO)
-# =========================
-jsonldFAQ:
-  "@context": "https://schema.org"
-  "@type": "FAQPage"
-  mainEntity:
-    - "@type": "Question"
-      name: "Quels sont les avantages d'une assistante maternelle à Brétigny-sur-Orge ?"
-      acceptedAnswer:
-        "@type": "Answer"
-        text: "Une assistante maternelle offre un accueil personnalisé et sécurisé à Brétigny-sur-Orge, souvent plus souple et chaleureux qu'en crèche. Céline est agréée, proche de la gare RER C et du parc Clause-Bois Badeau."
-    - "@type": "Question"
-      name: "Puis-je visiter avant de réserver ?"
-      acceptedAnswer:
-        "@type": "Answer"
-        text: "Oui, lors d'un premier rendez-vous je propose une visite du lieu d'accueil avant toute réservation, afin de vous assurer que l'environnement correspond bien aux besoins de votre enfant et de votre famille. Cette visite permet également d'établir un premier contact, poser des questions, et discuter du projet d'accueil."
-    - "@type": "Question"
-      name: "Êtes-vous accessible depuis Le Plessis-Pâté ou Saint-Michel-sur-Orge ?"
-      acceptedAnswer:
-        "@type": "Answer"
-        text: "Oui, mon domicile est à quelques minutes de ces communes en voiture ou en bus."
-    - "@type": "Question"
-      name: "Accueillez-vous des enfants de Saint-Germain-lès-Arpajon ?"
-      acceptedAnswer:
-        "@type": "Answer"
-        text: "Oui, j'accueille des familles des villes voisines comme Saint-Germain-lès-Arpajon, Le Plessis-Pâté ou Saint-Michel-sur-Orge."
-
-# =========================
-# JSON-LD : Activité locale
-# =========================
-jsonldBusiness:
-  "@context": "https://schema.org"
-  "@type": "ChildCare"
-  "@id": "https://celine-assmat-bretigny.fr/#business"
-  name: "Assistante maternelle agréée - chez Céline"
-  url: "https://celine-assmat-bretigny.fr/"
-  image: "https://celine-assmat-bretigny.fr/presentation-assistante-maternelle-agreee.webp"
-  logo: "https://celine-assmat-bretigny.fr/images/navbar/logo-navbar-paint.png"
-  description: "Assistante maternelle agréée proposant un accueil personnalisé pour les enfants à Brétigny-sur-Orge. Une alternative chaleureuse et professionnelle à la crèche."
-
-  address:
-    "@type": "PostalAddress"
-    streetAddress: "30 Bis Av. Lucien Clause"
-    addressLocality: "Brétigny-sur-Orge"
-    addressRegion: "Île-de-France"
-    postalCode: "91220"
-    addressCountry: "FR"
-
-  geo:
-    "@type": "GeoCoordinates"
-    latitude: 48.609
-    longitude: 2.25
-
-  openingHoursSpecification:
-    - "@type": "OpeningHoursSpecification"
-      dayOfWeek:
-        - Monday
-        - Tuesday
-        - Thursday
-        - Friday
-      opens: "07:15"
-      closes: "18:45"
-
-  hasMap: "https://www.google.com/maps/place/30+Bis+Av.+Lucien+Clause,+Brétigny-sur-Orge"
-  priceRange: "€"
-
-  sameAs:
-    - "https://g.page/r/CQsVBcwjVgVtEBM/review"
 ---
+<!-- JSON-LD ChildCare (Local Business) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ChildCare",
+  "@id": "https://celine-assmat-bretigny.fr/#business",
+  "name": "Assistante maternelle agréée - chez Céline",
+  "url": "https://celine-assmat-bretigny.fr/",
+  "image": "https://celine-assmat-bretigny.fr/presentation-assistante-maternelle-agreee.webp",
+  "logo": "https://celine-assmat-bretigny.fr/images/navbar/logo-navbar-paint.png",
+  "description": "Assistante maternelle agréée proposant un accueil personnalisé pour les enfants à Brétigny-sur-Orge. Une alternative chaleureuse et professionnelle à la crèche.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "30 Bis Av. Lucien Clause",
+    "addressLocality": "Brétigny-sur-Orge",
+    "addressRegion": "Île-de-France",
+    "postalCode": "91220",
+    "addressCountry": "FR"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.609,
+    "longitude": 2.25
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Thursday", "Friday"],
+    "opens": "07:15",
+    "closes": "18:45"
+  }],
+  "hasMap": "https://www.google.com/maps/place/30+Bis+Av.+Lucien+Clause,+Brétigny-sur-Orge",
+  "priceRange": "€",
+  "sameAs": ["https://g.page/r/CQsVBcwjVgVtEBM/review"]
+}
+</script>
 
+<!-- JSON-LD FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "Quels sont les avantages d'une assistante maternelle à Brétigny-sur-Orge ?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Une assistante maternelle offre un accueil personnalisé et sécurisé à Brétigny-sur-Orge, souvent plus souple et chaleureux qu'en crèche. Céline est agréée, proche de la gare RER C et du parc Clause-Bois Badeau."
+    }
+  },{
+    "@type": "Question",
+    "name": "Puis-je visiter avant de réserver ?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui, lors d'un premier rendez-vous je propose une visite du lieu d'accueil avant toute réservation, afin de vous assurer que l'environnement correspond bien aux besoins de votre enfant et de votre famille. Cette visite permet également d'établir un premier contact, poser des questions, et discuter du projet d'accueil."
+    }
+  },{
+    "@type": "Question",
+    "name": "Êtes-vous accessible depuis Le Plessis-Pâté ou Saint-Michel-sur-Orge ?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui, mon domicile est à quelques minutes de ces communes en voiture ou en bus."
+    }
+  },{
+    "@type": "Question",
+    "name": "Accueillez-vous des enfants de Saint-Germain-lès-Arpajon ?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Oui, j'accueille des familles des villes voisines comme Saint-Germain-lès-Arpajon, Le Plessis-Pâté ou Saint-Michel-sur-Orge."
+    }
+  }]
+}
+</script>
 
   
 <!-- Icône de défilement vers le haut utilisant une image SVG -->
