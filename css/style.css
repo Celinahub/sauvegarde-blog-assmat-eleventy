@@ -287,7 +287,9 @@
    margin-bottom: 50px; /* Ajoutez de l'espace entre les éléments */
 }
 
-
+.paragraphe-spacing {
+  margin-bottom: 1rem; /* ou 1.5rem selon l’espace souhaité */
+}
 
 
 
@@ -1205,10 +1207,55 @@ h2, h3 {
    }
 
 
+.hero-dispo{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.hero-dispo-badge{
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #fff1f1;
+  color: #b00020;
+  font-size: 0.9rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.hero-dispo-text{
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #8b1a1a;
+}
+
+.hero-reassurance{
+font-size:0.9rem;
+font-weight: 400;
+color:#495057;
+}
+
+.hero-availability-info {
+    color: #495057; /* Gris anthracite bien contrasté */
+    line-height: 1.4;
+    display: block;
+    margin-top: 5px;
+}
+
+
+#creche-vs-assmat {
+   background-color: #103754;
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+
+
 /* Styles pour la section presentation-celine */
 
 #presentation-celine {
-   background-color: #103754;
+   background-color: #007595;
    padding-left: 20px;
    padding-right: 20px;
  }
@@ -1991,8 +2038,48 @@ height:1.5em;
  }
  
 
+.cta-liste-attente {
+  background: linear-gradient(135deg, #ffffff 0%, #f2faf9 35%, #96D2CA 120%);
+border-left: 4px solid #96D2CA;
+  border-radius: 16px;
+  border-left: 5px solid #103754;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+.cta-liste-attente:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(16, 55, 84, 0.18);
+}
 
+.cta-titre {
+  color: #103754;
+}
+
+.liste-check li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.checked-demarches {
+  height: 16px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.cta-zone-left {
+  margin-top: 2rem;
+}
+
+.cta-subtext {
+  color: rgba(248, 249, 246, 0.85);
+margin-top: .75rem;
+  opacity: .9;
+}
+
+.cta-subtext strong {
+  color: #96D2CA;
+}
 
 
 /* Style pour la page projet-accueil.html */
@@ -3112,23 +3199,20 @@ font-size: 0.75rem; /* Taille de la police relative */
    margin: 0;
 }
 
-.legende-couleurs {
-    .icone-legende {
-        vertical-align: middle;
-        width: 28px;
-        height: 28px;
-        flex-shrink: 0;
-    }
-} 
+/* Style pour les icônes de la légende */
+.legende-couleurs .icone-legende {
+    vertical-align: middle;
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+}
 
+/* Espacement sur mobile */
 @media (max-width: 767.98px) {
-    .legende-couleurs {
-        .col-12 {
-            margin-bottom: 0.75rem;
-        }
+    .legende-couleurs .col-12 {
+        margin-bottom: 0.75rem;
     }
-    }
-
+}
 /* Styles spécifiques de la ligne verticale en pointillé et de l'espacement du contenu */
 .routine-info {
    flex: 1;
@@ -4570,6 +4654,8 @@ font-size: 0.75rem; /* Taille de la police relative */
    }
 }
 
+
+
 /* Styles pour une image dans la page article.md*/
 .article-content img {
    display: block;       /* Assure que l'image se comporte comme un élément de bloc */
@@ -4686,9 +4772,93 @@ html {
      margin-bottom: 0.5rem;
    }
  }
- 
- 
 
+
+ .faq-list dd {
+    margin-bottom: 25px; /* Espace entre une réponse et la question suivante */
+    margin-left: 0;      /* Optionnel : aligne la réponse sur la question */
+  }
+
+  /* pour rendre les questions un peu plus distinctes */
+  .faq-list dt {
+    color: #2c3e50;
+    font-size: 1.1rem;
+  }
+ 
+/* Style pour introduction cartes evenement dates actualisees article chasse aux oeufs*/
+
+/* Palette du site */
+:root {
+  --celine-primary: #7FB8B2;   /* turquoise */
+  --celine-dark: #1F3A5F;      /* bleu nuit */
+  --celine-accent: #F4A340;    /* orange */
+  --celine-light: #F2F2F2;     /* fond clair */
+  --celine-soft-orange: #FFF4E6;
+  --celine-success-bg: #E6F6E6;
+  --celine-success-text: #2E7D32;
+}
+
+/* Cartes */
+.event-card {
+  border: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  margin-bottom: 1rem;
+}
+
+.event-card-header {
+  background: var(--celine-primary);
+  color: white;
+  font-weight: bold;
+}
+
+.event-card-body {
+  background: var(--celine-light);
+}
+
+/* Carte tout-petits */
+.toddler-card {
+  background: var(--celine-soft-orange);
+}
+
+.toddler-title {
+  color: var(--celine-accent);
+  font-weight: bold;
+}
+
+/* Carte œufs d'or */
+.gold-header {
+  background: var(--celine-dark);
+  color: white;
+  font-weight: bold;
+}
+
+/* Gratuit */
+.free-event {
+  background: var(--celine-success-bg);
+  color: var(--celine-success-text);
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+ 
+/* Style pour les cartes de maillage interne */
+.recipe-card {
+    border-radius: 15px;
+    overflow: hidden; /* Pour que l'image respecte l'arrondi du haut */
+}
+
+.recipe-card-img {
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.recipe-card-body {
+    border-radius: 0 0 15px 15px;
+    background-color: #f8f9fa; /* Correspond à bg-light de Bootstrap */
+}
 
  
  /* Styles pour la TYPO des cards cote droit blog */
@@ -5617,8 +5787,59 @@ body.rss-info-page {
    margin-bottom: 30px; /* Marge en bas du titre */
 }
 
+.info-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #e8f5e9;
+  color: #3a7a5b;
+  border: 1px solid #b7dfc8;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 500;
 
+  margin: 10px 0 20px 0; /* plus d’air en bas */
 
+}
+
+.info-badge i {
+  font-size: 0.9rem;
+}
+
+/* Conteneur principal du disclaimer */
+.disclaimer-container {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #e0e0e0; /* Ligne de séparation discrète */
+}
+
+/* Style du texte général */
+.disclaimer-simulation {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem; /* Plus petit que le corps de texte */
+    line-height: 1.5;
+    color: #6c757d; /* Gris typique Bootstrap text-muted */
+    font-style: italic;
+}
+
+/* Focus spécifique sur la mention crédit d'impôt */
+.disclaimer-impots {
+    margin-top: 0.75rem;
+    padding: 0.8rem;
+    background-color: #f8f9fa; /* Fond gris très léger pour le distinguer */
+    border-radius: 8px;
+    border-left: 3px solid #ffc107; /* Rappel de votre couleur "action/gold" */
+    color: #495057;
+    font-style: normal; /* On repasse en normal pour la lisibilité de l'info */
+}
+
+/* Optimisation pour l'export PDF (évite que le disclaimer soit coupé en deux) */
+@media print {
+    .disclaimer-container {
+        break-inside: avoid;
+    }
+}
 
 /* Styles pour la section conseil-expert-cmg */
  #conseil-expert-cmg {
